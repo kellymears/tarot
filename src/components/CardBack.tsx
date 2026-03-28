@@ -1,7 +1,6 @@
 import { Box, Text } from "ink";
 
-const ROW_A = "◇ · ◇ · ◇ · ◇ · ◇";
-const ROW_B = "· ◇ · ◇ · ◇ · ◇ ·";
+import { CARD_WIDTH, ROW_A, ROW_B } from "../constants.js";
 
 export function CardBack() {
   return (
@@ -11,7 +10,7 @@ export function CardBack() {
       flexDirection="column"
       paddingX={2}
       paddingY={2}
-      width={28}
+      width={CARD_WIDTH}
     >
       <Box justifyContent="center">
         <Text dimColor>{ROW_A}</Text>

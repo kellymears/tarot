@@ -1,11 +1,10 @@
-import type { Orientation, Position } from "./data/interpretations/types.js";
+import type { Orientation } from "./data/interpretations/types.js";
 import type { FullReading, SpreadCard } from "./engine/types.js";
 
+import { POSITIONS } from "./constants.js";
 import { cards } from "./data/cards.js";
 import { interpret } from "./engine/index.js";
 import { loadDaily, saveDaily } from "./store.js";
-
-export const POSITIONS: Position[] = ["past", "present", "future"];
 
 export function resolve(
   name: string,

@@ -6,12 +6,7 @@ import type {
   SuitDominance,
 } from "../types.js";
 
-const suitTheme: Record<Suit, string> = {
-  cups: "emotion, intuition, and relationships",
-  pentacles: "material concerns, work, and the physical world",
-  swords: "intellect, conflict, and hard truths",
-  wands: "passion, creativity, and willpower",
-};
+import { SUIT_THEME } from "../../constants.js";
 
 export function analyzeArcanaWeight(spread: SpreadCard[]): ArcanaWeight {
   const count = spread.filter((s) => s.card.arcana === "major").length;
@@ -93,8 +88,8 @@ export function analyzeSuitDominance(
         count,
         detail:
           count === 3
-            ? `All three cards belong to the suit of ${suit[0].toUpperCase() + suit.slice(1)}, saturating this reading with the energy of ${suitTheme[suit]}.`
-            : `The suit of ${suit[0].toUpperCase() + suit.slice(1)} dominates this spread, centering the reading around ${suitTheme[suit]}.`,
+            ? `All three cards belong to the suit of ${suit[0].toUpperCase() + suit.slice(1)}, saturating this reading with the energy of ${SUIT_THEME[suit]}.`
+            : `The suit of ${suit[0].toUpperCase() + suit.slice(1)} dominates this spread, centering the reading around ${SUIT_THEME[suit]}.`,
         suit,
       };
     }

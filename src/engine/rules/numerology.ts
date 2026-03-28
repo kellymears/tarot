@@ -1,18 +1,6 @@
 import type { NumericalPattern, SpreadCard } from "../types.js";
 
-const numberMeaning: Record<number, string> = {
-  0: "infinite potential and the void",
-  1: "new beginnings and initiative",
-  2: "duality and partnership",
-  3: "creativity and expression",
-  4: "stability and foundation",
-  5: "change and upheaval",
-  6: "harmony and responsibility",
-  7: "reflection and inner wisdom",
-  8: "power and mastery",
-  9: "completion and culmination",
-  10: "endings that become beginnings",
-};
+import { NUMBER_MEANING } from "../../constants.js";
 
 export function detectNumericalPattern(
   spread: SpreadCard[],
@@ -65,5 +53,5 @@ export function detectNumericalPattern(
 }
 
 function meaningFor(n: number): string {
-  return numberMeaning[n] ?? `the energy of ${n}`;
+  return NUMBER_MEANING[n] ?? `the energy of ${n}`;
 }

@@ -1,19 +1,12 @@
 import { Box, Text, useApp, useInput } from "ink";
 import { useEffect, useState } from "react";
 
-import type { Position } from "./data/interpretations/types.js";
-
 import { AnimatedCard } from "./components/AnimatedCard.js";
 import { RelationalInsight } from "./components/RelationalInsight.js";
 import { Typewriter } from "./components/Typewriter.js";
+import { POSITION_LABELS } from "./constants.js";
 import { useAnimationController } from "./hooks/useAnimationController.js";
 import { resolve } from "./resolve.js";
-
-const SPREAD_LABELS: Record<Position, string> = {
-  future: "Future",
-  past: "Past",
-  present: "Present",
-};
 
 interface AppProps {
   forceNew: boolean;
@@ -61,7 +54,7 @@ export function App({ forceNew, name }: AppProps) {
           <Box alignItems="center" flexDirection="column" key={sc.card.id}>
             {v.cards[i] !== "hidden" && (
               <Text bold dimColor>
-                {SPREAD_LABELS[sc.position]}
+                {POSITION_LABELS[sc.position]}
               </Text>
             )}
             <AnimatedCard

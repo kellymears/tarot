@@ -2,6 +2,15 @@ import { useEffect, useRef, useState } from "react";
 
 import type { FullReading } from "../engine/types.js";
 
+import {
+  CHARS_PER_TICK,
+  DEAL_CARD_TICKS,
+  DIVIDER_TICKS,
+  HEADER_TICKS,
+  REVEAL_CARD_TICKS,
+  TICK_MS,
+} from "../constants.js";
+
 export interface AnimationVisibility {
   cards: [CardState, CardState, CardState];
   closing: TypewriterState;
@@ -41,14 +50,6 @@ interface TypewriterState {
   chars: number;
   visible: boolean;
 }
-
-const TICK_MS = 33;
-const CHARS_PER_TICK = 25;
-
-const HEADER_TICKS = 30;
-const DEAL_CARD_TICKS = 24;
-const REVEAL_CARD_TICKS = 21;
-const DIVIDER_TICKS = 12;
 
 const HIDDEN: TypewriterState = { chars: 0, visible: false };
 const FULL: TypewriterState = { chars: Infinity, visible: true };
