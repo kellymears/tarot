@@ -42,17 +42,15 @@ export function saveDaily(
   writeFileSync(filePath(name), JSON.stringify(data, null, 2) + "\n");
 }
 
-function dataDir(): string {
+const dataDir = (): string => {
   const xdg =
     process.env["XDG_DATA_HOME"] ?? join(homedir(), ".local", "share");
   return join(xdg, "tarot");
-}
+};
 
-function filePath(name: string): string {
+const filePath = (name: string): string => {
   const safe = name.toLowerCase().replace(/[^a-z0-9-]/g, "-");
   return join(dataDir(), `${safe}.json`);
-}
+};
 
-function today(): string {
-  return new Date().toISOString().slice(0, 10);
-}
+const today = (): string => new Date().toISOString().slice(0, 10);

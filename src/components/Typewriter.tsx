@@ -17,7 +17,7 @@ export function Typewriter({ chars, children }: TypewriterProps) {
   );
 }
 
-function truncateVisible(str: string, maxChars: number): string {
+const truncateVisible = (str: string, maxChars: number): string => {
   let i = 0,
     visible = 0;
 
@@ -34,4 +34,4 @@ function truncateVisible(str: string, maxChars: number): string {
   }
 
   return str.slice(0, i);
-}
+};

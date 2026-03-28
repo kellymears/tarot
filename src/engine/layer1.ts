@@ -32,7 +32,7 @@ export function resolvePassages(
   });
 }
 
-function fallbackPassage(card: SpreadCard): string {
+const fallbackPassage = (card: SpreadCard): string => {
   const keywords =
     card.orientation === "reversed" ? card.card.reversed : card.card.upright;
   const name =
@@ -40,4 +40,4 @@ function fallbackPassage(card: SpreadCard): string {
       ? `${card.card.name} reversed`
       : card.card.name;
   return positionFraming[card.position](name, keywords);
-}
+};

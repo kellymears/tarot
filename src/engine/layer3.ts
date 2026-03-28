@@ -11,19 +11,19 @@ export function assembleNarrative(
   };
 }
 
-function arcLabel(cards: CardReading[]): string {
+const arcLabel = (cards: CardReading[]): string => {
   const past = cards.find((c) => c.position === "past");
   const present = cards.find((c) => c.position === "present");
   const future = cards.find((c) => c.position === "future");
   if (!past || !present || !future) return "";
 
   return `The thread from past through present into future traces an arc: what was, what is, and what approaches are not isolated moments but movements in a single unfolding story.`;
-}
+};
 
-function buildClosing(
+const buildClosing = (
   cards: CardReading[],
   relational: RelationalAnalysis,
-): string {
+): string => {
   const future = cards.find((c) => c.position === "future");
   if (!future) return "The cards have spoken. Sit with what they reveal.";
 
@@ -45,10 +45,10 @@ function buildClosing(
   }
 
   return "The cards point a way forward. What you do with their counsel is, as always, yours to decide.";
-}
+};
 
-function buildOpening(relational: RelationalAnalysis): string {
-  return [
+const buildOpening = (relational: RelationalAnalysis): string =>
+  [
     relational.arcanaWeight.detail,
     relational.reversalPattern.count > 0
       ? relational.reversalPattern.detail
@@ -56,13 +56,12 @@ function buildOpening(relational: RelationalAnalysis): string {
   ]
     .filter(Boolean)
     .join(" ");
-}
 
-function buildSynthesis(
+const buildSynthesis = (
   cards: CardReading[],
   relational: RelationalAnalysis,
-): string {
-  return [
+): string =>
+  [
     arcLabel(cards),
     relational.suitDominance?.detail,
     relational.numericalPattern?.detail,
@@ -70,9 +69,8 @@ function buildSynthesis(
   ]
     .filter(Boolean)
     .join(" ");
-}
 
-function dignityLabel(relational: RelationalAnalysis): string | undefined {
+const dignityLabel = (relational: RelationalAnalysis): string | undefined => {
   const hasEnemy = relational.dignities.some((d) => d.relationship === "enemy");
   const hasAllied = relational.dignities.some(
     (d) => d.relationship === "allied",
@@ -85,4 +83,4 @@ function dignityLabel(relational: RelationalAnalysis): string | undefined {
   if (hasAllied)
     return "The elemental harmony across your cards suggests a natural flow — the energies support rather than hinder each other.";
   return undefined;
-}
+};

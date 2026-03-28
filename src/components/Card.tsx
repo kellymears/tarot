@@ -41,6 +41,4 @@ export function Card({ card, reversed }: CardProps) {
   );
 }
 
-function toRoman(n: number): string {
-  return NUMERALS[n] ?? String(n);
-}
+const toRoman = (n: number): string => NUMERALS[n] ?? String(n);

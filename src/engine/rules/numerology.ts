@@ -52,6 +52,5 @@ export function detectNumericalPattern(
   return null;
 }
 
-function meaningFor(n: number): string {
-  return NUMBER_MEANING[n] ?? `the energy of ${n}`;
-}
+const meaningFor = (n: number): string =>
+  NUMBER_MEANING[n] ?? `the energy of ${n}`;

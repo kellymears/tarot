@@ -88,7 +88,7 @@ export function useAnimationController(reading: FullReading): {
   return { skip, visibility };
 }
 
-function computeVisibility(state: InternalState): AnimationVisibility {
+const computeVisibility = (state: InternalState): AnimationVisibility => {
   if (state.skipped) return skippedVisibility();
 
   const cards: [CardState, CardState, CardState] = [
@@ -198,32 +198,30 @@ function computeVisibility(state: InternalState): AnimationVisibility {
     sections,
     synthesis,
   };
-}
+};
 
-function hasConnections(reading: FullReading): boolean {
+const hasConnections = (reading: FullReading): boolean => {
   const r = reading.relational;
   return (
     r.dignities.length > 0 ||
     r.suitDominance !== null ||
     r.numericalPattern !== null
   );
-}
+};
 
-function skippedVisibility(): AnimationVisibility {
-  return {
-    cards: ["faceUp", "faceUp", "faceUp"],
-    closing: FULL,
-    connections: FULL,
-    divider: true,
-    done: true,
-    header: true,
-    opening: FULL,
-    sections: [FULL, FULL, FULL],
-    synthesis: FULL,
-  };
-}
+const skippedVisibility = (): AnimationVisibility => ({
+  cards: ["faceUp", "faceUp", "faceUp"],
+  closing: FULL,
+  connections: FULL,
+  divider: true,
+  done: true,
+  header: true,
+  opening: FULL,
+  sections: [FULL, FULL, FULL],
+  synthesis: FULL,
+});
 
-function textLengths(reading: FullReading) {
+const textLengths = (reading: FullReading) => {
   const connectionsText = [
     ...reading.relational.dignities.map((d) => d.detail),
     reading.relational.suitDominance?.detail,
@@ -243,9 +241,9 @@ function textLengths(reading: FullReading) {
     ],
     synthesis: reading.narrative.synthesis.length,
   };
-}
+};
 
-function tick(state: InternalState, reading: FullReading): InternalState {
+const tick = (state: InternalState, reading: FullReading): InternalState => {
   if (state.skipped || state.phase === "done") return state;
 
   const next = { ...state, ticks: state.ticks + 1 };
@@ -334,4 +332,4 @@ function tick(state: InternalState, reading: FullReading): InternalState {
   }
 
   return next;
-}
+};

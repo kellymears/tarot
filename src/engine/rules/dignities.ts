@@ -8,22 +8,25 @@ import {
   SUIT_ELEMENT,
 } from "../../constants.js";
 
-function elementFor(card: SpreadCard): Element | null {
+const elementFor = (card: SpreadCard): Element | null => {
   if (card.card.suit) return SUIT_ELEMENT[card.card.suit];
   return MAJOR_ELEMENT[card.card.id] ?? null;
-}
+};
 
-function isPair(a: Element, b: Element) {
-  return ([x, y]: [Element, Element]) =>
+const isPair =
+  (a: Element, b: Element) =>
+  ([x, y]: [Element, Element]) =>
     (a === x && b === y) || (a === y && b === x);
-}
 
-function relationship(a: Element, b: Element): "allied" | "enemy" | "neutral" {
+const relationship = (
+  a: Element,
+  b: Element,
+): "allied" | "enemy" | "neutral" => {
   if (a === b) return "allied";
   if (ALLIED.some(isPair(a, b))) return "allied";
   if (ENEMY.some(isPair(a, b))) return "enemy";
   return "neutral";
-}
+};
 
 const relationshipDetail: Record<
   "allied" | "enemy" | "neutral",

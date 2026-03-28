@@ -44,8 +44,8 @@ export function resolve(
   return { reading: interpret(spread), spread };
 }
 
-function draw(n: number): SpreadCard[] {
-  return shuffle(cards)
+const draw = (n: number): SpreadCard[] =>
+  shuffle(cards)
     .slice(0, n)
     .map<SpreadCard>((card, i) => ({
       card,
@@ -55,13 +55,12 @@ function draw(n: number): SpreadCard[] {
           : ("upright" as Orientation),
       position: POSITIONS[i],
     }));
-}
 
-function shuffle<T>(array: T[]): T[] {
+const shuffle = <T>(array: T[]): T[] => {
   const copy = [...array];
   for (let i = copy.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [copy[i], copy[j]] = [copy[j], copy[i]];
   }
   return copy;
-}
+};
