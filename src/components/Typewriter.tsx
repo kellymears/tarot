@@ -18,8 +18,8 @@ export function Typewriter({ chars, children }: TypewriterProps) {
 }
 
 function truncateVisible(str: string, maxChars: number): string {
-  let visible = 0;
-  let i = 0;
+  let i = 0,
+    visible = 0;
 
   while (i < str.length && visible < maxChars) {
     if (str[i] === "\x1b") {

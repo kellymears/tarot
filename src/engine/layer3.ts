@@ -48,51 +48,41 @@ function buildClosing(
 }
 
 function buildOpening(relational: RelationalAnalysis): string {
-  const parts: string[] = [];
-
-  parts.push(relational.arcanaWeight.detail);
-
-  if (relational.reversalPattern.count > 0) {
-    parts.push(relational.reversalPattern.detail);
-  }
-
-  return parts.join(" ");
+  return [
+    relational.arcanaWeight.detail,
+    relational.reversalPattern.count > 0
+      ? relational.reversalPattern.detail
+      : undefined,
+  ]
+    .filter(Boolean)
+    .join(" ");
 }
 
 function buildSynthesis(
   cards: CardReading[],
   relational: RelationalAnalysis,
 ): string {
-  const parts: string[] = [];
+  return [
+    arcLabel(cards),
+    relational.suitDominance?.detail,
+    relational.numericalPattern?.detail,
+    dignityLabel(relational),
+  ]
+    .filter(Boolean)
+    .join(" ");
+}
 
-  parts.push(arcLabel(cards));
-
-  if (relational.suitDominance) {
-    parts.push(relational.suitDominance.detail);
-  }
-
-  if (relational.numericalPattern) {
-    parts.push(relational.numericalPattern.detail);
-  }
-
+function dignityLabel(relational: RelationalAnalysis): string | undefined {
   const hasEnemy = relational.dignities.some((d) => d.relationship === "enemy");
   const hasAllied = relational.dignities.some(
     (d) => d.relationship === "allied",
   );
 
-  if (hasEnemy && hasAllied) {
-    parts.push(
-      "The elemental tensions and alliances in this spread suggest a journey that is neither entirely smooth nor entirely obstructed — balance is the work.",
-    );
-  } else if (hasEnemy) {
-    parts.push(
-      "Elemental friction runs through this reading, asking you to reconcile competing energies rather than choose between them.",
-    );
-  } else if (hasAllied) {
-    parts.push(
-      "The elemental harmony across your cards suggests a natural flow — the energies support rather than hinder each other.",
-    );
-  }
-
-  return parts.join(" ");
+  if (hasEnemy && hasAllied)
+    return "The elemental tensions and alliances in this spread suggest a journey that is neither entirely smooth nor entirely obstructed — balance is the work.";
+  if (hasEnemy)
+    return "Elemental friction runs through this reading, asking you to reconcile competing energies rather than choose between them.";
+  if (hasAllied)
+    return "The elemental harmony across your cards suggests a natural flow — the energies support rather than hinder each other.";
+  return undefined;
 }

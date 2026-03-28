@@ -7,19 +7,11 @@ interface RelationalInsightProps {
 }
 
 export function RelationalInsight({ analysis }: RelationalInsightProps) {
-  const insights: string[] = [];
-
-  for (const dignity of analysis.dignities) {
-    insights.push(dignity.detail);
-  }
-
-  if (analysis.suitDominance) {
-    insights.push(analysis.suitDominance.detail);
-  }
-
-  if (analysis.numericalPattern) {
-    insights.push(analysis.numericalPattern.detail);
-  }
+  const insights = [
+    ...analysis.dignities.map((d) => d.detail),
+    analysis.suitDominance?.detail,
+    analysis.numericalPattern?.detail,
+  ].filter(Boolean) as string[];
 
   if (insights.length === 0) return null;
 
