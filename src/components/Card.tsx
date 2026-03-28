@@ -1,4 +1,4 @@
-import { Box, Text } from "ink";
+import { Box, Newline, Text } from "ink";
 
 import type { TarotCard } from "../data/cards.js";
 
@@ -39,17 +39,29 @@ export function Card({ card, reversed }: CardProps) {
         borderColor="magenta"
         borderStyle="round"
         flexDirection="column"
+        height={17}
+        paddingBottom={1}
+        paddingTop={1}
         paddingX={2}
-        paddingY={1}
         width={28}
       >
         <Text dimColor>{card.arcana === "major" ? "M" : "m"}</Text>
+        <Newline />
+        <Newline />
+        <Newline />
+        <Newline />
         <Box justifyContent="center">
           <Text bold>{toRoman(card.number)}</Text>
         </Box>
+        <Newline />
         <Box justifyContent="center">
           <Text color="cyan">{card.name}</Text>
         </Box>
+        <Newline />
+        <Newline />
+        <Newline />
+        <Newline />
+        <Newline />
       </Box>
       {reversed && (
         <Box justifyContent="center" width={28}>

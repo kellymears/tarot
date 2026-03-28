@@ -15,7 +15,7 @@ interface AnimatedCardProps {
 
 export function AnimatedCard({ card, reversed, state }: AnimatedCardProps) {
   if (state === "hidden") {
-    return <Box height={7} width={28} />;
+    return <Box height={17} width={28} />;
   }
   if (state === "faceDown") {
     return <CardBack />;

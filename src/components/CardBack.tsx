@@ -10,9 +10,33 @@ export function CardBack() {
       borderStyle="round"
       flexDirection="column"
       paddingX={2}
-      paddingY={1}
+      paddingY={2}
       width={28}
     >
+      <Box justifyContent="center">
+        <Text dimColor>{ROW_A}</Text>
+      </Box>
+      <Box justifyContent="center">
+        <Text dimColor>{ROW_B}</Text>
+      </Box>
+      <Box justifyContent="center">
+        <Text dimColor>{ROW_A}</Text>
+      </Box>
+      <Box justifyContent="center">
+        <Text dimColor>{ROW_B}</Text>
+      </Box>
+      <Box justifyContent="center">
+        <Text dimColor>{ROW_A}</Text>
+      </Box>
+      <Box justifyContent="center">
+        <Text dimColor>{ROW_B}</Text>
+      </Box>
+      <Box justifyContent="center">
+        <Text dimColor>{ROW_A}</Text>
+      </Box>
+      <Box justifyContent="center">
+        <Text dimColor>{ROW_B}</Text>
+      </Box>
       <Box justifyContent="center">
         <Text dimColor>{ROW_A}</Text>
       </Box>
