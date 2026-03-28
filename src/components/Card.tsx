@@ -2,7 +2,7 @@ import { Box, Text } from "ink";
 
 import type { TarotCard } from "../data/cards.js";
 
-import { CARD_HEIGHT, CARD_WIDTH, NUMERALS } from "../constants.js";
+import { CARD, NUMERALS } from "../constants.js";
 
 interface CardProps {
   card: TarotCard;
@@ -16,11 +16,11 @@ export function Card({ card, reversed }: CardProps) {
         borderColor="magenta"
         borderStyle="round"
         flexDirection="column"
-        height={CARD_HEIGHT}
+        height={CARD.height}
         paddingBottom={1}
         paddingTop={1}
         paddingX={2}
-        width={CARD_WIDTH}
+        width={CARD.width}
       >
         <Text dimColor>{card.arcana === "major" ? "M" : "m"}</Text>
         <Box flexGrow={1} />
@@ -33,7 +33,7 @@ export function Card({ card, reversed }: CardProps) {
         <Box flexGrow={1} />
       </Box>
       {reversed && (
-        <Box justifyContent="center" width={CARD_WIDTH}>
+        <Box justifyContent="center" width={CARD.width}>
           <Text dimColor>(Reversed)</Text>
         </Box>
       )}

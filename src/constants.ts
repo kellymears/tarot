@@ -2,21 +2,43 @@ import type { Suit } from "./data/cards.js";
 import type { Position } from "./data/interpretations/types.js";
 import type { Element } from "./engine/types.js";
 
-export const ALLIED: [Element, Element][] = [
-  ["fire", "air"],
-  ["water", "earth"],
-];
+// Timing for the deal/reveal/typewriter sequence.
+// Tick-based phases (header, deal, reveal, divider) count frames at
+// `tickMs` intervals. Text phases advance `charsPerTick` per frame.
+export const ANIMATION = {
+  charsPerTick: 25,
+  dealCardTicks: 24,
+  dividerTicks: 12,
+  headerTicks: 30,
+  revealCardTicks: 21,
+  tickMs: 33,
+} as const;
 
-export const CARD_HEIGHT = 17;
+// Fixed dimensions (rows × columns) for card components.
+// `back` holds the two alternating rows of the face-down pattern.
+export const CARD = {
+  back: {
+    rowA: "◇ · ◇ · ◇ · ◇ · ◇",
+    rowB: "· ◇ · ◇ · ◇ · ◇ ·",
+  },
+  height: 17,
+  width: 28,
+} as const;
 
-export const CARD_WIDTH = 28;
+// Allied elements strengthen each other; enemy elements create tension.
+// Used by the dignity analysis to describe relationships between cards.
+export const DIGNITIES = {
+  allied: [
+    ["fire", "air"],
+    ["water", "earth"],
+  ] as [Element, Element][],
+  enemy: [
+    ["fire", "water"],
+    ["air", "earth"],
+  ] as [Element, Element][],
+};
 
-export const CHARS_PER_TICK = 25;
-
-export const DEAL_CARD_TICKS = 24;
-
-export const DIVIDER_TICKS = 12;
-
+// Display names for the four classical elements.
 export const ELEMENT_NAME: Record<Element, string> = {
   air: "Air",
   earth: "Earth",
@@ -24,13 +46,7 @@ export const ELEMENT_NAME: Record<Element, string> = {
   water: "Water",
 };
 
-export const ENEMY: [Element, Element][] = [
-  ["fire", "water"],
-  ["air", "earth"],
-];
-
-export const HEADER_TICKS = 30;
-
+// Maps each major arcana card (by ID) to its associated element.
 export const MAJOR_ELEMENT: Record<string, Element> = {
   "major-00": "air",
   "major-01": "air",
@@ -56,6 +72,8 @@ export const MAJOR_ELEMENT: Record<string, Element> = {
   "major-21": "earth",
 };
 
+// Numerological meaning for card numbers 0–10.
+// Falls back to a generic label for court cards (11+).
 export const NUMBER_MEANING: Record<number, string> = {
   0: "infinite potential and the void",
   1: "new beginnings and initiative",
@@ -70,6 +88,7 @@ export const NUMBER_MEANING: Record<number, string> = {
   10: "endings that become beginnings",
 };
 
+// Roman numeral labels for major arcana numbers (0–XXI).
 export const NUMERALS = [
   "0",
   "I",
@@ -95,20 +114,17 @@ export const NUMERALS = [
   "XXI",
 ];
 
+// Human-readable labels for the three spread positions.
 export const POSITION_LABELS: Record<Position, string> = {
   future: "Future",
   past: "Past",
   present: "Present",
 };
 
+// Ordered spread positions — determines draw and display order.
 export const POSITIONS: Position[] = ["past", "present", "future"];
 
-export const REVEAL_CARD_TICKS = 21;
-
-export const ROW_A = "◇ · ◇ · ◇ · ◇ · ◇";
-
-export const ROW_B = "· ◇ · ◇ · ◇ · ◇ ·";
-
+// Maps each minor arcana suit to its classical element.
 export const SUIT_ELEMENT: Record<Suit, Element> = {
   cups: "water",
   pentacles: "earth",
@@ -116,11 +132,10 @@ export const SUIT_ELEMENT: Record<Suit, Element> = {
   wands: "fire",
 };
 
+// Thematic description for each suit, used in narrative passages.
 export const SUIT_THEME: Record<Suit, string> = {
   cups: "emotion, intuition, and relationships",
   pentacles: "material concerns, work, and the physical world",
   swords: "intellect, conflict, and hard truths",
   wands: "passion, creativity, and willpower",
 };
-
-export const TICK_MS = 33;

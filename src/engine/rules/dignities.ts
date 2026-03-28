@@ -1,9 +1,8 @@
 import type { Element, ElementalDignity, SpreadCard } from "../types.js";
 
 import {
-  ALLIED,
+  DIGNITIES,
   ELEMENT_NAME,
-  ENEMY,
   MAJOR_ELEMENT,
   SUIT_ELEMENT,
 } from "../../constants.js";
@@ -23,8 +22,8 @@ const relationship = (
   b: Element,
 ): "allied" | "enemy" | "neutral" => {
   if (a === b) return "allied";
-  if (ALLIED.some(isPair(a, b))) return "allied";
-  if (ENEMY.some(isPair(a, b))) return "enemy";
+  if (DIGNITIES.allied.some(isPair(a, b))) return "allied";
+  if (DIGNITIES.enemy.some(isPair(a, b))) return "enemy";
   return "neutral";
 };
 

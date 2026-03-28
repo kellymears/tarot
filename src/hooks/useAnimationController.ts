@@ -2,14 +2,7 @@ import { useEffect, useRef, useState } from "react";
 
 import type { FullReading } from "../engine/types.js";
 
-import {
-  CHARS_PER_TICK,
-  DEAL_CARD_TICKS,
-  DIVIDER_TICKS,
-  HEADER_TICKS,
-  REVEAL_CARD_TICKS,
-  TICK_MS,
-} from "../constants.js";
+import { ANIMATION } from "../constants.js";
 
 export interface AnimationVisibility {
   cards: [CardState, CardState, CardState];
@@ -75,7 +68,7 @@ export function useAnimationController(reading: FullReading): {
     const id = setInterval(() => {
       stateRef.current = tick(stateRef.current, reading);
       setVisibility(computeVisibility(stateRef.current));
-    }, TICK_MS);
+    }, ANIMATION.tickMs);
 
     return () => clearInterval(id);
   }, [reading]);
@@ -251,21 +244,21 @@ const tick = (state: InternalState, reading: FullReading): InternalState => {
 
   switch (next.phase) {
     case "closing":
-      next.chars += CHARS_PER_TICK;
+      next.chars += ANIMATION.charsPerTick;
       if (next.chars >= lengths.closing) {
         return { ...next, phase: "done", ticks: 0 };
       }
       break;
 
     case "connections":
-      next.chars += CHARS_PER_TICK;
+      next.chars += ANIMATION.charsPerTick;
       if (next.chars >= lengths.connections) {
         return { ...next, chars: 0, phase: "synthesis", ticks: 0 };
       }
       break;
 
     case "deal":
-      if (next.ticks >= DEAL_CARD_TICKS) {
+      if (next.ticks >= ANIMATION.dealCardTicks) {
         if (next.cardIndex < 2) {
           return { ...next, cardIndex: next.cardIndex + 1, ticks: 0 };
         }
@@ -274,19 +267,19 @@ const tick = (state: InternalState, reading: FullReading): InternalState => {
       break;
 
     case "divider":
-      if (next.ticks >= DIVIDER_TICKS) {
+      if (next.ticks >= ANIMATION.dividerTicks) {
         return { ...next, chars: 0, phase: "opening", ticks: 0 };
       }
       break;
 
     case "header":
-      if (next.ticks >= HEADER_TICKS) {
+      if (next.ticks >= ANIMATION.headerTicks) {
         return { ...next, cardIndex: 0, phase: "deal", ticks: 0 };
       }
       break;
 
     case "opening":
-      next.chars += CHARS_PER_TICK;
+      next.chars += ANIMATION.charsPerTick;
       if (next.chars >= lengths.opening) {
         return {
           ...next,
@@ -299,7 +292,7 @@ const tick = (state: InternalState, reading: FullReading): InternalState => {
       break;
 
     case "reveal":
-      if (next.ticks >= REVEAL_CARD_TICKS) {
+      if (next.ticks >= ANIMATION.revealCardTicks) {
         if (next.cardIndex < 2) {
           return { ...next, cardIndex: next.cardIndex + 1, ticks: 0 };
         }
@@ -308,7 +301,7 @@ const tick = (state: InternalState, reading: FullReading): InternalState => {
       break;
 
     case "sections":
-      next.chars += CHARS_PER_TICK;
+      next.chars += ANIMATION.charsPerTick;
       if (next.chars >= lengths.sections[next.sectionIndex]) {
         if (next.sectionIndex < 2) {
           return {
@@ -324,7 +317,7 @@ const tick = (state: InternalState, reading: FullReading): InternalState => {
       break;
 
     case "synthesis":
-      next.chars += CHARS_PER_TICK;
+      next.chars += ANIMATION.charsPerTick;
       if (next.chars >= lengths.synthesis) {
         return { ...next, chars: 0, phase: "closing", ticks: 0 };
       }

@@ -1,6 +1,6 @@
 import { Box, Text } from "ink";
 
-import { CARD_WIDTH, ROW_A, ROW_B } from "../constants.js";
+import { CARD } from "../constants.js";
 
 export function CardBack() {
   return (
@@ -10,40 +10,40 @@ export function CardBack() {
       flexDirection="column"
       paddingX={2}
       paddingY={2}
-      width={CARD_WIDTH}
+      width={CARD.width}
     >
       <Box justifyContent="center">
-        <Text dimColor>{ROW_A}</Text>
+        <Text dimColor>{CARD.back.rowA}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_B}</Text>
+        <Text dimColor>{CARD.back.rowB}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_A}</Text>
+        <Text dimColor>{CARD.back.rowA}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_B}</Text>
+        <Text dimColor>{CARD.back.rowB}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_A}</Text>
+        <Text dimColor>{CARD.back.rowA}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_B}</Text>
+        <Text dimColor>{CARD.back.rowB}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_A}</Text>
+        <Text dimColor>{CARD.back.rowA}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_B}</Text>
+        <Text dimColor>{CARD.back.rowB}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_A}</Text>
+        <Text dimColor>{CARD.back.rowA}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_B}</Text>
+        <Text dimColor>{CARD.back.rowB}</Text>
       </Box>
       <Box justifyContent="center">
-        <Text dimColor>{ROW_A}</Text>
+        <Text dimColor>{CARD.back.rowA}</Text>
       </Box>
     </Box>
   );
