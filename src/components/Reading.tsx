@@ -7,18 +7,18 @@ import { ReadingSection } from "./ReadingSection.js";
 import { RelationalInsight } from "./RelationalInsight.js";
 import { Text } from "./Text.js";
 
-const TEXT_WIDTH = 76;
-const BORDERED_WIDTH = TEXT_WIDTH - 2;
-
 interface ReadingProps {
   reading: FullReading;
   spread: SpreadCard[];
+  textWidth: number;
 }
 
-export function Reading({ reading, spread }: ReadingProps) {
+export function Reading({ reading, spread, textWidth }: ReadingProps) {
+  const borderedWidth = textWidth - 2;
+
   return (
     <Box flexDirection="column" gap={1}>
-      <Text dimColor italic textWidth={TEXT_WIDTH}>
+      <Text dimColor italic textWidth={textWidth}>
         {reading.narrative.opening}
       </Text>
 
@@ -27,10 +27,11 @@ export function Reading({ reading, spread }: ReadingProps) {
           key={cardReading.position}
           passage={cardReading.passage}
           spreadCard={spread[i]}
+          textWidth={textWidth}
         />
       ))}
 
-      <RelationalInsight analysis={reading.relational} />
+      <RelationalInsight analysis={reading.relational} textWidth={textWidth} />
 
       <Box flexDirection="column">
         <Text bold color="green">
@@ -44,11 +45,11 @@ export function Reading({ reading, spread }: ReadingProps) {
           borderTop={false}
           paddingLeft={1}
         >
-          <Text textWidth={BORDERED_WIDTH}>{reading.narrative.synthesis}</Text>
+          <Text textWidth={borderedWidth}>{reading.narrative.synthesis}</Text>
         </Box>
       </Box>
 
-      <Text bold color="magenta" textWidth={TEXT_WIDTH}>
+      <Text bold color="magenta" textWidth={textWidth}>
         {reading.narrative.closing}
       </Text>
 

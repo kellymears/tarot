@@ -15,6 +15,10 @@ export const ANIMATION = {
   tickMs: 33,
 } as const;
 
+// Maximum width for the text content area. Clamped to terminal width at
+// render time so narrow terminals don't overflow.
+export const MAX_TEXT_WIDTH = 76;
+
 // Fixed dimensions (rows × columns) for card components.
 // `back` holds the two alternating rows of the face-down pattern.
 export const CARD = {

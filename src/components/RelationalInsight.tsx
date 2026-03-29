@@ -4,13 +4,16 @@ import type { RelationalAnalysis } from "../engine/types.js";
 
 import { Text } from "./Text.js";
 
-const CONTENT_WIDTH = 72; // parent TEXT_WIDTH (76) minus border (2) + paddingX (2)
-
 interface RelationalInsightProps {
   analysis: RelationalAnalysis;
+  textWidth: number;
 }
 
-export function RelationalInsight({ analysis }: RelationalInsightProps) {
+export function RelationalInsight({
+  analysis,
+  textWidth,
+}: RelationalInsightProps) {
+  const contentWidth = textWidth - 4; // border (2) + paddingX (2)
   const insights = [
     ...analysis.dignities.map((d) => d.detail),
     analysis.suitDominance?.detail,
@@ -33,7 +36,7 @@ export function RelationalInsight({ analysis }: RelationalInsightProps) {
 
       <Box flexDirection="column" rowGap={1}>
         {insights.map((insight, i) => (
-          <Text dimColor key={i} textWidth={CONTENT_WIDTH}>
+          <Text dimColor key={i} textWidth={contentWidth}>
             {insight}
           </Text>
         ))}

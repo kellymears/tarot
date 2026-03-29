@@ -11,14 +11,18 @@ import {
 } from "../constants.js";
 import { Text } from "./Text.js";
 
-const BORDERED_WIDTH = 74; // parent TEXT_WIDTH (76) minus border (1) + paddingLeft (1)
-
 interface ReadingSectionProps {
   passage: string;
   spreadCard: SpreadCard;
+  textWidth: number;
 }
 
-export function ReadingSection({ passage, spreadCard }: ReadingSectionProps) {
+export function ReadingSection({
+  passage,
+  spreadCard,
+  textWidth,
+}: ReadingSectionProps) {
+  const borderedWidth = textWidth - 2; // border (1) + paddingLeft (1)
   const { card, position } = spreadCard;
   const color = card.suit ? SUIT_COLOR[card.suit] : "magenta";
   const symbol = card.suit ? SUIT_SYMBOL[card.suit] : MAJOR_SYMBOL;
@@ -40,7 +44,7 @@ export function ReadingSection({ passage, spreadCard }: ReadingSectionProps) {
         borderTop={false}
         paddingLeft={1}
       >
-        <Text textWidth={BORDERED_WIDTH}>{passage}</Text>
+        <Text textWidth={borderedWidth}>{passage}</Text>
       </Box>
     </Box>
   );

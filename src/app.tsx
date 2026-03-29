@@ -8,6 +8,7 @@ import { Typewriter } from "./components/Typewriter.js";
 import {
   CARD,
   MAJOR_SYMBOL,
+  MAX_TEXT_WIDTH,
   ORNAMENT,
   POSITION_LABELS,
   POSITION_SUBTITLES,
@@ -17,8 +18,6 @@ import {
 import { useAnimationController } from "./hooks/useAnimationController.js";
 import { resolve } from "./resolve.js";
 
-const TEXT_WIDTH = 76;
-const BORDERED_WIDTH = TEXT_WIDTH - 2; // left border (1) + paddingLeft (1)
 const CARD_ROW_WIDTH = CARD.width * 3 + 2; // 3 cards + 2 gaps
 
 interface AppProps {
@@ -31,6 +30,8 @@ export function App({ animate, forceNew, name }: AppProps) {
   const { exit } = useApp();
   const { stdout } = useStdout();
   const columns = stdout.columns ?? CARD_ROW_WIDTH;
+  const textWidth = Math.min(MAX_TEXT_WIDTH, columns);
+  const borderedWidth = textWidth - 2;
   const paddingX = Math.max(0, Math.floor((columns - CARD_ROW_WIDTH) / 2));
 
   const [{ cached, reading, spread }] = useState(() => resolve(name, forceNew));
@@ -107,14 +108,14 @@ export function App({ animate, forceNew, name }: AppProps) {
       )}
 
       {v.divider && (
-        <Box flexDirection="column" gap={1} width={TEXT_WIDTH}>
+        <Box flexDirection="column" gap={1} width={textWidth}>
           <Box justifyContent="center">
             <Text dimColor>{"───────────── ✦ ─────────────"}</Text>
           </Box>
 
           {v.opening.visible && (
             <Typewriter chars={v.opening.chars}>
-              <Text dimColor italic textWidth={TEXT_WIDTH}>
+              <Text dimColor italic textWidth={textWidth}>
                 {reading.narrative.opening}
               </Text>
             </Typewriter>
@@ -150,9 +151,7 @@ export function App({ animate, forceNew, name }: AppProps) {
                   paddingLeft={1}
                 >
                   <Typewriter chars={v.sections[i].chars}>
-                    <Text textWidth={BORDERED_WIDTH}>
-                      {cardReading.passage}
-                    </Text>
+                    <Text textWidth={borderedWidth}>{cardReading.passage}</Text>
                   </Typewriter>
                 </Box>
               </Box>
@@ -160,7 +159,10 @@ export function App({ animate, forceNew, name }: AppProps) {
           })}
 
           {v.connections.visible && (
-            <RelationalInsight analysis={reading.relational} />
+            <RelationalInsight
+              analysis={reading.relational}
+              textWidth={textWidth}
+            />
           )}
 
           {v.synthesis.visible && (
@@ -177,7 +179,7 @@ export function App({ animate, forceNew, name }: AppProps) {
                 paddingLeft={1}
               >
                 <Typewriter chars={v.synthesis.chars}>
-                  <Text textWidth={BORDERED_WIDTH}>
+                  <Text textWidth={borderedWidth}>
                     {reading.narrative.synthesis}
                   </Text>
                 </Typewriter>
@@ -188,7 +190,7 @@ export function App({ animate, forceNew, name }: AppProps) {
           {v.closing.visible && (
             <Box flexDirection="column" gap={1}>
               <Typewriter chars={v.closing.chars}>
-                <Text bold color="magenta" textWidth={TEXT_WIDTH}>
+                <Text bold color="magenta" textWidth={textWidth}>
                   {reading.narrative.closing}
                 </Text>
               </Typewriter>
