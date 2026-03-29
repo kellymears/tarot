@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 import type { FullReading } from "../engine/types.js";
 
@@ -39,6 +39,15 @@ type Phase =
   | "sections"
   | "synthesis";
 
+interface TextLengths {
+  closing: number;
+  connections: number;
+  hasConnections: boolean;
+  opening: number;
+  sections: [number, number, number];
+  synthesis: number;
+}
+
 interface TypewriterState {
   chars: number;
   visible: boolean;
@@ -47,10 +56,37 @@ interface TypewriterState {
 const HIDDEN: TypewriterState = { chars: 0, visible: false };
 const FULL: TypewriterState = { chars: Infinity, visible: true };
 
+const PHASE_ORDER: Phase[] = [
+  "header",
+  "deal",
+  "reveal",
+  "divider",
+  "opening",
+  "sections",
+  "connections",
+  "synthesis",
+  "closing",
+  "done",
+];
+
+const SKIPPED: AnimationVisibility = {
+  cards: ["faceUp", "faceUp", "faceUp"],
+  closing: FULL,
+  connections: FULL,
+  divider: true,
+  done: true,
+  header: true,
+  opening: FULL,
+  sections: [FULL, FULL, FULL],
+  synthesis: FULL,
+};
+
 export function useAnimationController(reading: FullReading): {
   skip: () => void;
   visibility: AnimationVisibility;
 } {
+  const lengths = useMemo(() => textLengths(reading), [reading]);
+
   const stateRef = useRef<InternalState>({
     cardIndex: 0,
     chars: 0,
@@ -66,69 +102,45 @@ export function useAnimationController(reading: FullReading): {
 
   useEffect(() => {
     const id = setInterval(() => {
-      stateRef.current = tick(stateRef.current, reading);
-      setVisibility(computeVisibility(stateRef.current));
+      const next = tick(stateRef.current, lengths);
+      stateRef.current = next;
+      setVisibility(computeVisibility(next));
+      if (next.phase === "done") clearInterval(id);
     }, ANIMATION.tickMs);
 
     return () => clearInterval(id);
-  }, [reading]);
+  }, [reading, lengths]);
 
   const skip = () => {
     stateRef.current = { ...stateRef.current, skipped: true };
-    setVisibility(skippedVisibility());
+    setVisibility(SKIPPED);
   };
 
   return { skip, visibility };
 }
 
 const computeVisibility = (state: InternalState): AnimationVisibility => {
-  if (state.skipped) return skippedVisibility();
+  if (state.skipped) return SKIPPED;
+
+  const phaseIndex = PHASE_ORDER.indexOf(state.phase);
+  const past = (p: Phase) => PHASE_ORDER.indexOf(p) < phaseIndex;
+  const active = (p: Phase) => state.phase === p;
+
+  const typewriter = (p: Phase): TypewriterState =>
+    past(p) ? FULL : active(p) ? { chars: state.chars, visible: true } : HIDDEN;
 
   const cards: [CardState, CardState, CardState] = [
     "hidden",
     "hidden",
     "hidden",
   ];
-  const sections: [TypewriterState, TypewriterState, TypewriterState] = [
-    HIDDEN,
-    HIDDEN,
-    HIDDEN,
-  ];
-  let header = false;
-  let divider = false;
-  let opening: TypewriterState = HIDDEN;
-  let connections: TypewriterState = HIDDEN;
-  let synthesis: TypewriterState = HIDDEN;
-  let closing: TypewriterState = HIDDEN;
-  let done = false;
 
-  const phaseOrder: Phase[] = [
-    "header",
-    "deal",
-    "reveal",
-    "divider",
-    "opening",
-    "sections",
-    "connections",
-    "synthesis",
-    "closing",
-    "done",
-  ];
-  const phaseIndex = phaseOrder.indexOf(state.phase);
-  const past = (p: Phase) => phaseOrder.indexOf(p) < phaseIndex;
-  const active = (p: Phase) => state.phase === p;
-
-  // Header
-  if (active("header") || past("header")) header = true;
-
-  // Cards - deal phase
   if (past("deal")) {
     cards[0] = cards[1] = cards[2] = "faceDown";
   } else if (active("deal")) {
     for (let i = 0; i <= state.cardIndex; i++) cards[i] = "faceDown";
   }
 
-  // Cards - reveal phase
   if (past("reveal")) {
     cards[0] = cards[1] = cards[2] = "faceUp";
   } else if (active("reveal")) {
@@ -138,17 +150,11 @@ const computeVisibility = (state: InternalState): AnimationVisibility => {
     }
   }
 
-  // Divider
-  if (active("divider") || past("divider")) divider = true;
-
-  // Opening
-  if (past("opening")) {
-    opening = FULL;
-  } else if (active("opening")) {
-    opening = { chars: state.chars, visible: true };
-  }
-
-  // Sections
+  const sections: [TypewriterState, TypewriterState, TypewriterState] = [
+    HIDDEN,
+    HIDDEN,
+    HIDDEN,
+  ];
   if (past("sections")) {
     sections[0] = sections[1] = sections[2] = FULL;
   } else if (active("sections")) {
@@ -156,69 +162,25 @@ const computeVisibility = (state: InternalState): AnimationVisibility => {
     sections[state.sectionIndex] = { chars: state.chars, visible: true };
   }
 
-  // Connections
-  if (past("connections")) {
-    connections = FULL;
-  } else if (active("connections")) {
-    connections = { chars: state.chars, visible: true };
-  }
-
-  // Synthesis
-  if (past("synthesis")) {
-    synthesis = FULL;
-  } else if (active("synthesis")) {
-    synthesis = { chars: state.chars, visible: true };
-  }
-
-  // Closing
-  if (past("closing")) {
-    closing = FULL;
-  } else if (active("closing")) {
-    closing = { chars: state.chars, visible: true };
-  }
-
-  // Done
-  if (active("done")) done = true;
-
   return {
     cards,
-    closing,
-    connections,
-    divider,
-    done,
-    header,
-    opening,
+    closing: typewriter("closing"),
+    connections: typewriter("connections"),
+    divider: active("divider") || past("divider"),
+    done: active("done"),
+    header: active("header") || past("header"),
+    opening: typewriter("opening"),
     sections,
-    synthesis,
+    synthesis: typewriter("synthesis"),
   };
 };
 
-const hasConnections = (reading: FullReading): boolean => {
+const textLengths = (reading: FullReading): TextLengths => {
   const r = reading.relational;
-  return (
-    r.dignities.length > 0 ||
-    r.suitDominance !== null ||
-    r.numericalPattern !== null
-  );
-};
-
-const skippedVisibility = (): AnimationVisibility => ({
-  cards: ["faceUp", "faceUp", "faceUp"],
-  closing: FULL,
-  connections: FULL,
-  divider: true,
-  done: true,
-  header: true,
-  opening: FULL,
-  sections: [FULL, FULL, FULL],
-  synthesis: FULL,
-});
-
-const textLengths = (reading: FullReading) => {
   const connectionsText = [
-    ...reading.relational.dignities.map((d) => d.detail),
-    reading.relational.suitDominance?.detail,
-    reading.relational.numericalPattern?.detail,
+    ...r.dignities.map((d) => d.detail),
+    r.suitDominance?.detail,
+    r.numericalPattern?.detail,
   ]
     .filter(Boolean)
     .join(" ");
@@ -226,6 +188,10 @@ const textLengths = (reading: FullReading) => {
   return {
     closing: reading.narrative.closing.length,
     connections: connectionsText.length,
+    hasConnections:
+      r.dignities.length > 0 ||
+      r.suitDominance !== null ||
+      r.numericalPattern !== null,
     opening: reading.narrative.opening.length,
     sections: reading.cards.map((c) => c.passage.length + 20) as [
       number,
@@ -236,93 +202,75 @@ const textLengths = (reading: FullReading) => {
   };
 };
 
-const tick = (state: InternalState, reading: FullReading): InternalState => {
+const tick = (state: InternalState, lengths: TextLengths): InternalState => {
   if (state.skipped || state.phase === "done") return state;
 
-  const next = { ...state, ticks: state.ticks + 1 };
-  const lengths = textLengths(reading);
+  const t = state.ticks + 1;
+  const c = state.chars + ANIMATION.charsPerTick;
 
-  switch (next.phase) {
+  switch (state.phase) {
     case "closing":
-      next.chars += ANIMATION.charsPerTick;
-      if (next.chars >= lengths.closing) {
-        return { ...next, phase: "done", ticks: 0 };
-      }
-      break;
+      return c >= lengths.closing
+        ? { ...state, chars: c, phase: "done", ticks: 0 }
+        : { ...state, chars: c, ticks: t };
 
     case "connections":
-      next.chars += ANIMATION.charsPerTick;
-      if (next.chars >= lengths.connections) {
-        return { ...next, chars: 0, phase: "synthesis", ticks: 0 };
-      }
-      break;
+      return c >= lengths.connections
+        ? { ...state, chars: 0, phase: "synthesis", ticks: 0 }
+        : { ...state, chars: c, ticks: t };
 
     case "deal":
-      if (next.ticks >= ANIMATION.dealCardTicks) {
-        if (next.cardIndex < 2) {
-          return { ...next, cardIndex: next.cardIndex + 1, ticks: 0 };
-        }
-        return { ...next, cardIndex: 0, phase: "reveal", ticks: 0 };
+      if (t >= ANIMATION.dealCardTicks) {
+        return state.cardIndex < 2
+          ? { ...state, cardIndex: state.cardIndex + 1, ticks: 0 }
+          : { ...state, cardIndex: 0, phase: "reveal", ticks: 0 };
       }
-      break;
+      return { ...state, ticks: t };
 
     case "divider":
-      if (next.ticks >= ANIMATION.dividerTicks) {
-        return { ...next, chars: 0, phase: "opening", ticks: 0 };
-      }
-      break;
+      return t >= ANIMATION.dividerTicks
+        ? { ...state, chars: 0, phase: "opening", ticks: 0 }
+        : { ...state, ticks: t };
 
     case "header":
-      if (next.ticks >= ANIMATION.headerTicks) {
-        return { ...next, cardIndex: 0, phase: "deal", ticks: 0 };
-      }
-      break;
+      return t >= ANIMATION.headerTicks
+        ? { ...state, cardIndex: 0, phase: "deal", ticks: 0 }
+        : { ...state, ticks: t };
 
     case "opening":
-      next.chars += ANIMATION.charsPerTick;
-      if (next.chars >= lengths.opening) {
-        return {
-          ...next,
-          chars: 0,
-          phase: "sections",
-          sectionIndex: 0,
-          ticks: 0,
-        };
-      }
-      break;
+      return c >= lengths.opening
+        ? { ...state, chars: 0, phase: "sections", sectionIndex: 0, ticks: 0 }
+        : { ...state, chars: c, ticks: t };
 
     case "reveal":
-      if (next.ticks >= ANIMATION.revealCardTicks) {
-        if (next.cardIndex < 2) {
-          return { ...next, cardIndex: next.cardIndex + 1, ticks: 0 };
-        }
-        return { ...next, phase: "divider", ticks: 0 };
+      if (t >= ANIMATION.revealCardTicks) {
+        return state.cardIndex < 2
+          ? { ...state, cardIndex: state.cardIndex + 1, ticks: 0 }
+          : { ...state, phase: "divider", ticks: 0 };
       }
-      break;
+      return { ...state, ticks: t };
 
     case "sections":
-      next.chars += ANIMATION.charsPerTick;
-      if (next.chars >= lengths.sections[next.sectionIndex]) {
-        if (next.sectionIndex < 2) {
+      if (c >= lengths.sections[state.sectionIndex]) {
+        if (state.sectionIndex < 2) {
           return {
-            ...next,
+            ...state,
             chars: 0,
-            sectionIndex: next.sectionIndex + 1,
+            sectionIndex: state.sectionIndex + 1,
             ticks: 0,
           };
         }
-        const nextPhase = hasConnections(reading) ? "connections" : "synthesis";
-        return { ...next, chars: 0, phase: nextPhase, ticks: 0 };
+        const nextPhase = lengths.hasConnections ? "connections" : "synthesis";
+        return { ...state, chars: 0, phase: nextPhase, ticks: 0 };
       }
-      break;
+      return { ...state, chars: c, ticks: t };
 
     case "synthesis":
-      next.chars += ANIMATION.charsPerTick;
-      if (next.chars >= lengths.synthesis) {
-        return { ...next, chars: 0, phase: "closing", ticks: 0 };
-      }
-      break;
-  }
+      return c >= lengths.synthesis
+        ? { ...state, chars: 0, phase: "closing", ticks: 0 }
+        : { ...state, chars: c, ticks: t };
 
-  return next;
+    default:
+      return state;
+  }
 };

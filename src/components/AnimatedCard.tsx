@@ -1,12 +1,11 @@
 import { Box } from "ink";
 
 import type { TarotCard } from "../data/cards.js";
+import type { CardState } from "../hooks/useAnimationController.js";
 
 import { CARD } from "../constants.js";
 import { Card } from "./Card.js";
 import { CardBack } from "./CardBack.js";
-
-export type CardState = "faceDown" | "faceUp" | "hidden";
 
 interface AnimatedCardProps {
   card: TarotCard;
