@@ -11,6 +11,7 @@ export const ANIMATION = {
   dividerTicks: 12,
   headerTicks: 30,
   revealCardTicks: 21,
+  sectionPauseChars: 450, // ~600ms breathing room between sections
   tickMs: 33,
 } as const;
 
@@ -18,12 +19,34 @@ export const ANIMATION = {
 // `back` holds the two alternating rows of the face-down pattern.
 export const CARD = {
   back: {
-    rowA: "◇ · ◇ · ◇ · ◇ · ◇",
-    rowB: "· ◇ · ◇ · ◇ · ◇ ·",
+    rowA: "✧ · ✧ · ★ · ✧ · ✧",
+    rowB: "· ✧ · ✧ · ✧ · ✧ ·",
   },
   height: 17,
   width: 28,
 } as const;
+
+// Decorative ornament used in headers and dividers.
+export const ORNAMENT = "✧ · ✦ · ✧";
+
+// Symbol displayed on major arcana card faces.
+export const MAJOR_SYMBOL = "★";
+
+// Suit-specific border/text colors for visual distinction.
+export const SUIT_COLOR: Record<Suit, string> = {
+  cups: "blue",
+  pentacles: "green",
+  swords: "cyan",
+  wands: "yellow",
+};
+
+// Unicode glyphs representing each suit on card faces.
+export const SUIT_SYMBOL: Record<Suit, string> = {
+  cups: "☽",
+  pentacles: "✦",
+  swords: "△",
+  wands: "✧",
+};
 
 // Allied elements strengthen each other; enemy elements create tension.
 // Used by the dignity analysis to describe relationships between cards.
@@ -119,6 +142,13 @@ export const POSITION_LABELS: Record<Position, string> = {
   future: "Future",
   past: "Past",
   present: "Present",
+};
+
+// Evocative subtitles for each spread position.
+export const POSITION_SUBTITLES: Record<Position, string> = {
+  future: "what beckons",
+  past: "what shaped you",
+  present: "where you stand",
 };
 
 // Ordered spread positions — determines draw and display order.
