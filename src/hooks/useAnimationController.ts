@@ -81,26 +81,36 @@ const SKIPPED: AnimationVisibility = {
   synthesis: FULL,
 };
 
-export function useAnimationController(reading: FullReading): {
+interface AnimationOptions {
+  skip?: boolean;
+}
+
+export function useAnimationController(
+  reading: FullReading,
+  options?: AnimationOptions,
+): {
   skip: () => void;
   visibility: AnimationVisibility;
 } {
+  const startSkipped = options?.skip === true;
   const lengths = useMemo(() => textLengths(reading), [reading]);
 
   const stateRef = useRef<InternalState>({
     cardIndex: 0,
     chars: 0,
-    phase: "header",
+    phase: startSkipped ? "done" : "header",
     sectionIndex: 0,
-    skipped: false,
+    skipped: startSkipped,
     ticks: 0,
   });
 
   const [visibility, setVisibility] = useState<AnimationVisibility>(() =>
-    computeVisibility(stateRef.current),
+    startSkipped ? SKIPPED : computeVisibility(stateRef.current),
   );
 
   useEffect(() => {
+    if (startSkipped) return;
+
     const id = setInterval(() => {
       const next = tick(stateRef.current, lengths);
       stateRef.current = next;
@@ -109,7 +119,7 @@ export function useAnimationController(reading: FullReading): {
     }, ANIMATION.tickMs);
 
     return () => clearInterval(id);
-  }, [reading, lengths]);
+  }, [reading, lengths, startSkipped]);
 
   const skip = () => {
     stateRef.current = { ...stateRef.current, skipped: true };
@@ -193,11 +203,9 @@ const textLengths = (reading: FullReading): TextLengths => {
       r.suitDominance !== null ||
       r.numericalPattern !== null,
     opening: reading.narrative.opening.length,
-    sections: reading.cards.map((c) => c.passage.length + 20) as [
-      number,
-      number,
-      number,
-    ],
+    sections: reading.cards.map(
+      (c) => c.passage.length + ANIMATION.sectionPauseChars,
+    ) as [number, number, number],
     synthesis: reading.narrative.synthesis.length,
   };
 };
