@@ -10,6 +10,7 @@ export function resolve(
   name: string,
   forceNew: boolean,
 ): {
+  cached: boolean;
   reading: FullReading;
   spread: SpreadCard[];
 } {
@@ -27,7 +28,7 @@ export function resolve(
         .filter((s): s is SpreadCard => s !== null);
 
       if (spread.length === stored.length) {
-        return { reading: interpret(spread), spread };
+        return { cached: true, reading: interpret(spread), spread };
       }
     }
   }
@@ -41,7 +42,7 @@ export function resolve(
       position: s.position,
     })),
   );
-  return { reading: interpret(spread), spread };
+  return { cached: false, reading: interpret(spread), spread };
 }
 
 const draw = (n: number): SpreadCard[] =>

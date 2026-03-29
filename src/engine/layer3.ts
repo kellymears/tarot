@@ -25,26 +25,27 @@ const buildClosing = (
   relational: RelationalAnalysis,
 ): string => {
   const future = cards.find((c) => c.position === "future");
-  if (!future) return "The cards have spoken. Sit with what they reveal.";
+  if (!future)
+    return "The cards have spoken. Sit with what they reveal — understanding often arrives in its own time.";
 
   const allReversed = relational.reversalPattern.count === 3;
   const allUpright = relational.reversalPattern.count === 0;
   const majorHeavy = relational.arcanaWeight.count >= 2;
 
   if (allReversed) {
-    return "This reading asks for patience and introspection before action. The path forward will clarify as internal work is done.";
+    return "Be gentle with yourself. This reading asks for patience and inward attention before outward action. What feels blocked now is not permanent — it is waiting for the right conditions to move.";
   }
   if (allUpright && majorHeavy) {
-    return "The current runs strong and clear. Trust the momentum — what is unfolding carries a weight and purpose beyond the immediate.";
+    return "The current runs strong and clear. Trust what is unfolding — it carries a weight and purpose that will reveal itself in time. You are where you need to be.";
   }
   if (allUpright) {
-    return "The energy flows freely through this reading. Move forward with confidence in the direction these cards illuminate.";
+    return "The energy flows freely through this reading. Move forward with confidence — the path ahead is open, and these cards light the way.";
   }
   if (majorHeavy) {
-    return "Forces larger than the everyday are at work. What is asked of you now is not small — rise to meet it.";
+    return "Forces larger than the everyday are at work. What is asked of you now is not small, but neither is your capacity to meet it.";
   }
 
-  return "The cards point a way forward. What you do with their counsel is, as always, yours to decide.";
+  return "The cards offer a way forward. What you do with their counsel is, as always, yours to decide. Trust yourself.";
 };
 
 const buildOpening = (relational: RelationalAnalysis): string =>
