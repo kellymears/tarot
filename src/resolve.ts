@@ -1,7 +1,11 @@
 import type { Position } from "./data/interpretations/types.js";
 import type { FullReading, SpreadCard } from "./engine/types.js";
 
-import { FIVE_CARD_POSITIONS, POSITIONS } from "./constants.js";
+import {
+  FIVE_CARD_POSITIONS,
+  HORSESHOE_POSITIONS,
+  POSITIONS,
+} from "./constants.js";
 import { cards } from "./data/cards.js";
 import { interpret } from "./engine/index.js";
 import { loadDaily, saveDaily } from "./store.js";
@@ -26,6 +30,15 @@ export function resolveFiveCard(
 ): ResolveResult {
   return resolveWith(name, forceNew, "five-card", () =>
     draw(5, FIVE_CARD_POSITIONS),
+  );
+}
+
+export function resolveHorseshoe(
+  name: string,
+  forceNew: boolean,
+): ResolveResult {
+  return resolveWith(name, forceNew, "horseshoe", () =>
+    draw(7, HORSESHOE_POSITIONS),
   );
 }
 

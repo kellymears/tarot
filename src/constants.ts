@@ -136,20 +136,38 @@ export const FIVE_CARD_POSITIONS: Position[] = [
   "below",
 ];
 
+export const HORSESHOE_POSITIONS: Position[] = [
+  "past",
+  "present",
+  "future",
+  "self",
+  "environment",
+  "obstacle",
+  "outcome",
+];
+
 export const POSITION_LABELS: Record<Position, string> = {
   above: "Above",
   below: "Below",
+  environment: "Environment",
   future: "Future",
+  obstacle: "Obstacle",
+  outcome: "Outcome",
   past: "Past",
   present: "Present",
+  self: "Self",
 };
 
 export const POSITION_SUBTITLES: Record<Position, string> = {
   above: "what you aspire to",
   below: "the root cause",
+  environment: "external influences",
   future: "what beckons",
+  obstacle: "the challenge",
+  outcome: "where this leads",
   past: "what shaped you",
   present: "where you stand",
+  self: "your inner state",
 };
 
 export const POSITIONS: Position[] = ["past", "present", "future"];

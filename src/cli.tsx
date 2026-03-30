@@ -21,9 +21,11 @@ const mode =
     ? ("card" as const)
     : args[0] === "five-card"
       ? ("five-card" as const)
-      : args[0] === "yes-no"
-        ? ("yes-no" as const)
-        : ("spread" as const);
+      : args[0] === "horseshoe"
+        ? ("horseshoe" as const)
+        : args[0] === "yes-no"
+          ? ("yes-no" as const)
+          : ("spread" as const);
 
 const noColor =
   flags.has("--no-color") ||
@@ -34,7 +36,10 @@ const showVersion = flags.has("-v") || flags.has("--version");
 const forceNew = flags.has("--new");
 const jsonMode = flags.has("--json");
 const name =
-  (mode === "card" || mode === "five-card" || mode === "yes-no"
+  (mode === "card" ||
+  mode === "five-card" ||
+  mode === "horseshoe" ||
+  mode === "yes-no"
     ? args[1]
     : args[0]) ?? userInfo().username;
 
@@ -56,16 +61,18 @@ if (showHelp) {
     .write(`Tarot — draw a three-card spread and see what the cards have to say.
 
 Usage:
-  tarot                 Draw today's reading
-  tarot luna            Draw a reading for "luna"
-  tarot card            Draw a single card
-  tarot card luna       Draw a single card for "luna"
-  tarot five-card       Draw a five-card cross spread
-  tarot five-card luna  Draw a five-card cross spread for "luna"
-  tarot yes-no          Ask a yes-or-no question
-  tarot yes-no luna     Ask a yes-or-no question for "luna"
-  tarot --new           Draw a fresh spread (ignore today's cache)
-  tarot --json          Output the reading as JSON
+  tarot                   Draw today's reading
+  tarot luna              Draw a reading for "luna"
+  tarot card              Draw a single card
+  tarot card luna         Draw a single card for "luna"
+  tarot five-card         Draw a five-card cross spread
+  tarot five-card luna    Draw a five-card cross spread for "luna"
+  tarot horseshoe         Draw a seven-card horseshoe spread
+  tarot horseshoe luna    Draw a horseshoe spread for "luna"
+  tarot yes-no            Ask a yes-or-no question
+  tarot yes-no luna       Ask a yes-or-no question for "luna"
+  tarot --new             Draw a fresh spread (ignore today's cache)
+  tarot --json            Output the reading as JSON
 
 Flags:
   -h, --help            Show this help
@@ -83,8 +90,13 @@ https://github.com/kellymears/tarot
   process.stdout.write(`tarot ${pkg.version}\n`);
 } else if (jsonMode) {
   try {
-    const { resolve, resolveCard, resolveFiveCard, resolveYesNo } =
-      await import("./resolve.js");
+    const {
+      resolve,
+      resolveCard,
+      resolveFiveCard,
+      resolveHorseshoe,
+      resolveYesNo,
+    } = await import("./resolve.js");
     const { reading, spread } =
       mode === "yes-no"
         ? resolveYesNo(name, forceNew)
@@ -92,7 +104,9 @@ https://github.com/kellymears/tarot
           ? resolveCard(name, forceNew)
           : mode === "five-card"
             ? resolveFiveCard(name, forceNew)
-            : resolve(name, forceNew);
+            : mode === "horseshoe"
+              ? resolveHorseshoe(name, forceNew)
+              : resolve(name, forceNew);
     const output = {
       name,
       reading,

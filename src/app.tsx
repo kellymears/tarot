@@ -19,13 +19,14 @@ import {
   resolve,
   resolveCard,
   resolveFiveCard,
+  resolveHorseshoe,
   resolveYesNo,
 } from "./resolve.js";
 
 interface AppProps {
   animate: boolean;
   forceNew: boolean;
-  mode: "card" | "five-card" | "spread" | "yes-no";
+  mode: "card" | "five-card" | "horseshoe" | "spread" | "yes-no";
   name: string;
 }
 
@@ -34,10 +35,17 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
   const { stdout } = useStdout();
   const isCard = mode === "card";
   const isFiveCard = mode === "five-card";
+  const isHorseshoe = mode === "horseshoe";
   const isYesNo = mode === "yes-no";
   const isSingleCard = isCard || isYesNo;
   const isMultiCard = !isSingleCard;
-  const cardCount: 1 | 3 | 5 = isFiveCard ? 5 : isSingleCard ? 1 : 3;
+  const cardCount: 1 | 3 | 5 | 7 = isHorseshoe
+    ? 7
+    : isFiveCard
+      ? 5
+      : isSingleCard
+        ? 1
+        : 3;
   const columns = stdout.columns ?? MAX_TEXT_WIDTH;
   const textWidth = Math.min(MAX_TEXT_WIDTH, columns);
   const borderedWidth = textWidth - 2;
@@ -49,7 +57,9 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
         ? resolveCard(name, forceNew)
         : isFiveCard
           ? resolveFiveCard(name, forceNew)
-          : resolve(name, forceNew),
+          : isHorseshoe
+            ? resolveHorseshoe(name, forceNew)
+            : resolve(name, forceNew),
   );
   const { skip, visibility: v } = useAnimationController(reading, {
     cardCount,
@@ -91,7 +101,9 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
                 ? "Daily Card"
                 : isFiveCard
                   ? "Five-Card Cross"
-                  : "Three-Card Spread"}
+                  : isHorseshoe
+                    ? "Horseshoe Spread"
+                    : "Three-Card Spread"}
           </Text>
           <Text dimColor>
             A reading for <Text color="magenta">{displayName}</Text>
@@ -100,7 +112,9 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
             <Text dimColor>
               {isFiveCard
                 ? "Above · Past · Present · Future · Below"
-                : "Past · Present · Future"}
+                : isHorseshoe
+                  ? "Past · Present · Future · Self · Environment · Obstacle · Outcome"
+                  : "Past · Present · Future"}
             </Text>
           )}
           {cached && (
@@ -163,6 +177,72 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
                 state={v.cards[4]}
               />
             </Box>
+          </Box>
+        </Box>
+      ) : isHorseshoe ? (
+        <Box alignItems="center" flexDirection="column" gap={1}>
+          {/* Row 1: Past, Present, Future */}
+          <Box flexDirection="row" gap={1} justifyContent="center">
+            {[0, 1, 2].map((idx) => (
+              <Box
+                alignItems="center"
+                flexDirection="column"
+                key={spread[idx].card.id}
+              >
+                {v.cards[idx] !== "hidden" && (
+                  <Text bold dimColor>
+                    {POSITION_LABELS[spread[idx].position]}
+                  </Text>
+                )}
+                <AnimatedCard
+                  card={spread[idx].card}
+                  reversed={spread[idx].orientation === "reversed"}
+                  state={v.cards[idx]}
+                />
+              </Box>
+            ))}
+          </Box>
+          {/* Row 2: Self, Environment */}
+          <Box flexDirection="row" gap={1} justifyContent="center">
+            {[3, 4].map((idx) => (
+              <Box
+                alignItems="center"
+                flexDirection="column"
+                key={spread[idx].card.id}
+              >
+                {v.cards[idx] !== "hidden" && (
+                  <Text bold dimColor>
+                    {POSITION_LABELS[spread[idx].position]}
+                  </Text>
+                )}
+                <AnimatedCard
+                  card={spread[idx].card}
+                  reversed={spread[idx].orientation === "reversed"}
+                  state={v.cards[idx]}
+                />
+              </Box>
+            ))}
+          </Box>
+          {/* Row 3: Obstacle, Outcome */}
+          <Box flexDirection="row" gap={1} justifyContent="center">
+            {[5, 6].map((idx) => (
+              <Box
+                alignItems="center"
+                flexDirection="column"
+                key={spread[idx].card.id}
+              >
+                {v.cards[idx] !== "hidden" && (
+                  <Text bold dimColor>
+                    {POSITION_LABELS[spread[idx].position]}
+                  </Text>
+                )}
+                <AnimatedCard
+                  card={spread[idx].card}
+                  reversed={spread[idx].orientation === "reversed"}
+                  state={v.cards[idx]}
+                />
+              </Box>
+            ))}
           </Box>
         </Box>
       ) : (
@@ -318,7 +398,9 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
                       ? "tarot card --new for a fresh draw · tarot --json for data"
                       : isFiveCard
                         ? "tarot five-card --new for a fresh spread · tarot five-card --json for data"
-                        : "tarot --new for a fresh spread · tarot --json for data"}
+                        : isHorseshoe
+                          ? "tarot horseshoe --new for a fresh spread · tarot horseshoe --json for data"
+                          : "tarot --new for a fresh spread · tarot --json for data"}
                 </Text>
               )}
             </Box>

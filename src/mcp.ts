@@ -10,6 +10,7 @@ import {
   resolve,
   resolveCard,
   resolveFiveCard,
+  resolveHorseshoe,
   resolveYesNo,
 } from "./resolve.js";
 
@@ -31,7 +32,7 @@ server.tool(
       .describe("Force a fresh draw, ignoring today's cache"),
     name: z.string().describe("Name of the person to read for"),
     spread_type: z
-      .enum(["five-card", "single", "three-card", "yes-no"])
+      .enum(["five-card", "horseshoe", "single", "three-card", "yes-no"])
       .default("three-card")
       .describe("Type of spread to draw"),
   },
@@ -43,7 +44,9 @@ server.tool(
           ? resolveCard(name, force_new)
           : spread_type === "five-card"
             ? resolveFiveCard(name, force_new)
-            : resolve(name, force_new);
+            : spread_type === "horseshoe"
+              ? resolveHorseshoe(name, force_new)
+              : resolve(name, force_new);
     return {
       content: [
         {
