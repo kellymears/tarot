@@ -205,48 +205,41 @@ function Reading({
         </Box>
       )}
 
-      {!startAfterCards && (
-        <Box alignItems="center" flexDirection="column" gap={1}>
-          {def.layout.map((section, si) => (
-            <Box alignItems="center" flexDirection="column" gap={1} key={si}>
-              {section.label && (
-                <Text bold dimColor>
-                  {section.label}
-                </Text>
-              )}
-              {section.rows.map((row, ri) => (
-                <Box
-                  flexDirection="row"
-                  gap={1}
-                  justifyContent="center"
-                  key={ri}
-                >
-                  {row.map((idx) => {
-                    const slotColor = spread[idx].card.suit
-                      ? theme.suits[spread[idx].card.suit!]
-                      : theme.accent;
-                    return (
-                      <CardSlot
-                        card={spread[idx].card}
-                        color={slotColor}
-                        key={spread[idx].card.id}
-                        label={
-                          spread[idx].position === "challenge"
-                            ? "✦ " + POSITION_LABELS[spread[idx].position]
-                            : POSITION_LABELS[spread[idx].position]
-                        }
-                        reversed={spread[idx].orientation === "reversed"}
-                        showLabel={isMultiCard}
-                        state={v.cards[idx]}
-                      />
-                    );
-                  })}
-                </Box>
-              ))}
-            </Box>
-          ))}
-        </Box>
-      )}
+      <Box alignItems="center" flexDirection="column" gap={1}>
+        {def.layout.map((section, si) => (
+          <Box alignItems="center" flexDirection="column" gap={1} key={si}>
+            {section.label && (
+              <Text bold dimColor>
+                {section.label}
+              </Text>
+            )}
+            {section.rows.map((row, ri) => (
+              <Box flexDirection="row" gap={1} justifyContent="center" key={ri}>
+                {row.map((idx) => {
+                  const slotColor = spread[idx].card.suit
+                    ? theme.suits[spread[idx].card.suit!]
+                    : theme.accent;
+                  return (
+                    <CardSlot
+                      card={spread[idx].card}
+                      color={slotColor}
+                      key={spread[idx].card.id}
+                      label={
+                        spread[idx].position === "challenge"
+                          ? "✦ " + POSITION_LABELS[spread[idx].position]
+                          : POSITION_LABELS[spread[idx].position]
+                      }
+                      reversed={spread[idx].orientation === "reversed"}
+                      showLabel={isMultiCard}
+                      state={v.cards[idx]}
+                    />
+                  );
+                })}
+              </Box>
+            ))}
+          </Box>
+        ))}
+      </Box>
 
       {v.divider && (
         <Box
