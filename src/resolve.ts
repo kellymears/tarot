@@ -1,7 +1,7 @@
 import type { Position } from "./data/interpretations/types.js";
 import type { FullReading, SpreadCard } from "./engine/types.js";
 
-import { POSITIONS } from "./constants.js";
+import { FIVE_CARD_POSITIONS, POSITIONS } from "./constants.js";
 import { cards } from "./data/cards.js";
 import { interpret } from "./engine/index.js";
 import { loadDaily, saveDaily } from "./store.js";
@@ -18,6 +18,15 @@ export function resolve(name: string, forceNew: boolean): ResolveResult {
 
 export function resolveCard(name: string, forceNew: boolean): ResolveResult {
   return resolveWith(name, forceNew, "card", () => draw(1, ["present"]));
+}
+
+export function resolveFiveCard(
+  name: string,
+  forceNew: boolean,
+): ResolveResult {
+  return resolveWith(name, forceNew, "five-card", () =>
+    draw(5, FIVE_CARD_POSITIONS),
+  );
 }
 
 export function resolveYesNo(name: string, forceNew: boolean): ResolveResult {

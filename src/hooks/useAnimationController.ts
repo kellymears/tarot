@@ -79,20 +79,20 @@ const CARD_PHASES: Phase[] = [
   "done",
 ];
 
-const skippedState = (cardCount: 1 | 3): AnimationVisibility => ({
+const skippedState = (cardCount: 1 | 3 | 5): AnimationVisibility => ({
   cards: Array.from({ length: cardCount }, () => "faceUp" as CardState),
   closing: FULL,
-  connections: cardCount === 3 ? FULL : HIDDEN,
+  connections: cardCount >= 3 ? FULL : HIDDEN,
   divider: true,
   done: true,
   header: true,
-  opening: cardCount === 3 ? FULL : HIDDEN,
+  opening: cardCount >= 3 ? FULL : HIDDEN,
   sections: Array.from({ length: cardCount }, () => FULL),
-  synthesis: cardCount === 3 ? FULL : HIDDEN,
+  synthesis: cardCount >= 3 ? FULL : HIDDEN,
 });
 
 interface AnimationOptions {
-  cardCount?: 1 | 3;
+  cardCount?: 1 | 3 | 5;
   skip?: boolean;
 }
 
@@ -104,7 +104,7 @@ export function useAnimationController(
   visibility: AnimationVisibility;
 } {
   const startSkipped = options?.skip === true;
-  const cardCount = options?.cardCount ?? 3;
+  const cardCount: 1 | 3 | 5 = options?.cardCount ?? 3;
   const phases = cardCount === 1 ? CARD_PHASES : SPREAD_PHASES;
   const skipped = skippedState(cardCount);
   const lengths = useMemo(
@@ -151,7 +151,7 @@ export function useAnimationController(
 const computeVisibility = (
   state: InternalState,
   phases: Phase[],
-  cardCount: 1 | 3,
+  cardCount: 1 | 3 | 5,
 ): AnimationVisibility => {
   if (state.skipped) return skippedState(cardCount);
 
@@ -203,7 +203,10 @@ const computeVisibility = (
   };
 };
 
-const textLengths = (reading: FullReading, cardCount: 1 | 3): TextLengths => {
+const textLengths = (
+  reading: FullReading,
+  cardCount: 1 | 3 | 5,
+): TextLengths => {
   const r = reading.relational;
   const connectionsText = [
     ...r.dignities.map((d) => d.detail),
@@ -237,7 +240,7 @@ const tick = (
   state: InternalState,
   lengths: TextLengths,
   phases: Phase[],
-  cardCount: 1 | 3,
+  cardCount: 1 | 3 | 5,
 ): InternalState => {
   if (state.skipped || state.phase === "done") return state;
 
@@ -302,7 +305,7 @@ const tick = (
           };
         }
         const next =
-          cardCount === 3 && lengths.hasConnections
+          cardCount >= 3 && lengths.hasConnections
             ? "connections"
             : nextPhaseAfter("sections", phases);
         return { ...state, chars: 0, phase: next, ticks: 0 };

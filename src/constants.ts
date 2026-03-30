@@ -128,13 +128,25 @@ export const NUMERALS = [
   "XXI",
 ];
 
+export const FIVE_CARD_POSITIONS: Position[] = [
+  "present",
+  "past",
+  "future",
+  "above",
+  "below",
+];
+
 export const POSITION_LABELS: Record<Position, string> = {
+  above: "Above",
+  below: "Below",
   future: "Future",
   past: "Past",
   present: "Present",
 };
 
 export const POSITION_SUBTITLES: Record<Position, string> = {
+  above: "what you aspire to",
+  below: "the root cause",
   future: "what beckons",
   past: "what shaped you",
   present: "where you stand",

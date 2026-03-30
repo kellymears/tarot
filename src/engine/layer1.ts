@@ -1,9 +1,19 @@
-import type { InterpretationMap } from "../data/interpretations/types.js";
+import type {
+  InterpretationMap,
+  Position,
+} from "../data/interpretations/types.js";
 import type { CardReading, SpreadCard } from "./types.js";
 
 import { lookupPassage } from "../data/interpretations/index.js";
 
-const positionFraming = {
+const positionFraming: Record<
+  Position,
+  (name: string, keywords: string) => string
+> = {
+  above: (name: string, keywords: string) =>
+    `Above you, ${name} reveals aspirations tied to ${keywords}.`,
+  below: (name: string, keywords: string) =>
+    `Beneath the surface, ${name} points to a root cause grounded in ${keywords}.`,
   future: (name: string, keywords: string) =>
     `Looking ahead, ${name} indicates ${keywords} in what is to come.`,
   past: (name: string, keywords: string) =>

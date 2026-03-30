@@ -15,12 +15,17 @@ import {
   SUIT_SYMBOL,
 } from "./constants.js";
 import { useAnimationController } from "./hooks/useAnimationController.js";
-import { resolve, resolveCard, resolveYesNo } from "./resolve.js";
+import {
+  resolve,
+  resolveCard,
+  resolveFiveCard,
+  resolveYesNo,
+} from "./resolve.js";
 
 interface AppProps {
   animate: boolean;
   forceNew: boolean;
-  mode: "card" | "spread" | "yes-no";
+  mode: "card" | "five-card" | "spread" | "yes-no";
   name: string;
 }
 
@@ -28,9 +33,11 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
   const { exit } = useApp();
   const { stdout } = useStdout();
   const isCard = mode === "card";
+  const isFiveCard = mode === "five-card";
   const isYesNo = mode === "yes-no";
   const isSingleCard = isCard || isYesNo;
-  const cardCount = isSingleCard ? 1 : 3;
+  const isMultiCard = !isSingleCard;
+  const cardCount: 1 | 3 | 5 = isFiveCard ? 5 : isSingleCard ? 1 : 3;
   const columns = stdout.columns ?? MAX_TEXT_WIDTH;
   const textWidth = Math.min(MAX_TEXT_WIDTH, columns);
   const borderedWidth = textWidth - 2;
@@ -40,7 +47,9 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
       ? resolveYesNo(name, forceNew)
       : isCard
         ? resolveCard(name, forceNew)
-        : resolve(name, forceNew),
+        : isFiveCard
+          ? resolveFiveCard(name, forceNew)
+          : resolve(name, forceNew),
   );
   const { skip, visibility: v } = useAnimationController(reading, {
     cardCount,
@@ -80,12 +89,20 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
               ? "Yes or No?"
               : isCard
                 ? "Daily Card"
-                : "Three-Card Spread"}
+                : isFiveCard
+                  ? "Five-Card Cross"
+                  : "Three-Card Spread"}
           </Text>
           <Text dimColor>
             A reading for <Text color="magenta">{displayName}</Text>
           </Text>
-          {!isSingleCard && <Text dimColor>Past · Present · Future</Text>}
+          {isMultiCard && (
+            <Text dimColor>
+              {isFiveCard
+                ? "Above · Past · Present · Future · Below"
+                : "Past · Present · Future"}
+            </Text>
+          )}
           {cached && (
             <Text dimColor italic>
               {dateLabel}
@@ -94,22 +111,83 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
         </Box>
       )}
 
-      <Box flexDirection="row" flexWrap="wrap" gap={1} justifyContent="center">
-        {spread.slice(0, cardCount).map((sc, i) => (
-          <Box alignItems="center" flexDirection="column" key={sc.card.id}>
-            {!isSingleCard && v.cards[i] !== "hidden" && (
-              <Text bold dimColor>
-                {POSITION_LABELS[sc.position]}
-              </Text>
-            )}
-            <AnimatedCard
-              card={sc.card}
-              reversed={sc.orientation === "reversed"}
-              state={v.cards[i]}
-            />
+      {isFiveCard ? (
+        <Box alignItems="center" flexDirection="column" gap={1}>
+          {/* Row 1: Above (spread[3]) */}
+          <Box justifyContent="center">
+            <Box alignItems="center" flexDirection="column">
+              {v.cards[3] !== "hidden" && (
+                <Text bold dimColor>
+                  {POSITION_LABELS[spread[3].position]}
+                </Text>
+              )}
+              <AnimatedCard
+                card={spread[3].card}
+                reversed={spread[3].orientation === "reversed"}
+                state={v.cards[3]}
+              />
+            </Box>
           </Box>
-        ))}
-      </Box>
+          {/* Row 2: Past (spread[1]), Present (spread[0]), Future (spread[2]) */}
+          <Box flexDirection="row" gap={1} justifyContent="center">
+            {[1, 0, 2].map((idx) => (
+              <Box
+                alignItems="center"
+                flexDirection="column"
+                key={spread[idx].card.id}
+              >
+                {v.cards[idx] !== "hidden" && (
+                  <Text bold dimColor>
+                    {POSITION_LABELS[spread[idx].position]}
+                  </Text>
+                )}
+                <AnimatedCard
+                  card={spread[idx].card}
+                  reversed={spread[idx].orientation === "reversed"}
+                  state={v.cards[idx]}
+                />
+              </Box>
+            ))}
+          </Box>
+          {/* Row 3: Below (spread[4]) */}
+          <Box justifyContent="center">
+            <Box alignItems="center" flexDirection="column">
+              {v.cards[4] !== "hidden" && (
+                <Text bold dimColor>
+                  {POSITION_LABELS[spread[4].position]}
+                </Text>
+              )}
+              <AnimatedCard
+                card={spread[4].card}
+                reversed={spread[4].orientation === "reversed"}
+                state={v.cards[4]}
+              />
+            </Box>
+          </Box>
+        </Box>
+      ) : (
+        <Box
+          flexDirection="row"
+          flexWrap="wrap"
+          gap={1}
+          justifyContent="center"
+        >
+          {spread.slice(0, cardCount).map((sc, i) => (
+            <Box alignItems="center" flexDirection="column" key={sc.card.id}>
+              {isMultiCard && v.cards[i] !== "hidden" && (
+                <Text bold dimColor>
+                  {POSITION_LABELS[sc.position]}
+                </Text>
+              )}
+              <AnimatedCard
+                card={sc.card}
+                reversed={sc.orientation === "reversed"}
+                state={v.cards[i]}
+              />
+            </Box>
+          ))}
+        </Box>
+      )}
 
       {v.divider && (
         <Box
@@ -122,7 +200,7 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
             <Text dimColor>{"───────────── ✦ ─────────────"}</Text>
           </Box>
 
-          {!isSingleCard && v.opening.visible && (
+          {isMultiCard && v.opening.visible && (
             <Typewriter chars={v.opening.chars}>
               <Text dimColor italic textWidth={textWidth}>
                 {reading.narrative.opening}
@@ -193,14 +271,14 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
             );
           })}
 
-          {!isSingleCard && v.connections.visible && (
+          {isMultiCard && v.connections.visible && (
             <RelationalInsight
               analysis={reading.relational}
               textWidth={textWidth}
             />
           )}
 
-          {!isSingleCard && v.synthesis.visible && (
+          {isMultiCard && v.synthesis.visible && (
             <Box flexDirection="column">
               <Text bold color="green">
                 ✦ The Thread
@@ -238,7 +316,9 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
                     ? "tarot yes-no --new for a fresh draw · tarot yes-no --json for data"
                     : isCard
                       ? "tarot card --new for a fresh draw · tarot --json for data"
-                      : "tarot --new for a fresh spread · tarot --json for data"}
+                      : isFiveCard
+                        ? "tarot five-card --new for a fresh spread · tarot five-card --json for data"
+                        : "tarot --new for a fresh spread · tarot --json for data"}
                 </Text>
               )}
             </Box>

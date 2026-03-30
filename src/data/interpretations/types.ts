@@ -16,6 +16,6 @@ export type InterpretationMap = Map<string, Partial<CardInterpretation>>;
 
 export type Orientation = "reversed" | "upright";
 
-export type Position = "future" | "past" | "present";
+export type Position = "above" | "below" | "future" | "past" | "present";
 
-export type PositionPassages = Record<Position, CardPassage>;
+export type PositionPassages = Partial<Record<Position, CardPassage>>;
