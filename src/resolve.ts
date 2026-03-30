@@ -5,7 +5,7 @@ import type { SpreadMode } from "./spreads.js";
 import { cards } from "./data/cards.js";
 import { interpret } from "./engine/index.js";
 import { SPREADS } from "./spreads.js";
-import { loadDaily, saveDaily } from "./store.js";
+import { appendHistory, loadDaily, saveDaily } from "./store.js";
 
 interface ResolveResult {
   cached: boolean;
@@ -21,6 +21,7 @@ export function resolveSpread(
 ): ResolveResult {
   const def = SPREADS[mode];
   return resolveWith(
+    mode,
     name,
     forceNew,
     def.cacheSuffix,
@@ -30,6 +31,7 @@ export function resolveSpread(
 }
 
 const resolveWith = (
+  mode: SpreadMode,
   name: string,
   forceNew: boolean,
   suffix: string,
@@ -60,15 +62,17 @@ const resolveWith = (
   }
 
   const spread = drawCards();
-  saveDaily(
-    name,
-    spread.map((s) => ({
-      cardId: s.card.id,
-      orientation: s.orientation,
-      position: s.position,
-    })),
-    suffix,
-  );
+  const storedCards = spread.map((s) => ({
+    cardId: s.card.id,
+    orientation: s.orientation,
+    position: s.position,
+  }));
+  saveDaily(name, storedCards, suffix);
+  appendHistory(name, {
+    cards: storedCards,
+    date: new Date().toISOString().slice(0, 10),
+    spreadType: mode,
+  });
   return { cached: false, reading: interpret(spread, reversalMode), spread };
 };
 

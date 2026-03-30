@@ -4,6 +4,16 @@ import { join } from "node:path";
 
 import type { Orientation, Position } from "./data/interpretations/types.js";
 
+export interface HistoryEntry {
+  cards: Array<{
+    cardId: string;
+    orientation: Orientation;
+    position: Position;
+  }>;
+  date: string;
+  spreadType: string;
+}
+
 interface StoredCard {
   cardId: string;
   orientation: Orientation;
@@ -15,8 +25,36 @@ interface StoredReading {
   spread: StoredCard[];
 }
 
+export function appendHistory(name: string, entry: HistoryEntry): void {
+  const path = historyPath(name);
+  const dir = dataDir();
+  mkdirSync(dir, { recursive: true });
+
+  let history: HistoryEntry[] = [];
+  if (existsSync(path)) {
+    try {
+      history = JSON.parse(readFileSync(path, "utf-8"));
+    } catch {
+      history = [];
+    }
+  }
+  history.push(entry);
+  writeFileSync(path, JSON.stringify(history, null, 2) + "\n");
+}
+
 export function loadDaily(name: string, suffix = ""): null | StoredCard[] {
   return readStore(filePath(name, suffix));
+}
+
+export function loadHistory(name: string): HistoryEntry[] {
+  const path = historyPath(name);
+  if (!existsSync(path)) return [];
+
+  try {
+    return JSON.parse(readFileSync(path, "utf-8"));
+  } catch {
+    return [];
+  }
 }
 
 export function saveDaily(
@@ -59,5 +97,8 @@ const filePath = (name: string, suffix: string): string => {
   const base = safeName(name);
   return join(dataDir(), suffix ? `${base}.${suffix}.json` : `${base}.json`);
 };
+
+const historyPath = (name: string): string =>
+  join(dataDir(), `${safeName(name)}.history.json`);
 
 const today = (): string => new Date().toISOString().slice(0, 10);

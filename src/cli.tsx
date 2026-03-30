@@ -48,6 +48,7 @@ const args = rawArgs.filter(
   (a, i) => !a.startsWith("-") && !valueFlagArgs.has(i),
 );
 
+const isHistory = args[0] === "history";
 const mode: SpreadMode = SUBCOMMANDS.has(args[0])
   ? (args[0] as SpreadMode)
   : "spread";
@@ -71,7 +72,9 @@ if (reversalsArg !== undefined && !REVERSAL_MODES.has(reversalsArg)) {
 }
 const reversalMode: ReversalMode =
   (reversalsArg as ReversalMode | undefined) ?? "opposite";
-const name = (mode !== "spread" ? args[1] : args[0]) ?? userInfo().username;
+const name =
+  (isHistory ? args[1] : mode !== "spread" ? args[1] : args[0]) ??
+  userInfo().username;
 
 if (noColor) {
   process.env.NO_COLOR = "1";
@@ -103,6 +106,8 @@ Usage:
   tarot horseshoe luna       Draw a horseshoe spread for "luna"
   tarot yes-no               Ask a yes-or-no question
   tarot yes-no luna          Ask a yes-or-no question for "luna"
+  tarot history              Browse past readings
+  tarot history luna         Browse past readings for "luna"
   tarot --new                Draw a fresh spread (ignore today's cache)
   tarot --json               Output the reading as JSON
 
@@ -126,6 +131,117 @@ https://github.com/kellymears/tarot
     readFileSync(new URL("../package.json", import.meta.url), "utf-8"),
   );
   process.stdout.write(`tarot ${pkg.version}\n`);
+} else if (isHistory) {
+  try {
+    const { cards } = await import("./data/cards.js");
+    const { MAJOR_SYMBOL, POSITION_LABELS, SUIT_SYMBOL } =
+      await import("./constants.js");
+    const { loadHistory } = await import("./store.js");
+
+    const cardsById = new Map(cards.map((c) => [c.id, c]));
+    const history = loadHistory(name);
+
+    if (history.length === 0) {
+      process.stdout.write(`No readings found for ${name}.\n`);
+    } else {
+      const entries = [...history].reverse();
+      const lines: string[] = [];
+
+      for (const entry of entries) {
+        const d = new Date(entry.date + "T00:00:00");
+        const dateStr = d.toLocaleDateString("en-US", {
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+        });
+        const spreadDef = SPREADS[entry.spreadType as SpreadMode];
+        const spreadTitle = spreadDef?.title ?? entry.spreadType;
+        lines.push(`${dateStr} — ${spreadTitle}`);
+
+        for (const c of entry.cards) {
+          const card = cardsById.get(c.cardId);
+          if (!card) continue;
+
+          const symbol = card.suit ? SUIT_SYMBOL[card.suit] : MAJOR_SYMBOL;
+          const reversed = c.orientation === "reversed" ? " (reversed)" : "";
+          const label =
+            entry.cards.length > 1 ? `${POSITION_LABELS[c.position]}: ` : "";
+          lines.push(`  ${label}${symbol} ${card.name}${reversed}`);
+        }
+
+        lines.push("");
+      }
+
+      // Pattern analysis for 5+ readings
+      if (history.length >= 5) {
+        const cardCounts = new Map<string, number>();
+        const readingsWithSuit = new Map<string, Set<number>>();
+        let reversals = 0;
+        let total = 0;
+
+        for (let i = 0; i < history.length; i++) {
+          const entry = history[i];
+          for (const c of entry.cards) {
+            total++;
+            const card = cardsById.get(c.cardId);
+            if (!card) continue;
+            cardCounts.set(card.name, (cardCounts.get(card.name) ?? 0) + 1);
+            if (c.orientation === "reversed") reversals++;
+            if (card.suit) {
+              if (!readingsWithSuit.has(card.suit)) {
+                readingsWithSuit.set(card.suit, new Set());
+              }
+              readingsWithSuit.get(card.suit)!.add(i);
+            }
+          }
+        }
+
+        lines.push("── Patterns ──");
+
+        // Most drawn card
+        let maxCard = "";
+        let maxCount = 0;
+        for (const [card, count] of cardCounts) {
+          if (count > maxCount) {
+            maxCard = card;
+            maxCount = count;
+          }
+        }
+        if (maxCount > 1) {
+          lines.push(`  Most drawn: ${maxCard} (${maxCount} times)`);
+        }
+
+        // Dominant suit
+        let maxSuit = "";
+        let maxSuitReadings = 0;
+        for (const [suit, readings] of readingsWithSuit) {
+          if (readings.size > maxSuitReadings) {
+            maxSuit = suit;
+            maxSuitReadings = readings.size;
+          }
+        }
+        if (maxSuit) {
+          const suitName = maxSuit.charAt(0).toUpperCase() + maxSuit.slice(1);
+          lines.push(
+            `  Dominant suit: ${suitName} (appeared in ${maxSuitReadings}/${history.length} readings)`,
+          );
+        }
+
+        // Reversal rate
+        if (total > 0) {
+          const rate = Math.round((reversals / total) * 100);
+          lines.push(`  Reversal rate: ${rate}%`);
+        }
+
+        lines.push("");
+      }
+
+      process.stdout.write(lines.join("\n"));
+    }
+  } catch (err) {
+    printError(err);
+    process.exit(1);
+  }
 } else if (jsonMode) {
   try {
     const { resolveSpread } = await import("./resolve.js");

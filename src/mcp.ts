@@ -9,6 +9,7 @@ import type { SpreadMode } from "./spreads.js";
 import { cards } from "./data/cards.js";
 import { loadInterpretations } from "./data/interpretations/index.js";
 import { resolveSpread } from "./resolve.js";
+import { loadHistory } from "./store.js";
 
 const interpretations = loadInterpretations();
 
@@ -143,6 +144,31 @@ server.tool(
       content: [
         {
           text: JSON.stringify(filtered, null, 2),
+          type: "text" as const,
+        },
+      ],
+    };
+  },
+);
+
+server.tool(
+  "reading_history",
+  "Get past tarot readings for a person",
+  {
+    limit: z
+      .number()
+      .optional()
+      .default(10)
+      .describe("Maximum number of readings to return (most recent first)"),
+    name: z.string().describe("Name of the person to look up"),
+  },
+  async ({ limit, name }) => {
+    const history = loadHistory(name);
+    const recent = history.slice(-limit).reverse();
+    return {
+      content: [
+        {
+          text: JSON.stringify(recent, null, 2),
           type: "text" as const,
         },
       ],
