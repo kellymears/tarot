@@ -46,13 +46,15 @@ const args = rawArgs.filter(
 const mode =
   args[0] === "card"
     ? ("card" as const)
-    : args[0] === "five-card"
-      ? ("five-card" as const)
-      : args[0] === "horseshoe"
-        ? ("horseshoe" as const)
-        : args[0] === "yes-no"
-          ? ("yes-no" as const)
-          : ("spread" as const);
+    : args[0] === "celtic-cross"
+      ? ("celtic-cross" as const)
+      : args[0] === "five-card"
+        ? ("five-card" as const)
+        : args[0] === "horseshoe"
+          ? ("horseshoe" as const)
+          : args[0] === "yes-no"
+            ? ("yes-no" as const)
+            : ("spread" as const);
 
 const noColor =
   flags.has("--no-color") ||
@@ -76,6 +78,7 @@ const reversalMode: ReversalMode =
   (reversalsArg as ReversalMode | undefined) ?? "opposite";
 const name =
   (mode === "card" ||
+  mode === "celtic-cross" ||
   mode === "five-card" ||
   mode === "horseshoe" ||
   mode === "yes-no"
@@ -100,18 +103,20 @@ if (showHelp) {
     .write(`Tarot — draw a three-card spread and see what the cards have to say.
 
 Usage:
-  tarot                   Draw today's reading
-  tarot luna              Draw a reading for "luna"
-  tarot card              Draw a single card
-  tarot card luna         Draw a single card for "luna"
-  tarot five-card         Draw a five-card cross spread
-  tarot five-card luna    Draw a five-card cross spread for "luna"
-  tarot horseshoe         Draw a seven-card horseshoe spread
-  tarot horseshoe luna    Draw a horseshoe spread for "luna"
-  tarot yes-no            Ask a yes-or-no question
-  tarot yes-no luna       Ask a yes-or-no question for "luna"
-  tarot --new             Draw a fresh spread (ignore today's cache)
-  tarot --json            Output the reading as JSON
+  tarot                      Draw today's reading
+  tarot luna                 Draw a reading for "luna"
+  tarot card                 Draw a single card
+  tarot card luna            Draw a single card for "luna"
+  tarot celtic-cross         Draw a ten-card Celtic Cross spread
+  tarot celtic-cross luna    Draw a Celtic Cross spread for "luna"
+  tarot five-card            Draw a five-card cross spread
+  tarot five-card luna       Draw a five-card cross spread for "luna"
+  tarot horseshoe            Draw a seven-card horseshoe spread
+  tarot horseshoe luna       Draw a horseshoe spread for "luna"
+  tarot yes-no               Ask a yes-or-no question
+  tarot yes-no luna          Ask a yes-or-no question for "luna"
+  tarot --new                Draw a fresh spread (ignore today's cache)
+  tarot --json               Output the reading as JSON
 
 Flags:
   -h, --help            Show this help
@@ -138,6 +143,7 @@ https://github.com/kellymears/tarot
     const {
       resolve,
       resolveCard,
+      resolveCelticCross,
       resolveFiveCard,
       resolveHorseshoe,
       resolveYesNo,
@@ -147,11 +153,13 @@ https://github.com/kellymears/tarot
         ? resolveYesNo(name, forceNew, reversalMode)
         : mode === "card"
           ? resolveCard(name, forceNew, reversalMode)
-          : mode === "five-card"
-            ? resolveFiveCard(name, forceNew, reversalMode)
-            : mode === "horseshoe"
-              ? resolveHorseshoe(name, forceNew, reversalMode)
-              : resolve(name, forceNew, reversalMode);
+          : mode === "celtic-cross"
+            ? resolveCelticCross(name, forceNew, reversalMode)
+            : mode === "five-card"
+              ? resolveFiveCard(name, forceNew, reversalMode)
+              : mode === "horseshoe"
+                ? resolveHorseshoe(name, forceNew, reversalMode)
+                : resolve(name, forceNew, reversalMode);
     const output = {
       name,
       reading,

@@ -79,7 +79,7 @@ const CARD_PHASES: Phase[] = [
   "done",
 ];
 
-const skippedState = (cardCount: 1 | 3 | 5 | 7): AnimationVisibility => ({
+const skippedState = (cardCount: 1 | 3 | 5 | 7 | 10): AnimationVisibility => ({
   cards: Array.from({ length: cardCount }, () => "faceUp" as CardState),
   closing: FULL,
   connections: cardCount >= 3 ? FULL : HIDDEN,
@@ -92,7 +92,7 @@ const skippedState = (cardCount: 1 | 3 | 5 | 7): AnimationVisibility => ({
 });
 
 interface AnimationOptions {
-  cardCount?: 1 | 3 | 5 | 7;
+  cardCount?: 1 | 3 | 5 | 7 | 10;
   skip?: boolean;
 }
 
@@ -104,7 +104,7 @@ export function useAnimationController(
   visibility: AnimationVisibility;
 } {
   const startSkipped = options?.skip === true;
-  const cardCount: 1 | 3 | 5 | 7 = options?.cardCount ?? 3;
+  const cardCount: 1 | 3 | 5 | 7 | 10 = options?.cardCount ?? 3;
   const phases = cardCount === 1 ? CARD_PHASES : SPREAD_PHASES;
   const skipped = skippedState(cardCount);
   const lengths = useMemo(
@@ -151,7 +151,7 @@ export function useAnimationController(
 const computeVisibility = (
   state: InternalState,
   phases: Phase[],
-  cardCount: 1 | 3 | 5 | 7,
+  cardCount: 1 | 3 | 5 | 7 | 10,
 ): AnimationVisibility => {
   if (state.skipped) return skippedState(cardCount);
 
@@ -205,7 +205,7 @@ const computeVisibility = (
 
 const textLengths = (
   reading: FullReading,
-  cardCount: 1 | 3 | 5 | 7,
+  cardCount: 1 | 3 | 5 | 7 | 10,
 ): TextLengths => {
   const r = reading.relational;
   const connectionsText = [
@@ -240,7 +240,7 @@ const tick = (
   state: InternalState,
   lengths: TextLengths,
   phases: Phase[],
-  cardCount: 1 | 3 | 5 | 7,
+  cardCount: 1 | 3 | 5 | 7 | 10,
 ): InternalState => {
   if (state.skipped || state.phase === "done") return state;
 

@@ -33,10 +33,14 @@ const positionFraming: Record<
     `Above you, ${name} reveals aspirations tied to ${keywords}.`,
   below: (name: string, keywords: string) =>
     `Beneath the surface, ${name} points to a root cause grounded in ${keywords}.`,
+  challenge: (name: string, keywords: string) =>
+    `Crossing your path, ${name} presents an immediate challenge of ${keywords}.`,
   environment: (name: string, keywords: string) =>
     `Around you, ${name} highlights external forces shaped by ${keywords}.`,
   future: (name: string, keywords: string) =>
     `Looking ahead, ${name} indicates ${keywords} in what is to come.`,
+  "hopes-fears": (name: string, keywords: string) =>
+    `In the realm of hopes and fears, ${name} reveals a tension around ${keywords}.`,
   obstacle: (name: string, keywords: string) =>
     `Standing in your way, ${name} warns of a challenge rooted in ${keywords}.`,
   outcome: (name: string, keywords: string) =>

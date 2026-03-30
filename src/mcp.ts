@@ -9,6 +9,7 @@ import { loadInterpretations } from "./data/interpretations/index.js";
 import {
   resolve,
   resolveCard,
+  resolveCelticCross,
   resolveFiveCard,
   resolveHorseshoe,
   resolveYesNo,
@@ -38,7 +39,14 @@ server.tool(
         "How to interpret reversed cards: opposite (default), blocked, shadow, weakened, or none",
       ),
     spread_type: z
-      .enum(["five-card", "horseshoe", "single", "three-card", "yes-no"])
+      .enum([
+        "celtic-cross",
+        "five-card",
+        "horseshoe",
+        "single",
+        "three-card",
+        "yes-no",
+      ])
       .default("three-card")
       .describe("Type of spread to draw"),
   },
@@ -48,11 +56,13 @@ server.tool(
         ? resolveYesNo(name, force_new, reversal_mode)
         : spread_type === "single"
           ? resolveCard(name, force_new, reversal_mode)
-          : spread_type === "five-card"
-            ? resolveFiveCard(name, force_new, reversal_mode)
-            : spread_type === "horseshoe"
-              ? resolveHorseshoe(name, force_new, reversal_mode)
-              : resolve(name, force_new, reversal_mode);
+          : spread_type === "celtic-cross"
+            ? resolveCelticCross(name, force_new, reversal_mode)
+            : spread_type === "five-card"
+              ? resolveFiveCard(name, force_new, reversal_mode)
+              : spread_type === "horseshoe"
+                ? resolveHorseshoe(name, force_new, reversal_mode)
+                : resolve(name, force_new, reversal_mode);
     return {
       content: [
         {

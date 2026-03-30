@@ -128,6 +128,19 @@ export const NUMERALS = [
   "XXI",
 ];
 
+export const CELTIC_CROSS_POSITIONS: Position[] = [
+  "present",
+  "challenge",
+  "past",
+  "future",
+  "above",
+  "below",
+  "self",
+  "environment",
+  "hopes-fears",
+  "outcome",
+];
+
 export const FIVE_CARD_POSITIONS: Position[] = [
   "present",
   "past",
@@ -149,8 +162,10 @@ export const HORSESHOE_POSITIONS: Position[] = [
 export const POSITION_LABELS: Record<Position, string> = {
   above: "Above",
   below: "Below",
+  challenge: "Challenge",
   environment: "Environment",
   future: "Future",
+  "hopes-fears": "Hopes & Fears",
   obstacle: "Obstacle",
   outcome: "Outcome",
   past: "Past",
@@ -161,8 +176,10 @@ export const POSITION_LABELS: Record<Position, string> = {
 export const POSITION_SUBTITLES: Record<Position, string> = {
   above: "what you aspire to",
   below: "the root cause",
+  challenge: "what crosses you",
   environment: "external influences",
   future: "what beckons",
+  "hopes-fears": "hopes and fears",
   obstacle: "the challenge",
   outcome: "where this leads",
   past: "what shaped you",

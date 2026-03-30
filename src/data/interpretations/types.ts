@@ -19,8 +19,10 @@ export type Orientation = "reversed" | "upright";
 export type Position =
   | "above"
   | "below"
+  | "challenge"
   | "environment"
   | "future"
+  | "hopes-fears"
   | "obstacle"
   | "outcome"
   | "past"

@@ -2,6 +2,7 @@ import type { Position, ReversalMode } from "./data/interpretations/types.js";
 import type { FullReading, SpreadCard } from "./engine/types.js";
 
 import {
+  CELTIC_CROSS_POSITIONS,
   FIVE_CARD_POSITIONS,
   HORSESHOE_POSITIONS,
   POSITIONS,
@@ -34,6 +35,20 @@ export function resolveCard(
     forceNew,
     "card",
     () => draw(1, ["present"]),
+    reversalMode,
+  );
+}
+
+export function resolveCelticCross(
+  name: string,
+  forceNew: boolean,
+  reversalMode: ReversalMode = "opposite",
+): ResolveResult {
+  return resolveWith(
+    name,
+    forceNew,
+    "celtic-cross",
+    () => draw(10, CELTIC_CROSS_POSITIONS),
     reversalMode,
   );
 }
