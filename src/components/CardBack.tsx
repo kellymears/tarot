@@ -6,10 +6,14 @@ const rows = Array.from({ length: 11 }, (_, i) =>
   i % 2 === 0 ? CARD.back.rowA : CARD.back.rowB,
 );
 
-export function CardBack() {
+interface CardBackProps {
+  color: string;
+}
+
+export function CardBack({ color }: CardBackProps) {
   return (
     <Box
-      borderColor="magenta"
+      borderColor={color}
       borderStyle="round"
       flexDirection="column"
       paddingX={2}
@@ -18,7 +22,7 @@ export function CardBack() {
     >
       {rows.map((row, i) => (
         <Box justifyContent="center" key={i}>
-          <Text color="magenta" dimColor>
+          <Text color={color} dimColor>
             {row}
           </Text>
         </Box>

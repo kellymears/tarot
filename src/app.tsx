@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 
 import type { ReversalMode } from "./data/interpretations/types.js";
 import type { SpreadMode } from "./spreads.js";
+import type { ThemeName } from "./theme.js";
 
 import { CardSlot } from "./components/CardSlot.js";
 import { RelationalInsight } from "./components/RelationalInsight.js";
@@ -14,12 +15,12 @@ import {
   ORNAMENT,
   POSITION_LABELS,
   POSITION_SUBTITLES,
-  SUIT_COLOR,
   SUIT_SYMBOL,
 } from "./constants.js";
 import { useAnimationController } from "./hooks/useAnimationController.js";
 import { resolveSpread } from "./resolve.js";
 import { SPREADS } from "./spreads.js";
+import { THEMES } from "./theme.js";
 
 interface AppProps {
   animate: boolean;
@@ -27,11 +28,20 @@ interface AppProps {
   mode: SpreadMode;
   name: string;
   reversalMode: ReversalMode;
+  themeName: ThemeName;
 }
 
-export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
+export function App({
+  animate,
+  forceNew,
+  mode,
+  name,
+  reversalMode,
+  themeName,
+}: AppProps) {
   const { exit } = useApp();
   const { stdout } = useStdout();
+  const theme = THEMES[themeName];
   const def = SPREADS[mode];
   const isSingleCard = def.cardCount === 1;
   const isMultiCard = !isSingleCard;
@@ -76,11 +86,11 @@ export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
       {v.header && (
         <Box alignItems="center" flexDirection="column">
           <Text dimColor>{ORNAMENT}</Text>
-          <Text bold color="magenta">
+          <Text bold color={theme.accent}>
             {def.title}
           </Text>
           <Text dimColor>
-            A reading for <Text color="magenta">{displayName}</Text>
+            A reading for <Text color={theme.accent}>{displayName}</Text>
           </Text>
           {def.subtitle && <Text dimColor>{def.subtitle}</Text>}
           {cached && (
@@ -101,20 +111,26 @@ export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
             )}
             {section.rows.map((row, ri) => (
               <Box flexDirection="row" gap={1} justifyContent="center" key={ri}>
-                {row.map((idx) => (
-                  <CardSlot
-                    card={spread[idx].card}
-                    key={spread[idx].card.id}
-                    label={
-                      spread[idx].position === "challenge"
-                        ? "✦ " + POSITION_LABELS[spread[idx].position]
-                        : POSITION_LABELS[spread[idx].position]
-                    }
-                    reversed={spread[idx].orientation === "reversed"}
-                    showLabel={isMultiCard}
-                    state={v.cards[idx]}
-                  />
-                ))}
+                {row.map((idx) => {
+                  const slotColor = spread[idx].card.suit
+                    ? theme.suits[spread[idx].card.suit!]
+                    : theme.accent;
+                  return (
+                    <CardSlot
+                      card={spread[idx].card}
+                      color={slotColor}
+                      key={spread[idx].card.id}
+                      label={
+                        spread[idx].position === "challenge"
+                          ? "✦ " + POSITION_LABELS[spread[idx].position]
+                          : POSITION_LABELS[spread[idx].position]
+                      }
+                      reversed={spread[idx].orientation === "reversed"}
+                      showLabel={isMultiCard}
+                      state={v.cards[idx]}
+                    />
+                  );
+                })}
               </Box>
             ))}
           </Box>
@@ -144,7 +160,11 @@ export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
             <Box justifyContent="center">
               <Text
                 bold
-                color={spread[0].orientation === "upright" ? "green" : "red"}
+                color={
+                  spread[0].orientation === "upright"
+                    ? theme.positive
+                    : theme.negative
+                }
               >
                 {spread[0].orientation === "upright" ? "Yes" : "No"}
               </Text>
@@ -155,7 +175,9 @@ export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
             if (!v.sections[i].visible) return null;
 
             const sc = spread[i];
-            const color = sc.card.suit ? SUIT_COLOR[sc.card.suit] : "magenta";
+            const color = sc.card.suit
+              ? theme.suits[sc.card.suit]
+              : theme.accent;
             const symbol = sc.card.suit
               ? SUIT_SYMBOL[sc.card.suit]
               : MAJOR_SYMBOL;
@@ -205,6 +227,7 @@ export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
 
           {isMultiCard && v.connections.visible && (
             <RelationalInsight
+              accentColor={theme.accent}
               analysis={reading.relational}
               textWidth={textWidth}
             />
@@ -212,12 +235,12 @@ export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
 
           {isMultiCard && v.synthesis.visible && (
             <Box flexDirection="column">
-              <Text bold color="green">
+              <Text bold color={theme.thread}>
                 ✦ The Thread
               </Text>
               <Box
                 borderBottom={false}
-                borderColor="green"
+                borderColor={theme.thread}
                 borderRight={false}
                 borderStyle="single"
                 borderTop={false}
@@ -235,7 +258,7 @@ export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
           {v.closing.visible && (
             <Box flexDirection="column" gap={1}>
               <Typewriter chars={v.closing.chars}>
-                <Text bold color="magenta" textWidth={textWidth}>
+                <Text bold color={theme.accent} textWidth={textWidth}>
                   {reading.narrative.closing}
                 </Text>
               </Typewriter>

@@ -9,16 +9,22 @@ import { CardBack } from "./CardBack.js";
 
 interface AnimatedCardProps {
   card: TarotCard;
+  color: string;
   reversed: boolean;
   state: CardState;
 }
 
-export function AnimatedCard({ card, reversed, state }: AnimatedCardProps) {
+export function AnimatedCard({
+  card,
+  color,
+  reversed,
+  state,
+}: AnimatedCardProps) {
   if (state === "hidden") {
     return <Box height={CARD.height} width={CARD.width} />;
   }
   if (state === "faceDown") {
-    return <CardBack />;
+    return <CardBack color={color} />;
   }
-  return <Card card={card} reversed={reversed} />;
+  return <Card card={card} color={color} reversed={reversed} />;
 }

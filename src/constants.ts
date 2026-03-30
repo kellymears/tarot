@@ -30,13 +30,6 @@ export const ORNAMENT = "✧ · ✦ · ✧";
 
 export const MAJOR_SYMBOL = "★";
 
-export const SUIT_COLOR: Record<Suit, string> = {
-  cups: "blue",
-  pentacles: "green",
-  swords: "cyan",
-  wands: "yellow",
-};
-
 export const SUIT_SYMBOL: Record<Suit, string> = {
   cups: "☽",
   pentacles: "✦",

@@ -8,20 +8,19 @@ import {
   MAJOR_ELEMENT,
   MAJOR_SYMBOL,
   NUMERALS,
-  SUIT_COLOR,
   SUIT_ELEMENT,
   SUIT_SYMBOL,
 } from "../constants.js";
 
 interface CardProps {
   card: TarotCard;
+  color: string;
   reversed: boolean;
 }
 
 const INNER_WIDTH = CARD.width - 6; // border (2) + paddingX (4)
 
-export function Card({ card, reversed }: CardProps) {
-  const color = card.suit ? SUIT_COLOR[card.suit] : "magenta";
+export function Card({ card, color, reversed }: CardProps) {
   const symbol = card.suit ? SUIT_SYMBOL[card.suit] : MAJOR_SYMBOL;
   const element = card.suit
     ? ELEMENT_NAME[SUIT_ELEMENT[card.suit]]

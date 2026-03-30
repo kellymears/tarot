@@ -5,6 +5,7 @@ import { userInfo } from "node:os";
 
 import type { ReversalMode } from "./data/interpretations/types.js";
 import type { SpreadMode } from "./spreads.js";
+import type { ThemeName } from "./theme.js";
 
 import { SPREADS } from "./spreads.js";
 
@@ -14,6 +15,7 @@ const KNOWN_FLAGS = new Set([
   "--new",
   "--no-color",
   "--reversals",
+  "--theme",
   "--version",
   "-h",
   "-v",
@@ -29,7 +31,9 @@ const REVERSAL_MODES = new Set([
 
 const SUBCOMMANDS = new Set(Object.keys(SPREADS).filter((k) => k !== "spread"));
 
-const VALUE_FLAGS = new Set(["--reversals"]);
+const THEME_NAMES = new Set(["classic", "default"]);
+
+const VALUE_FLAGS = new Set(["--reversals", "--theme"]);
 
 const rawArgs = process.argv.slice(2);
 
@@ -72,6 +76,17 @@ if (reversalsArg !== undefined && !REVERSAL_MODES.has(reversalsArg)) {
 }
 const reversalMode: ReversalMode =
   (reversalsArg as ReversalMode | undefined) ?? "opposite";
+
+const themeIdx = rawArgs.indexOf("--theme");
+const themeArg = themeIdx !== -1 ? rawArgs[themeIdx + 1] : undefined;
+if (themeArg !== undefined && !THEME_NAMES.has(themeArg)) {
+  process.stderr.write(
+    `Invalid theme: "${themeArg}"\nValid themes: classic, default\n`,
+  );
+  process.exit(1);
+}
+const themeName: ThemeName = (themeArg as ThemeName | undefined) ?? "default";
+
 const name =
   (isHistory ? args[1] : mode !== "spread" ? args[1] : args[0]) ??
   userInfo().username;
@@ -117,6 +132,7 @@ Flags:
       --new             Force a new spread for today
       --json            Output structured JSON instead of the animated reading
       --no-color        Disable color output
+      --theme NAME      Color theme (default, classic)
       --reversals MODE  How to interpret reversed cards (default: opposite)
                         opposite  Use reversed passage (default behavior)
                         blocked   Upright meaning, framed as blocked energy
@@ -277,6 +293,7 @@ https://github.com/kellymears/tarot
         mode={mode}
         name={name}
         reversalMode={reversalMode}
+        themeName={themeName}
       />,
     );
   } catch (err) {

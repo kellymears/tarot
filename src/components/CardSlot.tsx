@@ -8,6 +8,7 @@ import { Text } from "./Text.js";
 
 interface CardSlotProps {
   card: TarotCard;
+  color: string;
   label?: string;
   reversed: boolean;
   showLabel: boolean;
@@ -16,6 +17,7 @@ interface CardSlotProps {
 
 export function CardSlot({
   card,
+  color,
   label,
   reversed,
   showLabel,
@@ -28,7 +30,12 @@ export function CardSlot({
           {label}
         </Text>
       )}
-      <AnimatedCard card={card} reversed={reversed} state={state} />
+      <AnimatedCard
+        card={card}
+        color={color}
+        reversed={reversed}
+        state={state}
+      />
     </Box>
   );
 }

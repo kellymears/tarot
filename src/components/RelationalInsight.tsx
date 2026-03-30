@@ -5,11 +5,13 @@ import type { RelationalAnalysis } from "../engine/types.js";
 import { Text } from "./Text.js";
 
 interface RelationalInsightProps {
+  accentColor: string;
   analysis: RelationalAnalysis;
   textWidth: number;
 }
 
 export function RelationalInsight({
+  accentColor,
   analysis,
   textWidth,
 }: RelationalInsightProps) {
@@ -24,13 +26,13 @@ export function RelationalInsight({
 
   return (
     <Box
-      borderColor="magenta"
+      borderColor={accentColor}
       borderStyle="round"
       flexDirection="column"
       paddingX={1}
       rowGap={1}
     >
-      <Text bold color="magenta">
+      <Text bold color={accentColor}>
         ✦ Connections
       </Text>
 
