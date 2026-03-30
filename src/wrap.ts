@@ -3,7 +3,7 @@
  * Ink's built-in `wrap="wrap"` can leave leading spaces on continuation
  * lines — this function avoids that by breaking at word boundaries cleanly.
  */
-export const wordWrap = (text: string, width: number): string => {
+export function wordWrap(text: string, width: number): string {
   const words = text.split(" ");
   const lines: string[] = [];
   let line = "";
@@ -22,4 +22,4 @@ export const wordWrap = (text: string, width: number): string => {
   if (line) lines.push(line);
 
   return lines.join("\n");
-};
+}

@@ -136,41 +136,38 @@ const computeVisibility = (state: InternalState): AnimationVisibility => {
   const past = (p: Phase) => PHASE_ORDER.indexOf(p) < phaseIndex;
   const active = (p: Phase) => state.phase === p;
 
-  const typewriter = (p: Phase): TypewriterState =>
-    past(p) ? FULL : active(p) ? { chars: state.chars, visible: true } : HIDDEN;
+  const typewriter = (p: Phase): TypewriterState => {
+    if (past(p)) return FULL;
+    if (active(p)) return { chars: state.chars, visible: true };
+    return HIDDEN;
+  };
 
+  const cardState = (i: number): CardState => {
+    if (past("reveal") || (active("reveal") && i <= state.cardIndex))
+      return "faceUp";
+    if (past("deal") || (active("deal") && i <= state.cardIndex))
+      return "faceDown";
+    if (active("reveal")) return "faceDown";
+    return "hidden";
+  };
   const cards: [CardState, CardState, CardState] = [
-    "hidden",
-    "hidden",
-    "hidden",
+    cardState(0),
+    cardState(1),
+    cardState(2),
   ];
 
-  if (past("deal")) {
-    cards[0] = cards[1] = cards[2] = "faceDown";
-  } else if (active("deal")) {
-    for (let i = 0; i <= state.cardIndex; i++) cards[i] = "faceDown";
-  }
-
-  if (past("reveal")) {
-    cards[0] = cards[1] = cards[2] = "faceUp";
-  } else if (active("reveal")) {
-    for (let i = 0; i < 3; i++) {
-      if (i <= state.cardIndex) cards[i] = "faceUp";
-      else cards[i] = "faceDown";
-    }
-  }
-
+  const sectionState = (i: number): TypewriterState => {
+    if (past("sections") || (active("sections") && i < state.sectionIndex))
+      return FULL;
+    if (active("sections") && i === state.sectionIndex)
+      return { chars: state.chars, visible: true };
+    return HIDDEN;
+  };
   const sections: [TypewriterState, TypewriterState, TypewriterState] = [
-    HIDDEN,
-    HIDDEN,
-    HIDDEN,
+    sectionState(0),
+    sectionState(1),
+    sectionState(2),
   ];
-  if (past("sections")) {
-    sections[0] = sections[1] = sections[2] = FULL;
-  } else if (active("sections")) {
-    for (let i = 0; i < state.sectionIndex; i++) sections[i] = FULL;
-    sections[state.sectionIndex] = { chars: state.chars, visible: true };
-  }
 
   return {
     cards,

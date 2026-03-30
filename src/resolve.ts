@@ -1,4 +1,3 @@
-import type { Orientation } from "./data/interpretations/types.js";
 import type { FullReading, SpreadCard } from "./engine/types.js";
 
 import { POSITIONS } from "./constants.js";
@@ -50,10 +49,7 @@ const draw = (n: number): SpreadCard[] =>
     .slice(0, n)
     .map<SpreadCard>((card, i) => ({
       card,
-      orientation:
-        Math.random() < 0.5
-          ? ("reversed" as Orientation)
-          : ("upright" as Orientation),
+      orientation: Math.random() < 0.5 ? "reversed" : "upright",
       position: POSITIONS[i],
     }));
 

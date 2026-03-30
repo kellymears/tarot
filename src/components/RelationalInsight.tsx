@@ -18,7 +18,7 @@ export function RelationalInsight({
     ...analysis.dignities.map((d) => d.detail),
     analysis.suitDominance?.detail,
     analysis.numericalPattern?.detail,
-  ].filter(Boolean) as string[];
+  ].filter((s): s is string => s != null);
 
   if (insights.length === 0) return null;
 

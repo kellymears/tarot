@@ -12,20 +12,22 @@ export function assembleNarrative(
 }
 
 const arcLabel = (cards: CardReading[]): string => {
-  const past = cards.find((c) => c.position === "past");
-  const present = cards.find((c) => c.position === "present");
-  const future = cards.find((c) => c.position === "future");
-  if (!past || !present || !future) return "";
+  const hasAllPositions =
+    cards.some((c) => c.position === "past") &&
+    cards.some((c) => c.position === "present") &&
+    cards.some((c) => c.position === "future");
 
-  return `The thread from past through present into future traces an arc: what was, what is, and what approaches are not isolated moments but movements in a single unfolding story.`;
+  if (!hasAllPositions) return "";
+
+  return "The thread from past through present into future traces an arc: what was, what is, and what approaches are not isolated moments but movements in a single unfolding story.";
 };
 
 const buildClosing = (
   cards: CardReading[],
   relational: RelationalAnalysis,
 ): string => {
-  const future = cards.find((c) => c.position === "future");
-  if (!future)
+  const hasFuture = cards.some((c) => c.position === "future");
+  if (!hasFuture)
     return "The cards have spoken. Sit with what they reveal — understanding often arrives in its own time.";
 
   const allReversed = relational.reversalPattern.count === 3;
