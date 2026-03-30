@@ -1,22 +1,44 @@
+import type { Orientation, Position } from "./data/interpretations/types.js";
 import type { FullReading, SpreadCard } from "./engine/types.js";
 
 import { POSITIONS } from "./constants.js";
 import { cards } from "./data/cards.js";
 import { interpret } from "./engine/index.js";
-import { loadDaily, saveDaily } from "./store.js";
+import { loadDaily, loadDailyCard, saveDaily, saveDailyCard } from "./store.js";
 
-export function resolve(
-  name: string,
-  forceNew: boolean,
-): {
+interface ResolveResult {
   cached: boolean;
   reading: FullReading;
   spread: SpreadCard[];
-} {
+}
+
+interface StoredCard {
+  cardId: string;
+  orientation: Orientation;
+  position: Position;
+}
+
+export function resolve(name: string, forceNew: boolean): ResolveResult {
+  return resolveWith(name, forceNew, loadDaily, saveDaily, () => draw(3));
+}
+
+export function resolveCard(name: string, forceNew: boolean): ResolveResult {
+  return resolveWith(name, forceNew, loadDailyCard, saveDailyCard, () =>
+    draw(1, ["present"]),
+  );
+}
+
+const resolveWith = (
+  name: string,
+  forceNew: boolean,
+  load: (name: string) => null | StoredCard[],
+  save: (name: string, spread: StoredCard[]) => void,
+  drawCards: () => SpreadCard[],
+): ResolveResult => {
   const cardsById = new Map(cards.map((c) => [c.id, c]));
 
   if (!forceNew) {
-    const stored = loadDaily(name);
+    const stored = load(name);
     if (stored) {
       const spread = stored
         .map((s) => {
@@ -32,8 +54,8 @@ export function resolve(
     }
   }
 
-  const spread = draw(3);
-  saveDaily(
+  const spread = drawCards();
+  save(
     name,
     spread.map((s) => ({
       cardId: s.card.id,
@@ -42,15 +64,15 @@ export function resolve(
     })),
   );
   return { cached: false, reading: interpret(spread), spread };
-}
+};
 
-const draw = (n: number): SpreadCard[] =>
+const draw = (n: number, positions: Position[] = POSITIONS): SpreadCard[] =>
   shuffle(cards)
     .slice(0, n)
     .map<SpreadCard>((card, i) => ({
       card,
       orientation: Math.random() < 0.5 ? "reversed" : "upright",
-      position: POSITIONS[i],
+      position: positions[i],
     }));
 
 const shuffle = <T>(array: T[]): T[] => {

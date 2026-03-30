@@ -16,6 +16,8 @@ const KNOWN_FLAGS = new Set([
 const flags = new Set(process.argv.slice(2).filter((a) => a.startsWith("-")));
 const args = process.argv.slice(2).filter((a) => !a.startsWith("-"));
 
+const mode = args[0] === "card" ? ("card" as const) : ("spread" as const);
+
 const noColor =
   flags.has("--no-color") ||
   "NO_COLOR" in process.env ||
@@ -24,7 +26,7 @@ const showHelp = flags.has("-h") || flags.has("--help");
 const showVersion = flags.has("-v") || flags.has("--version");
 const forceNew = flags.has("--new");
 const jsonMode = flags.has("--json");
-const name = args[0] ?? userInfo().username;
+const name = (mode === "card" ? args[1] : args[0]) ?? userInfo().username;
 
 if (noColor) {
   process.env.NO_COLOR = "1";
@@ -46,6 +48,8 @@ if (showHelp) {
 Usage:
   tarot                 Draw today's reading
   tarot luna            Draw a reading for "luna"
+  tarot card            Draw a single card
+  tarot card luna       Draw a single card for "luna"
   tarot --new           Draw a fresh spread (ignore today's cache)
   tarot --json          Output the reading as JSON
 
@@ -65,8 +69,9 @@ https://github.com/kellymears/tarot
   process.stdout.write(`tarot ${pkg.version}\n`);
 } else if (jsonMode) {
   try {
-    const { resolve } = await import("./resolve.js");
-    const { reading, spread } = resolve(name, forceNew);
+    const { resolve, resolveCard } = await import("./resolve.js");
+    const { reading, spread } =
+      mode === "card" ? resolveCard(name, forceNew) : resolve(name, forceNew);
     const output = {
       name,
       reading,
@@ -86,7 +91,7 @@ https://github.com/kellymears/tarot
     const { render } = await import("ink");
     const { App } = await import("./app.js");
     const isTTY = process.stdout.isTTY === true;
-    render(<App animate={isTTY} forceNew={forceNew} name={name} />);
+    render(<App animate={isTTY} forceNew={forceNew} mode={mode} name={name} />);
   } catch (err) {
     printError(err);
     process.exit(1);

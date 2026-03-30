@@ -6,7 +6,7 @@ import { z } from "zod";
 
 import { cards } from "./data/cards.js";
 import { loadInterpretations } from "./data/interpretations/index.js";
-import { resolve } from "./resolve.js";
+import { resolve, resolveCard } from "./resolve.js";
 
 const interpretations = loadInterpretations();
 
@@ -17,7 +17,7 @@ const server = new McpServer({
 
 server.tool(
   "draw_reading",
-  "Draw a three-card tarot reading (past/present/future) for a person. Returns the cached daily reading unless force_new is true. Each person gets one reading per day.",
+  "Draw a tarot reading for a person. Returns the cached daily reading unless force_new is true. Each person gets one reading per day.",
   {
     force_new: z
       .boolean()
@@ -25,9 +25,16 @@ server.tool(
       .default(false)
       .describe("Force a fresh draw, ignoring today's cache"),
     name: z.string().describe("Name of the person to read for"),
+    spread_type: z
+      .enum(["single", "three-card"])
+      .default("three-card")
+      .describe("Type of spread to draw"),
   },
-  async ({ force_new, name }) => {
-    const { reading, spread } = resolve(name, force_new);
+  async ({ force_new, name, spread_type }) => {
+    const { reading, spread } =
+      spread_type === "single"
+        ? resolveCard(name, force_new)
+        : resolve(name, force_new);
     return {
       content: [
         {
