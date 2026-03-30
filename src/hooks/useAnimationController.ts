@@ -94,6 +94,7 @@ const skippedState = (cardCount: 1 | 3 | 5 | 7 | 10): AnimationVisibility => ({
 interface AnimationOptions {
   cardCount?: 1 | 3 | 5 | 7 | 10;
   skip?: boolean;
+  startAfterCards?: boolean;
 }
 
 export function useAnimationController(
@@ -104,6 +105,7 @@ export function useAnimationController(
   visibility: AnimationVisibility;
 } {
   const startSkipped = options?.skip === true;
+  const startAfterCards = options?.startAfterCards === true;
   const cardCount: 1 | 3 | 5 | 7 | 10 = options?.cardCount ?? 3;
   const phases = cardCount === 1 ? CARD_PHASES : SPREAD_PHASES;
   const skipped = skippedState(cardCount);
@@ -112,10 +114,16 @@ export function useAnimationController(
     [reading, cardCount],
   );
 
+  const initialPhase: Phase = startSkipped
+    ? "done"
+    : startAfterCards
+      ? "divider"
+      : "header";
+
   const stateRef = useRef<InternalState>({
     cardIndex: 0,
     chars: 0,
-    phase: startSkipped ? "done" : "header",
+    phase: initialPhase,
     sectionIndex: 0,
     skipped: startSkipped,
     ticks: 0,

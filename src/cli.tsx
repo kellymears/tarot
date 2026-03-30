@@ -11,6 +11,7 @@ import { SPREADS } from "./spreads.js";
 
 const KNOWN_FLAGS = new Set([
   "--help",
+  "--interactive",
   "--json",
   "--new",
   "--no-color",
@@ -18,6 +19,7 @@ const KNOWN_FLAGS = new Set([
   "--theme",
   "--version",
   "-h",
+  "-i",
   "-v",
 ]);
 
@@ -63,6 +65,7 @@ const noColor =
 const showHelp = flags.has("-h") || flags.has("--help");
 const showVersion = flags.has("-v") || flags.has("--version");
 const forceNew = flags.has("--new");
+const interactiveFlag = flags.has("-i") || flags.has("--interactive");
 const jsonMode = flags.has("--json");
 
 const reversalsIdx = rawArgs.indexOf("--reversals");
@@ -129,6 +132,7 @@ Usage:
 Flags:
   -h, --help            Show this help
   -v, --version         Show version
+  -i, --interactive     Choose your own cards (three-card spread only)
       --new             Force a new spread for today
       --json            Output structured JSON instead of the animated reading
       --no-color        Disable color output
@@ -286,10 +290,17 @@ https://github.com/kellymears/tarot
     const { render } = await import("ink");
     const { App } = await import("./app.js");
     const isTTY = process.stdout.isTTY === true;
+    const interactive = interactiveFlag && process.stdin.isTTY === true;
+    if (interactiveFlag && !interactive) {
+      process.stderr.write(
+        "Interactive mode requires a terminal. Falling back to auto-draw.\n",
+      );
+    }
     render(
       <App
         animate={isTTY}
         forceNew={forceNew}
+        interactive={interactive}
         mode={mode}
         name={name}
         reversalMode={reversalMode}

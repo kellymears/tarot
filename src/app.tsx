@@ -1,10 +1,12 @@
 import { Box, useApp, useInput, useStdout } from "ink";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import type { ReversalMode } from "./data/interpretations/types.js";
+import type { FullReading, SpreadCard } from "./engine/types.js";
 import type { SpreadMode } from "./spreads.js";
 import type { ThemeName } from "./theme.js";
 
+import { CardPicker } from "./components/CardPicker.js";
 import { CardSlot } from "./components/CardSlot.js";
 import { RelationalInsight } from "./components/RelationalInsight.js";
 import { Text } from "./components/Text.js";
@@ -17,32 +19,137 @@ import {
   POSITION_SUBTITLES,
   SUIT_SYMBOL,
 } from "./constants.js";
+import { interpret } from "./engine/index.js";
 import { useAnimationController } from "./hooks/useAnimationController.js";
 import { resolveSpread } from "./resolve.js";
 import { SPREADS } from "./spreads.js";
+import { appendHistory } from "./store.js";
 import { THEMES } from "./theme.js";
 
-interface AppProps {
+export interface AppProps {
   animate: boolean;
   forceNew: boolean;
+  interactive: boolean;
   mode: SpreadMode;
   name: string;
   reversalMode: ReversalMode;
   themeName: ThemeName;
 }
 
+interface ReadingProps {
+  animate: boolean;
+  cached: boolean;
+  def: (typeof SPREADS)[SpreadMode];
+  displayName: string;
+  mode: SpreadMode;
+  reading: FullReading;
+  spread: SpreadCard[];
+  startAfterCards: boolean;
+  theme: (typeof THEMES)[keyof typeof THEMES];
+}
+
 export function App({
   animate,
   forceNew,
+  interactive,
   mode,
   name,
   reversalMode,
   themeName,
 }: AppProps) {
-  const { exit } = useApp();
-  const { stdout } = useStdout();
   const theme = THEMES[themeName];
   const def = SPREADS[mode];
+  const isInteractiveMode = interactive && mode === "spread";
+
+  const [pickerResult, setPickerResult] = useState<null | {
+    reading: FullReading;
+    spread: SpreadCard[];
+  }>(null);
+
+  const handlePickerComplete = useCallback(
+    (selected: SpreadCard[]) => {
+      const reading = interpret(selected, reversalMode);
+      appendHistory(name, {
+        cards: selected.map((s) => ({
+          cardId: s.card.id,
+          orientation: s.orientation,
+          position: s.position,
+        })),
+        date: new Date().toISOString().slice(0, 10),
+        spreadType: mode,
+      });
+      setPickerResult({ reading, spread: selected });
+    },
+    [mode, name, reversalMode],
+  );
+
+  // Auto-resolve for non-interactive mode
+  const autoResolved = useMemo(
+    () =>
+      isInteractiveMode
+        ? null
+        : resolveSpread(mode, name, forceNew, reversalMode),
+    [forceNew, isInteractiveMode, mode, name, reversalMode],
+  );
+
+  const displayName = name.charAt(0).toUpperCase() + name.slice(1);
+
+  // Interactive mode: show picker until cards are selected
+  if (isInteractiveMode && !pickerResult) {
+    return (
+      <Box flexDirection="column" gap={1}>
+        <Box alignItems="center" flexDirection="column">
+          <Text dimColor>{ORNAMENT}</Text>
+          <Text bold color={theme.accent}>
+            {def.title}
+          </Text>
+          <Text dimColor>
+            A reading for <Text color={theme.accent}>{displayName}</Text>
+          </Text>
+          <Text dimColor italic>
+            Choose your cards
+          </Text>
+        </Box>
+        <CardPicker
+          accentColor={theme.accent}
+          onComplete={handlePickerComplete}
+          positions={def.positions}
+        />
+      </Box>
+    );
+  }
+
+  // Either auto-resolved or picker-selected
+  const resolved = pickerResult ?? autoResolved!;
+
+  return (
+    <Reading
+      animate={animate}
+      cached={!pickerResult && (autoResolved?.cached ?? false)}
+      def={def}
+      displayName={displayName}
+      mode={mode}
+      reading={resolved.reading}
+      spread={resolved.spread}
+      startAfterCards={isInteractiveMode}
+      theme={theme}
+    />
+  );
+}
+
+function Reading({
+  animate,
+  cached,
+  def,
+  displayName,
+  mode,
+  reading,
+  spread,
+  startAfterCards,
+  theme,
+}: ReadingProps) {
+  const { exit } = useApp();
+  const { stdout } = useStdout();
   const isSingleCard = def.cardCount === 1;
   const isMultiCard = !isSingleCard;
   const isYesNo = mode === "yes-no";
@@ -50,21 +157,19 @@ export function App({
   const textWidth = Math.min(MAX_TEXT_WIDTH, columns);
   const borderedWidth = textWidth - 2;
 
-  const [{ cached, reading, spread }] = useState(() =>
-    resolveSpread(mode, name, forceNew, reversalMode),
-  );
   const { skip, visibility: v } = useAnimationController(reading, {
     cardCount: def.cardCount,
     skip: !animate,
+    startAfterCards,
   });
 
-  const interactive = process.stdin.isTTY === true;
+  const isTTY = process.stdin.isTTY === true;
 
   useInput(
     () => {
       if (!v.done) skip();
     },
-    { isActive: interactive && !v.done },
+    { isActive: isTTY && !v.done },
   );
 
   useEffect(() => {
@@ -74,7 +179,6 @@ export function App({
     }
   }, [v.done, exit]);
 
-  const displayName = name.charAt(0).toUpperCase() + name.slice(1);
   const dateLabel = new Date().toLocaleDateString("en-US", {
     day: "numeric",
     month: "long",
@@ -101,41 +205,48 @@ export function App({
         </Box>
       )}
 
-      <Box alignItems="center" flexDirection="column" gap={1}>
-        {def.layout.map((section, si) => (
-          <Box alignItems="center" flexDirection="column" gap={1} key={si}>
-            {section.label && (
-              <Text bold dimColor>
-                {section.label}
-              </Text>
-            )}
-            {section.rows.map((row, ri) => (
-              <Box flexDirection="row" gap={1} justifyContent="center" key={ri}>
-                {row.map((idx) => {
-                  const slotColor = spread[idx].card.suit
-                    ? theme.suits[spread[idx].card.suit!]
-                    : theme.accent;
-                  return (
-                    <CardSlot
-                      card={spread[idx].card}
-                      color={slotColor}
-                      key={spread[idx].card.id}
-                      label={
-                        spread[idx].position === "challenge"
-                          ? "✦ " + POSITION_LABELS[spread[idx].position]
-                          : POSITION_LABELS[spread[idx].position]
-                      }
-                      reversed={spread[idx].orientation === "reversed"}
-                      showLabel={isMultiCard}
-                      state={v.cards[idx]}
-                    />
-                  );
-                })}
-              </Box>
-            ))}
-          </Box>
-        ))}
-      </Box>
+      {!startAfterCards && (
+        <Box alignItems="center" flexDirection="column" gap={1}>
+          {def.layout.map((section, si) => (
+            <Box alignItems="center" flexDirection="column" gap={1} key={si}>
+              {section.label && (
+                <Text bold dimColor>
+                  {section.label}
+                </Text>
+              )}
+              {section.rows.map((row, ri) => (
+                <Box
+                  flexDirection="row"
+                  gap={1}
+                  justifyContent="center"
+                  key={ri}
+                >
+                  {row.map((idx) => {
+                    const slotColor = spread[idx].card.suit
+                      ? theme.suits[spread[idx].card.suit!]
+                      : theme.accent;
+                    return (
+                      <CardSlot
+                        card={spread[idx].card}
+                        color={slotColor}
+                        key={spread[idx].card.id}
+                        label={
+                          spread[idx].position === "challenge"
+                            ? "✦ " + POSITION_LABELS[spread[idx].position]
+                            : POSITION_LABELS[spread[idx].position]
+                        }
+                        reversed={spread[idx].orientation === "reversed"}
+                        showLabel={isMultiCard}
+                        state={v.cards[idx]}
+                      />
+                    );
+                  })}
+                </Box>
+              ))}
+            </Box>
+          ))}
+        </Box>
+      )}
 
       {v.divider && (
         <Box
@@ -275,7 +386,7 @@ export function App({
         </Box>
       )}
 
-      {interactive && !v.done && v.header && (
+      {isTTY && !v.done && v.header && (
         <Box justifyContent="center">
           <Text dimColor italic>
             press any key to skip
