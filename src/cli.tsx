@@ -4,6 +4,9 @@ import { readFileSync } from "node:fs";
 import { userInfo } from "node:os";
 
 import type { ReversalMode } from "./data/interpretations/types.js";
+import type { SpreadMode } from "./spreads.js";
+
+import { SPREADS } from "./spreads.js";
 
 const KNOWN_FLAGS = new Set([
   "--help",
@@ -24,6 +27,8 @@ const REVERSAL_MODES = new Set([
   "weakened",
 ]);
 
+const SUBCOMMANDS = new Set(Object.keys(SPREADS).filter((k) => k !== "spread"));
+
 const VALUE_FLAGS = new Set(["--reversals"]);
 
 const rawArgs = process.argv.slice(2);
@@ -43,19 +48,9 @@ const args = rawArgs.filter(
   (a, i) => !a.startsWith("-") && !valueFlagArgs.has(i),
 );
 
-const mode =
-  args[0] === "card"
-    ? ("card" as const)
-    : args[0] === "celtic-cross"
-      ? ("celtic-cross" as const)
-      : args[0] === "five-card"
-        ? ("five-card" as const)
-        : args[0] === "horseshoe"
-          ? ("horseshoe" as const)
-          : args[0] === "yes-no"
-            ? ("yes-no" as const)
-            : ("spread" as const);
-
+const mode: SpreadMode = SUBCOMMANDS.has(args[0])
+  ? (args[0] as SpreadMode)
+  : "spread";
 const noColor =
   flags.has("--no-color") ||
   "NO_COLOR" in process.env ||
@@ -76,14 +71,7 @@ if (reversalsArg !== undefined && !REVERSAL_MODES.has(reversalsArg)) {
 }
 const reversalMode: ReversalMode =
   (reversalsArg as ReversalMode | undefined) ?? "opposite";
-const name =
-  (mode === "card" ||
-  mode === "celtic-cross" ||
-  mode === "five-card" ||
-  mode === "horseshoe" ||
-  mode === "yes-no"
-    ? args[1]
-    : args[0]) ?? userInfo().username;
+const name = (mode !== "spread" ? args[1] : args[0]) ?? userInfo().username;
 
 if (noColor) {
   process.env.NO_COLOR = "1";
@@ -140,26 +128,13 @@ https://github.com/kellymears/tarot
   process.stdout.write(`tarot ${pkg.version}\n`);
 } else if (jsonMode) {
   try {
-    const {
-      resolve,
-      resolveCard,
-      resolveCelticCross,
-      resolveFiveCard,
-      resolveHorseshoe,
-      resolveYesNo,
-    } = await import("./resolve.js");
-    const { reading, spread } =
-      mode === "yes-no"
-        ? resolveYesNo(name, forceNew, reversalMode)
-        : mode === "card"
-          ? resolveCard(name, forceNew, reversalMode)
-          : mode === "celtic-cross"
-            ? resolveCelticCross(name, forceNew, reversalMode)
-            : mode === "five-card"
-              ? resolveFiveCard(name, forceNew, reversalMode)
-              : mode === "horseshoe"
-                ? resolveHorseshoe(name, forceNew, reversalMode)
-                : resolve(name, forceNew, reversalMode);
+    const { resolveSpread } = await import("./resolve.js");
+    const { reading, spread } = resolveSpread(
+      mode,
+      name,
+      forceNew,
+      reversalMode,
+    );
     const output = {
       name,
       reading,

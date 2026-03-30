@@ -4,18 +4,22 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { z } from "zod";
 
+import type { SpreadMode } from "./spreads.js";
+
 import { cards } from "./data/cards.js";
 import { loadInterpretations } from "./data/interpretations/index.js";
-import {
-  resolve,
-  resolveCard,
-  resolveCelticCross,
-  resolveFiveCard,
-  resolveHorseshoe,
-  resolveYesNo,
-} from "./resolve.js";
+import { resolveSpread } from "./resolve.js";
 
 const interpretations = loadInterpretations();
+
+const MCP_SPREAD_MAP: Record<string, SpreadMode> = {
+  "celtic-cross": "celtic-cross",
+  "five-card": "five-card",
+  horseshoe: "horseshoe",
+  single: "card",
+  "three-card": "spread",
+  "yes-no": "yes-no",
+};
 
 const server = new McpServer({
   name: "tarot",
@@ -51,18 +55,13 @@ server.tool(
       .describe("Type of spread to draw"),
   },
   async ({ force_new, name, reversal_mode, spread_type }) => {
-    const { reading, spread } =
-      spread_type === "yes-no"
-        ? resolveYesNo(name, force_new, reversal_mode)
-        : spread_type === "single"
-          ? resolveCard(name, force_new, reversal_mode)
-          : spread_type === "celtic-cross"
-            ? resolveCelticCross(name, force_new, reversal_mode)
-            : spread_type === "five-card"
-              ? resolveFiveCard(name, force_new, reversal_mode)
-              : spread_type === "horseshoe"
-                ? resolveHorseshoe(name, force_new, reversal_mode)
-                : resolve(name, force_new, reversal_mode);
+    const mode = MCP_SPREAD_MAP[spread_type];
+    const { reading, spread } = resolveSpread(
+      mode,
+      name,
+      force_new,
+      reversal_mode,
+    );
     return {
       content: [
         {

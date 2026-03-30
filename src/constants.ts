@@ -128,37 +128,6 @@ export const NUMERALS = [
   "XXI",
 ];
 
-export const CELTIC_CROSS_POSITIONS: Position[] = [
-  "present",
-  "challenge",
-  "past",
-  "future",
-  "above",
-  "below",
-  "self",
-  "environment",
-  "hopes-fears",
-  "outcome",
-];
-
-export const FIVE_CARD_POSITIONS: Position[] = [
-  "present",
-  "past",
-  "future",
-  "above",
-  "below",
-];
-
-export const HORSESHOE_POSITIONS: Position[] = [
-  "past",
-  "present",
-  "future",
-  "self",
-  "environment",
-  "obstacle",
-  "outcome",
-];
-
 export const POSITION_LABELS: Record<Position, string> = {
   above: "Above",
   below: "Below",
@@ -186,8 +155,6 @@ export const POSITION_SUBTITLES: Record<Position, string> = {
   present: "where you stand",
   self: "your inner state",
 };
-
-export const POSITIONS: Position[] = ["past", "present", "future"];
 
 export const SUIT_ELEMENT: Record<Suit, Element> = {
   cups: "water",
