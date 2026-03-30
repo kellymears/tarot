@@ -2,7 +2,6 @@ import type { Suit } from "./data/cards.js";
 import type { Position } from "./data/interpretations/types.js";
 import type { Element } from "./engine/types.js";
 
-// Timing for the deal/reveal/typewriter sequence.
 // Tick-based phases (header, deal, reveal, divider) count frames at
 // `tickMs` intervals. Text phases advance `charsPerTick` per frame.
 export const ANIMATION = {
@@ -15,12 +14,9 @@ export const ANIMATION = {
   tickMs: 33,
 } as const;
 
-// Maximum width for the text content area. Clamped to terminal width at
-// render time so narrow terminals don't overflow.
+// Clamped to terminal width at render time so narrow terminals don't overflow.
 export const MAX_TEXT_WIDTH = 76;
 
-// Fixed dimensions (rows × columns) for card components.
-// `back` holds the two alternating rows of the face-down pattern.
 export const CARD = {
   back: {
     rowA: "✧ · ✧ · ★ · ✧ · ✧",
@@ -30,13 +26,10 @@ export const CARD = {
   width: 28,
 } as const;
 
-// Decorative ornament used in headers and dividers.
 export const ORNAMENT = "✧ · ✦ · ✧";
 
-// Symbol displayed on major arcana card faces.
 export const MAJOR_SYMBOL = "★";
 
-// Suit-specific border/text colors for visual distinction.
 export const SUIT_COLOR: Record<Suit, string> = {
   cups: "blue",
   pentacles: "green",
@@ -44,7 +37,6 @@ export const SUIT_COLOR: Record<Suit, string> = {
   wands: "yellow",
 };
 
-// Unicode glyphs representing each suit on card faces.
 export const SUIT_SYMBOL: Record<Suit, string> = {
   cups: "☽",
   pentacles: "✦",
@@ -53,7 +45,6 @@ export const SUIT_SYMBOL: Record<Suit, string> = {
 };
 
 // Allied elements strengthen each other; enemy elements create tension.
-// Used by the dignity analysis to describe relationships between cards.
 export const DIGNITIES = {
   allied: [
     ["fire", "air"],
@@ -65,7 +56,6 @@ export const DIGNITIES = {
   ] as [Element, Element][],
 };
 
-// Display names for the four classical elements.
 export const ELEMENT_NAME: Record<Element, string> = {
   air: "Air",
   earth: "Earth",
@@ -73,7 +63,6 @@ export const ELEMENT_NAME: Record<Element, string> = {
   water: "Water",
 };
 
-// Maps each major arcana card (by ID) to its associated element.
 export const MAJOR_ELEMENT: Record<string, Element> = {
   "major-00": "air",
   "major-01": "air",
@@ -99,7 +88,6 @@ export const MAJOR_ELEMENT: Record<string, Element> = {
   "major-21": "earth",
 };
 
-// Numerological meaning for card numbers 0–10.
 // Falls back to a generic label for court cards (11+).
 export const NUMBER_MEANING: Record<number, string> = {
   0: "infinite potential and the void",
@@ -115,7 +103,6 @@ export const NUMBER_MEANING: Record<number, string> = {
   10: "endings that become beginnings",
 };
 
-// Roman numeral labels for major arcana numbers (0–XXI).
 export const NUMERALS = [
   "0",
   "I",
@@ -141,24 +128,20 @@ export const NUMERALS = [
   "XXI",
 ];
 
-// Human-readable labels for the three spread positions.
 export const POSITION_LABELS: Record<Position, string> = {
   future: "Future",
   past: "Past",
   present: "Present",
 };
 
-// Evocative subtitles for each spread position.
 export const POSITION_SUBTITLES: Record<Position, string> = {
   future: "what beckons",
   past: "what shaped you",
   present: "where you stand",
 };
 
-// Ordered spread positions — determines draw and display order.
 export const POSITIONS: Position[] = ["past", "present", "future"];
 
-// Maps each minor arcana suit to its classical element.
 export const SUIT_ELEMENT: Record<Suit, Element> = {
   cups: "water",
   pentacles: "earth",
@@ -166,7 +149,6 @@ export const SUIT_ELEMENT: Record<Suit, Element> = {
   wands: "fire",
 };
 
-// Thematic description for each suit, used in narrative passages.
 export const SUIT_THEME: Record<Suit, string> = {
   cups: "emotion, intuition, and relationships",
   pentacles: "material concerns, work, and the physical world",
