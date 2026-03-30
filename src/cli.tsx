@@ -16,7 +16,12 @@ const KNOWN_FLAGS = new Set([
 const flags = new Set(process.argv.slice(2).filter((a) => a.startsWith("-")));
 const args = process.argv.slice(2).filter((a) => !a.startsWith("-"));
 
-const mode = args[0] === "card" ? ("card" as const) : ("spread" as const);
+const mode =
+  args[0] === "card"
+    ? ("card" as const)
+    : args[0] === "yes-no"
+      ? ("yes-no" as const)
+      : ("spread" as const);
 
 const noColor =
   flags.has("--no-color") ||
@@ -26,7 +31,9 @@ const showHelp = flags.has("-h") || flags.has("--help");
 const showVersion = flags.has("-v") || flags.has("--version");
 const forceNew = flags.has("--new");
 const jsonMode = flags.has("--json");
-const name = (mode === "card" ? args[1] : args[0]) ?? userInfo().username;
+const name =
+  (mode === "card" || mode === "yes-no" ? args[1] : args[0]) ??
+  userInfo().username;
 
 if (noColor) {
   process.env.NO_COLOR = "1";
@@ -50,6 +57,8 @@ Usage:
   tarot luna            Draw a reading for "luna"
   tarot card            Draw a single card
   tarot card luna       Draw a single card for "luna"
+  tarot yes-no          Ask a yes-or-no question
+  tarot yes-no luna     Ask a yes-or-no question for "luna"
   tarot --new           Draw a fresh spread (ignore today's cache)
   tarot --json          Output the reading as JSON
 
@@ -69,9 +78,13 @@ https://github.com/kellymears/tarot
   process.stdout.write(`tarot ${pkg.version}\n`);
 } else if (jsonMode) {
   try {
-    const { resolve, resolveCard } = await import("./resolve.js");
+    const { resolve, resolveCard, resolveYesNo } = await import("./resolve.js");
     const { reading, spread } =
-      mode === "card" ? resolveCard(name, forceNew) : resolve(name, forceNew);
+      mode === "yes-no"
+        ? resolveYesNo(name, forceNew)
+        : mode === "card"
+          ? resolveCard(name, forceNew)
+          : resolve(name, forceNew);
     const output = {
       name,
       reading,

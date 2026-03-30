@@ -6,7 +6,7 @@ import { z } from "zod";
 
 import { cards } from "./data/cards.js";
 import { loadInterpretations } from "./data/interpretations/index.js";
-import { resolve, resolveCard } from "./resolve.js";
+import { resolve, resolveCard, resolveYesNo } from "./resolve.js";
 
 const interpretations = loadInterpretations();
 
@@ -26,15 +26,17 @@ server.tool(
       .describe("Force a fresh draw, ignoring today's cache"),
     name: z.string().describe("Name of the person to read for"),
     spread_type: z
-      .enum(["single", "three-card"])
+      .enum(["single", "three-card", "yes-no"])
       .default("three-card")
       .describe("Type of spread to draw"),
   },
   async ({ force_new, name, spread_type }) => {
     const { reading, spread } =
-      spread_type === "single"
-        ? resolveCard(name, force_new)
-        : resolve(name, force_new);
+      spread_type === "yes-no"
+        ? resolveYesNo(name, force_new)
+        : spread_type === "single"
+          ? resolveCard(name, force_new)
+          : resolve(name, force_new);
     return {
       content: [
         {

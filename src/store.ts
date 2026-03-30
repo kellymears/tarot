@@ -15,34 +15,16 @@ interface StoredReading {
   spread: StoredCard[];
 }
 
-export function loadDaily(name: string): null | StoredCard[] {
-  return readStore(filePath(name));
-}
-
-export function loadDailyCard(name: string): null | StoredCard[] {
-  return readStore(cardFilePath(name));
+export function loadDaily(name: string, suffix = ""): null | StoredCard[] {
+  return readStore(filePath(name, suffix));
 }
 
 export function saveDaily(
   name: string,
-  spread: Array<{
-    cardId: string;
-    orientation: Orientation;
-    position: Position;
-  }>,
+  spread: StoredCard[],
+  suffix = "",
 ): void {
-  writeStore(filePath(name), spread);
-}
-
-export function saveDailyCard(
-  name: string,
-  spread: Array<{
-    cardId: string;
-    orientation: Orientation;
-    position: Position;
-  }>,
-): void {
-  writeStore(cardFilePath(name), spread);
+  writeStore(filePath(name, suffix), spread);
 }
 
 const readStore = (path: string): null | StoredCard[] => {
@@ -57,14 +39,7 @@ const readStore = (path: string): null | StoredCard[] => {
   }
 };
 
-const writeStore = (
-  path: string,
-  spread: Array<{
-    cardId: string;
-    orientation: Orientation;
-    position: Position;
-  }>,
-): void => {
+const writeStore = (path: string, spread: StoredCard[]): void => {
   const dir = dataDir();
   mkdirSync(dir, { recursive: true });
   const data: StoredReading = { date: today(), spread };
@@ -80,10 +55,9 @@ const dataDir = (): string => {
 const safeName = (name: string): string =>
   name.toLowerCase().replace(/[^a-z0-9-]/g, "-");
 
-const filePath = (name: string): string =>
-  join(dataDir(), `${safeName(name)}.json`);
-
-const cardFilePath = (name: string): string =>
-  join(dataDir(), `${safeName(name)}.card.json`);
+const filePath = (name: string, suffix: string): string => {
+  const base = safeName(name);
+  return join(dataDir(), suffix ? `${base}.${suffix}.json` : `${base}.json`);
+};
 
 const today = (): string => new Date().toISOString().slice(0, 10);

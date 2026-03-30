@@ -15,12 +15,12 @@ import {
   SUIT_SYMBOL,
 } from "./constants.js";
 import { useAnimationController } from "./hooks/useAnimationController.js";
-import { resolve, resolveCard } from "./resolve.js";
+import { resolve, resolveCard, resolveYesNo } from "./resolve.js";
 
 interface AppProps {
   animate: boolean;
   forceNew: boolean;
-  mode: "card" | "spread";
+  mode: "card" | "spread" | "yes-no";
   name: string;
 }
 
@@ -28,13 +28,19 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
   const { exit } = useApp();
   const { stdout } = useStdout();
   const isCard = mode === "card";
-  const cardCount = isCard ? 1 : 3;
+  const isYesNo = mode === "yes-no";
+  const isSingleCard = isCard || isYesNo;
+  const cardCount = isSingleCard ? 1 : 3;
   const columns = stdout.columns ?? MAX_TEXT_WIDTH;
   const textWidth = Math.min(MAX_TEXT_WIDTH, columns);
   const borderedWidth = textWidth - 2;
 
   const [{ cached, reading, spread }] = useState(() =>
-    isCard ? resolveCard(name, forceNew) : resolve(name, forceNew),
+    isYesNo
+      ? resolveYesNo(name, forceNew)
+      : isCard
+        ? resolveCard(name, forceNew)
+        : resolve(name, forceNew),
   );
   const { skip, visibility: v } = useAnimationController(reading, {
     cardCount,
@@ -70,12 +76,16 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
         <Box alignItems="center" flexDirection="column">
           <Text dimColor>{ORNAMENT}</Text>
           <Text bold color="magenta">
-            {isCard ? "Daily Card" : "Three-Card Spread"}
+            {isYesNo
+              ? "Yes or No?"
+              : isCard
+                ? "Daily Card"
+                : "Three-Card Spread"}
           </Text>
           <Text dimColor>
             A reading for <Text color="magenta">{displayName}</Text>
           </Text>
-          {!isCard && <Text dimColor>Past · Present · Future</Text>}
+          {!isSingleCard && <Text dimColor>Past · Present · Future</Text>}
           {cached && (
             <Text dimColor italic>
               {dateLabel}
@@ -87,7 +97,7 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
       <Box flexDirection="row" flexWrap="wrap" gap={1} justifyContent="center">
         {spread.slice(0, cardCount).map((sc, i) => (
           <Box alignItems="center" flexDirection="column" key={sc.card.id}>
-            {!isCard && v.cards[i] !== "hidden" && (
+            {!isSingleCard && v.cards[i] !== "hidden" && (
               <Text bold dimColor>
                 {POSITION_LABELS[sc.position]}
               </Text>
@@ -112,12 +122,23 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
             <Text dimColor>{"───────────── ✦ ─────────────"}</Text>
           </Box>
 
-          {!isCard && v.opening.visible && (
+          {!isSingleCard && v.opening.visible && (
             <Typewriter chars={v.opening.chars}>
               <Text dimColor italic textWidth={textWidth}>
                 {reading.narrative.opening}
               </Text>
             </Typewriter>
+          )}
+
+          {isYesNo && v.sections[0]?.visible && (
+            <Box justifyContent="center">
+              <Text
+                bold
+                color={spread[0].orientation === "upright" ? "green" : "red"}
+              >
+                {spread[0].orientation === "upright" ? "Yes" : "No"}
+              </Text>
+            </Box>
           )}
 
           {reading.cards.slice(0, cardCount).map((cardReading, i) => {
@@ -131,9 +152,18 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
 
             return (
               <Box flexDirection="column" key={cardReading.position}>
-                {isCard ? (
+                {isSingleCard ? (
                   <Text bold color={color}>
                     {symbol} {sc.card.name}
+                    {isYesNo && (
+                      <Text dimColor>
+                        {" "}
+                        ·{" "}
+                        {sc.orientation === "upright"
+                          ? "upright"
+                          : "reversed"}{" "}
+                      </Text>
+                    )}
                   </Text>
                 ) : (
                   <Text bold color={color}>
@@ -163,14 +193,14 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
             );
           })}
 
-          {!isCard && v.connections.visible && (
+          {!isSingleCard && v.connections.visible && (
             <RelationalInsight
               analysis={reading.relational}
               textWidth={textWidth}
             />
           )}
 
-          {!isCard && v.synthesis.visible && (
+          {!isSingleCard && v.synthesis.visible && (
             <Box flexDirection="column">
               <Text bold color="green">
                 ✦ The Thread
@@ -204,9 +234,11 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
               </Box>
               {cached && (
                 <Text dimColor italic>
-                  {isCard
-                    ? "tarot card --new for a fresh draw · tarot --json for data"
-                    : "tarot --new for a fresh spread · tarot --json for data"}
+                  {isYesNo
+                    ? "tarot yes-no --new for a fresh draw · tarot yes-no --json for data"
+                    : isCard
+                      ? "tarot card --new for a fresh draw · tarot --json for data"
+                      : "tarot --new for a fresh spread · tarot --json for data"}
                 </Text>
               )}
             </Box>
