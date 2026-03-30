@@ -28,3 +28,10 @@ export type Position =
   | "self";
 
 export type PositionPassages = Partial<Record<Position, CardPassage>>;
+
+export type ReversalMode =
+  | "blocked"
+  | "none"
+  | "opposite"
+  | "shadow"
+  | "weakened";

@@ -1,6 +1,8 @@
 import { Box, useApp, useInput, useStdout } from "ink";
 import { useEffect, useState } from "react";
 
+import type { ReversalMode } from "./data/interpretations/types.js";
+
 import { AnimatedCard } from "./components/AnimatedCard.js";
 import { RelationalInsight } from "./components/RelationalInsight.js";
 import { Text } from "./components/Text.js";
@@ -28,9 +30,10 @@ interface AppProps {
   forceNew: boolean;
   mode: "card" | "five-card" | "horseshoe" | "spread" | "yes-no";
   name: string;
+  reversalMode: ReversalMode;
 }
 
-export function App({ animate, forceNew, mode, name }: AppProps) {
+export function App({ animate, forceNew, mode, name, reversalMode }: AppProps) {
   const { exit } = useApp();
   const { stdout } = useStdout();
   const isCard = mode === "card";
@@ -52,14 +55,14 @@ export function App({ animate, forceNew, mode, name }: AppProps) {
 
   const [{ cached, reading, spread }] = useState(() =>
     isYesNo
-      ? resolveYesNo(name, forceNew)
+      ? resolveYesNo(name, forceNew, reversalMode)
       : isCard
-        ? resolveCard(name, forceNew)
+        ? resolveCard(name, forceNew, reversalMode)
         : isFiveCard
-          ? resolveFiveCard(name, forceNew)
+          ? resolveFiveCard(name, forceNew, reversalMode)
           : isHorseshoe
-            ? resolveHorseshoe(name, forceNew)
-            : resolve(name, forceNew),
+            ? resolveHorseshoe(name, forceNew, reversalMode)
+            : resolve(name, forceNew, reversalMode),
   );
   const { skip, visibility: v } = useAnimationController(reading, {
     cardCount,

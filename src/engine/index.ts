@@ -1,3 +1,4 @@
+import type { ReversalMode } from "../data/interpretations/types.js";
 import type { FullReading, SpreadCard } from "./types.js";
 
 import { loadInterpretations } from "../data/interpretations/index.js";
@@ -7,8 +8,11 @@ import { assembleNarrative } from "./layer3.js";
 
 const interpretations = loadInterpretations();
 
-export function interpret(spread: SpreadCard[]): FullReading {
-  const cards = resolvePassages(spread, interpretations);
+export function interpret(
+  spread: SpreadCard[],
+  reversalMode: ReversalMode = "opposite",
+): FullReading {
+  const cards = resolvePassages(spread, interpretations, reversalMode);
   const relational = analyzeRelations(spread);
   const narrative = assembleNarrative(cards, relational);
 

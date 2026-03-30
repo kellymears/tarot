@@ -1,10 +1,29 @@
 import type {
   InterpretationMap,
   Position,
+  ReversalMode,
 } from "../data/interpretations/types.js";
 import type { CardReading, SpreadCard } from "./types.js";
 
 import { lookupPassage } from "../data/interpretations/index.js";
+
+const reversalFraming: Record<
+  "blocked" | "shadow" | "weakened",
+  { prefix: string; suffix: string }
+> = {
+  blocked: {
+    prefix: "This energy is present but finds itself obstructed. ",
+    suffix: " Yet something prevents its full expression right now.",
+  },
+  shadow: {
+    prefix: "This influence operates beneath conscious awareness. ",
+    suffix: " It works from the inner landscape, not the visible one.",
+  },
+  weakened: {
+    prefix: "A quieter version of this energy is at play. ",
+    suffix: " The essence remains, but its force is diminished.",
+  },
+};
 
 const positionFraming: Record<
   Position,
@@ -33,28 +52,52 @@ const positionFraming: Record<
 export function resolvePassages(
   spread: SpreadCard[],
   interpretations: InterpretationMap,
+  reversalMode: ReversalMode = "opposite",
 ): CardReading[] {
   return spread.map((sc) => {
+    const isReversed = sc.orientation === "reversed";
+    const useUpright =
+      isReversed && reversalMode !== "opposite" && reversalMode !== "none";
+    const effectiveOrientation =
+      reversalMode === "none"
+        ? "upright"
+        : useUpright
+          ? "upright"
+          : sc.orientation;
+
     const authored = lookupPassage(
       interpretations,
       sc.card.id,
       sc.position,
-      sc.orientation,
+      effectiveOrientation,
     );
+
+    let passage = authored ?? fallbackPassage(sc, effectiveOrientation);
+
+    if (isReversed && useUpright) {
+      const framing =
+        reversalFraming[reversalMode as "blocked" | "shadow" | "weakened"];
+      passage = framing.prefix + passage + framing.suffix;
+    }
 
     return {
       fallback: !authored,
-      passage: authored ?? fallbackPassage(sc),
+      passage,
       position: sc.position,
     };
   });
 }
 
-const fallbackPassage = (card: SpreadCard): string => {
+const fallbackPassage = (
+  card: SpreadCard,
+  effectiveOrientation: "reversed" | "upright",
+): string => {
   const keywords =
-    card.orientation === "reversed" ? card.card.reversed : card.card.upright;
+    effectiveOrientation === "reversed"
+      ? card.card.reversed
+      : card.card.upright;
   const name =
-    card.orientation === "reversed"
+    effectiveOrientation === "reversed"
       ? `${card.card.name} reversed`
       : card.card.name;
   return positionFraming[card.position](name, keywords);

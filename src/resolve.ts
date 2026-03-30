@@ -1,4 +1,4 @@
-import type { Position } from "./data/interpretations/types.js";
+import type { Position, ReversalMode } from "./data/interpretations/types.js";
 import type { FullReading, SpreadCard } from "./engine/types.js";
 
 import {
@@ -16,34 +16,68 @@ interface ResolveResult {
   spread: SpreadCard[];
 }
 
-export function resolve(name: string, forceNew: boolean): ResolveResult {
-  return resolveWith(name, forceNew, "", () => draw(3));
+export function resolve(
+  name: string,
+  forceNew: boolean,
+  reversalMode: ReversalMode = "opposite",
+): ResolveResult {
+  return resolveWith(name, forceNew, "", () => draw(3), reversalMode);
 }
 
-export function resolveCard(name: string, forceNew: boolean): ResolveResult {
-  return resolveWith(name, forceNew, "card", () => draw(1, ["present"]));
+export function resolveCard(
+  name: string,
+  forceNew: boolean,
+  reversalMode: ReversalMode = "opposite",
+): ResolveResult {
+  return resolveWith(
+    name,
+    forceNew,
+    "card",
+    () => draw(1, ["present"]),
+    reversalMode,
+  );
 }
 
 export function resolveFiveCard(
   name: string,
   forceNew: boolean,
+  reversalMode: ReversalMode = "opposite",
 ): ResolveResult {
-  return resolveWith(name, forceNew, "five-card", () =>
-    draw(5, FIVE_CARD_POSITIONS),
+  return resolveWith(
+    name,
+    forceNew,
+    "five-card",
+    () => draw(5, FIVE_CARD_POSITIONS),
+    reversalMode,
   );
 }
 
 export function resolveHorseshoe(
   name: string,
   forceNew: boolean,
+  reversalMode: ReversalMode = "opposite",
 ): ResolveResult {
-  return resolveWith(name, forceNew, "horseshoe", () =>
-    draw(7, HORSESHOE_POSITIONS),
+  return resolveWith(
+    name,
+    forceNew,
+    "horseshoe",
+    () => draw(7, HORSESHOE_POSITIONS),
+    reversalMode,
   );
 }
 
-export function resolveYesNo(name: string, forceNew: boolean): ResolveResult {
-  return resolveWith(name, forceNew, "yesno", () => draw(1, ["present"]));
+export function resolveYesNo(
+  name: string,
+  forceNew: boolean,
+  reversalMode: ReversalMode = "opposite",
+): ResolveResult {
+  return resolveWith(
+    name,
+    forceNew,
+    "yesno",
+    () => draw(1, ["present"]),
+    reversalMode,
+  );
 }
 
 const resolveWith = (
@@ -51,6 +85,7 @@ const resolveWith = (
   forceNew: boolean,
   suffix: string,
   drawCards: () => SpreadCard[],
+  reversalMode: ReversalMode = "opposite",
 ): ResolveResult => {
   const cardsById = new Map(cards.map((c) => [c.id, c]));
 
@@ -66,7 +101,11 @@ const resolveWith = (
         .filter((s): s is SpreadCard => s !== null);
 
       if (spread.length === stored.length) {
-        return { cached: true, reading: interpret(spread), spread };
+        return {
+          cached: true,
+          reading: interpret(spread, reversalMode),
+          spread,
+        };
       }
     }
   }
@@ -81,7 +120,7 @@ const resolveWith = (
     })),
     suffix,
   );
-  return { cached: false, reading: interpret(spread), spread };
+  return { cached: false, reading: interpret(spread, reversalMode), spread };
 };
 
 const draw = (n: number, positions: Position[] = POSITIONS): SpreadCard[] =>

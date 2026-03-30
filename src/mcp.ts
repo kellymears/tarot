@@ -31,22 +31,28 @@ server.tool(
       .default(false)
       .describe("Force a fresh draw, ignoring today's cache"),
     name: z.string().describe("Name of the person to read for"),
+    reversal_mode: z
+      .enum(["blocked", "none", "opposite", "shadow", "weakened"])
+      .default("opposite")
+      .describe(
+        "How to interpret reversed cards: opposite (default), blocked, shadow, weakened, or none",
+      ),
     spread_type: z
       .enum(["five-card", "horseshoe", "single", "three-card", "yes-no"])
       .default("three-card")
       .describe("Type of spread to draw"),
   },
-  async ({ force_new, name, spread_type }) => {
+  async ({ force_new, name, reversal_mode, spread_type }) => {
     const { reading, spread } =
       spread_type === "yes-no"
-        ? resolveYesNo(name, force_new)
+        ? resolveYesNo(name, force_new, reversal_mode)
         : spread_type === "single"
-          ? resolveCard(name, force_new)
+          ? resolveCard(name, force_new, reversal_mode)
           : spread_type === "five-card"
-            ? resolveFiveCard(name, force_new)
+            ? resolveFiveCard(name, force_new, reversal_mode)
             : spread_type === "horseshoe"
-              ? resolveHorseshoe(name, force_new)
-              : resolve(name, force_new);
+              ? resolveHorseshoe(name, force_new, reversal_mode)
+              : resolve(name, force_new, reversal_mode);
     return {
       content: [
         {
