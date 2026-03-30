@@ -5,6 +5,7 @@ import type { TarotCard } from "../data/cards.js";
 import type { Orientation, Position } from "../data/interpretations/types.js";
 import type { SpreadCard } from "../engine/types.js";
 
+import { POSITION_LABELS } from "../constants.js";
 import { cards } from "../data/cards.js";
 import { Card } from "./Card.js";
 import { CardBack } from "./CardBack.js";
@@ -20,7 +21,7 @@ interface Selection {
   orientation: Orientation;
 }
 
-const POOL_SIZE = 7;
+const POOL_SIZE = 5;
 
 const shuffle = <T,>(array: T[]): T[] => {
   const copy = [...array];
@@ -29,20 +30,6 @@ const shuffle = <T,>(array: T[]): T[] => {
     [copy[i], copy[j]] = [copy[j], copy[i]];
   }
   return copy;
-};
-
-const POSITION_LABELS: Record<string, string> = {
-  above: "Above",
-  below: "Below",
-  challenge: "Challenge",
-  environment: "Environment",
-  future: "Future",
-  "hopes-fears": "Hopes & Fears",
-  obstacle: "Obstacle",
-  outcome: "Outcome",
-  past: "Past",
-  present: "Present",
-  self: "Self",
 };
 
 export function CardPicker({
@@ -92,7 +79,7 @@ export function CardPicker({
             return (
               <Box alignItems="center" flexDirection="column" key={card.id}>
                 <Text bold color={accentColor}>
-                  {POSITION_LABELS[positions[selIdx]] ?? positions[selIdx]}
+                  {POSITION_LABELS[positions[selIdx]]}
                 </Text>
                 <Card
                   card={card}
