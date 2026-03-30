@@ -5,14 +5,14 @@ import type { FullReading } from "../engine/types.js";
 import { ANIMATION } from "../constants.js";
 
 export interface AnimationVisibility {
-  cards: [CardState, CardState, CardState];
+  cards: CardState[];
   closing: TypewriterState;
   connections: TypewriterState;
   divider: boolean;
   done: boolean;
   header: boolean;
   opening: TypewriterState;
-  sections: [TypewriterState, TypewriterState, TypewriterState];
+  sections: TypewriterState[];
   synthesis: TypewriterState;
 }
 
@@ -44,7 +44,7 @@ interface TextLengths {
   connections: number;
   hasConnections: boolean;
   opening: number;
-  sections: [number, number, number];
+  sections: number[];
   synthesis: number;
 }
 
@@ -56,7 +56,7 @@ interface TypewriterState {
 const HIDDEN: TypewriterState = { chars: 0, visible: false };
 const FULL: TypewriterState = { chars: Infinity, visible: true };
 
-const PHASE_ORDER: Phase[] = [
+const SPREAD_PHASES: Phase[] = [
   "header",
   "deal",
   "reveal",
@@ -69,19 +69,30 @@ const PHASE_ORDER: Phase[] = [
   "done",
 ];
 
-const SKIPPED: AnimationVisibility = {
-  cards: ["faceUp", "faceUp", "faceUp"],
+const CARD_PHASES: Phase[] = [
+  "header",
+  "deal",
+  "reveal",
+  "divider",
+  "sections",
+  "closing",
+  "done",
+];
+
+const skippedState = (cardCount: 1 | 3): AnimationVisibility => ({
+  cards: Array.from({ length: cardCount }, () => "faceUp" as CardState),
   closing: FULL,
-  connections: FULL,
+  connections: cardCount === 3 ? FULL : HIDDEN,
   divider: true,
   done: true,
   header: true,
-  opening: FULL,
-  sections: [FULL, FULL, FULL],
-  synthesis: FULL,
-};
+  opening: cardCount === 3 ? FULL : HIDDEN,
+  sections: Array.from({ length: cardCount }, () => FULL),
+  synthesis: cardCount === 3 ? FULL : HIDDEN,
+});
 
 interface AnimationOptions {
+  cardCount?: 1 | 3;
   skip?: boolean;
 }
 
@@ -93,7 +104,13 @@ export function useAnimationController(
   visibility: AnimationVisibility;
 } {
   const startSkipped = options?.skip === true;
-  const lengths = useMemo(() => textLengths(reading), [reading]);
+  const cardCount = options?.cardCount ?? 3;
+  const phases = cardCount === 1 ? CARD_PHASES : SPREAD_PHASES;
+  const skipped = skippedState(cardCount);
+  const lengths = useMemo(
+    () => textLengths(reading, cardCount),
+    [reading, cardCount],
+  );
 
   const stateRef = useRef<InternalState>({
     cardIndex: 0,
@@ -105,44 +122,55 @@ export function useAnimationController(
   });
 
   const [visibility, setVisibility] = useState<AnimationVisibility>(() =>
-    startSkipped ? SKIPPED : computeVisibility(stateRef.current),
+    startSkipped
+      ? skipped
+      : computeVisibility(stateRef.current, phases, cardCount),
   );
 
   useEffect(() => {
     if (startSkipped) return;
 
     const id = setInterval(() => {
-      const next = tick(stateRef.current, lengths);
+      const next = tick(stateRef.current, lengths, phases, cardCount);
       stateRef.current = next;
-      setVisibility(computeVisibility(next));
+      setVisibility(computeVisibility(next, phases, cardCount));
       if (next.phase === "done") clearInterval(id);
     }, ANIMATION.tickMs);
 
     return () => clearInterval(id);
-  }, [reading, lengths, startSkipped]);
+  }, [reading, lengths, startSkipped, phases, cardCount]);
 
   const skip = () => {
     stateRef.current = { ...stateRef.current, skipped: true };
-    setVisibility(SKIPPED);
+    setVisibility(skipped);
   };
 
   return { skip, visibility };
 }
 
-const computeVisibility = (state: InternalState): AnimationVisibility => {
-  if (state.skipped) return SKIPPED;
+const computeVisibility = (
+  state: InternalState,
+  phases: Phase[],
+  cardCount: 1 | 3,
+): AnimationVisibility => {
+  if (state.skipped) return skippedState(cardCount);
 
-  const phaseIndex = PHASE_ORDER.indexOf(state.phase);
-  const past = (p: Phase) => PHASE_ORDER.indexOf(p) < phaseIndex;
+  const phaseIndex = phases.indexOf(state.phase);
+  const past = (p: Phase) => {
+    const idx = phases.indexOf(p);
+    return idx !== -1 && idx < phaseIndex;
+  };
   const active = (p: Phase) => state.phase === p;
 
   const typewriter = (p: Phase): TypewriterState => {
+    if (phases.indexOf(p) === -1) return HIDDEN;
     if (past(p)) return FULL;
     if (active(p)) return { chars: state.chars, visible: true };
     return HIDDEN;
   };
 
   const cardState = (i: number): CardState => {
+    if (i >= cardCount) return "hidden";
     if (past("reveal") || (active("reveal") && i <= state.cardIndex))
       return "faceUp";
     if (past("deal") || (active("deal") && i <= state.cardIndex))
@@ -150,24 +178,17 @@ const computeVisibility = (state: InternalState): AnimationVisibility => {
     if (active("reveal")) return "faceDown";
     return "hidden";
   };
-  const cards: [CardState, CardState, CardState] = [
-    cardState(0),
-    cardState(1),
-    cardState(2),
-  ];
+  const cards = Array.from({ length: cardCount }, (_, i) => cardState(i));
 
   const sectionState = (i: number): TypewriterState => {
+    if (i >= cardCount) return HIDDEN;
     if (past("sections") || (active("sections") && i < state.sectionIndex))
       return FULL;
     if (active("sections") && i === state.sectionIndex)
       return { chars: state.chars, visible: true };
     return HIDDEN;
   };
-  const sections: [TypewriterState, TypewriterState, TypewriterState] = [
-    sectionState(0),
-    sectionState(1),
-    sectionState(2),
-  ];
+  const sections = Array.from({ length: cardCount }, (_, i) => sectionState(i));
 
   return {
     cards,
@@ -182,7 +203,7 @@ const computeVisibility = (state: InternalState): AnimationVisibility => {
   };
 };
 
-const textLengths = (reading: FullReading): TextLengths => {
+const textLengths = (reading: FullReading, cardCount: 1 | 3): TextLengths => {
   const r = reading.relational;
   const connectionsText = [
     ...r.dignities.map((d) => d.detail),
@@ -200,14 +221,24 @@ const textLengths = (reading: FullReading): TextLengths => {
       r.suitDominance !== null ||
       r.numericalPattern !== null,
     opening: reading.narrative.opening.length,
-    sections: reading.cards.map(
-      (c) => c.passage.length + ANIMATION.sectionPauseChars,
-    ) as [number, number, number],
+    sections: reading.cards
+      .slice(0, cardCount)
+      .map((c) => c.passage.length + ANIMATION.sectionPauseChars),
     synthesis: reading.narrative.synthesis.length,
   };
 };
 
-const tick = (state: InternalState, lengths: TextLengths): InternalState => {
+const nextPhaseAfter = (current: Phase, phases: Phase[]): Phase => {
+  const idx = phases.indexOf(current);
+  return phases[idx + 1] ?? "done";
+};
+
+const tick = (
+  state: InternalState,
+  lengths: TextLengths,
+  phases: Phase[],
+  cardCount: 1 | 3,
+): InternalState => {
   if (state.skipped || state.phase === "done") return state;
 
   const t = state.ticks + 1;
@@ -226,7 +257,7 @@ const tick = (state: InternalState, lengths: TextLengths): InternalState => {
 
     case "deal":
       if (t >= ANIMATION.dealCardTicks) {
-        return state.cardIndex < 2
+        return state.cardIndex < cardCount - 1
           ? { ...state, cardIndex: state.cardIndex + 1, ticks: 0 }
           : { ...state, cardIndex: 0, phase: "reveal", ticks: 0 };
       }
@@ -234,7 +265,12 @@ const tick = (state: InternalState, lengths: TextLengths): InternalState => {
 
     case "divider":
       return t >= ANIMATION.dividerTicks
-        ? { ...state, chars: 0, phase: "opening", ticks: 0 }
+        ? {
+            ...state,
+            chars: 0,
+            phase: nextPhaseAfter("divider", phases),
+            ticks: 0,
+          }
         : { ...state, ticks: t };
 
     case "header":
@@ -249,7 +285,7 @@ const tick = (state: InternalState, lengths: TextLengths): InternalState => {
 
     case "reveal":
       if (t >= ANIMATION.revealCardTicks) {
-        return state.cardIndex < 2
+        return state.cardIndex < cardCount - 1
           ? { ...state, cardIndex: state.cardIndex + 1, ticks: 0 }
           : { ...state, phase: "divider", ticks: 0 };
       }
@@ -257,7 +293,7 @@ const tick = (state: InternalState, lengths: TextLengths): InternalState => {
 
     case "sections":
       if (c >= lengths.sections[state.sectionIndex]) {
-        if (state.sectionIndex < 2) {
+        if (state.sectionIndex < cardCount - 1) {
           return {
             ...state,
             chars: 0,
@@ -265,8 +301,11 @@ const tick = (state: InternalState, lengths: TextLengths): InternalState => {
             ticks: 0,
           };
         }
-        const nextPhase = lengths.hasConnections ? "connections" : "synthesis";
-        return { ...state, chars: 0, phase: nextPhase, ticks: 0 };
+        const next =
+          cardCount === 3 && lengths.hasConnections
+            ? "connections"
+            : nextPhaseAfter("sections", phases);
+        return { ...state, chars: 0, phase: next, ticks: 0 };
       }
       return { ...state, chars: c, ticks: t };
 

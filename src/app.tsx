@@ -6,7 +6,6 @@ import { RelationalInsight } from "./components/RelationalInsight.js";
 import { Text } from "./components/Text.js";
 import { Typewriter } from "./components/Typewriter.js";
 import {
-  CARD,
   MAJOR_SYMBOL,
   MAX_TEXT_WIDTH,
   ORNAMENT,
@@ -16,26 +15,29 @@ import {
   SUIT_SYMBOL,
 } from "./constants.js";
 import { useAnimationController } from "./hooks/useAnimationController.js";
-import { resolve } from "./resolve.js";
-
-const CARD_ROW_WIDTH = CARD.width * 3 + 2; // 3 cards + 2 gaps
+import { resolve, resolveCard } from "./resolve.js";
 
 interface AppProps {
   animate: boolean;
   forceNew: boolean;
+  mode: "card" | "spread";
   name: string;
 }
 
-export function App({ animate, forceNew, name }: AppProps) {
+export function App({ animate, forceNew, mode, name }: AppProps) {
   const { exit } = useApp();
   const { stdout } = useStdout();
-  const columns = stdout.columns ?? CARD_ROW_WIDTH;
+  const isCard = mode === "card";
+  const cardCount = isCard ? 1 : 3;
+  const columns = stdout.columns ?? MAX_TEXT_WIDTH;
   const textWidth = Math.min(MAX_TEXT_WIDTH, columns);
   const borderedWidth = textWidth - 2;
-  const paddingX = Math.max(0, Math.floor((columns - CARD_ROW_WIDTH) / 2));
 
-  const [{ cached, reading, spread }] = useState(() => resolve(name, forceNew));
+  const [{ cached, reading, spread }] = useState(() =>
+    isCard ? resolveCard(name, forceNew) : resolve(name, forceNew),
+  );
   const { skip, visibility: v } = useAnimationController(reading, {
+    cardCount,
     skip: !animate,
   });
 
@@ -63,17 +65,17 @@ export function App({ animate, forceNew, name }: AppProps) {
   });
 
   return (
-    <Box flexDirection="column" gap={1} paddingX={paddingX}>
+    <Box flexDirection="column" gap={1}>
       {v.header && (
         <Box alignItems="center" flexDirection="column">
           <Text dimColor>{ORNAMENT}</Text>
           <Text bold color="magenta">
-            Three-Card Spread
+            {isCard ? "Daily Card" : "Three-Card Spread"}
           </Text>
           <Text dimColor>
             A reading for <Text color="magenta">{displayName}</Text>
           </Text>
-          <Text dimColor>Past · Present · Future</Text>
+          {!isCard && <Text dimColor>Past · Present · Future</Text>}
           {cached && (
             <Text dimColor italic>
               {dateLabel}
@@ -83,9 +85,9 @@ export function App({ animate, forceNew, name }: AppProps) {
       )}
 
       <Box flexDirection="row" flexWrap="wrap" gap={1} justifyContent="center">
-        {spread.map((sc, i) => (
+        {spread.slice(0, cardCount).map((sc, i) => (
           <Box alignItems="center" flexDirection="column" key={sc.card.id}>
-            {v.cards[i] !== "hidden" && (
+            {!isCard && v.cards[i] !== "hidden" && (
               <Text bold dimColor>
                 {POSITION_LABELS[sc.position]}
               </Text>
@@ -99,21 +101,18 @@ export function App({ animate, forceNew, name }: AppProps) {
         ))}
       </Box>
 
-      {interactive && !v.done && v.header && (
-        <Box justifyContent="center">
-          <Text dimColor italic>
-            press any key to skip
-          </Text>
-        </Box>
-      )}
-
       {v.divider && (
-        <Box flexDirection="column" gap={1} width={textWidth}>
+        <Box
+          alignSelf="center"
+          flexDirection="column"
+          gap={1}
+          width={textWidth}
+        >
           <Box justifyContent="center">
             <Text dimColor>{"───────────── ✦ ─────────────"}</Text>
           </Box>
 
-          {v.opening.visible && (
+          {!isCard && v.opening.visible && (
             <Typewriter chars={v.opening.chars}>
               <Text dimColor italic textWidth={textWidth}>
                 {reading.narrative.opening}
@@ -121,7 +120,7 @@ export function App({ animate, forceNew, name }: AppProps) {
             </Typewriter>
           )}
 
-          {reading.cards.map((cardReading, i) => {
+          {reading.cards.slice(0, cardCount).map((cardReading, i) => {
             if (!v.sections[i].visible) return null;
 
             const sc = spread[i];
@@ -132,16 +131,22 @@ export function App({ animate, forceNew, name }: AppProps) {
 
             return (
               <Box flexDirection="column" key={cardReading.position}>
-                <Text bold color={color}>
-                  {POSITION_LABELS[cardReading.position]}
-                  <Text dimColor>
-                    {" "}
-                    · {POSITION_SUBTITLES[cardReading.position]} ·{" "}
-                  </Text>
-                  <Text color={color}>
+                {isCard ? (
+                  <Text bold color={color}>
                     {symbol} {sc.card.name}
                   </Text>
-                </Text>
+                ) : (
+                  <Text bold color={color}>
+                    {POSITION_LABELS[cardReading.position]}
+                    <Text dimColor>
+                      {" "}
+                      · {POSITION_SUBTITLES[cardReading.position]} ·{" "}
+                    </Text>
+                    <Text color={color}>
+                      {symbol} {sc.card.name}
+                    </Text>
+                  </Text>
+                )}
                 <Box
                   borderBottom={false}
                   borderColor={color}
@@ -158,14 +163,14 @@ export function App({ animate, forceNew, name }: AppProps) {
             );
           })}
 
-          {v.connections.visible && (
+          {!isCard && v.connections.visible && (
             <RelationalInsight
               analysis={reading.relational}
               textWidth={textWidth}
             />
           )}
 
-          {v.synthesis.visible && (
+          {!isCard && v.synthesis.visible && (
             <Box flexDirection="column">
               <Text bold color="green">
                 ✦ The Thread
@@ -199,11 +204,21 @@ export function App({ animate, forceNew, name }: AppProps) {
               </Box>
               {cached && (
                 <Text dimColor italic>
-                  tarot --new for a fresh spread · tarot --json for data
+                  {isCard
+                    ? "tarot card --new for a fresh draw · tarot --json for data"
+                    : "tarot --new for a fresh spread · tarot --json for data"}
                 </Text>
               )}
             </Box>
           )}
+        </Box>
+      )}
+
+      {interactive && !v.done && v.header && (
+        <Box justifyContent="center">
+          <Text dimColor italic>
+            press any key to skip
+          </Text>
         </Box>
       )}
     </Box>
