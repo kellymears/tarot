@@ -71,12 +71,21 @@ const relationshipDetail: Record<
 > = {
   allied: alliedDetail,
   enemy: enemyDetail,
-  neutral: (a, b, elA, elB) =>
-    `${ELEMENT_NAME[elA]} and ${ELEMENT_NAME[elB]} hold a neutral relation between ${a} and ${b}, suggesting independent but non-conflicting energies.`,
+  neutral: (a, b, elA, elB) => {
+    const pair = [elA, elB].sort().join("+");
+    switch (pair) {
+      case "air+water":
+        return `${a} (${ELEMENT_NAME[elA]}) and ${b} (${ELEMENT_NAME[elB]}) neither strengthen nor oppose each other \u2014 thought and feeling coexist without merging.`;
+      case "earth+fire":
+        return `${a} (${ELEMENT_NAME[elA]}) and ${b} (${ELEMENT_NAME[elB]}) neither strengthen nor oppose each other \u2014 the builder and the spark operate on parallel tracks.`;
+      default:
+        return `${ELEMENT_NAME[elA]} and ${ELEMENT_NAME[elB]} hold a neutral relation between ${a} and ${b}, suggesting independent but non-conflicting energies.`;
+    }
+  },
 };
 
 export function analyzeDignities(spread: SpreadCard[]): ElementalDignity[] {
-  return spread.slice(0, -1).flatMap((a, i) => {
+  const raw = spread.slice(0, -1).flatMap((a, i) => {
     const b = spread[i + 1];
     const elA = elementFor(a);
     const elB = elementFor(b);
@@ -85,9 +94,19 @@ export function analyzeDignities(spread: SpreadCard[]): ElementalDignity[] {
 
     const rel = relationship(elA, elB);
     return {
-      cards: [a.card.name, b.card.name],
+      cards: [a.card.name, b.card.name] as [string, string],
       detail: relationshipDetail[rel](a.card.name, b.card.name, elA, elB),
       relationship: rel,
     };
   });
+
+  // Prioritize: enemies first, then allies, then neutrals.
+  // Drop neutrals entirely for spreads with 5+ cards (they add noise).
+  // Cap at 4 entries to keep the Connections box focused.
+  const enemies = raw.filter((d) => d.relationship === "enemy");
+  const allies = raw.filter((d) => d.relationship === "allied");
+  const neutrals =
+    spread.length < 5 ? raw.filter((d) => d.relationship === "neutral") : [];
+
+  return [...enemies, ...allies, ...neutrals].slice(0, 4);
 }
