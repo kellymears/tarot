@@ -120,6 +120,7 @@ const buildOpening = (relational: RelationalAnalysis): string =>
     relational.reversalPattern.count > 0
       ? relational.reversalPattern.detail
       : undefined,
+    relational.elementalBalance?.detail,
   ]
     .filter(Boolean)
     .join(" ");
@@ -133,6 +134,7 @@ const buildSynthesis = (
     relational.suitDominance?.detail,
     relational.numericalPattern?.detail,
     dignityLabel(relational),
+    relational.courtCards?.detail,
   ]
     .filter(Boolean)
     .join(" ");

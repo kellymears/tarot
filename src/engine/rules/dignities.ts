@@ -27,18 +27,52 @@ const relationship = (
   return "neutral";
 };
 
+const alliedDetail = (
+  a: string,
+  b: string,
+  elA: Element,
+  elB: Element,
+): string => {
+  if (elA === elB) {
+    return `${a} and ${b} share the element of ${ELEMENT_NAME[elA]}, doubling its influence and creating a powerful resonance between these positions.`;
+  }
+
+  const pair = [elA, elB].sort().join("+");
+  switch (pair) {
+    case "air+fire":
+      return `The ${ELEMENT_NAME[elA]} of ${a} and ${ELEMENT_NAME[elB]} of ${b} are allied \u2014 thought and action align, and ideas find immediate expression.`;
+    case "earth+water":
+      return `The ${ELEMENT_NAME[elA]} of ${a} and ${ELEMENT_NAME[elB]} of ${b} are allied \u2014 emotion and practicality work together, and feelings find tangible form.`;
+    default:
+      return `The ${ELEMENT_NAME[elA]} of ${a} and ${ELEMENT_NAME[elB]} of ${b} are allied elements \u2014 they strengthen and support each other across your reading.`;
+  }
+};
+
+const enemyDetail = (
+  a: string,
+  b: string,
+  elA: Element,
+  elB: Element,
+): string => {
+  const pair = [elA, elB].sort().join("+");
+  switch (pair) {
+    case "air+earth":
+      return `The ${ELEMENT_NAME[elA]} of ${a} and ${ELEMENT_NAME[elB]} of ${b} stand in opposition \u2014 abstraction and reality collide, and ideas struggle to take root.`;
+    case "fire+water":
+      return `The ${ELEMENT_NAME[elA]} of ${a} and ${ELEMENT_NAME[elB]} of ${b} stand in opposition \u2014 passion and emotion clash, and desire wars with deeper feeling.`;
+    default:
+      return `The ${ELEMENT_NAME[elA]} of ${a} and ${ELEMENT_NAME[elB]} of ${b} stand in opposition \u2014 a creative tension that demands conscious navigation between these positions.`;
+  }
+};
+
 const relationshipDetail: Record<
   "allied" | "enemy" | "neutral",
-  (a: string, b: string, eA: string, eB: string) => string
+  (a: string, b: string, elA: Element, elB: Element) => string
 > = {
-  allied: (a, b, eA, eB) =>
-    eA === eB
-      ? `${a} and ${b} share the element of ${eA}, doubling its influence and creating a powerful resonance between these positions.`
-      : `The ${eA} of ${a} and ${eB} of ${b} are allied elements — they strengthen and support each other across your reading.`,
-  enemy: (a, b, eA, eB) =>
-    `The ${eA} of ${a} and ${eB} of ${b} stand in opposition — a creative tension that demands conscious navigation between these positions.`,
-  neutral: (a, b, eA, eB) =>
-    `${eA} and ${eB} hold a neutral relation between ${a} and ${b}, suggesting independent but non-conflicting energies.`,
+  allied: alliedDetail,
+  enemy: enemyDetail,
+  neutral: (a, b, elA, elB) =>
+    `${ELEMENT_NAME[elA]} and ${ELEMENT_NAME[elB]} hold a neutral relation between ${a} and ${b}, suggesting independent but non-conflicting energies.`,
 };
 
 export function analyzeDignities(spread: SpreadCard[]): ElementalDignity[] {
@@ -52,12 +86,7 @@ export function analyzeDignities(spread: SpreadCard[]): ElementalDignity[] {
     const rel = relationship(elA, elB);
     return {
       cards: [a.card.name, b.card.name],
-      detail: relationshipDetail[rel](
-        a.card.name,
-        b.card.name,
-        ELEMENT_NAME[elA],
-        ELEMENT_NAME[elB],
-      ),
+      detail: relationshipDetail[rel](a.card.name, b.card.name, elA, elB),
       relationship: rel,
     };
   });

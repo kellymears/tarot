@@ -12,7 +12,18 @@ export interface CardReading {
   position: Position;
 }
 
+export interface CourtCardPresence {
+  count: number;
+  detail: string;
+}
+
 export type Element = "air" | "earth" | "fire" | "water";
+
+export interface ElementalBalance {
+  detail: string;
+  dominant: Element[];
+  missing: Element[];
+}
 
 export interface ElementalDignity {
   cards: [string, string];
@@ -39,7 +50,9 @@ export interface NumericalPattern {
 
 export interface RelationalAnalysis {
   arcanaWeight: ArcanaWeight;
+  courtCards: CourtCardPresence | null;
   dignities: ElementalDignity[];
+  elementalBalance: ElementalBalance | null;
   numericalPattern: null | NumericalPattern;
   reversalPattern: ReversalPattern;
   suitDominance: null | SuitDominance;

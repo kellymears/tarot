@@ -18,6 +18,8 @@ export function RelationalInsight({
   const contentWidth = textWidth - 4; // border (2) + paddingX (2)
   const insights = [
     ...analysis.dignities.map((d) => d.detail),
+    analysis.elementalBalance?.detail,
+    analysis.courtCards?.detail,
     analysis.suitDominance?.detail,
     analysis.numericalPattern?.detail,
   ].filter((s): s is string => s != null);

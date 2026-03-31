@@ -1,6 +1,7 @@
 import type { Suit } from "../../data/cards.js";
 import type {
   ArcanaWeight,
+  CourtCardPresence,
   ReversalPattern,
   SpreadCard,
   SuitDominance,
@@ -100,4 +101,82 @@ export function analyzeSuitDominance(
   }
 
   return null;
+}
+
+const RANK_NAME: Record<number, string> = {
+  11: "Pages",
+  12: "Knights",
+  13: "Queens",
+  14: "Kings",
+};
+
+const RANK_MEANING: Record<number, string> = {
+  11: "youthful energy, messages, or new students of a discipline",
+  12: "action, movement, and the pursuit of goals",
+  13: "mature receptive authority, emotional intelligence, and mastery",
+  14: "mature active authority, leadership, and outward mastery",
+};
+
+const RANK_SINGULAR: Record<number, string> = {
+  11: "Pages",
+  12: "Knights",
+  13: "Queens",
+  14: "Kings",
+};
+
+export function analyzeCourtCards(
+  spread: SpreadCard[],
+): CourtCardPresence | null {
+  const courts = spread.filter(
+    (s) => s.card.arcana === "minor" && s.card.number >= 11,
+  );
+
+  if (courts.length < 2) return null;
+
+  const rankCounts = new Map<number, number>();
+  for (const c of courts) {
+    rankCounts.set(c.card.number, (rankCounts.get(c.card.number) ?? 0) + 1);
+  }
+
+  // 3+ court cards — thick with personality
+  if (courts.length >= 3) {
+    // Check for dominant rank within the 3+
+    const dominantRank = [...rankCounts.entries()].find(
+      ([, count]) => count >= 2,
+    );
+
+    if (dominantRank) {
+      const [rank, count] = dominantRank;
+      return {
+        count: courts.length,
+        detail: `The court is full. ${count === 2 ? "Two" : "Three"} ${RANK_NAME[rank]} appear among ${courts.length} court cards \u2014 ${RANK_MEANING[rank]}. This reading is thick with personality and interpersonal energy. The cards speak less to abstract forces and more to specific people and their influence on your path.`,
+      };
+    }
+
+    return {
+      count: courts.length,
+      detail:
+        "The court is full. This reading is thick with personality and interpersonal energy. The cards speak less to abstract forces and more to specific people and their influence on your path.",
+    };
+  }
+
+  // Exactly 2 court cards
+  const duplicateRank = [...rankCounts.entries()].find(
+    ([, count]) => count >= 2,
+  );
+
+  if (duplicateRank) {
+    const [rank] = duplicateRank;
+    const name = RANK_SINGULAR[rank];
+    return {
+      count: courts.length,
+      detail: `Two ${name} appear in this reading \u2014 ${RANK_MEANING[rank]}. Pay attention to the energies of ${name.toLowerCase()} asserting themselves from multiple directions in your situation.`,
+    };
+  }
+
+  return {
+    count: courts.length,
+    detail:
+      "Several court cards populate this spread, suggesting a situation shaped by multiple personalities or social dynamics. This is not a solitary journey \u2014 other people\u2019s choices matter here.",
+  };
 }
