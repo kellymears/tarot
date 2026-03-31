@@ -1,6 +1,6 @@
 {
   "name": "arcana-cli",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Arcana — a tarot reading CLI",
   "type": "module",
   "files": [
@@ -13,7 +13,9 @@
   },
   "bin": {
     "arcana": "./dist/cli.js",
-    "arcana-mcp": "./dist/mcp.js"
+    "arcana-cli": "./dist/cli.js",
+    "arcana-mcp": "./dist/mcp.js",
+    "tarot": "./dist/cli.js"
   },
   "scripts": {
     "build": "tsc && mkdir -p dist/data/interpretations && cp src/data/cards.json dist/data/cards.json && cp src/data/interpretations/*.json dist/data/interpretations/ 2>/dev/null || true",
