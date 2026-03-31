@@ -1,337 +1,673 @@
 {
   "pentacles-01": {
     "upright": {
+      "above": {
+        "passage": "You aspire to a fresh start in the material world — a clean opening, a chance to plant something real in fertile soil. The Ace above you is the purest form of that longing: not wealth itself, but the moment just before it takes root."
+      },
+      "below": {
+        "passage": "Beneath your current situation lies a deep, almost primal need for tangible security. Something in you believes that the right opportunity — the golden coin in the open hand — will finally make the ground beneath your feet feel solid."
+      },
+      "future": {
+        "passage": "A concrete opportunity is approaching, one rooted in the physical world — money, property, health, craft. When it arrives, take it with both hands. This is not the time for hesitation; the earth is fertile and waiting for you to plant."
+      },
+      "outcome": {
+        "passage": "If you stay on this path, a genuine material opportunity will crystallize. It may be modest at first — a seed, not a forest — but it carries real potential. Your job is to receive it with the seriousness it deserves and begin building."
+      },
       "past": {
         "passage": "A seed of real wealth was placed in your hands — a job offer, an inheritance, a moment when the material world said yes. That opening shaped the ground you stand on now, whether or not you recognized its full weight at the time."
       },
       "present": {
         "passage": "Something tangible is being offered to you. A new venture, a financial opening, a chance to build from raw potential. Hold it carefully — the Ace asks you to treat this beginning as a living thing that needs tending, not just excitement."
       },
-      "future": {
-        "passage": "A concrete opportunity is approaching, one rooted in the physical world — money, property, health, craft. When it arrives, take it with both hands. This is not the time for hesitation; the earth is fertile and waiting for you to plant."
+      "self": {
+        "passage": "You see yourself standing at the threshold of something new and solid — hands open, ready to receive. There's a quiet confidence in your self-image right now, the sense that you are someone capable of turning raw opportunity into lasting form."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for a new beginning that keeps dissolving before it takes shape. The ideal you're chasing — the perfect opportunity, the clean financial start — may need to be redefined before it can actually arrive."
+      },
+      "below": {
+        "passage": "A buried fear of scarcity is driving more of your decisions than you realize. Somewhere beneath the surface, you believe that real opportunities don't come to people like you, and that belief is quietly filtering out the ones that do."
+      },
+      "future": {
+        "passage": "A material chance may come wrapped in delay or disguise. The abundance is real, but your readiness to receive it is the question. Work on clearing the internal clutter — scarcity thinking, poor planning — so you can recognize the opening when it appears."
+      },
+      "outcome": {
+        "passage": "The opportunity you're banking on may arrive incomplete or off-schedule. The outcome isn't ruin — it's delay. Use the interim to examine whether you've been waiting for the perfect start instead of working with the imperfect one already in your hands."
+      },
       "past": {
         "passage": "An opportunity slipped through your fingers, or you accepted one that turned out to be less solid than it appeared. The loss taught you something about what real security means versus what merely glitters."
       },
       "present": {
         "passage": "You may be clutching a plan that hasn't materialized or chasing a promise that keeps receding. The resources feel just out of reach. Before you spend more energy pursuing, ask whether the foundation beneath this opportunity is actually sound."
       },
-      "future": {
-        "passage": "A material chance may come wrapped in delay or disguise. The abundance is real, but your readiness to receive it is the question. Work on clearing the internal clutter — scarcity thinking, poor planning — so you can recognize the opening when it appears."
+      "self": {
+        "passage": "You see yourself as someone who keeps missing the boat — always a step behind the opening, always arriving after the door has closed. That self-image is more prison than portrait. The next opportunity won't fix what this belief keeps breaking."
       }
     }
   },
   "pentacles-02": {
     "upright": {
+      "above": {
+        "passage": "You're striving for the ability to hold multiple things in motion without losing your center. The ideal isn't perfection — it's fluidity. You want to move through competing demands with grace rather than white-knuckle control."
+      },
+      "below": {
+        "passage": "Underneath everything, you're driven by a deep need to keep all the plates spinning — a fear that setting one down means the whole arrangement collapses. That hidden anxiety about balance is the engine beneath your constant motion."
+      },
+      "future": {
+        "passage": "Expect a period of managing competing priorities. You will need to be adaptable with your time, money, or energy. Don't try to pin everything down at once; the rhythm of give-and-take will carry you further than any fixed plan."
+      },
+      "outcome": {
+        "passage": "You'll find your rhythm if you stop trying to eliminate the juggle and start working with it. The likely outcome is a sustainable, if imperfect, balance — not stillness, but a dance with your obligations that you can actually maintain."
+      },
       "past": {
         "passage": "You were juggling — two jobs, two financial demands, two paths that each required your full attention. That balancing act taught you flexibility, even if it felt like chaos at the time. The skill you built in that stretch still serves you."
       },
       "present": {
         "passage": "Multiple demands compete for your resources and time. The trick is not to resolve the tension but to move with it — staying light on your feet, adjusting your grip as the weight shifts. Rigidity is the only real danger here."
       },
-      "future": {
-        "passage": "Expect a period of managing competing priorities. You will need to be adaptable with your time, money, or energy. Don't try to pin everything down at once; the rhythm of give-and-take will carry you further than any fixed plan."
+      "self": {
+        "passage": "You see yourself as adaptable, someone who can handle the push and pull of competing demands. That self-assessment is probably accurate — you're more flexible than you give yourself credit for. The question is whether flexibility has become its own form of avoidance."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for stability, but the version you're imagining requires controlling every variable at once. The ideal needs simplifying. You cannot hold everything, and the aspiration to do so is the source of the strain, not the cure."
+      },
+      "below": {
+        "passage": "Beneath the overwhelm is a belief that you must handle everything yourself or it won't get done right. That hidden driver — part perfectionism, part distrust — keeps you juggling long past the point where you should have asked for help."
+      },
+      "future": {
+        "passage": "If you continue without prioritizing, the balance will tip. This isn't a threat but a fact of physics — finite resources cannot cover infinite commitments. Decide now what matters most before the decision is made for you."
+      },
+      "outcome": {
+        "passage": "Something will drop if the current pace continues. The outcome isn't catastrophe — it's forced triage. Better to choose now what to set down gracefully than to have it knocked from your hands by exhaustion or circumstance."
+      },
       "past": {
         "passage": "The plates you were spinning came crashing down — overcommitment, financial disorganization, or simply too many irons in the fire. That collapse, painful as it was, forced you to learn what you could and could not sustain."
       },
       "present": {
         "passage": "You're stretched too thin and the seams are showing. Dropped responsibilities, mounting bills, or a schedule that devours itself — something needs to be set down so the rest can survive. Triage honestly."
       },
-      "future": {
-        "passage": "If you continue without prioritizing, the balance will tip. This isn't a threat but a fact of physics — finite resources cannot cover infinite commitments. Decide now what matters most before the decision is made for you."
+      "self": {
+        "passage": "You see yourself as someone who's losing their grip, and that perception is feeding the very chaos you're trying to manage. The disorganization feels like a character flaw, but it's actually a capacity problem. You need fewer commitments, not more discipline."
       }
     }
   },
   "pentacles-03": {
     "upright": {
+      "above": {
+        "passage": "You aspire to mastery that is recognized and valued — not fame, but the deep satisfaction of contributing skilled work to something larger than yourself. The ideal is craftsmanship in community, your expertise woven into a shared endeavor."
+      },
+      "below": {
+        "passage": "Beneath your current drive is a need to prove that your skills have real worth — that what you can do with your hands or your mind matters to others. The hidden root is a hunger for competence that is witnessed and respected."
+      },
+      "future": {
+        "passage": "Skilled work lies ahead, the kind that demands both competence and cooperation. You will be recognized for what you know how to do, and called to contribute it alongside others. Prepare your craft; the cathedral needs its stonemasons."
+      },
+      "outcome": {
+        "passage": "Your work will be seen and valued. The likely outcome is recognition earned through genuine skill — not accolades, but the quiet satisfaction of a job done well and the respect of those who understand what it took."
+      },
       "past": {
         "passage": "You worked alongside others to build something real — a project, a team effort, a craft honed through collaboration. The skills you sharpened in that partnership became part of your foundation. Mastery was the byproduct of showing up and doing the work."
       },
       "present": {
         "passage": "Your craft is being noticed. Collaboration brings out the best in your work right now, and there's a productive exchange of skill and vision happening. Lean into the teamwork — the blueprint improves when more hands hold the pen."
       },
-      "future": {
-        "passage": "Skilled work lies ahead, the kind that demands both competence and cooperation. You will be recognized for what you know how to do, and called to contribute it alongside others. Prepare your craft; the cathedral needs its stonemasons."
+      "self": {
+        "passage": "You see yourself as a craftsperson — someone who builds with care and takes pride in the quality of their output. That identity serves you well here. You know your contribution matters, and you're willing to do the detailed work that proves it."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for collaborative excellence, but the reality keeps falling short of the vision. The ideal of shared craftsmanship feels mocked by sloppy work, poor communication, or the nagging sense that no one else cares as much as you do."
+      },
+      "below": {
+        "passage": "Beneath the frustration with others is a deep fear that your own work isn't good enough — that if the team fails, it reflects on you personally. That hidden insecurity is sharpening your criticism and making collaboration feel threatening rather than generative."
+      },
+      "future": {
+        "passage": "A project may stall because the right people aren't aligned, or because skill gaps go unaddressed. Invest in learning and in finding collaborators who share your commitment to the work itself, not just the paycheck."
+      },
+      "outcome": {
+        "passage": "The project risks mediocrity unless the collaboration improves. The likely result is work that falls short of its potential — not because the skill isn't there, but because the team hasn't found its rhythm. Address that disconnect before the deadline forces a compromise."
+      },
       "past": {
         "passage": "A collaboration fell apart, or your work went unacknowledged. Perhaps you cut corners, or others failed to pull their weight. The frustration of that experience left a mark on how you approach shared labor."
       },
       "present": {
         "passage": "The teamwork feels off — miscommunication, mediocre output, or a sense that no one cares about quality the way you do. Before blaming others, examine whether you've been clear about standards and willing to teach, not just critique."
       },
-      "future": {
-        "passage": "A project may stall because the right people aren't aligned, or because skill gaps go unaddressed. Invest in learning and in finding collaborators who share your commitment to the work itself, not just the paycheck."
+      "self": {
+        "passage": "You see yourself as the only one holding the standard, and that loneliness is warping your view of the situation. Either you're right and need better collaborators, or your standards have become a wall that keeps others from contributing. Honest reflection will tell you which."
       }
     }
   },
   "pentacles-04": {
     "upright": {
+      "above": {
+        "passage": "You aspire to a fortress of security — a position where nothing can shake your material foundation. The ideal is total stability, resources protected, boundaries firm. It's a worthy goal, as long as the fortress has a door you're willing to open."
+      },
+      "below": {
+        "passage": "Beneath your careful management lies a fear of loss so deep it operates like gravity — invisible, constant, pulling every decision toward conservation. That hidden driver isn't irrational, but it may be stronger than the current situation warrants."
+      },
+      "future": {
+        "passage": "A period of consolidation is coming. You'll want to hold your ground, protect what you've built, and resist the urge to spend or overextend. Strategic conservation now will give you leverage later."
+      },
+      "outcome": {
+        "passage": "If you maintain your current approach, your resources will be well-protected. The outcome is stability — solid, reliable, perhaps a little airless. You'll have what you need, but make sure you haven't traded possibility for mere safety."
+      },
       "past": {
         "passage": "There was a time when you held on tight — guarding your savings, your stability, your hard-won ground. That caution served you. It kept the wolves from the door and gave you a platform of security that still supports you."
       },
       "present": {
         "passage": "You're in a protective stance with your resources. Boundaries around money, time, or energy feel necessary, and they may well be. Just notice whether the fortress is keeping threats out or keeping you locked in."
       },
-      "future": {
-        "passage": "A period of consolidation is coming. You'll want to hold your ground, protect what you've built, and resist the urge to spend or overextend. Strategic conservation now will give you leverage later."
+      "self": {
+        "passage": "You see yourself as the guardian of your own stability — careful, controlled, unwilling to let hard-won ground erode. That self-image gives you real strength. Just check occasionally whether the person inside the walls still feels alive."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for security, but the version you're grasping at has curdled into something rigid. The aspiration to protect your resources has become indistinguishable from the fear of ever using them. Redefine what safety actually looks like."
+      },
+      "below": {
+        "passage": "Deep beneath the surface, a experience of loss or deprivation is running the show. You hoard not because you're greedy but because some part of you is still living in the lean time, still bracing for the next blow. That wound needs tending, not more walls."
+      },
+      "future": {
+        "passage": "Scarcity thinking threatens to calcify into permanent restriction. The antidote is not recklessness but measured release — loosening your grip enough to let circulation return. Stagnant water breeds nothing good."
+      },
+      "outcome": {
+        "passage": "The likely result is a kind of suffocation — resources intact but joy diminished, security achieved at the cost of growth. You won't lose what you have, but you may lose touch with why you wanted it in the first place."
+      },
       "past": {
         "passage": "Hoarding became a cage. You gripped your resources so tightly that generosity, growth, and even joy were squeezed out. The security you sought came at the cost of the life you were trying to secure."
       },
       "present": {
         "passage": "The fear of losing what you have is controlling your choices. Money stays unspent, risks stay untaken, and the walls keep thickening. Ask yourself: what is the wealth for, if not to be used in service of a life worth living?"
       },
-      "future": {
-        "passage": "Scarcity thinking threatens to calcify into permanent restriction. The antidote is not recklessness but measured release — loosening your grip enough to let circulation return. Stagnant water breeds nothing good."
+      "self": {
+        "passage": "You see yourself as prudent, but others might use a harsher word. The line between wise stewardship and fearful hoarding has blurred, and your self-image hasn't caught up. Generosity — even small, deliberate acts of it — would tell you a lot about where you actually stand."
       }
     }
   },
   "pentacles-05": {
     "upright": {
+      "above": {
+        "passage": "You aspire to move beyond hardship — to find the warmth on the other side of the stained glass. The ideal you're reaching toward is simply relief: a world where your basic needs are met and the cold no longer defines your days."
+      },
+      "below": {
+        "passage": "Beneath everything is a deep, often unspoken terror of being left out in the cold — materially, physically, socially. That fear of exclusion and want is the hidden engine driving your current choices, even the ones that seem unrelated to money."
+      },
+      "future": {
+        "passage": "Lean times may be approaching, but they are not permanent. Prepare practically: shore up resources, ask for help before you're desperate, and remember that every church in the Five of Pentacles has a lit window. You are not as alone as you will feel."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads through a difficult passage, but not a dead end. You will feel the cold, and the isolation will be real. But the hardship has a far side, and the help you need is closer than your pride allows you to see."
+      },
       "past": {
         "passage": "You walked through a hard winter — financial loss, illness, exclusion from the warmth others seemed to share. That experience carved something into you. The cold taught you what you truly need versus what you merely want."
       },
       "present": {
         "passage": "Material hardship presses in. Whether it's money, health, or a sense of being left out in the cold, the struggle is real and it's wearing you down. Look for the door you haven't tried — help exists, even if pride makes it hard to see."
       },
-      "future": {
-        "passage": "Lean times may be approaching, but they are not permanent. Prepare practically: shore up resources, ask for help before you're desperate, and remember that every church in the Five of Pentacles has a lit window. You are not as alone as you will feel."
+      "self": {
+        "passage": "You see yourself as someone who has been left behind — walking wounded past a warmth that belongs to others. That identity of hardship is real, but it is not the whole truth. You are also someone who keeps walking, and that matters more than you know."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to recovery — to finally leave the worst behind and step back into warmth. The ideal is not luxury but the simple, aching hope of stability after a period of real deprivation. That hope is well-founded."
+      },
+      "below": {
+        "passage": "Beneath your current situation is the residue of a hardship you survived but never fully processed. The scarcity may have ended, but the flinch remains — a hidden driver that keeps you braced for a blow that may not come again."
+      },
+      "future": {
+        "passage": "Recovery is on the horizon. The isolation and scarcity will begin to thaw, but you'll need to accept the help that's offered rather than insisting on doing it all alone. Let someone hold the door open for you."
+      },
+      "outcome": {
+        "passage": "The worst is passing. The likely outcome is a slow, unglamorous return to stability — not a windfall, but the gradual cessation of crisis. Accept the pace. Healing from real hardship doesn't happen on a schedule you get to set."
+      },
       "past": {
         "passage": "You emerged from a period of lack — slowly, painfully, but you emerged. Recovery wasn't dramatic; it was one small repair after another. That resilience is now part of your story, even if the scars remain tender."
       },
       "present": {
         "passage": "The worst may be behind you, but the fear of returning to that low point lingers like a draft under the door. Healing from material hardship takes longer than rebuilding the bank account. Be patient with the part of you that still flinches."
       },
-      "future": {
-        "passage": "Recovery is on the horizon. The isolation and scarcity will begin to thaw, but you'll need to accept the help that's offered rather than insisting on doing it all alone. Let someone hold the door open for you."
+      "self": {
+        "passage": "You see yourself as someone in recovery — no longer in crisis, but not yet safe. That liminal self-image is honest, and honoring it is healthier than pretending everything is fine. You're allowed to still be healing while also moving forward."
       }
     }
   },
   "pentacles-06": {
     "upright": {
+      "above": {
+        "passage": "You aspire to a generous relationship with your resources — the ability to give freely without diminishing yourself. The ideal is circulation, not accumulation: wealth that moves through your hands and leaves everyone better for it."
+      },
+      "below": {
+        "passage": "Beneath your actions is a deep understanding that resources are relational — that wealth means nothing in isolation. Whether you know it or not, your relationship with giving and receiving is shaping every material decision you make right now."
+      },
+      "future": {
+        "passage": "An act of giving or receiving will shift your material landscape. Philanthropy, a raise, a gift with strings or without — pay attention to the terms. True generosity creates no debt; it simply moves abundance where it's needed."
+      },
+      "outcome": {
+        "passage": "The likely result is a meaningful exchange of resources — one that rebalances something that had tilted. Whether you're giving or receiving, the outcome restores a sense of fairness. Let the transaction be clean, and it will nourish both sides."
+      },
       "past": {
         "passage": "Generosity shaped your history — either yours or someone else's. A gift, a fair wage, a mentor who invested in you materially. That exchange set a precedent for how you understand the flow of resources between people."
       },
       "present": {
         "passage": "You are in a position to give or receive, and the balance of that exchange matters. Generosity now is not charity — it's circulation. Whether you're the one with the open hand or the one reaching out, meet the moment with dignity on both sides."
       },
-      "future": {
-        "passage": "An act of giving or receiving will shift your material landscape. Philanthropy, a raise, a gift with strings or without — pay attention to the terms. True generosity creates no debt; it simply moves abundance where it's needed."
+      "self": {
+        "passage": "You see yourself as someone who understands the value of sharing — not as sacrifice, but as a natural expression of abundance. That generous self-image is serving you well. Just make sure it extends to receiving, too; generosity isn't only about what you give."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for fair exchange, but the reality feels transactional or exploitative. The ideal of clean generosity is being corrupted by power dynamics, strings attached, or the nagging sense that someone is keeping score."
+      },
+      "below": {
+        "passage": "Beneath the surface is an old wound around worthiness — a hidden belief that you must pay for love, or that accepting help puts you in someone's debt. That buried dynamic is distorting your relationship with generosity in both directions."
+      },
+      "future": {
+        "passage": "Watch for generosity used as leverage. Not every gift is clean, and not every request for help is honest. Protect your resources without becoming cynical — discernment and suspicion are not the same thing."
+      },
+      "outcome": {
+        "passage": "The exchange ahead carries a risk of imbalance — one side giving too much, the other taking without reciprocity. The likely outcome is resentment unless the terms are made explicit. Name what you need before the debt becomes unspoken and unpayable."
+      },
       "past": {
         "passage": "A gift came with strings, or generosity was withheld when you needed it most. Perhaps you were the one who gave too much and depleted yourself, or the one who took without reciprocating. The imbalance left its mark."
       },
       "present": {
         "passage": "The flow of resources around you has become uneven. Someone is taking more than their share, or debt — financial or emotional — is creating a power dynamic that corrodes the relationship. Name the imbalance before it festers."
       },
-      "future": {
-        "passage": "Watch for generosity used as leverage. Not every gift is clean, and not every request for help is honest. Protect your resources without becoming cynical — discernment and suspicion are not the same thing."
+      "self": {
+        "passage": "You see yourself as either over-generous to the point of depletion or uncomfortably indebted to someone else's goodwill. Neither position feels clean. Recalibrate by asking what a truly fair exchange would look like — and whether you'd accept it."
       }
     }
   },
   "pentacles-07": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the patience of a farmer — the willingness to plant, tend, and wait without demanding that the earth hurry. The ideal is a long-term vision so clear that the daily tedium of tending it feels purposeful rather than punishing."
+      },
+      "below": {
+        "passage": "Beneath your patience is a quiet, almost stubborn faith that sustained effort will be rewarded. That hidden conviction — that the harvest will come if you just keep working — is the root system feeding everything you're building on the surface."
+      },
+      "future": {
+        "passage": "A harvest is coming, born from work you've already done. The results may not match your fantasy, but they will reflect your effort honestly. Assess what's grown with clear eyes — then decide what's worth cultivating further and what to let go."
+      },
+      "outcome": {
+        "passage": "The seeds you've planted will bear fruit. The likely result is a return proportional to your investment — not windfall, but honest yield. You may wish for more, but what arrives will be genuinely yours, built from the ground up."
+      },
       "past": {
         "passage": "You planted something and waited. A long investment — years of study, a business built slowly, savings accumulated coin by coin. The patience that season demanded was its own form of labor, quiet and unglamorous."
       },
       "present": {
         "passage": "The crop is growing but not yet ripe. You can see the progress, which makes the remaining wait harder, not easier. Resist the urge to harvest early. The difference between good enough and truly ready is often just a little more time."
       },
-      "future": {
-        "passage": "A harvest is coming, born from work you've already done. The results may not match your fantasy, but they will reflect your effort honestly. Assess what's grown with clear eyes — then decide what's worth cultivating further and what to let go."
+      "self": {
+        "passage": "You see yourself as someone playing the long game — patient, deliberate, willing to delay gratification for a larger return. That self-image is a source of real strength right now. Trust it, even when the world rewards speed over steadiness."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for results, but the timeline keeps stretching beyond what feels bearable. The ideal of patient investment has started to feel like a euphemism for waiting forever. The aspiration needs a deadline, or at least an honest reassessment."
+      },
+      "below": {
+        "passage": "Beneath your impatience is a buried doubt — a fear that you've been watering dead soil, that the investment won't pay off no matter how long you wait. That hidden anxiety is the real source of the restlessness, not a lack of discipline."
+      },
+      "future": {
+        "passage": "The return on your investment may underwhelm. Before that stings too badly, recalibrate your expectations and examine whether you've been measuring success by the right standard. Sometimes the real yield is what you learned, not what you earned."
+      },
+      "outcome": {
+        "passage": "The harvest may disappoint. The likely result is a return that doesn't match the effort invested, which will force a reckoning with where your time and energy are best spent. That reckoning, painful as it is, may be the most valuable yield of all."
+      },
       "past": {
         "passage": "You invested heavily and the return disappointed — not necessarily a failure, but a harvest that didn't justify the years of labor. That reckoning forced you to ask harder questions about where you spend your finite time."
       },
       "present": {
         "passage": "Impatience or doubt is corroding your long-term work. You're tempted to abandon the field or, worse, to keep tending something that will never bear fruit. Honest assessment — not anxiety, not stubbornness — is what this moment requires."
       },
-      "future": {
-        "passage": "The return on your investment may underwhelm. Before that stings too badly, recalibrate your expectations and examine whether you've been measuring success by the right standard. Sometimes the real yield is what you learned, not what you earned."
+      "self": {
+        "passage": "You see yourself as someone who's been patient long enough — and that frustration is coloring your judgment. Before you uproot everything, separate the legitimate signal that it's time to pivot from the noise of simple weariness."
       }
     }
   },
   "pentacles-08": {
     "upright": {
+      "above": {
+        "passage": "You aspire to mastery — the kind that comes not from talent alone but from disciplined, repeated practice. The ideal above you is the artisan at the bench, fully absorbed in work that demands everything and returns something permanent."
+      },
+      "below": {
+        "passage": "Beneath your effort is a deep need to prove your worth through the quality of your work. That hidden driver — the belief that you are what you produce — fuels extraordinary diligence, but it also means rest can feel like failure."
+      },
+      "future": {
+        "passage": "A period of focused skill-building is ahead. It will be demanding and perhaps monotonous, but the competence you develop will become a permanent asset. Commit to the craft. The world has enough dabblers; be someone who finishes what they start."
+      },
+      "outcome": {
+        "passage": "Your dedication will produce genuine skill. The likely result is competence that others recognize and trust — the kind built through hours of unglamorous repetition. The work itself is the reward, and the external validation will follow naturally."
+      },
       "past": {
         "passage": "You apprenticed yourself to something — a skill, a trade, a discipline that demanded repetition until your hands knew the work without thinking. That period of dedicated craft built competence that no shortcut could replicate."
       },
       "present": {
         "passage": "The work in front of you rewards diligence, not brilliance. Show up, refine your technique, and trust the process. Mastery lives in the eight hundredth repetition, not the first flash of inspiration. Keep your head down and your standards high."
       },
-      "future": {
-        "passage": "A period of focused skill-building is ahead. It will be demanding and perhaps monotonous, but the competence you develop will become a permanent asset. Commit to the craft. The world has enough dabblers; be someone who finishes what they start."
+      "self": {
+        "passage": "You see yourself as a dedicated worker — someone defined by the quality and consistency of their craft. That identity is well-earned and genuinely admirable. Just remember that you are more than your output, even on the days when the work doesn't come easily."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for meaningful work, but what you have feels hollow — a grind without purpose, effort without engagement. The ideal of craftsmanship mocks the reality of showing up to something that no longer feeds you."
+      },
+      "below": {
+        "passage": "Beneath the restlessness is a fear that you've been building the wrong thing — that the skills you've honed serve a purpose you no longer believe in. That hidden misalignment between effort and meaning is the real source of your discontent."
+      },
+      "future": {
+        "passage": "Without renewed focus, your skills risk stagnating. Perfectionism may paralyze you, or restlessness may scatter your efforts across too many projects. Choose one craft and go deeper — breadth without depth is just a longer list of things you almost know."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to stagnation or burnout — effort without growth, repetition without refinement. The likely result is a body of work that never reaches its potential, not from lack of ability but from misdirected energy. Realignment is the remedy."
+      },
       "past": {
         "passage": "You abandoned a discipline too early, or ground away at work that never engaged your deeper talents. The mismatch between effort and meaning left you feeling hollowed out — busy but unfulfilled, productive but purposeless."
       },
       "present": {
         "passage": "The work feels rote, pointless, or beneath you. Either you've outgrown this particular grind or you've lost sight of why it matters. Before you walk away, distinguish between genuine misalignment and the ordinary discomfort of mastery's middle stages."
       },
-      "future": {
-        "passage": "Without renewed focus, your skills risk stagnating. Perfectionism may paralyze you, or restlessness may scatter your efforts across too many projects. Choose one craft and go deeper — breadth without depth is just a longer list of things you almost know."
+      "self": {
+        "passage": "You see yourself as stuck — capable of more, but trapped in work that doesn't reflect your real abilities. Whether that perception is accurate or just restlessness talking, it's eroding your motivation. Something needs to change, even if it's only your perspective."
       }
     }
   },
   "pentacles-09": {
     "upright": {
+      "above": {
+        "passage": "You aspire to self-sufficiency — a life sustained entirely by your own effort, where comfort is earned and nobody else holds the keys. The ideal is the walled garden, abundant and private, tended by your own hands alone."
+      },
+      "below": {
+        "passage": "Beneath your ambition is a deep desire for independence that borders on self-containment. The hidden driver is not greed but the need to prove — perhaps to yourself — that you can provide everything you need without relying on anyone else."
+      },
+      "future": {
+        "passage": "Material independence is within reach. The luxury of the Nine is not decadence — it's the deep security of knowing you can sustain yourself on your own terms. Keep building toward that self-reliance; it's closer than you think."
+      },
+      "outcome": {
+        "passage": "If you continue on this path, material comfort and personal independence await. The likely result is a life of genuine abundance — earned, not inherited. Enjoy it fully. The garden you've cultivated deserves a gardener who actually sits down in it."
+      },
       "past": {
         "passage": "You built a life of comfort through your own effort — a home that felt like yours, a garden you could walk through alone and feel whole. That self-sufficiency wasn't accidental; it was earned through years of disciplined work and deliberate choices."
       },
       "present": {
         "passage": "Abundance surrounds you, and it's yours to enjoy. This is not excess but the rightful fruit of sustained effort — financial ease, physical comfort, the pleasure of a life well-arranged. Savor it without guilt. You did the work."
       },
-      "future": {
-        "passage": "Material independence is within reach. The luxury of the Nine is not decadence — it's the deep security of knowing you can sustain yourself on your own terms. Keep building toward that self-reliance; it's closer than you think."
+      "self": {
+        "passage": "You see yourself as someone who has arrived — not at perfection, but at a place of genuine sufficiency. That quiet pride in what you've built is not arrogance; it's the earned confidence of someone who knows the cost of everything they have."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for comfort, but it keeps feeling empty or out of reach. The ideal of self-sufficient luxury is haunted by a question you can't quite silence: is this all there is? The aspiration may need something beyond the material to complete it."
+      },
+      "below": {
+        "passage": "Beneath the dissatisfaction is a hidden truth: you've been using material comfort as a proxy for something deeper — connection, meaning, peace. That substitution worked for a while, but the gap is widening and no purchase can close it."
+      },
+      "future": {
+        "passage": "Financial independence may come at a personal cost if you're not careful. Solitude and self-sufficiency have a shadow side — make sure the life you're building has room for connection, not just comfort."
+      },
+      "outcome": {
+        "passage": "The likely result is material comfort that rings hollow. You'll have what you need, perhaps more, but the satisfaction you expected may not arrive with it. The outcome asks you to look beyond the garden walls for the thing that's actually missing."
+      },
       "past": {
         "passage": "Comfort became isolation, or the wealth you built never translated into the satisfaction you expected. Having everything you needed didn't prevent the feeling that something essential was missing from the picture."
       },
       "present": {
         "passage": "You may be over-relying on material security as a substitute for deeper fulfillment, or struggling to enjoy what you have because anxiety won't release its grip. The garden is beautiful, but you can't seem to sit still in it."
       },
-      "future": {
-        "passage": "Financial independence may come at a personal cost if you're not careful. Solitude and self-sufficiency have a shadow side — make sure the life you're building has room for connection, not just comfort."
+      "self": {
+        "passage": "You see yourself as someone who should feel more satisfied than you do — and the gap between expectation and reality is unsettling. The comfort is real, but it hasn't touched the part of you that's actually hungry. Name what's missing before you try to buy it."
       }
     }
   },
   "pentacles-10": {
     "upright": {
+      "above": {
+        "passage": "You aspire to build something that outlasts you — a legacy, a family fortune, an institution that carries your values forward. The ideal is multigenerational wealth in its broadest sense: material, cultural, and spiritual inheritance."
+      },
+      "below": {
+        "passage": "Beneath your drive is a deep awareness of lineage — a sense that you are not just building for yourself but continuing something that started before you and must extend beyond you. That hidden root connects your daily choices to a much longer arc."
+      },
+      "future": {
+        "passage": "Lasting prosperity is forming, the kind that outlives a single career or bank account. Think in terms of legacy: what are you building that your children — literal or figurative — will stand on? The Ten asks you to build for the long arc."
+      },
+      "outcome": {
+        "passage": "If you maintain this course, something enduring will take shape — a family, a business, a body of work that others will inherit and build upon. The likely result is stability that extends beyond your own lifetime. That is no small thing."
+      },
       "past": {
         "passage": "You came from something established — family wealth, institutional support, or a tradition that gave you a foundation others had to build from scratch. That inheritance, material or cultural, shaped your sense of what's possible."
       },
       "present": {
         "passage": "Legacy is alive in your hands. The wealth of the Ten is multigenerational — it's about what you've received and what you'll pass on. Tend to the structures that sustain your household, your lineage, your community. This abundance is not yours alone."
       },
-      "future": {
-        "passage": "Lasting prosperity is forming, the kind that outlives a single career or bank account. Think in terms of legacy: what are you building that your children — literal or figurative — will stand on? The Ten asks you to build for the long arc."
+      "self": {
+        "passage": "You see yourself as a link in a chain — not just an individual but a steward of something larger. That sense of responsibility to what came before and what comes after gives your material life a weight and meaning that goes well beyond the bank balance."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for the security of legacy, but the structure you're trying to build on feels unstable — family dysfunction, institutional rot, or an inheritance that costs more than it gives. The ideal needs to be rebuilt on cleaner ground."
+      },
+      "below": {
+        "passage": "Beneath the instability is a hidden conflict between loyalty to what you inherited and the knowledge that it no longer serves you. That tension — duty versus self-preservation — is the subconscious driver pulling your material life in two directions at once."
+      },
+      "future": {
+        "passage": "The inheritance — material, emotional, or systemic — may not serve you as it once did. Be willing to forge your own legacy rather than propping up one that's crumbling. Not everything old is worth preserving."
+      },
+      "outcome": {
+        "passage": "The legacy as it stands may fracture. The likely result is a disruption to what was assumed to be permanent — family structures, financial arrangements, institutional continuity. What emerges from the break has a chance to be more honest, even if it's less grand."
+      },
       "past": {
         "passage": "Family money was a source of conflict, or the legacy you inherited came laced with obligation, dysfunction, or loss. The weight of what was passed down may have felt more like a burden than a gift."
       },
       "present": {
         "passage": "Cracks are showing in what should be stable — family disputes over money, institutional instability, or the sense that a long-standing structure is failing. You may need to break from tradition to protect your own financial health."
       },
-      "future": {
-        "passage": "The inheritance — material, emotional, or systemic — may not serve you as it once did. Be willing to forge your own legacy rather than propping up one that's crumbling. Not everything old is worth preserving."
+      "self": {
+        "passage": "You see yourself as someone carrying a weight that wasn't entirely yours to bear — an inheritance of obligation, expectation, or dysfunction that shapes your material life in ways you didn't choose. You're allowed to set some of it down."
       }
     }
   },
   "pentacles-page": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the beginner's posture — open hands, clear eyes, the willingness to learn without pretending you already know. The ideal is practical curiosity directed at something tangible: a new skill, a fresh financial understanding, a craft worth studying."
+      },
+      "below": {
+        "passage": "Beneath your current situation is a genuine, almost childlike hunger to understand how things work in the material world. That curiosity — unpolished but persistent — is the hidden engine driving you toward new knowledge and practical skill."
+      },
+      "future": {
+        "passage": "News about money, work, or health is on its way — likely a small but real opportunity to learn or earn. Don't dismiss it for being modest. The Page's gift is the first step, not the destination, and every master was once exactly where you'll be standing."
+      },
+      "outcome": {
+        "passage": "A new beginning in the material world is likely — modest, earnest, full of potential. The outcome won't be dramatic, but it will be real. Treat the opportunity with the seriousness of a student who understands that small starts lead to lasting mastery."
+      },
       "past": {
         "passage": "A new study, a first job, a fascination with how things work — you began something with earnest, practical curiosity. That wide-eyed willingness to learn laid groundwork you're still building on, even if the early efforts were clumsy."
       },
       "present": {
         "passage": "You're a student of something tangible right now — a new skill, a financial plan, a health regimen. The Page brings beginner's focus: methodical, eager, unashamed of not yet being expert. Protect that openness. It's more valuable than you realize."
       },
-      "future": {
-        "passage": "News about money, work, or health is on its way — likely a small but real opportunity to learn or earn. Don't dismiss it for being modest. The Page's gift is the first step, not the destination, and every master was once exactly where you'll be standing."
+      "self": {
+        "passage": "You see yourself as a learner — someone at the beginning of a practical journey, not yet expert but genuinely engaged. That humility is not a weakness. The willingness to be new at something is the rarest and most productive form of courage."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for a fresh start, but something keeps you circling the planning stage without ever committing to the first step. The ideal of practical learning has been replaced by the comfortable illusion of preparation without action."
+      },
+      "below": {
+        "passage": "Beneath the procrastination is a hidden fear of looking foolish — of being the beginner, the one who doesn't know yet. That fear of incompetence is the subconscious root keeping you stuck in research mode instead of actually starting."
+      },
+      "future": {
+        "passage": "A learning opportunity may arrive that you're tempted to dismiss as too basic or too slow. That dismissal would be a mistake. Swallow your pride and start where the work actually begins, not where you wish it did."
+      },
+      "outcome": {
+        "passage": "The likely result is a missed opportunity to grow — not through catastrophe, but through the quiet erosion of never beginning. The outcome improves dramatically the moment you trade planning for practice, even imperfect practice."
+      },
       "past": {
         "passage": "A practical opportunity was squandered through laziness, distraction, or an unwillingness to start at the bottom. You wanted the result without the apprenticeship, and the shortcut cost you more than the long road would have."
       },
       "present": {
         "passage": "You're stuck in planning without execution, or studying without applying. The gap between knowing and doing has become a comfortable hiding place. Commit to one tangible action today — the Page reversed needs movement, not more preparation."
       },
-      "future": {
-        "passage": "A learning opportunity may arrive that you're tempted to dismiss as too basic or too slow. That dismissal would be a mistake. Swallow your pride and start where the work actually begins, not where you wish it did."
+      "self": {
+        "passage": "You see yourself as someone who's not quite ready — always needing one more course, one more plan, one more round of preparation before you can begin. That self-image is a trap dressed as diligence. You are readier than you think."
       }
     }
   },
   "pentacles-knight": {
     "upright": {
+      "above": {
+        "passage": "You aspire to unshakable reliability — the kind of person who shows up, does the work, and never needs to be asked twice. The ideal above you is steady progress, not flash. You want to be the one others count on without question."
+      },
+      "below": {
+        "passage": "Beneath your methodical approach is a deep conviction that consistency is the only trustworthy path to results. That hidden belief — that slow and steady isn't just a strategy but a moral position — anchors everything you build."
+      },
+      "future": {
+        "passage": "A steady, dependable force is entering your material world — a reliable job, a disciplined routine, or a person who shows up without drama and does what they say. It won't be exciting. It will be exactly what you need."
+      },
+      "outcome": {
+        "passage": "If you stay your course, the result will be solid, dependable progress — nothing viral, nothing overnight, but ground gained that stays gained. The outcome rewards your patience with something flashier approaches rarely produce: permanence."
+      },
       "past": {
         "passage": "You put your head down and worked — steadily, reliably, without flash or fanfare. That dogged persistence carried you through a period when others quit or lost focus. Slow never bothered you because you knew you'd arrive."
       },
       "present": {
         "passage": "Methodical effort is your greatest asset right now. The Knight of Pentacles doesn't gallop — he walks, checking the ground with each step. Progress will feel slow, but it's the kind that doesn't collapse when tested. Trust your pace."
       },
-      "future": {
-        "passage": "A steady, dependable force is entering your material world — a reliable job, a disciplined routine, or a person who shows up without drama and does what they say. It won't be exciting. It will be exactly what you need."
+      "self": {
+        "passage": "You see yourself as dependable — the person who delivers through discipline rather than inspiration. That self-image is a genuine asset, and the people around you trust it more than you realize. Your steadiness is its own kind of brilliance."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for stability, but what you've built feels more like stagnation. The ideal of steady progress has calcified into mere routine, and the aspiration to be reliable has become an excuse to never take a risk."
+      },
+      "below": {
+        "passage": "Beneath the paralysis is a buried fear of making the wrong move — a perfectionism so thorough it disguises itself as caution. That hidden driver keeps you frozen in place, mistaking immobility for safety."
+      },
+      "future": {
+        "passage": "Stagnation threatens to set in if you mistake caution for wisdom. The reversed Knight warns against becoming so risk-averse that you fossilize. A little productive discomfort now will save you from the larger pain of wasted time."
+      },
+      "outcome": {
+        "passage": "Without a change in approach, the likely result is a life that's stable but stalled — secure in its routines but going nowhere. The ground you're standing on is solid, yes, but you were meant to walk it, not stand on it forever."
+      },
       "past": {
         "passage": "Caution became paralysis. You were so focused on doing things the right way that you missed the window to do them at all. Or perhaps the routine you trusted became a rut so deep you couldn't see over the edges."
       },
       "present": {
         "passage": "Stubbornness is masquerading as discipline. You're either refusing to adapt when conditions have changed or stalling because the next step isn't perfectly mapped out. The ground is solid enough — start walking."
       },
-      "future": {
-        "passage": "Stagnation threatens to set in if you mistake caution for wisdom. The reversed Knight warns against becoming so risk-averse that you fossilize. A little productive discomfort now will save you from the larger pain of wasted time."
+      "self": {
+        "passage": "You see yourself as careful and thorough, but from the outside it may look more like stuck. The line between prudent and paralyzed has blurred, and your self-image hasn't adjusted. Something needs to move, even if it moves imperfectly."
       }
     }
   },
   "pentacles-queen": {
     "upright": {
+      "above": {
+        "passage": "You aspire to be the axis of abundance — not just wealthy, but wise with resources, capable of growing things and nurturing the people and projects in your care. The ideal is a life where practical generosity and material ease coexist naturally."
+      },
+      "below": {
+        "passage": "Beneath your actions is a deep instinct to nurture through the material — to express care by creating comfort, feeding people, making spaces that feel like home. That hidden driver connects your relationship with money to your capacity for love."
+      },
+      "future": {
+        "passage": "Step into the role of provider and nurturer in its fullest sense. The Queen doesn't just accumulate — she cultivates. Financial wisdom, physical well-being, and sensual pleasure are all within reach if you tend them with her steady hand."
+      },
+      "outcome": {
+        "passage": "The likely result is a life of grounded abundance — not extravagant, but deeply comfortable and generously shared. You will become the person others turn to for practical wisdom and material support, and you will have enough to give."
+      },
       "past": {
         "passage": "Someone — perhaps you — held the household together with quiet competence. Resources were managed wisely, comfort was created from practical skill, and abundance was cultivated through attention to the real and the daily. That stewardship was an act of love."
       },
       "present": {
         "passage": "You are the axis around which material stability turns. Your relationship with money, home, and body is grounded and generous — you know how to make things grow, how to nourish without smothering, how to turn raw resources into a life worth inhabiting."
       },
-      "future": {
-        "passage": "Step into the role of provider and nurturer in its fullest sense. The Queen doesn't just accumulate — she cultivates. Financial wisdom, physical well-being, and sensual pleasure are all within reach if you tend them with her steady hand."
+      "self": {
+        "passage": "You see yourself as someone who provides — not from obligation, but from a genuine abundance of care and practical skill. That nurturing self-image is grounded in reality. You know how to make things grow, and that knowledge gives you a quiet, unshakable authority."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for nurturing abundance, but the giving has become depleting. The ideal of practical generosity has tipped into self-neglect or over-control. The aspiration needs rebalancing before it consumes you."
+      },
+      "below": {
+        "passage": "Beneath the imbalance is a hidden belief that your worth depends on what you provide for others. That subconscious equation — I am needed, therefore I matter — drives you to give past the point of sustainability and resent the cost in silence."
+      },
+      "future": {
+        "passage": "Reclaim your connection to the physical world without letting it possess you. The reversed Queen warns against both neglect and obsession — find the middle ground where you can provide for yourself and others without losing yourself in the process."
+      },
+      "outcome": {
+        "passage": "The likely result is burnout from over-giving, or material neglect from having swung too far in the other direction. The outcome improves when you include yourself on the list of people you nourish. You cannot pour from a garden you've stopped watering."
+      },
       "past": {
         "passage": "The caretaking became consuming — you gave so much to maintaining the material world that you neglected your own needs, or you hoarded comfort as a defense against a deeper insecurity. The garden grew, but the gardener withered."
       },
       "present": {
         "passage": "Your relationship with material security has tilted out of balance. Either you're neglecting practical matters in favor of abstraction, or you've become so fixated on financial safety that warmth and spontaneity have drained from your days."
       },
-      "future": {
-        "passage": "Reclaim your connection to the physical world without letting it possess you. The reversed Queen warns against both neglect and obsession — find the middle ground where you can provide for yourself and others without losing yourself in the process."
+      "self": {
+        "passage": "You see yourself as someone who's lost the balance between caring for others and caring for yourself. That awareness is the first step. The reversed Queen isn't broken — she's overextended. Pull back enough to remember what your own needs feel like."
       }
     }
   },
   "pentacles-king": {
     "upright": {
+      "above": {
+        "passage": "You aspire to command your material world with the calm authority of someone who has truly mastered it. The ideal is not just wealth but the wisdom to wield it — building enterprises, supporting others, and creating value that compounds over generations."
+      },
+      "below": {
+        "passage": "Beneath your ambition is a deep need to prove that you can build something substantial and lasting. That hidden driver — the desire to be the one who provides, who leads, who makes the final call on resources — is the bedrock of your material identity."
+      },
+      "future": {
+        "passage": "Material mastery is the destination you're heading toward. Not just wealth but the wisdom to use it well — to build institutions, support others, and create lasting value. Step into that authority. The empire is yours to run."
+      },
+      "outcome": {
+        "passage": "The likely result is a position of real material authority — earned, not inherited, and sustained by competence rather than bluster. You will have the resources and the wisdom to deploy them well. Trust that trajectory and keep building."
+      },
       "past": {
         "passage": "Wealth was built through discipline, not luck. You — or someone who shaped your path — demonstrated that real prosperity comes from mastering the material world patiently, treating money as a tool and enterprise as a craft."
       },
       "present": {
         "passage": "You command your resources with authority and calm. The King's throne is earned through demonstrated competence — managing wealth, leading practical ventures, making decisions that compound over time. Others look to you for stability, and you deliver."
       },
-      "future": {
-        "passage": "Material mastery is the destination you're heading toward. Not just wealth but the wisdom to use it well — to build institutions, support others, and create lasting value. Step into that authority. The empire is yours to run."
+      "self": {
+        "passage": "You see yourself as someone who has earned the right to lead in the material domain. That confidence is grounded in real competence, and others sense it. The King's authority comes not from title but from the consistent demonstration of sound judgment."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You're reaching for material authority, but the power has become an end in itself. The ideal of wise stewardship has decayed into accumulation without purpose or control without generosity. The aspiration needs its soul back."
+      },
+      "below": {
+        "passage": "Beneath the grip on power is a hidden terror of irrelevance — the fear that without your wealth or your title, you are no one. That buried insecurity is driving you to hold tighter when the wiser move would be to hold differently."
+      },
+      "future": {
+        "passage": "Without a course correction, prosperity risks curdling into corruption or collapsing under its own weight. Reexamine your relationship with wealth and power. The goal was never just to have more — it was to build something that matters."
+      },
+      "outcome": {
+        "passage": "The likely result is authority that erodes from within — not a dramatic fall, but a slow hollowing. Wealth without wisdom, power without purpose. The correction is simple but demanding: remember who the empire was supposed to serve."
+      },
       "past": {
         "passage": "Power over resources became an end in itself. Wealth was used to control rather than to build, or financial success masked a hollowness that no amount of money could fill. The throne was comfortable but the kingdom suffered."
       },
       "present": {
         "passage": "Material authority is slipping — through mismanagement, greed, or an unwillingness to adapt. You may be clinging to a financial identity or business model that no longer serves. The King reversed mistakes stubbornness for strength and accumulation for achievement."
       },
-      "future": {
-        "passage": "Without a course correction, prosperity risks curdling into corruption or collapsing under its own weight. Reexamine your relationship with wealth and power. The goal was never just to have more — it was to build something that matters."
+      "self": {
+        "passage": "You see yourself as the one in charge, but the control feels more fragile than you'd admit. The reversed King's self-image is a fortress built on sand — impressive from the outside, quietly crumbling within. Honest reassessment, not more authority, is what's needed."
       }
     }
   }

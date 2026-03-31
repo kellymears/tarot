@@ -1,337 +1,673 @@
 {
   "cups-01": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward a pure emotional beginning — the chance to feel something entirely new, unguarded and unfiltered. The Ace of Cups as your aspiration says you want to be the kind of person who can receive love or inspiration without flinching."
+      },
+      "below": {
+        "passage": "Beneath everything, there is a deep and quiet thirst — a need to be filled emotionally that you may not fully acknowledge. The Ace of Cups at the root says your actions are being driven by a longing for connection, creativity, or spiritual nourishment that hasn't yet been named."
+      },
+      "future": {
+        "passage": "An outpouring of feeling is approaching. Whether it arrives as love, inspiration, or spiritual clarity, the Ace of Cups promises your heart will soon have more to hold than it does today."
+      },
+      "outcome": {
+        "passage": "If you stay on this path, a genuine emotional opening awaits — love offered freely, creative channels unblocked, or a spiritual renewal that comes without conditions. The Ace of Cups as outcome says the heart gets what it has been asking for."
+      },
       "past": {
         "passage": "A wellspring of emotion opened in your past — a new love, a creative awakening, or a moment when the heart cracked open and let something in. The Ace of Cups marks the origin point of a feeling that still moves through you."
       },
       "present": {
         "passage": "Something is being offered to you right now — an emotional beginning, a hand extended, a channel opening between you and another person or a deeper part of yourself. Do not overthink this gift. Let it fill you."
       },
-      "future": {
-        "passage": "An outpouring of feeling is approaching. Whether it arrives as love, inspiration, or spiritual clarity, the Ace of Cups promises your heart will soon have more to hold than it does today."
+      "self": {
+        "passage": "You see yourself as someone on the verge of an emotional breakthrough — open, receptive, ready to feel something real. The Ace of Cups in the self position says you identify with the possibility of beginning again, with a heart that hasn't yet been poured out."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward emotional openness, but something keeps sealing you off before you can receive it. The reversed Ace of Cups as your ideal suggests you are reaching for a feeling that keeps slipping through your fingers — not because it isn't real, but because you can't quite let it in."
+      },
+      "below": {
+        "passage": "Beneath your current situation lies an emotional blockage you haven't fully confronted — a refusal to feel, a well that was capped shut for reasons that once made sense. The reversed Ace of Cups at the root says the dryness you feel is not random; it's protected."
+      },
+      "future": {
+        "passage": "There is a risk of missing an emotional opening that's coming your way. If you remain closed off or too deeply guarded, love or inspiration may arrive and find no place to land."
+      },
+      "outcome": {
+        "passage": "The most likely outcome is an emotional offering that goes unmet — not because it doesn't arrive, but because you aren't in a position to receive it. The reversed Ace of Cups warns that the cup tips over when there's no hand ready to hold it."
+      },
       "past": {
         "passage": "An emotional offering was extended to you, but something prevented you from receiving it fully. Perhaps you were guarded, perhaps the timing was wrong. That cup was tipped before you could drink from it."
       },
       "present": {
         "passage": "You may be feeling emotionally blocked or creatively dry, as though the well has gone still. This isn't emptiness — it's a signal to look at what you've been refusing to feel. The water is there, beneath the surface."
       },
-      "future": {
-        "passage": "There is a risk of missing an emotional opening that's coming your way. If you remain closed off or too deeply guarded, love or inspiration may arrive and find no place to land."
+      "self": {
+        "passage": "You see yourself as emotionally shut down or unable to access what others seem to feel easily. The reversed Ace of Cups in the self position reflects an inner landscape that feels parched — not because you lack depth, but because something dammed the flow."
       }
     }
   },
   "cups-02": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward a true partnership — one built on mutual recognition and equal footing. The Two of Cups as your aspiration says your highest aim right now is to look someone in the eye and know you are seen as fully as you see them."
+      },
+      "below": {
+        "passage": "The hidden driver beneath all of this is a deep need for reciprocity. You want to be met — emotionally, creatively, spiritually — by someone or something that gives as much as it takes. The Two of Cups at the root says partnership is not a preference; it's a craving."
+      },
+      "future": {
+        "passage": "A significant partnership is forming on the horizon. Two people, two energies, moving toward each other with intention. What approaches is not casual — it will ask something real of you."
+      },
+      "outcome": {
+        "passage": "The trajectory you're on leads toward genuine connection — a bond that is equal, intentional, and rooted in honest exchange. The Two of Cups as outcome promises that the partnership forming now has the potential to hold real weight."
+      },
       "past": {
         "passage": "A meaningful partnership took root in your past — a bond forged in mutual recognition. Whether romantic or platonic, this connection shaped how you understand intimacy and reciprocity."
       },
       "present": {
         "passage": "A relationship in your life right now is asking for your full attention. This is the card of equal exchange, of looking someone in the eye and choosing them as they choose you. Honor what flows between you."
       },
-      "future": {
-        "passage": "A significant partnership is forming on the horizon. Two people, two energies, moving toward each other with intention. What approaches is not casual — it will ask something real of you."
+      "self": {
+        "passage": "You see yourself as someone seeking — or already holding — a bond of real depth. The Two of Cups in the self position says you identify as a partner, someone whose emotional life is shaped by the quality of your closest connections."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward connection, but the partnerships you envision keep falling short of balance. The reversed Two of Cups as your ideal suggests you are chasing a unity that requires something you haven't yet been willing to offer — or to demand."
+      },
+      "below": {
+        "passage": "An unacknowledged imbalance in a relationship is driving more of your behavior than you realize. The reversed Two of Cups at the root says the dissonance between what you give and what you receive has become a silent engine beneath your choices."
+      },
+      "future": {
+        "passage": "A partnership ahead may struggle to find its footing unless both sides are willing to be vulnerable. Watch for the temptation to keep score or to merge without boundaries. Balance must be built, not assumed."
+      },
+      "outcome": {
+        "passage": "The current path leads toward a relationship that cannot sustain itself on uneven ground. The reversed Two of Cups as outcome warns that without honest renegotiation, a bond you value may fracture under the weight of what goes unsaid."
+      },
       "past": {
         "passage": "An imbalance marked a relationship in your past. One person poured while the other only received, or both withheld what mattered most. The connection faltered not from lack of feeling, but from unequal ground."
       },
       "present": {
         "passage": "Something is off-balance in a current relationship. You may be giving more than you receive, or you may have pulled back without acknowledging it. Look honestly at what's being exchanged — and what isn't."
       },
-      "future": {
-        "passage": "A partnership ahead may struggle to find its footing unless both sides are willing to be vulnerable. Watch for the temptation to keep score or to merge without boundaries. Balance must be built, not assumed."
+      "self": {
+        "passage": "You see yourself as someone caught in an unequal dynamic — giving too much, receiving too little, or unsure whether the connection is real. The reversed Two of Cups in the self position reflects a relational identity under strain."
       }
     }
   },
   "cups-03": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward belonging — the kind of shared joy that can only happen when people show up without pretense. The Three of Cups as your aspiration says your highest aim is to be surrounded by people who celebrate with you, not for you."
+      },
+      "below": {
+        "passage": "A deep need for community is driving your current situation, even if you haven't named it. The Three of Cups at the root suggests that beneath the surface, what you really want is to stop carrying things alone and let joy be a shared experience."
+      },
+      "future": {
+        "passage": "A gathering or reunion approaches — people coming together to celebrate something that matters. The Three of Cups suggests that your near future holds shared happiness that cannot be manufactured alone."
+      },
+      "outcome": {
+        "passage": "The path you're on leads toward genuine celebration — friendships deepening, creative collaborations bearing fruit, or a community forming around something you helped build. The Three of Cups as outcome says joy is multiplying."
+      },
       "past": {
         "passage": "There was a time of genuine celebration in your life — friends gathered, joy shared without self-consciousness. The Three of Cups points back to a moment when belonging was effortless and laughter came easily."
       },
       "present": {
         "passage": "Community is where your strength lies right now. Lean into friendships, shared creative work, and the people who remind you that you don't have to carry everything alone. Joy multiplies when it's passed around."
       },
-      "future": {
-        "passage": "A gathering or reunion approaches — people coming together to celebrate something that matters. The Three of Cups suggests that your near future holds shared happiness that cannot be manufactured alone."
+      "self": {
+        "passage": "You see yourself as someone who thrives in connection — a friend, a collaborator, someone whose light gets brighter in company. The Three of Cups in the self position says your identity is woven into the people you love."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward meaningful community, but what you keep finding feels hollow or performative. The reversed Three of Cups as your ideal suggests you know what real belonging should feel like — you just haven't found it yet in its truest form."
+      },
+      "below": {
+        "passage": "A wound around social exclusion or betrayal is quietly shaping your choices. The reversed Three of Cups at the root says your wariness in groups isn't arbitrary — it's a learned response to a time when community let you down."
+      },
+      "future": {
+        "passage": "Social dynamics ahead may prove more complicated than they appear on the surface. Not every invitation is what it seems. Protect your energy and choose carefully who you celebrate with."
+      },
+      "outcome": {
+        "passage": "The current trajectory risks social isolation or shallow connection. The reversed Three of Cups as outcome warns that if you keep performing togetherness without actually letting people in, the celebration will ring hollow."
+      },
       "past": {
         "passage": "A social circle or group dynamic soured in your past. What should have been celebration became exclusion, gossip, or hollow performance. The memory of that disconnection still informs how you show up in groups."
       },
       "present": {
         "passage": "You may be withdrawing from community or overextending yourself socially to avoid being alone with your feelings. Neither extreme serves you. Notice whether your social life nourishes you or simply distracts you."
       },
-      "future": {
-        "passage": "Social dynamics ahead may prove more complicated than they appear on the surface. Not every invitation is what it seems. Protect your energy and choose carefully who you celebrate with."
+      "self": {
+        "passage": "You see yourself as someone on the outside of the circle, watching others celebrate while you hover at the edge. The reversed Three of Cups in the self position reflects a fear that you don't quite belong — even when you're invited."
       }
     }
   },
   "cups-04": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward something you can't quite name — a feeling, an experience, a cup that hasn't yet appeared. The Four of Cups as your aspiration reveals a restless idealism, a refusal to settle for what's available when you sense something truer exists."
+      },
+      "below": {
+        "passage": "Beneath your current situation lies a deep emotional weariness — a quiet disillusionment that makes everything on offer look flat. The Four of Cups at the root says apathy is not laziness; it's the body's way of saying nothing here matches what the soul is actually asking for."
+      },
+      "future": {
+        "passage": "A period of emotional stagnation is possible if you continue looking past what's already here. The Four of Cups warns against waiting for a perfect feeling that never arrives while real ones sit untouched at your feet."
+      },
+      "outcome": {
+        "passage": "If nothing changes, you may find yourself sitting among opportunities you cannot bring yourself to take. The Four of Cups as outcome says the most likely result is a kind of emotional paralysis — not ruin, but stagnation disguised as patience."
+      },
       "past": {
         "passage": "There was a period when you turned inward and refused what was being offered. Apathy or disillusionment set in, and the world's gifts seemed flat and uninspiring. That withdrawal, though painful, was part of a necessary recalibration."
       },
       "present": {
         "passage": "Boredom or emotional restlessness has taken hold. You are being offered something — perhaps several somethings — but none of them feel right. Before you dismiss what's in front of you, ask whether the problem is the offering or your willingness to receive."
       },
-      "future": {
-        "passage": "A period of emotional stagnation is possible if you continue looking past what's already here. The Four of Cups warns against waiting for a perfect feeling that never arrives while real ones sit untouched at your feet."
+      "self": {
+        "passage": "You see yourself as someone who is waiting — not passive, but unsatisfied. The Four of Cups in the self position says you identify with the figure under the tree, arms crossed, certain that what's being offered is not enough but unsure what would be."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You are reaching toward re-engagement — the moment when the fog lifts and curiosity floods back in. The reversed Four of Cups as your aspiration says you want to want things again, to feel the pull of possibility after a long emotional drought."
+      },
+      "below": {
+        "passage": "Beneath the surface, a shift has already begun. The reversed Four of Cups at the root says the apathy that once held you is loosening its grip — something in your subconscious has turned toward the light, even if the rest of you hasn't caught up yet."
+      },
+      "future": {
+        "passage": "You will soon emerge from a period of emotional flatness with renewed appreciation for what's available to you. The reversed Four of Cups signals that what once seemed dull is about to look very different."
+      },
+      "outcome": {
+        "passage": "The most likely result is a gradual reawakening — eyes opening, arms uncrossing, hands reaching for what was always there. The reversed Four of Cups as outcome promises that the stagnation breaks, and engagement returns."
+      },
       "past": {
         "passage": "You once snapped out of a long emotional funk and suddenly saw what had been in front of you all along. That moment of re-engagement — of finally reaching for the cup — changed the direction of things."
       },
       "present": {
         "passage": "A fog is lifting. After a period of withdrawal or disinterest, you are beginning to see new possibilities and feel motivated again. Follow that flicker of curiosity — it is the thread that leads you back to engagement."
       },
-      "future": {
-        "passage": "You will soon emerge from a period of emotional flatness with renewed appreciation for what's available to you. The reversed Four of Cups signals that what once seemed dull is about to look very different."
+      "self": {
+        "passage": "You see yourself as someone emerging from a period of emotional withdrawal, blinking in the new light. The reversed Four of Cups in the self position says you are beginning to recognize that you are ready to receive again."
       }
     }
   },
   "cups-05": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward the courage to fully grieve — to look at what has been lost without flinching or rushing toward resolution. The Five of Cups as your aspiration says the ideal you're moving toward is honest mourning, not premature healing."
+      },
+      "below": {
+        "passage": "Unprocessed grief is the hidden engine beneath your current situation. The Five of Cups at the root says loss — whether recent or ancient — is shaping your choices in ways you may not consciously recognize. The spilled cups are still spilling."
+      },
+      "future": {
+        "passage": "A disappointment is coming that will test your resilience. Something you hoped for may not arrive as expected. The Five of Cups does not promise the loss will be small, only that it will not be total."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads through grief, not around it. The Five of Cups as outcome says disappointment is likely, but it also says that what remains standing after the loss will be more real than what fell. The two cups behind you still hold."
+      },
       "past": {
         "passage": "A loss marked your past deeply — grief, disappointment, or the end of something you believed would last. The Five of Cups acknowledges that pain without minimizing it. You mourned what spilled, and that mourning was real."
       },
       "present": {
         "passage": "Grief or regret has your attention fixed on what's been lost. Three cups have fallen, but two remain standing behind you. This is not about forced optimism — it's about turning around when you're ready and seeing what survived."
       },
-      "future": {
-        "passage": "A disappointment is coming that will test your resilience. Something you hoped for may not arrive as expected. The Five of Cups does not promise the loss will be small, only that it will not be total."
+      "self": {
+        "passage": "You see yourself as someone defined by what was lost — the relationship that ended, the chance that slipped away, the version of your life that didn't survive. The Five of Cups in the self position says grief has become part of how you know yourself."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You are reaching toward recovery — the moment when grief loosens its hold and you can set the sorrow down without forgetting it. The reversed Five of Cups as your aspiration says you are ready to stop being defined by what was lost."
+      },
+      "below": {
+        "passage": "Beneath your current situation is a grief that was either buried too quickly or held too long. The reversed Five of Cups at the root says the mourning process was disrupted, and that disruption is still quietly steering things from below."
+      },
+      "future": {
+        "passage": "Healing from a past wound is closer than it appears. The reversed Five of Cups suggests you are approaching the point where you can set the grief down — not forget it, but stop letting it steer."
+      },
+      "outcome": {
+        "passage": "The most likely result is a turning point in your healing — the day you finally look away from the spilled cups and see what's still standing. The reversed Five of Cups as outcome says acceptance is coming, and it will feel like relief."
+      },
       "past": {
         "passage": "You carried grief longer than it needed to be carried, or you buried it before it was fully felt. Either way, the mourning process was interrupted, and some of that unprocessed sorrow may still be lodged in you."
       },
       "present": {
         "passage": "You are beginning to release an old grief or accept a loss you've been fighting. This is the slow, unglamorous work of emotional recovery. There is no shortcut, but you are further along than you think."
       },
-      "future": {
-        "passage": "Healing from a past wound is closer than it appears. The reversed Five of Cups suggests you are approaching the point where you can set the grief down — not forget it, but stop letting it steer."
+      "self": {
+        "passage": "You see yourself as someone in the process of healing — no longer drowning in grief but not yet free of it. The reversed Five of Cups in the self position says you know you're getting better, even on the days it doesn't feel like it."
       }
     }
   },
   "cups-06": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward innocence — not the naivety of childhood, but the emotional clarity that comes from a time before you learned to guard yourself. The Six of Cups as your aspiration says you want to feel that safe again, that known."
+      },
+      "below": {
+        "passage": "A memory from your earlier life is exerting a pull you may not fully recognize. The Six of Cups at the root says nostalgia — for a person, a place, a version of yourself — is the quiet force shaping your present choices."
+      },
+      "future": {
+        "passage": "A reunion or homecoming is on its way. Someone or something from your earlier life will re-enter the picture, carrying the warmth of shared history. The Six of Cups says the past is not done with you yet."
+      },
+      "outcome": {
+        "passage": "The path you're on leads back to something familiar — a reconnection with your roots, a return to a place or person who shaped you. The Six of Cups as outcome says the past offers something you need, and receiving it will feel like coming home."
+      },
       "past": {
         "passage": "Nostalgia calls you back to a simpler time — childhood innocence, an old friendship, a place where you once felt safe and known. The Six of Cups says that sweetness was real, not imagined. It shaped your emotional core."
       },
       "present": {
         "passage": "Something from your past is resurfacing in the present — a person, a memory, a feeling you thought you'd outgrown. Receive it gently. This return is not regression; it carries something you need right now."
       },
-      "future": {
-        "passage": "A reunion or homecoming is on its way. Someone or something from your earlier life will re-enter the picture, carrying the warmth of shared history. The Six of Cups says the past is not done with you yet."
+      "self": {
+        "passage": "You see yourself through the lens of who you were before the world complicated things. The Six of Cups in the self position says your inner landscape is colored by memory — the sweetness of early bonds, the ache of places you can't return to."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to move forward, but the past keeps tugging at your sleeve. The reversed Six of Cups as your ideal says you want to be free of nostalgia's grip — to stop measuring the present against a memory that may have been kinder than the truth."
+      },
+      "below": {
+        "passage": "An idealized version of the past is distorting your present without your knowing it. The reversed Six of Cups at the root says you are making choices based on a memory that has been polished smooth by time — the rough edges forgotten, the warmth exaggerated."
+      },
+      "future": {
+        "passage": "Moving forward means letting go of the childhood story you've been telling about yourself. The reversed Six of Cups suggests that the future will open up once you stop measuring every new experience against an old one."
+      },
+      "outcome": {
+        "passage": "If you continue on this course, you risk remaining tethered to a past that no longer serves you. The reversed Six of Cups as outcome says that growth requires releasing the version of yourself — and your history — that you've been clinging to."
+      },
       "past": {
         "passage": "You may have idealized a past that wasn't as innocent as you remember, or you clung to old patterns long after they stopped serving you. Nostalgia became a hiding place rather than a source of comfort."
       },
       "present": {
         "passage": "You are being asked to release an attachment to the way things were. Living in memory — however sweet — is keeping you from building something new. The present requires your full presence, not a curated version of the past."
       },
-      "future": {
-        "passage": "Moving forward means letting go of the childhood story you've been telling about yourself. The reversed Six of Cups suggests that the future will open up once you stop measuring every new experience against an old one."
+      "self": {
+        "passage": "You see yourself as someone haunted by a past you can't fully release — replaying old scenes, comparing every new thing to what came before. The reversed Six of Cups in the self position says your identity has become entangled with who you used to be."
       }
     }
   },
   "cups-07": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward possibility itself — the shimmering spread of everything you could become, every life you could live. The Seven of Cups as your aspiration reveals a soul intoxicated by potential, drawn to the dream more than the doing."
+      },
+      "below": {
+        "passage": "Fantasy is the hidden driver beneath your current situation. The Seven of Cups at the root says your choices are being shaped by desires you haven't examined closely — some real, some projected, and some that dissolve when you look directly at them."
+      },
+      "future": {
+        "passage": "A period of temptation and fantasy lies ahead. Multiple paths will present themselves, each one alluring. Discernment will matter more than desire. Choose the cup that's real, not the one that glitters most."
+      },
+      "outcome": {
+        "passage": "If you stay on this course without sharpening your discernment, the most likely result is scattered energy and unfulfilled longing. The Seven of Cups as outcome says the dream remains a dream unless you choose one cup and commit to it."
+      },
       "past": {
         "passage": "You once stood before a dazzling spread of possibilities — dreams, fantasies, visions of who you could become. The Seven of Cups recalls a time when imagination ran wild and not every shimmering option was real."
       },
       "present": {
         "passage": "You are surrounded by options, and not all of them are what they seem. Desire and illusion are tangled together right now. The Seven of Cups asks you to see clearly before you reach for anything — wishful thinking is not the same as intuition."
       },
-      "future": {
-        "passage": "A period of temptation and fantasy lies ahead. Multiple paths will present themselves, each one alluring. Discernment will matter more than desire. Choose the cup that's real, not the one that glitters most."
+      "self": {
+        "passage": "You see yourself as a dreamer — someone with more visions than hours, more desires than decisions. The Seven of Cups in the self position says your inner world is rich and crowded, and you are not entirely sure which of your longings to trust."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You are reaching toward clarity — the ability to see through illusion and choose with your eyes open. The reversed Seven of Cups as your aspiration says you are tired of chasing phantoms and want something solid enough to build on."
+      },
+      "below": {
+        "passage": "A period of escapism or scattered desire left deeper marks than you realized. The reversed Seven of Cups at the root says the confusion you once lived in — the haze of too many options and not enough commitment — is still influencing how you evaluate what's real."
+      },
+      "future": {
+        "passage": "The fantasies you've been entertaining will soon be tested against reality. This is a good thing. The reversed Seven of Cups says grounded choices are coming, even if the process of letting go of illusions stings."
+      },
+      "outcome": {
+        "passage": "The most likely result is a sobering clarity that strips the gilding from your fantasies and reveals which desires were real all along. The reversed Seven of Cups as outcome says the illusions fall away, and what remains is worth keeping."
+      },
       "past": {
         "passage": "A time of confusion or escapism held you captive — you may have lost yourself in fantasy, substances, or avoidance rather than confronting what was actually in front of you. That fog eventually broke, but it cost you time."
       },
       "present": {
         "passage": "Clarity is cutting through the haze. After a period of scattered desires and indecision, you are beginning to see which options are real and which were projections. Trust that narrowing down is not the same as losing."
       },
-      "future": {
-        "passage": "The fantasies you've been entertaining will soon be tested against reality. This is a good thing. The reversed Seven of Cups says grounded choices are coming, even if the process of letting go of illusions stings."
+      "self": {
+        "passage": "You see yourself as someone who has emerged from confusion and is now choosing with sharper eyes. The reversed Seven of Cups in the self position says you have traded the enchantment of possibility for the steadier ground of knowing what you actually want."
       }
     }
   },
   "cups-08": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward the courage to walk away — to leave behind what no longer nourishes you in search of something with more depth. The Eight of Cups as your aspiration says the ideal you're moving toward is not a destination, but the willingness to seek one."
+      },
+      "below": {
+        "passage": "Beneath the surface, you already know something has run its course. The Eight of Cups at the root says the hidden driver of your situation is a quiet, unshakable sense that there must be more — a dissatisfaction that no amount of rearranging the existing cups will fix."
+      },
+      "future": {
+        "passage": "A departure is approaching. You will choose to leave something behind in search of deeper meaning, even though what you're leaving isn't broken. This is one of the bravest cards in the deck — it asks you to trust the ache that says there must be more."
+      },
+      "outcome": {
+        "passage": "The path you're on leads to a deliberate departure — a choice to seek deeper waters even though the shore behind you is familiar and safe. The Eight of Cups as outcome says you will walk away, and the walking will be the point."
+      },
       "past": {
         "passage": "You walked away from something that still had emotional weight — a relationship, a community, a way of life. The Eight of Cups marks the moment you chose the unknown over the familiar, knowing the familiar was no longer enough."
       },
       "present": {
         "passage": "Something in your emotional life has run its course, and you know it. The Eight of Cups does not demand a dramatic exit — only an honest one. What you're leaving behind isn't ruined; it simply isn't yours anymore."
       },
-      "future": {
-        "passage": "A departure is approaching. You will choose to leave something behind in search of deeper meaning, even though what you're leaving isn't broken. This is one of the bravest cards in the deck — it asks you to trust the ache that says there must be more."
+      "self": {
+        "passage": "You see yourself as someone in transit — walking away from something that once mattered, toward something you can't yet see. The Eight of Cups in the self position says your identity right now is the journey itself, the space between what was and what will be."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to leave but cannot bring yourself to take the first step. The reversed Eight of Cups as your ideal says you know the departure is necessary — what you're reaching for is the nerve to actually do it."
+      },
+      "below": {
+        "passage": "Fear of abandonment — your own or someone else's — is the hidden force keeping you in place. The reversed Eight of Cups at the root says you stay not because you want to, but because the cost of leaving feels higher than the cost of remaining."
+      },
+      "future": {
+        "passage": "The journey you've been postponing will demand your attention soon. You cannot stay in emotional limbo indefinitely. The reversed Eight of Cups warns that avoidance has an expiration date."
+      },
+      "outcome": {
+        "passage": "If you remain on this path, the most likely result is prolonged stagnation — staying in a situation your heart has already left because the alternative feels too uncertain. The reversed Eight of Cups as outcome says the departure gets harder the longer you wait."
+      },
       "past": {
         "passage": "You stayed somewhere too long — in a relationship, a role, an emotional pattern — because leaving felt like failure. The reversed Eight of Cups marks the cost of that lingering, even if you eventually found your way out."
       },
       "present": {
         "passage": "You know you need to move on, but something keeps you circling back. Fear of the unknown, guilt, or the comfort of a familiar ache — something is tethering you to a situation your heart has already left."
       },
-      "future": {
-        "passage": "The journey you've been postponing will demand your attention soon. You cannot stay in emotional limbo indefinitely. The reversed Eight of Cups warns that avoidance has an expiration date."
+      "self": {
+        "passage": "You see yourself as someone who is stuck — aware that you should go but unable to move your feet. The reversed Eight of Cups in the self position says you know the truth about your situation; what you lack is not clarity but the will to act on it."
       }
     }
   },
   "cups-09": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward deep contentment — the quiet, earned kind that doesn't need an audience. The Nine of Cups as your aspiration says your highest ideal is emotional satisfaction, the fulfillment of a wish you've held close for a long time."
+      },
+      "below": {
+        "passage": "Beneath everything you're doing lies a singular, powerful wish — something you want so badly it shapes your choices without your conscious permission. The Nine of Cups at the root says desire is the quiet architect of your situation."
+      },
+      "future": {
+        "passage": "A wish is about to be granted. Not in a fairy-tale sense, but in the way that sustained emotional effort eventually bears fruit. The Nine of Cups promises that what you've been working toward in your inner life is coming to fruition."
+      },
+      "outcome": {
+        "passage": "The trajectory you're on leads to genuine satisfaction — the wish fulfilled, the glass raised, the private smile of someone who got what they actually wanted. The Nine of Cups as outcome says the emotional harvest is coming, and it will be real."
+      },
       "past": {
         "passage": "There was a time when you had exactly what you wanted — contentment, satisfaction, the quiet pleasure of a wish fulfilled. The Nine of Cups points to a past moment of emotional abundance that proved your desires were not unreasonable."
       },
       "present": {
         "passage": "You are closer to emotional fulfillment than you realize. The Nine of Cups — the wish card — suggests that something you've been hoping for is within reach or already here. Let yourself enjoy it without immediately looking for the catch."
       },
-      "future": {
-        "passage": "A wish is about to be granted. Not in a fairy-tale sense, but in the way that sustained emotional effort eventually bears fruit. The Nine of Cups promises that what you've been working toward in your inner life is coming to fruition."
+      "self": {
+        "passage": "You see yourself as someone whose wishes are valid and within reach. The Nine of Cups in the self position reflects a quiet confidence in your own desires — you believe you deserve what you're asking for, and that belief is well-placed."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward a satisfaction that keeps eluding you — a wish that shifts shape each time you get close. The reversed Nine of Cups as your ideal says the fulfillment you're reaching for may need to be redefined before it can be reached."
+      },
+      "below": {
+        "passage": "Beneath the surface lies a misaligned desire — something you've been chasing that was never truly yours to want. The reversed Nine of Cups at the root says the dissatisfaction you feel is not about failing to get what you wanted; it's about wanting the wrong thing."
+      },
+      "future": {
+        "passage": "Be careful what you wish for — not because it won't come, but because it might arrive and leave you unchanged. The reversed Nine of Cups cautions that fulfillment in the future depends on wanting the right things now."
+      },
+      "outcome": {
+        "passage": "The most likely result is getting what you asked for and finding it doesn't fill the space you expected it to. The reversed Nine of Cups as outcome warns that the wish may be granted, but the satisfaction may not follow."
+      },
       "past": {
         "passage": "You once got what you thought you wanted and found it hollow, or you were so focused on one desire that you missed the satisfaction already present in your life. The wish fulfilled did not feel the way you expected."
       },
       "present": {
         "passage": "Dissatisfaction lingers despite outward comfort. You may have everything you asked for and still feel a gap. The reversed Nine of Cups asks whether your wishes were truly yours, or borrowed from someone else's idea of happiness."
       },
-      "future": {
-        "passage": "Be careful what you wish for — not because it won't come, but because it might arrive and leave you unchanged. The reversed Nine of Cups cautions that fulfillment in the future depends on wanting the right things now."
+      "self": {
+        "passage": "You see yourself as someone who should be happy but isn't — surrounded by evidence of fulfillment that doesn't quite land. The reversed Nine of Cups in the self position says the gap between having and feeling has become central to how you understand yourself."
       }
     }
   },
   "cups-10": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward emotional wholeness — the full rainbow, the family gathered, the love that sustains without condition. The Ten of Cups as your aspiration says your highest aim is a life where the heart is genuinely, permanently home."
+      },
+      "below": {
+        "passage": "The hidden root of your situation is a profound longing for lasting emotional security — not the flash of new love, but the enduring warmth of bonds that hold through everything. The Ten of Cups at the root says you are building toward something permanent, even if you haven't named it."
+      },
+      "future": {
+        "passage": "Lasting emotional fulfillment is ahead. Not the temporary high of new love, but the sustained warmth of a life well-shared. The Ten of Cups promises that the connections you're nurturing now will bloom into something enduring."
+      },
+      "outcome": {
+        "passage": "The path you're on leads to genuine emotional abundance — love that lasts, bonds that deepen, a sense of home that doesn't depend on geography. The Ten of Cups as outcome says the life you're building will hold the weight of your whole heart."
+      },
       "past": {
         "passage": "A time of deep emotional harmony marked your history — family wholeness, lasting love, the kind of contentment that doesn't need to perform itself. The Ten of Cups speaks to a period when your heart was genuinely, quietly full."
       },
       "present": {
         "passage": "Emotional completion is available to you right now. Look at the people around you, the bonds you've built, the love that circulates in your daily life. The Ten of Cups says the rainbow is already overhead — you just need to look up."
       },
-      "future": {
-        "passage": "Lasting emotional fulfillment is ahead. Not the temporary high of new love, but the sustained warmth of a life well-shared. The Ten of Cups promises that the connections you're nurturing now will bloom into something enduring."
+      "self": {
+        "passage": "You see yourself as someone whose richness is measured in love, not achievement. The Ten of Cups in the self position says your inner landscape is defined by the quality of your bonds — you know who you are by who you hold close."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward family harmony or lasting love, but the ideal you're reaching for keeps revealing cracks upon closer inspection. The reversed Ten of Cups as your aspiration says you want the rainbow, but you're honest enough to see it's not there yet."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a family wound or a broken image of what love is supposed to look like. The reversed Ten of Cups at the root says dysfunction in your closest bonds — past or present — is silently shaping how you approach intimacy and belonging."
+      },
+      "future": {
+        "passage": "The lasting harmony you're seeking will require honest reckoning with what isn't working in your closest bonds. The reversed Ten of Cups warns that ignoring dysfunction does not create peace — it only defers the breaking point."
+      },
+      "outcome": {
+        "passage": "The most likely result is a fractured version of the harmony you hoped for — love that is real but strained, a home that looks right but feels wrong. The reversed Ten of Cups as outcome says the facade must be addressed before the foundation can hold."
+      },
       "past": {
         "passage": "The image of a happy home or family was cracked by something unspoken — tension beneath the surface, love that was conditional, or harmony that was performed rather than felt. That dissonance shaped your understanding of what closeness really means."
       },
       "present": {
         "passage": "A family bond or close relationship is under strain. The picture may look fine from the outside, but privately something is misaligned. The reversed Ten of Cups asks you to address the fracture rather than maintain the facade."
       },
-      "future": {
-        "passage": "The lasting harmony you're seeking will require honest reckoning with what isn't working in your closest bonds. The reversed Ten of Cups warns that ignoring dysfunction does not create peace — it only defers the breaking point."
+      "self": {
+        "passage": "You see yourself as someone living inside a picture that doesn't match the frame. The reversed Ten of Cups in the self position says you know the love around you is real, but something fundamental is misaligned — and pretending otherwise costs more each day."
       }
     }
   },
   "cups-page": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward emotional freshness — the beginner's heart, the willingness to feel something without already knowing how it ends. The Page of Cups as your aspiration says you want to be surprised by your own tenderness again."
+      },
+      "below": {
+        "passage": "A childlike emotional need is driving your behavior from beneath the surface — the need to be delighted, to create without judgment, to feel wonder instead of caution. The Page of Cups at the root says your inner child is calling, and the call is not trivial."
+      },
+      "future": {
+        "passage": "A surprising emotional invitation is on its way. It may come as a creative impulse, an unexpected connection, or an intuitive flash that defies logic. The Page of Cups says: be curious enough to follow it."
+      },
+      "outcome": {
+        "passage": "The path you're on leads to a sweet, unexpected emotional discovery — a message from the heart you didn't know was coming. The Page of Cups as outcome says something tender and a little magical is trying to reach you, and it will."
+      },
       "past": {
         "passage": "A tender emotional awakening occurred in your past — a first crush, a creative discovery, a moment when you felt something so new it didn't yet have a name. The Page of Cups recalls the part of you that was still learning the language of the heart."
       },
       "present": {
         "passage": "A message of the heart is arriving — unexpected, possibly whimsical, and easy to dismiss if you're not paying attention. The Page of Cups asks you to receive this emotional nudge with the openness of a beginner, not the skepticism of someone who's been hurt."
       },
-      "future": {
-        "passage": "A surprising emotional invitation is on its way. It may come as a creative impulse, an unexpected connection, or an intuitive flash that defies logic. The Page of Cups says: be curious enough to follow it."
+      "self": {
+        "passage": "You see yourself as emotionally young in this situation — open, curious, perhaps a little naive, but willing to feel things fully. The Page of Cups in the self position says you haven't armored yourself yet, and that vulnerability is your strength right now."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward creative or emotional openness, but something keeps shutting the door before you can step through. The reversed Page of Cups as your aspiration says you want to feel freely again — but cynicism or past hurt keeps intercepting the impulse."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a wounded inner child — a part of you that was told its feelings were too much, its creativity impractical, its tenderness a liability. The reversed Page of Cups at the root says that early dismissal is still shaping how you let yourself feel."
+      },
+      "future": {
+        "passage": "An emotional opportunity may arrive that you're tempted to dismiss as childish or unrealistic. The reversed Page of Cups warns against cynicism disguised as maturity. Not every tender feeling needs to be armored against."
+      },
+      "outcome": {
+        "passage": "The most likely result is a missed emotional signal — a creative impulse ignored, a tender connection dismissed, an intuitive flash overruled by the rational mind. The reversed Page of Cups as outcome says the message will come, but you may not let yourself hear it."
+      },
       "past": {
         "passage": "Emotional immaturity or naivety led you into a situation you weren't prepared for. You may have worn your heart too openly or trusted someone who hadn't earned it. That vulnerability, though costly, was not a flaw — only poorly placed."
       },
       "present": {
         "passage": "Creative blocks or emotional withdrawal have dulled your sensitivity. The inner child — the part of you that feels freely and creates without judgment — has gone quiet. Something is asking to be unblocked, but you'll need to lower your guard first."
       },
-      "future": {
-        "passage": "An emotional opportunity may arrive that you're tempted to dismiss as childish or unrealistic. The reversed Page of Cups warns against cynicism disguised as maturity. Not every tender feeling needs to be armored against."
+      "self": {
+        "passage": "You see yourself as someone who has lost touch with their emotional innocence — jaded where you were once open, guarded where you were once curious. The reversed Page of Cups in the self position says the softness is still in you, buried under scar tissue."
       }
     }
   },
   "cups-knight": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward the romantic ideal — the full-hearted pursuit of something beautiful, led by feeling rather than strategy. The Knight of Cups as your aspiration says you want to be someone who follows the heart without hesitation."
+      },
+      "below": {
+        "passage": "A deep romantic or creative longing is driving your choices from beneath the surface. The Knight of Cups at the root says you are being propelled by passion you may not have fully acknowledged — a desire to pursue something or someone with your whole self."
+      },
+      "future": {
+        "passage": "Someone or something is approaching with an emotional proposition. The Knight of Cups brings charm, sincerity, and creative vision. What arrives may be deeply appealing — just make sure the offer has substance beneath its poetry."
+      },
+      "outcome": {
+        "passage": "The path you're on leads toward a romantic or creative pursuit that carries genuine feeling. The Knight of Cups as outcome says the heart's quest will not be in vain — what you're riding toward has the potential to be as real as it is beautiful."
+      },
       "past": {
         "passage": "A romantic or creative pursuit swept you off your feet — someone arrived bearing feeling, or you yourself charged forward on a wave of passion and idealism. The Knight of Cups recalls a time when the heart led and the mind followed."
       },
       "present": {
         "passage": "An invitation rooted in emotion or romance is present in your life. The Knight of Cups rides toward you — or perhaps you are the knight, moved by feeling to pursue something beautiful. Follow the impulse, but keep one eye on the ground beneath your horse."
       },
-      "future": {
-        "passage": "Someone or something is approaching with an emotional proposition. The Knight of Cups brings charm, sincerity, and creative vision. What arrives may be deeply appealing — just make sure the offer has substance beneath its poetry."
+      "self": {
+        "passage": "You see yourself as the romantic — charming, feeling-led, willing to ride toward love or beauty on nothing but sincerity and hope. The Knight of Cups in the self position says you identify with the quest itself, the pursuit of what moves the heart."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward passionate pursuit, but something keeps turning the romance hollow or the creative vision blurry. The reversed Knight of Cups as your aspiration says you want to be swept away, but you've learned that charm without substance leaves you stranded."
+      },
+      "below": {
+        "passage": "Beneath the surface, emotional inconsistency or unfulfilled romantic promises are shaping your situation more than you realize. The reversed Knight of Cups at the root says someone — possibly you — made an emotional offer they couldn't back up, and the residue of that lingers."
+      },
+      "future": {
+        "passage": "An emotionally compelling offer is coming, but it may lack substance. The reversed Knight of Cups cautions against being swept away by beautiful words or grand gestures that have no foundation beneath them."
+      },
+      "outcome": {
+        "passage": "The most likely result is disillusionment with a pursuit that promised more than it could deliver. The reversed Knight of Cups as outcome warns that the grand gesture may be hollow, the poetry may be performance, and the ride may end without a destination."
+      },
       "past": {
         "passage": "Emotional volatility or empty promises marked a past chapter. Someone — possibly you — played the romantic without follow-through, or let moodiness masquerade as depth. The charm was real, but the commitment behind it was not."
       },
       "present": {
         "passage": "Beware of seductive visions untethered from reality. The reversed Knight of Cups warns that emotional intensity is not the same as emotional truth. If something feels too poetic to be real, examine what's actually being offered."
       },
-      "future": {
-        "passage": "An emotionally compelling offer is coming, but it may lack substance. The reversed Knight of Cups cautions against being swept away by beautiful words or grand gestures that have no foundation beneath them."
+      "self": {
+        "passage": "You see yourself as someone whose emotional intensity has become unreliable — romantic but scattered, passionate but inconsistent. The reversed Knight of Cups in the self position says you know your heart runs hot and cold, and you're not sure which temperature to trust."
       }
     }
   },
   "cups-queen": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward deep emotional wisdom — the ability to hold immense feeling without being overwhelmed by it. The Queen of Cups as your aspiration says your ideal is a compassion so steady it becomes a form of strength."
+      },
+      "below": {
+        "passage": "A profound well of empathy and intuition lies beneath your current choices, whether you recognize it or not. The Queen of Cups at the root says your actions are being guided by an emotional intelligence that operates below the threshold of conscious thought."
+      },
+      "future": {
+        "passage": "You are growing into a deeper relationship with your own emotional wisdom. The Queen of Cups in the future position promises that your capacity to feel, intuit, and nurture will become a source of real power — not despite its softness, but because of it."
+      },
+      "outcome": {
+        "passage": "The path you're on leads to emotional mastery rooted in compassion — a way of moving through the world that holds space for others without losing yourself. The Queen of Cups as outcome says your sensitivity will become your authority."
+      },
       "past": {
         "passage": "A figure of deep emotional intelligence shaped your past — someone who taught you that feeling deeply and thinking clearly are not opposites. Or perhaps you yourself held space for others with a compassion that ran quiet and sure."
       },
       "present": {
         "passage": "Your emotional depth is your greatest asset right now. The Queen of Cups asks you to trust your intuition, hold space for what others cannot say, and let your inner knowing guide your choices. You see more than most people realize."
       },
-      "future": {
-        "passage": "You are growing into a deeper relationship with your own emotional wisdom. The Queen of Cups in the future position promises that your capacity to feel, intuit, and nurture will become a source of real power — not despite its softness, but because of it."
+      "self": {
+        "passage": "You see yourself as someone whose power lies in feeling — intuitive, compassionate, attuned to currents others miss. The Queen of Cups in the self position says you identify with the quiet depths, not the loud surface."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward emotional depth, but the boundary between your feelings and everyone else's has become dangerously thin. The reversed Queen of Cups as your aspiration says you want to be compassionate without drowning — and you're still learning how."
+      },
+      "below": {
+        "passage": "Beneath your situation lies an emotional porousness you haven't fully reckoned with — a tendency to absorb others' pain or, conversely, to numb your own feeling entirely. The reversed Queen of Cups at the root says the empathy you carry has become a wound."
+      },
+      "future": {
+        "passage": "Emotional overwhelm is a real possibility if you do not establish better boundaries with the people you care for. The reversed Queen of Cups asks you to tend to your own depths before diving into someone else's."
+      },
+      "outcome": {
+        "passage": "The most likely result is emotional exhaustion — compassion without boundaries, empathy without self-protection, a heart that has given more than it has left. The reversed Queen of Cups as outcome says burnout is the cost of care without limits."
+      },
       "past": {
         "passage": "Emotional boundaries collapsed in your past — you absorbed others' pain as your own, or you disconnected from your feelings entirely to survive. The reversed Queen of Cups marks a time when your sensitivity became a wound rather than a gift."
       },
       "present": {
         "passage": "You may be drowning in other people's emotions or numbing your own. The reversed Queen of Cups warns that empathy without boundaries is self-destruction. Your compassion must include yourself, or it will hollow you out."
       },
-      "future": {
-        "passage": "Emotional overwhelm is a real possibility if you do not establish better boundaries with the people you care for. The reversed Queen of Cups asks you to tend to your own depths before diving into someone else's."
+      "self": {
+        "passage": "You see yourself as someone who feels too much — an empath without armor, a healer who cannot heal themselves. The reversed Queen of Cups in the self position says your sensitivity has become something you manage rather than something you trust."
       }
     }
   },
   "cups-king": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward emotional sovereignty — the ability to feel everything without being ruled by anything. The King of Cups as your aspiration says your ideal is a calm, generous authority that holds steady in turbulent waters."
+      },
+      "below": {
+        "passage": "A deep need for emotional control — not suppression, but mastery — is driving your current situation from beneath the surface. The King of Cups at the root says you are seeking a way to honor your feelings without being capsized by them."
+      },
+      "future": {
+        "passage": "Emotional authority is developing in you. The King of Cups in the future position says you are moving toward a place where your feelings become a source of wisdom and leadership, not volatility. The depth you've earned will serve others as well as yourself."
+      },
+      "outcome": {
+        "passage": "The path you're on leads to emotional maturity that others will recognize and trust. The King of Cups as outcome says you are becoming the person who holds the room steady — not by suppressing feeling, but by containing it with grace."
+      },
       "past": {
         "passage": "Emotional mastery marked a period in your past — not the suppression of feeling, but the ability to hold deep emotion with grace and act from a place of compassion rather than reactivity. You or someone close to you embodied that rare balance."
       },
       "present": {
         "passage": "You are being called to lead with emotional maturity. The King of Cups sits with his feelings without being ruled by them, offering calm in the middle of turbulence. This is your role right now — steady, generous, and fully present."
       },
-      "future": {
-        "passage": "Emotional authority is developing in you. The King of Cups in the future position says you are moving toward a place where your feelings become a source of wisdom and leadership, not volatility. The depth you've earned will serve others as well as yourself."
+      "self": {
+        "passage": "You see yourself as someone who has earned the right to lead through emotional depth — composed, wise, capable of holding others' storms without losing your center. The King of Cups in the self position says you know your strength lies in what you've felt, not what you've avoided."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire toward emotional composure, but the control you're reaching for keeps tipping into suppression or volatility. The reversed King of Cups as your aspiration says you want mastery over your feelings, but you haven't yet found the balance between holding them and being held hostage by them."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a pattern of emotional manipulation or repression — feelings that were controlled rather than felt, composure that was performance rather than peace. The reversed King of Cups at the root says the calm surface hides a dangerous undertow."
+      },
+      "future": {
+        "passage": "If emotional honesty is not cultivated now, the reversed King of Cups warns of a future where unprocessed feelings corrode your closest bonds. The king who refuses to feel eventually becomes the tyrant who cannot connect."
+      },
+      "outcome": {
+        "passage": "The most likely result is emotional isolation disguised as composure — a surface so controlled that nothing genuine can pass through it. The reversed King of Cups as outcome warns that the feelings you refuse to process will eventually process you."
+      },
       "past": {
         "passage": "Emotional control was wielded manipulatively in your past — someone used their composure as a weapon, or you kept such a tight grip on your feelings that they curdled beneath the surface. The reversed King of Cups marks a time when mastery became suppression."
       },
       "present": {
         "passage": "Emotional volatility or cold detachment is undermining your relationships. The reversed King of Cups warns that the feelings you refuse to process will find their own way out — often sideways, often at the worst possible moment."
       },
-      "future": {
-        "passage": "If emotional honesty is not cultivated now, the reversed King of Cups warns of a future where unprocessed feelings corrode your closest bonds. The king who refuses to feel eventually becomes the tyrant who cannot connect."
+      "self": {
+        "passage": "You see yourself as someone whose emotional control has become a cage — composed on the outside, turbulent or numb within. The reversed King of Cups in the self position says you know the mask of mastery is slipping, and what's beneath it frightens you."
       }
     }
   }

@@ -1,337 +1,673 @@
 {
   "swords-01": {
     "upright": {
+      "above": {
+        "passage": "You are reaching for a moment of pure mental clarity — a single truth that cuts through everything. The ideal you aspire to is the clean strike of insight, the kind that leaves no room for ambiguity or self-deception."
+      },
+      "below": {
+        "passage": "Beneath the surface, a fierce need for truth is driving you. You may not consciously recognize it, but your subconscious is sharpening itself against every comfortable lie, preparing for a breakthrough you haven't yet named."
+      },
+      "future": {
+        "passage": "A revelation is coming that will slice through everything you thought you knew. It may arrive as a single sentence, a sudden understanding, or a truth you can no longer avoid. Be ready to act on what you see."
+      },
+      "outcome": {
+        "passage": "If you stay this course, clarity will arrive — sudden, undeniable, and a little ruthless. The breakthrough you've been building toward will cut clean, and what remains will be simpler and sharper than what came before."
+      },
       "past": {
         "passage": "A breakthrough once cut through the fog of your uncertainty. You found a truth that could not be unfound — a moment of intellectual clarity that divided your life into before and after."
       },
       "present": {
         "passage": "A new idea is piercing through confusion right now, sharp and undeniable. Seize this clarity before the mind clouds it with doubt — the sword is in your hand, and the air has never been thinner."
       },
-      "future": {
-        "passage": "A revelation is coming that will slice through everything you thought you knew. It may arrive as a single sentence, a sudden understanding, or a truth you can no longer avoid. Be ready to act on what you see."
+      "self": {
+        "passage": "You see yourself as someone on the verge of understanding — mind raised, ready to receive whatever truth descends. There is a quiet confidence in your intellectual posture right now, a readiness to cut through the noise."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to clarity but keep reaching for it with a clenched fist. The breakthrough you want cannot be forced — the harder you grasp, the more the insight fractures in your hand."
+      },
+      "below": {
+        "passage": "A suppressed truth is festering beneath your awareness. Some insight tried to surface and you pushed it back down, perhaps because the clarity it offered was more threatening than the confusion it would replace."
+      },
+      "future": {
+        "passage": "An idea that should liberate you may instead cut inward. Guard against using your own intelligence as a weapon against yourself — the sharpest minds are most vulnerable to their own edge."
+      },
+      "outcome": {
+        "passage": "Mental fog is the likely result if you continue avoiding the insight that's trying to reach you. The sword is there, but you keep turning away from it. Confusion will persist until you stop fearing what clarity demands."
+      },
       "past": {
         "passage": "You once held a powerful insight but couldn't wield it. The clarity was there — you saw the truth — yet something kept you from speaking it or acting on it. That silence cost more than you expected."
       },
       "present": {
         "passage": "Your thinking is muddled, and you know it. The mental breakthrough you're reaching for keeps dissolving when you grasp at it. Stop forcing clarity and let the noise settle on its own terms."
       },
-      "future": {
-        "passage": "An idea that should liberate you may instead cut inward. Guard against using your own intelligence as a weapon against yourself — the sharpest minds are most vulnerable to their own edge."
+      "self": {
+        "passage": "You see yourself as mentally blocked, unable to access the sharpness you know you possess. The frustration of almost-understanding is coloring your self-image — you feel dulled when you know you should be cutting through."
       }
     }
   },
   "swords-02": {
     "upright": {
+      "above": {
+        "passage": "You aspire to perfect balance — the ability to hold two opposing truths without choosing between them. But the equilibrium you seek is not a destination; it's a tightrope, and you cannot walk it forever."
+      },
+      "below": {
+        "passage": "Beneath your composure lies a deep fear of choosing wrong. The stalemate isn't indifference — it's a subconscious conviction that any move will cost you something irreplaceable. That fear, not the decision itself, is the real obstacle."
+      },
+      "future": {
+        "passage": "A decision approaches that will demand you remove the blindfold. Neither option is painless, but the tension of holding both is becoming its own wound. Trust that choosing is better than endlessly weighing."
+      },
+      "outcome": {
+        "passage": "Continued avoidance will calcify into its own kind of decision. If you hold this stalemate much longer, the options will begin to decay. The likely outcome is that circumstance chooses for you, and it will not choose gently."
+      },
       "past": {
         "passage": "You once stood at a crossroads with a blindfold you chose to wear. The decision you refused to make shaped your path just as surely as any choice would have — indecision was itself a direction."
       },
       "present": {
         "passage": "Two truths sit in uneasy balance, and you are holding them apart with sheer will. This stalemate cannot last. The discomfort you feel is the cost of refusing to look at what you already know."
       },
-      "future": {
-        "passage": "A decision approaches that will demand you remove the blindfold. Neither option is painless, but the tension of holding both is becoming its own wound. Trust that choosing is better than endlessly weighing."
+      "self": {
+        "passage": "You see yourself as caught between equally valid positions, a careful weigher of options. But the blindfold is not objectivity — it is protection. Somewhere beneath the deliberation, you already know which way you lean."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You want to stop the flood of information and return to a simpler time when the choices felt manageable. The ideal you're reaching for is a quiet mind, but quiet will not come from shutting your eyes again."
+      },
+      "below": {
+        "passage": "Someone or something once controlled what you were allowed to know, and that experience left a deep imprint. Your subconscious still flinches from full information, preferring the false safety of partial sight."
+      },
+      "future": {
+        "passage": "You will soon see through a deception that has kept you frozen. The relief of finally knowing may be tinged with anger at how long the stalemate lasted, but clarity, even late, is still a gift."
+      },
+      "outcome": {
+        "passage": "The dam is breaking whether you want it to or not. The most likely result is a sudden rush of truth that overwhelms your defenses. It will be messy, but on the other side of the flood is solid ground."
+      },
       "past": {
         "passage": "Information you needed was kept from you, or you kept it from yourself. A period of enforced ignorance shaped your choices in ways you're only now beginning to trace."
       },
       "present": {
         "passage": "The paralysis is breaking. Truths you've been holding at arm's length are flooding in whether you're ready or not. This is overwhelming but necessary — the dam was never going to hold."
       },
-      "future": {
-        "passage": "You will soon see through a deception that has kept you frozen. The relief of finally knowing may be tinged with anger at how long the stalemate lasted, but clarity, even late, is still a gift."
+      "self": {
+        "passage": "You see yourself as someone who was deceived or kept in the dark, and that narrative is shaping how you handle new information. Be careful not to overcorrect — not every ambiguity is a lie."
       }
     }
   },
   "swords-03": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward an honest reckoning with grief — the willingness to feel the full weight of a loss rather than numbing it. The clarity you aspire to requires passing through this pain, not around it."
+      },
+      "below": {
+        "passage": "A deep heartbreak you may not have fully processed is driving your responses. The sorrow beneath the surface isn't weakness — it's the subconscious insisting that you honor what was lost before you try to move on."
+      },
+      "future": {
+        "passage": "A painful truth is approaching, one that will pierce something you've been protecting. The wound will be clean, not ragged. What follows this hurt is not ruin but the hard-won clarity that only honest grief provides."
+      },
+      "outcome": {
+        "passage": "The trajectory you're on leads through genuine sorrow. This is not a punishment — it is the natural consequence of caring deeply about something real. The pain will be precise, and when it passes, what remains will be true."
+      },
       "past": {
         "passage": "Heartbreak sharpened you. The pain you endured was not senseless — it was the specific grief that comes from understanding exactly what was lost and why. That precision of sorrow became a kind of wisdom."
       },
       "present": {
         "passage": "You are in the acute phase of a pain that comes from seeing clearly. This is not confusion — you know exactly what hurts and why. Let the grief do its work; it is cutting away what was never truly yours."
       },
-      "future": {
-        "passage": "A painful truth is approaching, one that will pierce something you've been protecting. The wound will be clean, not ragged. What follows this hurt is not ruin but the hard-won clarity that only honest grief provides."
+      "self": {
+        "passage": "You see yourself as someone who has been pierced — wounded but awake. There is a strange dignity in the way you are holding this pain, an awareness that the hurt proves you were brave enough to care."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to release a grief that has overstayed its welcome. The healing you reach toward is real, but it requires you to stop treating the wound as proof of your depth and start treating it as something that can close."
+      },
+      "below": {
+        "passage": "An old sorrow has woven itself into your identity so thoroughly that releasing it feels like losing a part of yourself. The subconscious clings to familiar pain because at least it is known — and the unknown feels like a betrayal of what you lost."
+      },
+      "future": {
+        "passage": "Recovery from an old wound will ask you to stop rehearsing the story of your pain. You have honored what hurt you long enough. What comes next requires hands that aren't clutching old swords."
+      },
+      "outcome": {
+        "passage": "If you continue on this path, the grief will loosen whether you're ready or not. The outcome is gradual healing — not a dramatic release, but a slow morning where you realize the sharpest edge of sorrow has finally dulled."
+      },
       "past": {
         "passage": "You carried a sorrow longer than it needed carrying. The pain became so familiar it started to feel like identity — releasing it meant losing a version of yourself you'd grown accustomed to."
       },
       "present": {
         "passage": "Old grief is loosening its grip, though you may not trust the relief. The wound is healing whether you give it permission or not. Stop reopening it to check if it still hurts."
       },
-      "future": {
-        "passage": "Recovery from an old wound will ask you to stop rehearsing the story of your pain. You have honored what hurt you long enough. What comes next requires hands that aren't clutching old swords."
+      "self": {
+        "passage": "You see yourself as someone emerging from a long season of sorrow, uncertain whether the lightness you feel is recovery or just numbness. Trust the thaw — you are not forgetting, you are finally setting it down."
       }
     }
   },
   "swords-04": {
     "upright": {
+      "above": {
+        "passage": "You aspire to genuine stillness — not the anxious pause before the next crisis, but the deep rest that comes from trusting that the swords above you will wait. The peace you reach for is surrender, not defeat."
+      },
+      "below": {
+        "passage": "Beneath your activity, your mind is begging for quiet. A deep exhaustion you may not be acknowledging is driving you toward withdrawal, whether you honor that need consciously or your body forces the issue."
+      },
+      "future": {
+        "passage": "A period of mental retreat is coming, and you should welcome it. The battles ahead require a rested mind. Use the coming stillness to consolidate what you've learned before the next confrontation demands it."
+      },
+      "outcome": {
+        "passage": "The most likely result is a necessary pause — a period where nothing seems to move but everything is quietly integrating. This stillness is not stagnation. When you rise, you will be sharper than when you lay down."
+      },
       "past": {
         "passage": "A necessary withdrawal once saved you from burning out entirely. That period of stillness — whether chosen or forced — allowed your mind to recover from battles it could no longer sustain."
       },
       "present": {
         "passage": "Your mind needs rest, and the swords above you are a reminder that the conflicts will still be there when you wake. This is not defeat — it is strategic stillness. Let your thoughts go quiet for once."
       },
-      "future": {
-        "passage": "A period of mental retreat is coming, and you should welcome it. The battles ahead require a rested mind. Use the coming stillness to consolidate what you've learned before the next confrontation demands it."
+      "self": {
+        "passage": "You see yourself as someone who has earned a rest, though you may feel guilty taking it. The tomb-like stillness of this card mirrors your inner state — you are not dead, you are recovering. Honor the difference."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to action but confuse restlessness with readiness. The drive to get back in the fight is real, but the ideal you're reaching for — decisive engagement — requires a foundation of rest you haven't yet built."
+      },
+      "below": {
+        "passage": "A deep anxiety about falling behind is overriding your body's need for recovery. Your subconscious equates stillness with vulnerability, so you keep moving even when every signal says to stop. The fear of rest is the real enemy."
+      },
+      "future": {
+        "passage": "Burnout is approaching if you do not intervene. Your mind is signaling that it cannot sustain this pace, but you keep overriding the warning. The enforced rest that follows collapse is far less kind than the rest you choose."
+      },
+      "outcome": {
+        "passage": "Without intervention, the most likely outcome is premature re-engagement followed by exhaustion. You will charge back into conflict before you've healed, and the toll will be steeper the second time. Choose rest now or have it chosen for you."
+      },
       "past": {
         "passage": "Rest was available to you, but you refused it. You pushed through exhaustion out of fear that stopping would mean falling behind. The cost of that refusal is still being paid in ways you may not recognize."
       },
       "present": {
         "passage": "Restlessness is driving you back into conflict before you've healed. The urge to act feels urgent, but it is anxiety wearing the mask of purpose. You are not ready, and somewhere inside, you know it."
       },
-      "future": {
-        "passage": "Burnout is approaching if you do not intervene. Your mind is signaling that it cannot sustain this pace, but you keep overriding the warning. The enforced rest that follows collapse is far less kind than the rest you choose."
+      "self": {
+        "passage": "You see yourself as someone who cannot afford to rest, and that belief is more dangerous than whatever you think you need to fight. The version of you that refuses stillness is not strong — it is afraid."
       }
     }
   },
   "swords-05": {
     "upright": {
+      "above": {
+        "passage": "You aspire to victory, but the version of winning you're reaching for may require others to lose. Examine whether the triumph you envision leaves anyone standing beside you, or only scattered swords at your feet."
+      },
+      "below": {
+        "passage": "Beneath this conflict lies a deeper hunger to prove your dominance — to be the one left holding all the swords. Your subconscious may be driving you toward a confrontation that has less to do with principle and more to do with ego."
+      },
+      "future": {
+        "passage": "A confrontation is coming where the temptation to fight dirty will be strong. Consider what you're willing to sacrifice for the sake of being right. Some victories leave you with nothing but proof that you can destroy things."
+      },
+      "outcome": {
+        "passage": "If the current dynamic continues, someone wins and everyone loses. The most likely result is a hollow victory — the argument resolved, the relationship damaged, and the swords collected by whoever cared the least about the cost."
+      },
       "past": {
         "passage": "You won a battle that cost more than the victory was worth. The swords you collected from the field belong to people who walked away — and their absence defined the aftermath more than your triumph did."
       },
       "present": {
         "passage": "Conflict surrounds you, and someone is playing to win at any cost. Examine whether that someone is you. The argument you're determined to win may leave you standing alone in a field of abandoned swords."
       },
-      "future": {
-        "passage": "A confrontation is coming where the temptation to fight dirty will be strong. Consider what you're willing to sacrifice for the sake of being right. Some victories leave you with nothing but proof that you can destroy things."
+      "self": {
+        "passage": "You see yourself as the one who must prevail in this conflict, the one whose position is most justified. But the Five of Swords doesn't care who's right — it only cares who's willing to fight the dirtiest. Is that who you want to be?"
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to peace after a bruising conflict — the kind of resolution where weapons are laid down and no one keeps score. The reconciliation you're reaching for is possible, but it requires someone to go first."
+      },
+      "below": {
+        "passage": "Beneath your desire for peace, an old defeat still stings. You may be avoiding conflict not out of wisdom but out of a subconscious fear of losing again. Knowing the difference matters — one is growth, the other is a wound wearing a mask."
+      },
+      "future": {
+        "passage": "Reconciliation after a bitter dispute is possible, but it will require someone to lay down their sword first. That someone may need to be you — not because you were wrong, but because you value what comes next more than what came before."
+      },
+      "outcome": {
+        "passage": "The most likely outcome is an uneasy truce rather than a clean resolution. It won't feel like victory or defeat — it will feel like exhaustion. But from that exhaustion, something more honest can eventually be built."
+      },
       "past": {
         "passage": "A conflict ended with no real winner, only exhaustion. You may have walked away thinking you lost, but the person who claimed victory gained nothing worth having. The shame you carried was misplaced."
       },
       "present": {
         "passage": "The desire to avoid conflict at all costs is costing you something important. Picking up the swords others have dropped does not make you the peacemaker — it makes you the one carrying everyone's weapons."
       },
-      "future": {
-        "passage": "Reconciliation after a bitter dispute is possible, but it will require someone to lay down their sword first. That someone may need to be you — not because you were wrong, but because you value what comes next more than what came before."
+      "self": {
+        "passage": "You see yourself as someone who has had enough of fighting, and that weariness is honest. But make sure your desire for peace isn't just a different kind of surrender — laying down your sword is only noble when you've chosen it freely."
       }
     }
   },
   "swords-06": {
     "upright": {
+      "above": {
+        "passage": "You aspire to leave troubled waters behind — to find the quiet shore where the conflicts of the past cannot reach you. The transition you're reaching toward is not escape but a deliberate journey toward something calmer."
+      },
+      "below": {
+        "passage": "A deep instinct for self-preservation is guiding you away from a situation your conscious mind hasn't fully processed. Your subconscious already knows this environment is no longer safe — it's steering the boat before you've even decided to leave."
+      },
+      "future": {
+        "passage": "A necessary departure is on the horizon. You will leave behind something familiar for something unknown but gentler. The journey itself will be the healing — by the time you arrive, the worst will already be behind you."
+      },
+      "outcome": {
+        "passage": "The trajectory leads to calmer waters. If you allow the transition to unfold, you will arrive somewhere gentler than where you've been. The crossing may be difficult, but the destination is worth the disorientation of leaving."
+      },
       "past": {
         "passage": "You once left troubled waters behind and moved toward something calmer. That transition — however reluctant — carried you away from a situation that would have consumed you if you'd stayed."
       },
       "present": {
         "passage": "You are in passage between what was and what will be. The water is calmer ahead, but you haven't arrived yet. This liminal space asks for patience — you cannot rush a crossing, only endure it with grace."
       },
-      "future": {
-        "passage": "A necessary departure is on the horizon. You will leave behind something familiar for something unknown but gentler. The journey itself will be the healing — by the time you arrive, the worst will already be behind you."
+      "self": {
+        "passage": "You see yourself as someone in transit — no longer belonging to what you left, not yet arrived at what comes next. This between-space feels unsettling, but your willingness to leave says more about your courage than you realize."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You want to move on but keep looking back at the shore you left. The ideal you're reaching for — a clean departure, a fresh start — is undermined by the part of you that isn't finished with what you left behind."
+      },
+      "below": {
+        "passage": "Something unresolved is anchoring you to a situation you've already outgrown. The subconscious pull back toward familiar suffering is not nostalgia — it's unfinished business demanding your attention before you can truly leave."
+      },
+      "future": {
+        "passage": "Unresolved issues from a past chapter may resurface, demanding attention before you can truly move on. The crossing you thought was complete still has unfinished business. Address it now rather than carrying it into the next shore."
+      },
+      "outcome": {
+        "passage": "The likely result is a delayed departure. You will eventually move on, but not as cleanly as you hoped — the old situation will cling to you until you name what's holding you there and release it deliberately."
+      },
       "past": {
         "passage": "A transition you needed to make was delayed or derailed. You stayed in rough waters longer than necessary, perhaps believing you deserved the turbulence or fearing that calmer shores didn't exist."
       },
       "present": {
         "passage": "You are stuck in a situation you know you should leave but cannot seem to. The boat is ready, the calmer shore is visible, yet something keeps you anchored to familiar suffering. Name what holds you here."
       },
-      "future": {
-        "passage": "Unresolved issues from a past chapter may resurface, demanding attention before you can truly move on. The crossing you thought was complete still has unfinished business. Address it now rather than carrying it into the next shore."
+      "self": {
+        "passage": "You see yourself as stuck — unable to leave but unable to stay peacefully. The frustration of knowing you should be further along by now is its own kind of turbulence. Be patient with the part of you that isn't ready yet."
       }
     }
   },
   "swords-07": {
     "upright": {
+      "above": {
+        "passage": "You aspire to cleverness — the ability to outmaneuver a situation rather than overpower it. The ideal you're reaching for is strategic brilliance, but be honest about where strategy ends and deception begins."
+      },
+      "below": {
+        "passage": "Beneath your careful plans, a belief that directness will get you hurt is driving you toward stealth. Your subconscious has learned that the front door is dangerous, so you're always looking for the back entrance — even when one isn't necessary."
+      },
+      "future": {
+        "passage": "A situation ahead will tempt you to take a shortcut that looks clever but feels dishonest. Trust your discomfort. If you have to sneak, ask yourself why you can't walk through the front door."
+      },
+      "outcome": {
+        "passage": "If you continue on this path, you'll get what you want — but through means that leave you looking over your shoulder. The most likely result is a successful maneuver followed by the quiet anxiety of wondering when it will unravel."
+      },
       "past": {
         "passage": "You once got away with something through cleverness rather than confrontation. Whether it was a strategic retreat or an outright deception, you chose cunning over direct conflict — and it worked, at a cost only you can measure."
       },
       "present": {
         "passage": "Strategy is required, not brute force. Someone — possibly you — is operating with hidden motives. Check your assumptions about who is being honest. The most dangerous deceptions are the ones we practice on ourselves."
       },
-      "future": {
-        "passage": "A situation ahead will tempt you to take a shortcut that looks clever but feels dishonest. Trust your discomfort. If you have to sneak, ask yourself why you can't walk through the front door."
+      "self": {
+        "passage": "You see yourself as the clever one, the person who sees angles others miss. That perception is not wrong, but it has a shadow — when you always look for the hidden play, you stop trusting the straightforward ones."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to come clean — to stop managing the narrative and simply tell the truth. The directness you're reaching toward feels terrifying precisely because it is the opposite of everything you've been doing."
+      },
+      "below": {
+        "passage": "The weight of maintaining a deception is heavier than you consciously admit. Your subconscious is exhausted by the complexity of the story you've constructed, and it is quietly looking for a way to collapse the whole thing."
+      },
+      "future": {
+        "passage": "A hidden truth will surface, whether you reveal it yourself or it finds its own way out. Choose confession over discovery. The version of events you control is far kinder than the one that emerges on its own."
+      },
+      "outcome": {
+        "passage": "The deception cannot hold. The most likely outcome is exposure — whether by your own hand or someone else's. The good news is that the truth, once out, is lighter than the secret ever was."
+      },
       "past": {
         "passage": "A deception unraveled, and the fallout was worse than the truth would have been. The elaborate workaround you constructed collapsed under its own complexity. The lesson was expensive but impossible to forget."
       },
       "present": {
         "passage": "The clever approach isn't working anymore. What once passed for strategy now feels like self-sabotage. Your conscience is louder than your cunning, and that's not a weakness — it's growth."
       },
-      "future": {
-        "passage": "A hidden truth will surface, whether you reveal it yourself or it finds its own way out. Choose confession over discovery. The version of events you control is far kinder than the one that emerges on its own."
+      "self": {
+        "passage": "You see yourself as someone who has been too clever for your own good. The realization that your strategies have become traps is uncomfortable but important. The smartest move now is the simplest one — honesty."
       }
     }
   },
   "swords-08": {
     "upright": {
+      "above": {
+        "passage": "You aspire to freedom but can't yet see the exit. The liberation you're reaching for feels impossibly distant because the blindfold is still on — the ideal is real, but you're trying to find it with your eyes closed."
+      },
+      "below": {
+        "passage": "A deeply internalized belief that you deserve confinement is keeping you bound. Your subconscious built this cage from old messages about your worth, and it maintains the prison with more devotion than any external jailer could."
+      },
+      "future": {
+        "passage": "A mental trap is forming around you, built from your own anxious thoughts. Recognize it as it takes shape, before the bindings feel permanent. Someone outside your own head can see what you cannot — ask for their eyes."
+      },
+      "outcome": {
+        "passage": "If you continue to accept these restrictions as permanent, they will become so. The likely outcome is prolonged captivity — not because escape is impossible, but because you haven't yet tried the one thing that would free you: believing you can leave."
+      },
       "past": {
         "passage": "You once believed yourself trapped in a situation that had more exits than you could see. The bindings were real, but they were not as tight as they felt. Fear was the true cage, not circumstance."
       },
       "present": {
         "passage": "The restrictions you feel are at least partly of your own making. The swords surrounding you are fearsome, but notice — your hands could reach the blindfold if you tried. The first step out of this prison is realizing the door was never locked."
       },
-      "future": {
-        "passage": "A mental trap is forming around you, built from your own anxious thoughts. Recognize it as it takes shape, before the bindings feel permanent. Someone outside your own head can see what you cannot — ask for their eyes."
+      "self": {
+        "passage": "You see yourself as trapped, bound, and helpless — and that self-image is the tightest restraint of all. The swords around you are real, but the story you're telling yourself about them is what makes them a prison rather than a fence."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to full liberation — the moment when the last binding falls away and you walk free with clear eyes. The freedom you're reaching for is close. You can already feel the blindfold loosening."
+      },
+      "below": {
+        "passage": "A subconscious shift is underway — the part of you that built the prison is quietly dismantling it. You may not understand why the old constraints suddenly feel less absolute, but your deeper self has begun the work of release."
+      },
+      "future": {
+        "passage": "Liberation from a self-imposed limitation is near, but it will require you to accept that you were the one holding yourself back. That realization stings, but it also means the power to free yourself has been yours all along."
+      },
+      "outcome": {
+        "passage": "Freedom is the likely result, though it may arrive more gradually than you'd like. The bindings loosen one at a time, and each removal reveals another layer of restriction you didn't know was there. Persistence is everything now."
+      },
       "past": {
         "passage": "A prison of your own making eventually crumbled, and you walked out blinking into light you'd forgotten existed. The liberation was disorienting — you'd spent so long believing escape was impossible that freedom itself felt foreign."
       },
       "present": {
         "passage": "The blindfold is slipping. You are beginning to see that the constraints you accepted were not as absolute as they appeared. This dawning awareness is fragile — protect it from the inner voice that insists you deserve captivity."
       },
-      "future": {
-        "passage": "Liberation from a self-imposed limitation is near, but it will require you to accept that you were the one holding yourself back. That realization stings, but it also means the power to free yourself has been yours all along."
+      "self": {
+        "passage": "You see yourself as someone waking up from a long captivity, testing the strength of bonds you once thought unbreakable. The emerging self-image is someone who can leave — hold onto that vision, because it is the truest one you've had in a while."
       }
     }
   },
   "swords-09": {
     "upright": {
+      "above": {
+        "passage": "You aspire to face your fears directly, to sit with the anxiety rather than running from it. The ideal you're reaching for is the courage to be honest about what keeps you up at night — even when naming it makes it more real."
+      },
+      "below": {
+        "passage": "A well of dread beneath your awareness is feeding the anxiety you feel on the surface. The nightmares have roots in something specific — a fear you haven't examined in daylight, one that grows more powerful the longer it stays underground."
+      },
+      "future": {
+        "passage": "A period of acute anxiety approaches. The mental anguish will feel unbearable in the moment, but it is the mind's way of processing something it cannot yet name. Do not suffer alone — speak the fears aloud and watch them shrink."
+      },
+      "outcome": {
+        "passage": "If the current pattern holds, the anxiety will intensify before it breaks. The sleepless nights are building toward a confrontation with whatever you've been avoiding. The good news is that the worst fears rarely survive being faced directly."
+      },
       "past": {
         "passage": "Sleepless nights and circling thoughts once consumed you. The anxiety was not imaginary — the threats were real — but the suffering multiplied in the dark, where your mind replayed every worst-case scenario until dawn."
       },
       "present": {
         "passage": "Your mind is tormenting you in the small hours. The worries are real, but they have grown monstrous in the dark. What haunts you at 3 AM rarely survives the scrutiny of daylight. Get through the night — morning changes everything."
       },
-      "future": {
-        "passage": "A period of acute anxiety approaches. The mental anguish will feel unbearable in the moment, but it is the mind's way of processing something it cannot yet name. Do not suffer alone — speak the fears aloud and watch them shrink."
+      "self": {
+        "passage": "You see yourself as someone carrying an unbearable weight of worry. The anguish feels solitary and endless, as though you're the only one who lies awake with these thoughts. You aren't — but reaching out feels impossible from inside the nightmare."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to a quiet mind — mornings without dread, nights without the spiral. The peace you're reaching for is not naivety; it's the earned calm of someone who has stared into the dark and decided to come back."
+      },
+      "below": {
+        "passage": "Beneath the surface, the worst of the anxiety is loosening its grip, even if your conscious mind hasn't caught up. Your subconscious is slowly releasing the dread patterns, unwinding the catastrophic scripts one thread at a time."
+      },
+      "future": {
+        "passage": "Relief from persistent worry is coming, not as a sudden cure but as a gradual loosening. The grip of anxiety will weaken slowly enough that you might not notice it happening. One day you'll simply realize the dread is gone."
+      },
+      "outcome": {
+        "passage": "The trajectory leads toward relief. The anxiety that has dominated your inner life is losing its power, and the most likely outcome is a slow return to baseline — not the absence of worry, but the ability to keep it in proportion."
+      },
       "past": {
         "passage": "The worst of the mental anguish eventually passed, though not as quickly as you hoped. Recovery from anxiety is rarely dramatic — it's just one morning when you realize you slept through the night without waking in dread."
       },
       "present": {
         "passage": "The nightmares are fading, but you don't yet trust the quiet. You keep bracing for the next wave of anxiety, and that bracing is itself a kind of suffering. Let the calm be calm. It is not the eye of the storm — it is the clearing."
       },
-      "future": {
-        "passage": "Relief from persistent worry is coming, not as a sudden cure but as a gradual loosening. The grip of anxiety will weaken slowly enough that you might not notice it happening. One day you'll simply realize the dread is gone."
+      "self": {
+        "passage": "You see yourself as someone emerging from a long dark night of the mind. The relief is tentative — you keep checking for the old dread the way you'd touch a bruise to see if it still hurts. It's fading. Let it fade."
       }
     }
   },
   "swords-10": {
     "upright": {
+      "above": {
+        "passage": "You aspire to an ending — the final, definitive close of something that has been dying slowly. The ideal you're reaching for is not destruction but the mercy of completion, the moment when pretending is no longer possible."
+      },
+      "below": {
+        "passage": "Beneath everything, a part of you knows this must end completely. Your subconscious is not fighting the collapse — it is almost inviting it, because it understands that what cannot be salvaged must be laid to rest before anything new can grow."
+      },
+      "future": {
+        "passage": "A painful conclusion is unavoidable. Something in your life must end completely before renewal is possible. Do not try to save what is already falling — let it land. The aftermath is where your real story begins."
+      },
+      "outcome": {
+        "passage": "The current path leads to a definitive ending. It will be painful, and there is no way to soften it. But this card's deepest teaching is that the worst moment is also the turning point — once you hit the ground, the only direction left is up."
+      },
       "past": {
         "passage": "Something ended with finality — a betrayal, a collapse, a moment when the last illusion was stripped away. The pain was total, but it was also the end. Nothing that comes after this can wound you in the same place."
       },
       "present": {
         "passage": "You have hit the floor. This is the worst of it, and there is a grim mercy in that — it cannot get worse from here. The ten swords in your back are an ending, not a permanent state. Dawn is already coloring the horizon."
       },
-      "future": {
-        "passage": "A painful conclusion is unavoidable. Something in your life must end completely before renewal is possible. Do not try to save what is already falling — let it land. The aftermath is where your real story begins."
+      "self": {
+        "passage": "You see yourself as someone who has been utterly brought down — pinned, finished, defeated. That perception is not wrong, but it is incomplete. The figure in this card is still in the story. The scene is an ending, not an erasure."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to rise from what tried to destroy you. The ideal you reach for is not just survival but the proof that the worst thing that ever happened to you was not the last thing. You want to stand again."
+      },
+      "below": {
+        "passage": "A subconscious resilience you may not recognize is already at work, pulling swords from your back one by one. The part of you that refuses to stay down is not bravado — it is the deep, quiet insistence of a self that knows its own worth."
+      },
+      "future": {
+        "passage": "The ending you fear may not be as total as it appears. What looks like complete destruction from this angle may prove to be a dramatic but survivable transformation. You will get up. You always do."
+      },
+      "outcome": {
+        "passage": "The most likely result is recovery — slow, unglamorous, but real. The devastation was not the final chapter. If you keep pulling out swords and tending wounds, you will stand again, and what you build from here will be sturdier than what fell."
+      },
       "past": {
         "passage": "You survived something that should have broken you, and the fact that you're here proves it didn't. The worst is behind you, though you may still flinch at shadows that resemble what once struck you down."
       },
       "present": {
         "passage": "You are pulling swords from your own back, one at a time. The process is slow and painful, but each removal is a reclamation. Resist the urge to declare yourself healed before the work is done — thoroughness matters now."
       },
-      "future": {
-        "passage": "The ending you fear may not be as total as it appears. What looks like complete destruction from this angle may prove to be a dramatic but survivable transformation. You will get up. You always do."
+      "self": {
+        "passage": "You see yourself as a survivor, and that identity is both your strength and your burden. You know you can endure the worst, but you're tired of having to prove it. The self-image you're building now should include more than just resilience."
       }
     }
   },
   "swords-page": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the beginner's sharpness — the ability to see clearly because you haven't yet learned what to ignore. The ideal you're reaching for is intellectual honesty unclouded by expertise or cynicism."
+      },
+      "below": {
+        "passage": "A youthful curiosity you may have suppressed is driving your current restlessness. Beneath the surface, your mind wants permission to ask naive questions again — the kind that cut through pretense precisely because they don't know the rules."
+      },
+      "future": {
+        "passage": "News is coming that will challenge your thinking. Receive it with an open mind rather than a drawn sword. The young intellect knows that every new idea is worth examining before deciding whether to keep or discard it."
+      },
+      "outcome": {
+        "passage": "If you stay curious and keep your sword light, new information will arrive that reshapes your understanding. The most likely outcome is a fresh perspective — not the answer itself, but the right question, asked with the Page's unguarded boldness."
+      },
       "past": {
         "passage": "A moment of youthful intellectual courage once set you on this path. You asked a question no one else would ask, or spoke a truth that others found uncomfortable. That early boldness shaped everything that followed."
       },
       "present": {
         "passage": "New information is arriving, and it demands your full attention. Approach it with the Page's curiosity — eager but not yet certain, sharp but not yet hardened. The message matters more than the messenger right now."
       },
-      "future": {
-        "passage": "News is coming that will challenge your thinking. Receive it with an open mind rather than a drawn sword. The young intellect knows that every new idea is worth examining before deciding whether to keep or discard it."
+      "self": {
+        "passage": "You see yourself as a keen observer, someone still learning to wield their intellect. There is no shame in this position — the Page's sword is just as sharp as the King's. The difference is only experience, and experience is coming."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to focus your scattered mental energy into something coherent. The discipline you're reaching for is the Page grown steadier — the same sharpness, but directed with intention rather than swung at everything that moves."
+      },
+      "below": {
+        "passage": "Beneath your mental restlessness, a fear of committing to any single idea is keeping you scattered. Your subconscious avoids depth because depth means being wrong about something specific — and staying shallow feels safer than being precisely mistaken."
+      },
+      "future": {
+        "passage": "Gossip or miscommunication may create confusion ahead. Be precise with your words and skeptical of secondhand information. Not every message that reaches you will be accurate, and not every truth needs to be repeated."
+      },
+      "outcome": {
+        "passage": "Without focus, the most likely result is wasted potential — good ideas that never land because they're abandoned before they mature. The mental energy is there, but it needs a channel, or it will dissipate into clever chatter that changes nothing."
+      },
       "past": {
         "passage": "Words were used carelessly, and the damage outlasted the conversation. A cutting remark or a hasty message sent ripples you couldn't recall. The lesson about the weight of words was learned the hard way."
       },
       "present": {
         "passage": "Your mind is restless and unfocused, leaping from thought to thought without landing. The intellectual energy is there but scattered — like a sword swung wildly rather than wielded with intent. Slow down before you cut yourself."
       },
-      "future": {
-        "passage": "Gossip or miscommunication may create confusion ahead. Be precise with your words and skeptical of secondhand information. Not every message that reaches you will be accurate, and not every truth needs to be repeated."
+      "self": {
+        "passage": "You see yourself as sharp but undisciplined, full of ideas that evaporate before you can act on them. The frustration of your own inconsistency is real, but it's not a fixed trait — it's a skill you haven't yet developed."
       }
     }
   },
   "swords-knight": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the full-tilt charge — the moment when thinking becomes action and hesitation falls away. The ideal you're reaching for is total intellectual commitment, the Knight who rides directly into the wind without flinching."
+      },
+      "below": {
+        "passage": "Beneath your surface, a fierce impatience is driving everything. Your subconscious is tired of deliberation and ready to charge, whether or not the terrain has been scouted. This energy is powerful, but it does not always know where it's going."
+      },
+      "future": {
+        "passage": "A sudden rush of clarity and momentum is approaching. When it arrives, you will need to act quickly and trust your judgment. Hesitation in this moment would be costlier than an imperfect decision made with full conviction."
+      },
+      "outcome": {
+        "passage": "The trajectory leads to swift, decisive action and its consequences — for better or worse. If you've aimed well, the Knight's charge will cut through every obstacle. If you haven't, the speed that serves you will also magnify the impact of any miscalculation."
+      },
       "past": {
         "passage": "You once charged into a situation with absolute conviction, cutting through hesitation and obstacles alike. That intellectual fearlessness served you — the speed of your certainty made things happen that caution never would have."
       },
       "present": {
         "passage": "Events are accelerating, and decisive mental action is required. Think fast, speak clearly, commit fully. The Knight of Swords does not hedge — he rides directly into the wind. This is not the time for deliberation; it is the time for execution."
       },
-      "future": {
-        "passage": "A sudden rush of clarity and momentum is approaching. When it arrives, you will need to act quickly and trust your judgment. Hesitation in this moment would be costlier than an imperfect decision made with full conviction."
+      "self": {
+        "passage": "You see yourself as someone in motion — mentally quick, intellectually fearless, and unwilling to slow down for anyone. That self-image carries real power right now. Just make sure the direction you're charging in is one you chose, not one you defaulted to."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to harness the Knight's energy without his recklessness — speed with direction, courage with awareness. The ideal you're reaching for is not the charge itself but the ability to choose when to charge and when to rein in."
+      },
+      "below": {
+        "passage": "A subconscious pattern of intellectual aggression is undermining your best intentions. Somewhere you learned that the fastest thinker wins, and that belief pushes you into confrontations before you've fully understood what you're fighting for."
+      },
+      "future": {
+        "passage": "Impulsive words or actions could derail something important if you aren't careful. The urge to strike first and think later will be strong. Channel the Knight's courage without his recklessness — speed is only valuable when aimed well."
+      },
+      "outcome": {
+        "passage": "Without a course correction, the likely result is a collision — you will hit something at full speed that you should have seen coming. The Knight thrown from his horse is not defeated, but he is humbled. Slow down now and arrive intact."
+      },
       "past": {
         "passage": "Reckless haste once led you into a conflict you weren't prepared for. The charge felt heroic at the time, but the aftermath revealed how much damage unchecked aggression can do — especially intellectual aggression."
       },
       "present": {
         "passage": "You are either rushing headlong into something without thinking it through, or you're stalled entirely — the Knight thrown from his horse. Either way, the mismatch between your mental speed and your circumstances is causing harm. Calibrate."
       },
-      "future": {
-        "passage": "Impulsive words or actions could derail something important if you aren't careful. The urge to strike first and think later will be strong. Channel the Knight's courage without his recklessness — speed is only valuable when aimed well."
+      "self": {
+        "passage": "You see yourself as either recklessly fast or frustratingly stalled, and neither version feels like who you want to be. The Knight reversed is not broken — he is between charges, learning that power without aim is just noise."
       }
     }
   },
   "swords-queen": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the Queen's uncompromising clarity — the ability to see through every pretense and speak every truth without cruelty. The ideal you're reaching for is perception so refined it becomes a form of compassion."
+      },
+      "below": {
+        "passage": "Past grief sharpened your mind in ways you may not fully recognize. Beneath your clear-eyed composure, an old wound taught you to see through lies because believing them once cost you dearly. Your perceptiveness is rooted in survival."
+      },
+      "future": {
+        "passage": "A situation ahead will require you to speak an uncomfortable truth with precision and without cruelty. You have the clarity to see what others cannot. Wield that perception with the Queen's discipline — direct, but never needlessly sharp."
+      },
+      "outcome": {
+        "passage": "If you trust your perception and speak with the Queen's measured honesty, the most likely result is respect — not always comfort, but the kind of trust that only comes from someone who tells the truth even when it's difficult."
+      },
       "past": {
         "passage": "Grief or difficulty once honed your perception to a razor's edge. You learned to see through pretense because you had to — the truth, however painful, became more tolerable than comfortable lies."
       },
       "present": {
         "passage": "Clear-eyed judgment is your greatest asset right now. Cut through the emotional noise and see the situation for what it is. The Queen of Swords is not cold — she is honest, and honesty right now is the kindest thing you can offer."
       },
-      "future": {
-        "passage": "A situation ahead will require you to speak an uncomfortable truth with precision and without cruelty. You have the clarity to see what others cannot. Wield that perception with the Queen's discipline — direct, but never needlessly sharp."
+      "self": {
+        "passage": "You see yourself as someone who perceives more than others, who carries the quiet burden of seeing what people would rather keep hidden. That clarity is real, and right now it is exactly what is needed — trust it."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to soften your edge without losing your sharpness. The ideal you're reaching for is warmth that doesn't compromise clarity — the Queen who can see everything and still choose kindness over cruelty."
+      },
+      "below": {
+        "passage": "Beneath your sharp exterior, a deep hurt is using intelligence as armor. Your subconscious learned that if your mind is sharp enough, nothing can get close enough to wound you again. The cutting remarks are a fortress, not a weapon."
+      },
+      "future": {
+        "passage": "Guard against letting hard-won wisdom curdle into cruelty. The perceptiveness you've developed is a gift, but if turned inward or wielded without compassion, it isolates rather than illuminates. Clarity should open doors, not seal them."
+      },
+      "outcome": {
+        "passage": "If bitterness continues to sharpen your tongue, the most likely result is isolation — people will respect your mind but avoid your presence. The Queen reversed cuts everyone, including herself. The outcome changes when the sword is lowered."
+      },
       "past": {
         "passage": "Sharpness of mind once became sharpness of tongue, and the wound you inflicted with your words went deeper than you intended. Intelligence without empathy carved a distance between you and someone who mattered."
       },
       "present": {
         "passage": "Your judgment is clouded by bitterness or your clarity has calcified into cynicism. The Queen's sword was meant to cut through deception, not to keep everyone at a safe distance. Ask yourself what you're protecting and whether it still needs protecting."
       },
-      "future": {
-        "passage": "Guard against letting hard-won wisdom curdle into cruelty. The perceptiveness you've developed is a gift, but if turned inward or wielded without compassion, it isolates rather than illuminates. Clarity should open doors, not seal them."
+      "self": {
+        "passage": "You see yourself as someone whose honesty has become a liability — too sharp, too direct, too much. But the issue isn't your clarity; it's the anger fueling it. The same perception wielded with warmth would be your greatest gift."
       }
     }
   },
   "swords-king": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the King's mastery — the ability to render judgment without flinching, to hold authority through clarity rather than force. The ideal you're reaching for is a mind so disciplined that fairness becomes instinctive."
+      },
+      "below": {
+        "passage": "A deep need to be the voice of reason drives you beneath the surface. Your subconscious craves the order that comes from clear thinking — not for control, but because you've seen what happens when decisions are made from confusion."
+      },
+      "future": {
+        "passage": "A situation is coming that will require you to be the clear head in a room full of clouded ones. Your ability to think without flinching will be the deciding factor. Prepare to make the call no one else is willing to make."
+      },
+      "outcome": {
+        "passage": "If you lead with intellect tempered by fairness, the most likely outcome is a sound decision that others will trust — not because you forced it, but because your reasoning was transparent and your judgment was earned."
+      },
       "past": {
         "passage": "You once made a decision with the full authority of your intellect — dispassionate, fair, and final. That act of mental sovereignty set a standard for how you handle difficult truths. The sword was heavy, but you held it steady."
       },
       "present": {
         "passage": "This moment calls for intellectual authority. Weigh the evidence, strip away sentiment, and render your judgment. The King of Swords does not rule through emotion — he rules through the clarity that comes from thinking a thing all the way through."
       },
-      "future": {
-        "passage": "A situation is coming that will require you to be the clear head in a room full of clouded ones. Your ability to think without flinching will be the deciding factor. Prepare to make the call no one else is willing to make."
+      "self": {
+        "passage": "You see yourself as the authority in this situation — the one whose thinking is clearest and whose judgment can be trusted. That confidence is warranted right now, but only if you remain willing to hear evidence that challenges your conclusions."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to wield intellectual power without corruption — to be the authority who serves truth rather than using truth to serve himself. The ideal you're reaching for requires the humility that raw intelligence alone cannot provide."
+      },
+      "below": {
+        "passage": "A subconscious need to dominate through intellect is distorting your judgment. Beneath your reasoning, a desire to be right has quietly replaced the desire to be fair. The distinction matters more than you may realize."
+      },
+      "future": {
+        "passage": "Power without fairness is approaching, either as a threat from someone in authority or as a temptation within yourself. The King reversed uses logic as a weapon rather than a tool. Remember that the mind's highest purpose is justice, not dominance."
+      },
+      "outcome": {
+        "passage": "If rigidity continues to masquerade as rigor, the most likely outcome is a decision that is technically correct but humanly wrong. The King reversed wins every argument and loses every relationship. Recalibrate before the verdict is rendered."
+      },
       "past": {
         "passage": "Authority was once wielded without wisdom — either yours or someone else's. Intellectual power used to control rather than clarify left scars that rational argument alone cannot heal."
       },
       "present": {
         "passage": "Your thinking has become rigid where it should be precise. There is a difference between intellectual authority and intellectual tyranny, and you are drifting toward the latter. A sword held too tightly cuts the hand that grips it."
       },
-      "future": {
-        "passage": "Power without fairness is approaching, either as a threat from someone in authority or as a temptation within yourself. The King reversed uses logic as a weapon rather than a tool. Remember that the mind's highest purpose is justice, not dominance."
+      "self": {
+        "passage": "You see yourself as the smartest person in the room, and that belief is making you dangerous. The King reversed does not lack intelligence — he lacks the awareness that intelligence without humility is just a sharper way to be wrong."
       }
     }
   }

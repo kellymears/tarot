@@ -1,337 +1,673 @@
 {
   "wands-01": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward pure creative ignition — the moment before the flame takes shape, when everything feels possible. This aspiration is not naive; it is the truest part of you remembering that every meaningful thing you have ever built started as a wordless spark."
+      },
+      "below": {
+        "passage": "Beneath the surface, a primal need to create is driving you — not for recognition or utility, but because something inside you dies a little when it has no outlet. This root impulse is older than your current plans and more honest than your stated reasons."
+      },
+      "future": {
+        "passage": "An invitation is approaching — a blank canvas, a bold opening, a beginning that carries genuine heat. When it arrives you will know it by the way your pulse quickens. Be ready to act before your doubts organize themselves."
+      },
+      "outcome": {
+        "passage": "If you stay on this path, a genuine new beginning will arrive — raw, unformed, and electric. The spark will be real, and what you do in the first moments of its arrival will determine whether it becomes a sustained flame or a brief flare."
+      },
       "past": {
         "passage": "A raw spark of inspiration struck you — something that felt like pure potential before the world could name it. That initial surge of creative fire set a direction you are still following, whether you realize it or not."
       },
       "present": {
         "passage": "New energy is pressing against you from the inside out, demanding expression. This is the seed moment: take the ember before it cools and give it form, even imperfect form. Hesitation is the only real threat here."
       },
-      "future": {
-        "passage": "An invitation is approaching — a blank canvas, a bold opening, a beginning that carries genuine heat. When it arrives you will know it by the way your pulse quickens. Be ready to act before your doubts organize themselves."
+      "self": {
+        "passage": "You see yourself as someone on the verge of something — standing at the edge of creation with fire in your hands. There is a quiet certainty in you right now that this potential is real, even if you cannot yet describe what it will become."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You are reaching for inspiration but grasping at smoke. The desire to feel that initial creative surge has become an aspiration in itself, disconnected from any particular form. What you truly need is not another spark but the stillness to recognize the one already smoldering."
+      },
+      "below": {
+        "passage": "A deep creative frustration is running beneath everything you do — the suffocated feeling of potential that has no permission to express itself. Something early taught you that your fire was too much, and that old lesson is still throttling the valve."
+      },
+      "future": {
+        "passage": "A promising beginning may stall or arrive stillborn if the ground is not prepared. The inspiration will come, but without cleared space and honest readiness, it will dissipate as quickly as it appears."
+      },
+      "outcome": {
+        "passage": "The likely result is a false start — energy that flares and fades before it can catch. This is not a permanent verdict, but the current trajectory points toward wasted potential unless you address whatever is blocking the creative channel."
+      },
       "past": {
         "passage": "There was a moment when inspiration knocked and you were not able to answer. The spark was real, but something — timing, fear, distraction — kept you from catching it. Understanding what blocked you then is more useful now than regret."
       },
       "present": {
         "passage": "Creative energy is circling inside you with no outlet, generating restlessness rather than momentum. You may feel the urge to start something without knowing what. Clear the internal clutter first; the spark needs dry kindling, not a crowded hearth."
       },
-      "future": {
-        "passage": "A promising beginning may stall or arrive stillborn if the ground is not prepared. The inspiration will come, but without cleared space and honest readiness, it will dissipate as quickly as it appears."
+      "self": {
+        "passage": "You see yourself as creatively stuck — someone with a lighter but no fuel, or fuel but no lighter. This self-image is more prison than portrait. The block is not a lack of talent but a fear of beginning imperfectly."
       }
     }
   },
   "wands-02": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the clarity of a person who knows exactly where their energy belongs. The vision of standing at the threshold with command over your own direction is what pulls you forward — not the destination itself, but the authority of choosing it."
+      },
+      "below": {
+        "passage": "Beneath your deliberations runs a deep need to feel that your life has intentional direction rather than accidental momentum. The restlessness you feel is not indecision — it is a subconscious awareness that you are capable of more deliberate aim than you have been exercising."
+      },
+      "future": {
+        "passage": "A decision point is forming on the horizon — one that asks you to commit your ambition to a specific vessel. The scope of what is possible will narrow, but that narrowing is what transforms daydreaming into actual power."
+      },
+      "outcome": {
+        "passage": "If you hold your current course, a moment of clear strategic vision will crystallize. You will see the landscape with unusual clarity and choose your direction with confidence. The key is to act on that clarity before it clouds over again."
+      },
       "past": {
         "passage": "You stood at a threshold and made a deliberate choice about where to direct your energy. That moment of surveying the landscape and choosing a path — even with incomplete information — shaped what you are building now."
       },
       "present": {
         "passage": "The world in front of you is wide and the options are real, but standing at the crossroads is not the same as traveling. You have enough vision to choose. Pick a direction and let momentum teach you what planning cannot."
       },
-      "future": {
-        "passage": "A decision point is forming on the horizon — one that asks you to commit your ambition to a specific vessel. The scope of what is possible will narrow, but that narrowing is what transforms daydreaming into actual power."
+      "self": {
+        "passage": "You see yourself as the planner, the strategist surveying possibilities from high ground. This self-perception is mostly accurate — you do have real vision — but be honest about whether the surveying has become a way to avoid the vulnerability of committing."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You are reaching toward a sense of direction that keeps dissolving when you get close. The aspiration is not to any particular path but to the feeling of certainty itself — and that craving for guarantees is the very thing preventing movement."
+      },
+      "below": {
+        "passage": "A buried fear of choosing wrong has become the hidden engine of your indecision. Somewhere beneath your rational weighing of options, a part of you believes that the wrong choice is irreversible. It is not, and that belief is costing you more than any wrong turn would."
+      },
+      "future": {
+        "passage": "Without a committed direction, scattered energy will produce scattered results. The coming period asks you to resist the seduction of optionality and accept that depth requires choosing one well over many shallows."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to paralysis dressed as prudence. Options will multiply but commitment will not, and you may find yourself in the same place months from now with more information but no more progress. Choose before the window narrows on its own."
+      },
       "past": {
         "passage": "Fear of choosing wrong kept you circling the same ground. The planning phase extended until the window shifted, and what felt like careful strategy was closer to avoidance. The lesson is that indecision is itself a decision."
       },
       "present": {
         "passage": "You may be over-planning or second-guessing a direction you already know is right. The comfort of keeping options open has become its own trap. The map is not the territory — put the map down and walk."
       },
-      "future": {
-        "passage": "Without a committed direction, scattered energy will produce scattered results. The coming period asks you to resist the seduction of optionality and accept that depth requires choosing one well over many shallows."
+      "self": {
+        "passage": "You see yourself as thoughtfully weighing options, but there is a whisper underneath that knows you are stalling. The gap between strategic patience and fear-based hesitation is narrower than you would like to admit."
       }
     }
   },
   "wands-03": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward the feeling of watching something you built begin to take flight — your plans meeting the world and proving themselves viable. This aspiration for expansion is healthy and well-timed; the horizon is genuinely widening."
+      },
+      "below": {
+        "passage": "A deep drive to prove that your vision has real-world legs is fueling your actions beneath the surface. You need to see your ships come in — not for wealth alone, but for confirmation that your foresight is trustworthy. That need is a powerful and largely accurate compass."
+      },
+      "future": {
+        "passage": "Expansion is coming — the kind that rewards patience and preparation. Opportunities you planted weeks or months ago will begin producing visible results. Keep your gaze on the horizon; the real gains are still approaching."
+      },
+      "outcome": {
+        "passage": "The trajectory you are on leads to genuine growth — enterprise bearing fruit, plans proving sound. Early returns will validate your strategic instincts and open doors to further expansion. Stay attentive to what is working and invest more there."
+      },
       "past": {
         "passage": "You set something in motion and then watched it begin to take on a life of its own. That early expansion — the moment your plans started meeting the real world and holding up — gave you a well-earned confidence."
       },
       "present": {
         "passage": "Your ships are out on the water and the first returns are coming in. This is the phase where foresight meets reality, and reality is cooperating. Stay attentive to what is working and double down there rather than scattering your focus."
       },
-      "future": {
-        "passage": "Expansion is coming — the kind that rewards patience and preparation. Opportunities you planted weeks or months ago will begin producing visible results. Keep your gaze on the horizon; the real gains are still approaching."
+      "self": {
+        "passage": "You see yourself as the builder who has done the work and is now watching the payoff approach. There is a quiet pride in this self-image — earned, not arrogant — and it is giving you the confidence to think even bigger."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to growth but sense that something foundational is not ready to support it. The longing for expansion is real, but a wiser part of you knows the scaffolding needs work before the structure can go higher."
+      },
+      "below": {
+        "passage": "Beneath your frustration with stalled progress lies a fear that your vision may be flawed at its core. This fear is mostly wrong — the vision is sound — but it is pointing accurately at logistical gaps that need honest attention before growth can resume."
+      },
+      "future": {
+        "passage": "Delays in expected growth are likely, not as punishment but as correction. Something in your current approach needs adjustment before expansion can sustain itself. Treat the slowdown as useful intelligence, not failure."
+      },
+      "outcome": {
+        "passage": "Growth will stall or arrive smaller than expected unless structural issues are addressed. The likely result is not failure but underperformance — a version of success that leaves you knowing it could have been more. Tighten the foundation now."
+      },
       "past": {
         "passage": "Early momentum stalled because the foundation was not as solid as it appeared. Plans that looked promising from a distance revealed gaps up close. That frustration taught you something about the difference between vision and execution."
       },
       "present": {
         "passage": "Progress feels slower than it should, and you may be questioning whether your efforts are reaching far enough. The issue is not your ambition but your logistics. Tighten what you have before reaching for more."
       },
-      "future": {
-        "passage": "Delays in expected growth are likely, not as punishment but as correction. Something in your current approach needs adjustment before expansion can sustain itself. Treat the slowdown as useful intelligence, not failure."
+      "self": {
+        "passage": "You see yourself as someone whose plans are not delivering what they promised. This self-assessment stings, but it is more useful than denial. The gap between vision and results is not a character flaw — it is a solvable engineering problem."
       }
     }
   },
   "wands-04": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward a sense of true belonging — the warmth of a milestone shared with people who genuinely matter. This aspiration for celebration and homecoming is not frivolous; it is a deep need for your efforts to be witnessed and honored."
+      },
+      "below": {
+        "passage": "Beneath your current situation runs a profound need for stability and communal joy — the feeling of arriving somewhere safe after a long effort. This hidden driver is not weakness; it is the part of you that knows achievement means nothing without connection."
+      },
+      "future": {
+        "passage": "A moment of celebration or arrival is ahead — the kind where effort crystallizes into something tangible and shared. Community will play a role. Let yourself enjoy it fully; not every milestone needs to be immediately followed by the next climb."
+      },
+      "outcome": {
+        "passage": "The path you are on leads to a moment worth celebrating — stability earned, community gathered, effort acknowledged. The outcome carries genuine warmth. Allow yourself to receive it without immediately looking for the next mountain to climb."
+      },
       "past": {
         "passage": "There was a time of genuine celebration — a milestone reached, a homecoming, a gathering where joy was not performed but felt. That warmth left a mark on you, a reference point for what belonging actually tastes like."
       },
       "present": {
         "passage": "Something you have been building is reaching a point worth celebrating. Pause long enough to feel the accomplishment before charging toward the next goal. Shared joy strengthens the bonds that make future work possible."
       },
-      "future": {
-        "passage": "A moment of celebration or arrival is ahead — the kind where effort crystallizes into something tangible and shared. Community will play a role. Let yourself enjoy it fully; not every milestone needs to be immediately followed by the next climb."
+      "self": {
+        "passage": "You see yourself in a moment of earned rest — someone who has built something worth pausing for. This inner sense of harmony is not complacency; it is the healthy recognition that you deserve to enjoy what you have created."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to feel at home in what you have built, but something keeps the warmth at arm's length. The celebration you are reaching for feels just out of sync — the right elements are present but the feeling is not landing."
+      },
+      "below": {
+        "passage": "Beneath the surface, a restless dissatisfaction is undermining your ability to enjoy your achievements. Some part of you learned early that settling in means letting your guard down, and that old programming is stealing your capacity for contentment."
+      },
+      "future": {
+        "passage": "A gathering or milestone may not land the way you expect. The disruption is not catastrophic, but it points to unresolved tension in your inner circle. Better to address it now than to let it surface at the worst moment."
+      },
+      "outcome": {
+        "passage": "The likely result is a celebration that rings hollow or a homecoming that reveals cracks in the foundation. Stability will be harder to feel than to achieve. The fix is not more accomplishment but more honesty about what is wobbling underneath."
+      },
       "past": {
         "passage": "A celebration felt hollow, or a milestone passed without the recognition it deserved. Perhaps the achievement was real but the people around you could not meet it, or perhaps you could not let yourself rest long enough to feel it."
       },
       "present": {
         "passage": "Instability in your foundation is making it hard to enjoy what you have built. The structure looks fine from outside, but inside you feel the wobble. Address the cracks in the base before decorating the surface."
       },
-      "future": {
-        "passage": "A gathering or milestone may not land the way you expect. The disruption is not catastrophic, but it points to unresolved tension in your inner circle. Better to address it now than to let it surface at the worst moment."
+      "self": {
+        "passage": "You see yourself as someone who cannot quite land — always arriving but never feeling arrived. This inner restlessness is not ambition; it is a disconnection from the present that makes every achievement feel provisional."
       }
     }
   },
   "wands-05": {
     "upright": {
+      "above": {
+        "passage": "You aspire to emerge from conflict as someone sharpened rather than diminished. The ideal you are reaching for is not the absence of struggle but the version of yourself that comes through it with clearer convictions and honest battle scars."
+      },
+      "below": {
+        "passage": "Beneath your current situation runs a competitive drive that is more primal than you may admit. Something in you needs to test itself against resistance — not to dominate, but to discover what you are actually made of when the pressure is real."
+      },
+      "future": {
+        "passage": "Conflict is approaching, likely the productive kind that forces growth through friction. Expect disagreements, rival ideas, and jostling for position. Your task is not to avoid it but to fight for what matters without losing yourself in the brawl."
+      },
+      "outcome": {
+        "passage": "If things continue as they are, a productive clash is the most likely result. The friction will be uncomfortable but clarifying — the kind that burns away what is inessential and leaves only what you truly stand for. Engage with integrity and you will come out stronger."
+      },
       "past": {
         "passage": "You walked through a period of fierce competition or open conflict — the kind where everyone had a wand raised and no one was backing down. That friction, uncomfortable as it was, sharpened your instincts and clarified your position."
       },
       "present": {
         "passage": "Tension and competing agendas surround you, and the noise can feel chaotic. But this is not destruction — it is the heat of clashing perspectives forging something stronger. Engage honestly rather than trying to rise above the fray."
       },
-      "future": {
-        "passage": "Conflict is approaching, likely the productive kind that forces growth through friction. Expect disagreements, rival ideas, and jostling for position. Your task is not to avoid it but to fight for what matters without losing yourself in the brawl."
+      "self": {
+        "passage": "You see yourself as a fighter in a crowded arena — not necessarily winning, but refusing to back down. This self-image carries real power, but check whether you are fighting for something that matters or simply fighting because stillness feels like surrender."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to peace, but the peace you are imagining requires conflicts that have not been had. The ideal of harmony you are reaching toward will remain a fantasy until you are willing to pass through the honest friction standing between you and it."
+      },
+      "below": {
+        "passage": "A deep aversion to conflict is shaping your choices beneath the level of awareness. Somewhere you learned that confrontation leads to loss, and that old equation is running silently — keeping you out of necessary battles and eroding you from within."
+      },
+      "future": {
+        "passage": "Unresolved inner tension will demand attention soon. The coming period favors honesty over harmony. If you can confront what you have been avoiding within yourself, the external conflicts will sort themselves out with surprising ease."
+      },
+      "outcome": {
+        "passage": "Avoided conflict does not disappear — it compounds. The likely result is tension breaking through in an uncontrolled way, at a time and place not of your choosing. A deliberate, honest confrontation now prevents a messier one later."
+      },
       "past": {
         "passage": "You avoided a necessary confrontation, and the unspoken tension did more damage than the argument would have. Swallowed fire does not disappear — it smolders. That period taught you something about the cost of artificial peace."
       },
       "present": {
         "passage": "Internal conflict is masquerading as external calm. You may be at war with yourself — competing desires, contradictory ambitions — while presenting a composed exterior. Name the real fight before it names itself at a worse time."
       },
-      "future": {
-        "passage": "Unresolved inner tension will demand attention soon. The coming period favors honesty over harmony. If you can confront what you have been avoiding within yourself, the external conflicts will sort themselves out with surprising ease."
+      "self": {
+        "passage": "You see yourself as keeping the peace, but a more honest look reveals someone exhausted by the effort of containing unspoken tensions. The composure you project is costing more energy than the conflict you are avoiding."
       }
     }
   },
   "wands-06": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward the feeling of being seen and celebrated for your genuine contribution. This aspiration is not vanity — it is the healthy desire for your work to land where it matters and for the world to acknowledge what it cost you to produce it."
+      },
+      "below": {
+        "passage": "Beneath your actions runs a deep need for validation that goes beyond ego. Something in you needs the external world to confirm that your fire is real and that your efforts have made a visible difference. This driver is powerful — just be sure it serves your work rather than replacing it."
+      },
+      "future": {
+        "passage": "Public recognition or a significant win is approaching. The laurels will be real, not hollow. Prepare by staying connected to the effort itself rather than the applause, so the victory strengthens rather than distorts you."
+      },
+      "outcome": {
+        "passage": "The current path leads to recognition — a moment when your efforts are publicly acknowledged and your work receives the reception it deserves. The victory will feel earned because it is. Accept it gracefully and notice who shares in the celebration."
+      },
       "past": {
         "passage": "You earned a victory that others recognized — a public acknowledgment of effort, skill, or courage. That moment of riding high was not just ego; it was the world confirming that your work landed where it needed to."
       },
       "present": {
         "passage": "Recognition is finding you now, and you have earned it. Accept the praise without deflecting and without inflating. This is a moment to let your work speak and to notice who shows up to celebrate alongside you — those people matter."
       },
-      "future": {
-        "passage": "Public recognition or a significant win is approaching. The laurels will be real, not hollow. Prepare by staying connected to the effort itself rather than the applause, so the victory strengthens rather than distorts you."
+      "self": {
+        "passage": "You see yourself as someone whose efforts are finally being rewarded — riding a wave of deserved acknowledgment. This self-image is accurate right now. Let it fuel your next move rather than becoming a peak you spend the rest of your time trying to return to."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to recognition but are tangled in conflicting feelings about what visibility actually costs. The triumph you reach for keeps arriving with conditions attached — approval from the wrong people, praise for the wrong reasons, or a spotlight that illuminates everything except what matters."
+      },
+      "below": {
+        "passage": "Beneath the surface, a fear of being truly seen is sabotaging the recognition you consciously seek. You may be chasing approval while unconsciously arranging things so it never quite arrives. This contradiction is exhausting and worth examining honestly."
+      },
+      "future": {
+        "passage": "Success may come with complications — envy from peers, a victory that feels pyrrhic, or praise for the wrong reasons. Stay grounded in why you started. Recognition that does not align with your values is just noise."
+      },
+      "outcome": {
+        "passage": "Recognition may arrive but feel wrong — either hollow, misdirected, or accompanied by unexpected costs. The likely outcome is a victory that teaches you more about what you actually want than about what you have won. Let that lesson reorient you."
+      },
       "past": {
         "passage": "A victory was undercut — by your own doubt, by others' envy, or by the hollow feeling that the prize was not what you actually wanted. Winning without inner alignment leaves a strange aftertaste."
       },
       "present": {
         "passage": "You may be chasing recognition that will not satisfy you, or fearing visibility when your work deserves it. The issue is not the spotlight but your relationship to it. Ask yourself whose approval you are actually seeking."
       },
-      "future": {
-        "passage": "Success may come with complications — envy from peers, a victory that feels pyrrhic, or praise for the wrong reasons. Stay grounded in why you started. Recognition that does not align with your values is just noise."
+      "self": {
+        "passage": "You see yourself as either undeserving of the praise you receive or overlooked despite deserving more. Neither version is fully true. Your relationship with recognition needs recalibrating — the work is better than your confidence allows you to believe."
       }
     }
   },
   "wands-07": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the kind of resolve that does not flinch when tested. The ideal you are reaching toward is not aggression but the quiet, immovable conviction of someone who knows exactly what they are defending and why it matters."
+      },
+      "below": {
+        "passage": "Beneath your actions lies a deep refusal to be moved from ground you have earned. This is not stubbornness for its own sake — it is a primal recognition that some positions, once surrendered, cannot be reclaimed. Trust this instinct; it knows what your logic has not yet articulated."
+      },
+      "future": {
+        "passage": "Expect to be tested — not a single dramatic confrontation but a sustained pressure that asks whether you truly believe in what you are defending. Your conviction will be your best weapon. Know what hill you are willing to die on before the battle arrives."
+      },
+      "outcome": {
+        "passage": "If you hold your ground with integrity, the most likely result is that the pressure relents and your position is vindicated. The stand will cost you energy, but the alternative — ceding ground you believe in — would cost far more in the long run."
+      },
       "past": {
         "passage": "You held your ground when others pushed back, defending a position that mattered to you against real pressure. That stand — exhausting as it was — proved something to you about your own resolve."
       },
       "present": {
         "passage": "Challenges to your position are coming from multiple directions, and the temptation is to give ground just to end the siege. Hold firm. You are on higher ground for a reason, and retreat now would cost more than endurance."
       },
-      "future": {
-        "passage": "Expect to be tested — not a single dramatic confrontation but a sustained pressure that asks whether you truly believe in what you are defending. Your conviction will be your best weapon. Know what hill you are willing to die on before the battle arrives."
+      "self": {
+        "passage": "You see yourself as the lone defender on the hill — outnumbered but unbroken. This self-image carries real truth right now. The weariness is honest, but so is the resolve, and the resolve is winning."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to hold your ground but are losing clarity about whether the ground is worth holding. The ideal of perseverance has become confused with the habit of resistance, and you are reaching for conviction that has started to feel hollow."
+      },
+      "below": {
+        "passage": "Beneath your defensive posture runs a fear that any concession will become a collapse. This all-or-nothing reflex is protecting you from something older than the current battle — a time when giving an inch truly did mean losing everything. That time has passed."
+      },
+      "future": {
+        "passage": "The coming pressure may overwhelm a rigid defense. Flexibility will serve you better than fortification. The strongest position is not always the one you are already standing on — sometimes it is the one you have not considered yet."
+      },
+      "outcome": {
+        "passage": "Continued rigidity will likely lead to exhaustion or a defense that collapses under its own weight. The trajectory points toward diminishing returns on stubbornness. Strategic flexibility now prevents a less graceful reckoning later."
+      },
       "past": {
         "passage": "You caved under pressure when standing firm would have served you better, or you held on so rigidly that the defense became its own kind of defeat. Either way, the lesson was about calibrating stubbornness versus surrender."
       },
       "present": {
         "passage": "Defensiveness has become your default posture, and it is draining you. Not every challenge requires a battle stance. Some pressure is an invitation to adapt rather than resist. Consider whether the position you are defending still deserves the cost."
       },
-      "future": {
-        "passage": "The coming pressure may overwhelm a rigid defense. Flexibility will serve you better than fortification. The strongest position is not always the one you are already standing on — sometimes it is the one you have not considered yet."
+      "self": {
+        "passage": "You see yourself as embattled — constantly fending off threats that may or may not be as serious as they feel. This siege mentality is obscuring your judgment. Step back far enough to see whether the fortress is protecting something vital or just preserving a habit."
       }
     }
   },
   "wands-08": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the feeling of things clicking into place at speed — aligned momentum where action and intention are indistinguishable. The ideal you are reaching for is not just progress but the exhilarating coherence of everything moving in the same direction at once."
+      },
+      "below": {
+        "passage": "Beneath your current situation, a restless energy has been building that demands release into forward motion. Something in you knows that the stagnation is over and the channel is open. This subconscious readiness is the reason things are about to accelerate."
+      },
+      "future": {
+        "passage": "Swift developments are heading your way — news, travel, breakthroughs arriving in rapid succession. When the pace picks up, do not brake out of anxiety. The speed itself is the message: what was stuck is now free."
+      },
+      "outcome": {
+        "passage": "The most likely result is rapid, decisive movement — things that have been pending suddenly resolving in quick succession. The pace may feel almost too fast, but the direction is sound. Trust the momentum and save your course corrections for after you have landed."
+      },
       "past": {
         "passage": "Events accelerated suddenly — messages arrived, things aligned, and momentum carried you forward faster than you expected. That burst of rapid movement cut through stagnation and changed your trajectory in days rather than months."
       },
       "present": {
         "passage": "Everything is moving quickly now. Communications are flying, plans are materializing, and the pace may feel almost reckless. Trust it. This is not chaos — it is the moment when accumulated energy finally finds its channel. Ride the current."
       },
-      "future": {
-        "passage": "Swift developments are heading your way — news, travel, breakthroughs arriving in rapid succession. When the pace picks up, do not brake out of anxiety. The speed itself is the message: what was stuck is now free."
+      "self": {
+        "passage": "You see yourself as caught in a swift current — exhilarated and slightly breathless. This perception is accurate. You are moving fast because you are ready to, and the speed is a sign of alignment, not recklessness."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to momentum but keep encountering friction where flow should be. The speed and clarity you are reaching for remain just out of grasp, and the gap between your desired pace and your actual pace is becoming a source of real frustration."
+      },
+      "below": {
+        "passage": "Beneath your impatience with delays runs a fear that stalled momentum means stalled potential. Something in you equates slowness with failure, and that equation is creating more anxiety than the actual delays warrant. Not all pauses are losses."
+      },
+      "future": {
+        "passage": "Expected developments may arrive later than planned, or the initial burst of speed may fizzle unexpectedly. Build margin into your timelines. The energy will move when the path is genuinely clear, not when you push harder."
+      },
+      "outcome": {
+        "passage": "The likely result is delays and detours that frustrate but ultimately redirect. What feels like lost time is often gained intelligence. The arrival will be later than hoped but more precise than a rushed version would have been."
+      },
       "past": {
         "passage": "Something that should have moved quickly got tangled in delays, miscommunication, or bad timing. The frustration of watching momentum die is a particular kind of agony. What stalled then may still carry lessons about patience and preparation."
       },
       "present": {
         "passage": "Delays and crossed signals are slowing what should be a fast-moving situation. Resist the urge to force speed. The blockage often contains information — a misalignment, a missing piece, a conversation that has not happened yet."
       },
-      "future": {
-        "passage": "Expected developments may arrive later than planned, or the initial burst of speed may fizzle unexpectedly. Build margin into your timelines. The energy will move when the path is genuinely clear, not when you push harder."
+      "self": {
+        "passage": "You see yourself as stuck in traffic when you should be flying. This frustration is valid, but the delay is not wasted time — it is teaching you something about the difference between urgency and readiness."
       }
     }
   },
   "wands-09": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the resilience of someone who has been through the worst and is still standing. The ideal you are reaching for is not comfort but endurance — the proven ability to take a hit and keep going when everything says to quit."
+      },
+      "below": {
+        "passage": "Beneath the surface, a deep determination is holding you upright when your conscious mind wants to collapse. This subconscious resilience is older and stronger than your fatigue. It knows you have survived worse, even when the rest of you has forgotten."
+      },
+      "future": {
+        "passage": "One more test of your endurance is coming, the kind that arrives when you think you have nothing left. You do. The final stretch is always the hardest, and your scars are evidence of capability, not weakness."
+      },
+      "outcome": {
+        "passage": "If you keep going, you will make it through — battered but intact, and with a hard-won understanding of your own limits that no easier path could have given you. The finish line is closer than it appears from inside the exhaustion."
+      },
       "past": {
         "passage": "You endured a long stretch of resistance — battered but still upright, still holding the line. That period of sustained effort left its marks on you, but it also proved a resilience you might not have believed you had."
       },
       "present": {
         "passage": "You are tired, possibly wounded, but you have not fallen. The weight of sustained effort is real and you should not pretend otherwise. Acknowledge the fatigue without letting it become surrender. You are closer to the end of this than you think."
       },
-      "future": {
-        "passage": "One more test of your endurance is coming, the kind that arrives when you think you have nothing left. You do. The final stretch is always the hardest, and your scars are evidence of capability, not weakness."
+      "self": {
+        "passage": "You see yourself as bruised but unbroken — the last one standing after a long siege. This self-image is not bravado; it is an accurate reading of what you have survived. Let that evidence steady you through what remains."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to endurance but have lost the thread of what you are enduring for. The ideal of resilience has curdled into pure stubbornness, and you are reaching for strength while your deeper self is begging for rest."
+      },
+      "below": {
+        "passage": "Beneath your exhaustion lies a belief that needing help is the same as failing. This buried conviction is the real enemy — not the challenges you face, but the refusal to let anyone share the weight. That refusal was once survival; now it is self-destruction."
+      },
+      "future": {
+        "passage": "Continued resistance without rest will break something that does not heal easily. The coming period demands that you distinguish between perseverance and self-punishment. Lay down the burden long enough to remember why you picked it up."
+      },
+      "outcome": {
+        "passage": "The likely result is burnout or a collapse that forces the rest you refused to take voluntarily. This is not inevitable — but avoiding it requires admitting, soon, that you cannot sustain this pace alone. Ask for help before your body makes the decision for you."
+      },
       "past": {
         "passage": "You pushed past your limits and paid for it — burnout, paranoia, or a stubborn refusal to ask for help when help was available. Endurance without wisdom is just slow self-destruction."
       },
       "present": {
         "passage": "Hypervigilance has become your baseline, and the fortress mentality is isolating you. Not every approaching figure is a threat. The walls you built for protection are now blocking the reinforcements. Let someone in."
       },
-      "future": {
-        "passage": "Continued resistance without rest will break something that does not heal easily. The coming period demands that you distinguish between perseverance and self-punishment. Lay down the burden long enough to remember why you picked it up."
+      "self": {
+        "passage": "You see yourself as someone who must handle everything alone — the last defender who cannot afford vulnerability. This self-image is heroic and unsustainable. The strength you need now is the kind that asks for help."
       }
     }
   },
   "wands-10": {
     "upright": {
+      "above": {
+        "passage": "You aspire to carry it all — every responsibility, every commitment, every fire you have started. The ideal you are reaching for is the person who can hold everything together through sheer will. That aspiration is noble and it is also the thing most likely to break you."
+      },
+      "below": {
+        "passage": "Beneath the visible weight you carry runs a deep belief that putting anything down means letting someone down. This hidden driver turns every obligation into a personal test of worthiness. The burden is not just the tasks — it is the meaning you have attached to carrying them."
+      },
+      "future": {
+        "passage": "The load is about to get heavier unless you make deliberate choices about what to set down. Delegation is not weakness. The approaching demands will overwhelm a lone carrier but are manageable for someone willing to share the weight."
+      },
+      "outcome": {
+        "passage": "The current path leads to a breaking point — not necessarily dramatic, but the slow accumulation of too much will eventually force something to give. The outcome improves dramatically the moment you release even one obligation that is not truly yours."
+      },
       "past": {
         "passage": "You carried too much — responsibilities, ambitions, obligations stacked until the weight became the defining fact of your days. That overload, whether chosen or inherited, shaped your understanding of what you can and cannot sustain."
       },
       "present": {
         "passage": "The burden you are carrying is real and it is heavy. Some of those wands are not yours to hold. Before you collapse under the weight, take an honest inventory: which responsibilities serve your actual path and which are just momentum from old commitments?"
       },
-      "future": {
-        "passage": "The load is about to get heavier unless you make deliberate choices about what to set down. Delegation is not weakness. The approaching demands will overwhelm a lone carrier but are manageable for someone willing to share the weight."
+      "self": {
+        "passage": "You see yourself as the one who holds everything together — the person others rely on to carry what they cannot. This self-image is both your greatest strength and your most dangerous blind spot. Not every load that fits in your arms belongs there."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to relief — the simple, almost unimaginable feeling of not being crushed by obligation. The ideal you are reaching for is not laziness but a sustainable relationship with responsibility, and the fact that this feels radical tells you how far off-balance things have gotten."
+      },
+      "below": {
+        "passage": "Beneath your current state runs either a complete avoidance of responsibility or a silent martyrdom that refuses to renegotiate impossible terms. Either way, the subconscious driver is the same: a belief that your only options are carrying everything or carrying nothing."
+      },
+      "future": {
+        "passage": "Relief from an unsustainable burden is possible, but only if you are willing to disappoint someone. The coming period rewards honest limits over heroic overextension. Say no to the next thing that does not set your chest on fire."
+      },
+      "outcome": {
+        "passage": "If things continue on this trajectory, the burden will either drop entirely or crush you — neither gracefully. The better outcome requires conscious release of specific obligations before the choice is made for you. Strategic surrender now prevents total collapse later."
+      },
       "past": {
         "passage": "You hit a breaking point and dropped everything, or you quietly crumbled under a load you told everyone you could handle. That collapse was not failure — it was the inevitable physics of carrying more than any one person should."
       },
       "present": {
         "passage": "You may be avoiding responsibility entirely or silently suffocating under obligations you refuse to renegotiate. Neither extreme serves you. Find the handful of commitments that genuinely matter and release the rest without guilt."
       },
-      "future": {
-        "passage": "Relief from an unsustainable burden is possible, but only if you are willing to disappoint someone. The coming period rewards honest limits over heroic overextension. Say no to the next thing that does not set your chest on fire."
+      "self": {
+        "passage": "You see yourself as either the person who failed to carry the weight or the person about to. Neither version tells the whole truth. You are someone learning — painfully, slowly — that limits are not failures but necessary architecture."
       }
     }
   },
   "wands-page": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the beginner's openness — the ability to approach something with pure curiosity, unburdened by expertise or expectation. The ideal you are reaching for is the unguarded enthusiasm that makes everything feel possible again."
+      },
+      "below": {
+        "passage": "Beneath your current situation lies a hunger for novelty and creative play that your adult responsibilities have been suppressing. This youthful drive is not immature — it is the part of you that learns fastest and sees possibilities that experience has made invisible."
+      },
+      "future": {
+        "passage": "Exciting news or a new creative impulse is on its way to you. It may arrive through a younger person, an unexpected message, or a sudden fascination that pulls you in a direction you had not considered. Meet it with openness rather than skepticism."
+      },
+      "outcome": {
+        "passage": "The trajectory you are on leads to a fresh discovery — something that reignites your curiosity and reminds you why you started. The outcome carries the energy of a new beginning, smaller than a revolution but genuine enough to change your direction."
+      },
       "past": {
         "passage": "A message or discovery arrived that lit you up from the inside — an idea that made the world feel larger than it did the day before. That youthful burst of creative enthusiasm planted seeds whose growth you are only now beginning to see."
       },
       "present": {
         "passage": "Fresh creative energy is available to you, carrying the enthusiasm of a beginner and the potential of the untried. Follow the curiosity without demanding that it justify itself yet. Not every spark needs a business plan — some just need oxygen."
       },
-      "future": {
-        "passage": "Exciting news or a new creative impulse is on its way to you. It may arrive through a younger person, an unexpected message, or a sudden fascination that pulls you in a direction you had not considered. Meet it with openness rather than skepticism."
+      "self": {
+        "passage": "You see yourself as the eager explorer — someone at the start of a creative adventure with everything to learn and nothing to lose. This self-image is more accurate than your inner critic wants to admit. Protect that openness; it is rarer and more valuable than expertise."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to creative excitement but keep chasing the thrill of starting without ever landing anywhere. The spark you are reaching for is real, but your relationship with it has become about the high of ignition rather than the slower warmth of sustained attention."
+      },
+      "below": {
+        "passage": "Beneath your scattered energy lies a fear that commitment will kill the magic. Something in you believes that depth means boredom and that finishing is less alive than beginning. This hidden driver keeps you in a cycle of exciting starts and abandoned middles."
+      },
+      "future": {
+        "passage": "An exciting opportunity may fizzle if met with scattered attention or impulsive action. The coming spark is real, but it will require more patience than your initial enthusiasm wants to give it. Slow the rush to start and plan the first three steps."
+      },
+      "outcome": {
+        "passage": "Without a change in approach, the likely result is another promising beginning that dissolves before it becomes anything substantial. The spark will arrive, but follow-through determines whether it becomes a fire or a footnote."
+      },
       "past": {
         "passage": "Enthusiasm without follow-through left a trail of half-started projects and abandoned sparks. The energy was genuine but the discipline to sustain it was missing. What you learned about your own patterns of distraction still applies."
       },
       "present": {
         "passage": "Creative restlessness is churning without producing anything tangible. You may be addicted to the thrill of beginning while avoiding the less glamorous work of continuing. Pick one flame and tend it instead of lighting new ones."
       },
-      "future": {
-        "passage": "An exciting opportunity may fizzle if met with scattered attention or impulsive action. The coming spark is real, but it will require more patience than your initial enthusiasm wants to give it. Slow the rush to start and plan the first three steps."
+      "self": {
+        "passage": "You see yourself as someone with too many ideas and not enough time, but the more honest read is someone with plenty of ignition and not enough follow-through. Recognizing this pattern is the first step toward breaking it."
       }
     }
   },
   "wands-knight": {
     "upright": {
+      "above": {
+        "passage": "You aspire to bold, decisive action — the kind that changes everything in a single gallop. The ideal you are reaching for is the person who does not wait for permission or perfect conditions, who moves on instinct and conviction and makes it work."
+      },
+      "below": {
+        "passage": "Beneath the surface, a fierce restlessness is driving you — the need for motion, adventure, and the raw thrill of committing fully to a direction. This energy is not recklessness; it is the compressed power of someone who has been still too long and knows it."
+      },
+      "future": {
+        "passage": "A surge of bold, adventurous energy is approaching — the kind that makes you want to quit your job, book a flight, or burn a bridge just to feel alive. Let it move you, but give it a target. Aimless fire just leaves scorch marks."
+      },
+      "outcome": {
+        "passage": "The current path leads to a bold move — swift, passionate, and consequential. The outcome carries the Knight's signature: rapid change that opens new territory but may leave some things behind. If you can aim the charge, the landing will be worth the leap."
+      },
       "past": {
         "passage": "You charged headlong into something with fire in your veins — a move, a project, a declaration that left no room for half-measures. That bold action changed your landscape overnight, for better and for more complicated."
       },
       "present": {
         "passage": "Passionate, impulsive energy is driving you forward at speed. Channel it. The Knight of Wands does not ask permission or wait for perfect conditions — but the best riders know when to let the horse run and when to pull the reins. You are in the gallop now."
       },
-      "future": {
-        "passage": "A surge of bold, adventurous energy is approaching — the kind that makes you want to quit your job, book a flight, or burn a bridge just to feel alive. Let it move you, but give it a target. Aimless fire just leaves scorch marks."
+      "self": {
+        "passage": "You see yourself as the adventurer — someone built for bold action and open roads. This self-image carries real energy and real risk in equal measure. The question is not whether you have the courage to charge but whether you have the wisdom to aim."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to bold action but the fire keeps misfiring — either exploding in the wrong direction or refusing to ignite at all. The daring you are reaching for is tangled up with frustration, and the line between courage and recklessness has become dangerously blurred."
+      },
+      "below": {
+        "passage": "Beneath your frustration lies a fear that your fire will be wasted or that you will charge and discover there was nothing worth riding toward. This subconscious hesitation is creating the very paralysis it fears — you cannot gallop and grip the reins in panic at the same time."
+      },
+      "future": {
+        "passage": "Impulsive moves in the coming period carry higher risk than usual. The energy to act will be there, but the wisdom to act well may lag behind. Build in a pause between the impulse and the action — even a short one changes everything."
+      },
+      "outcome": {
+        "passage": "Without correction, the likely result is a reckless leap that lands poorly or a stalled charge that never leaves the gate. Either extreme wastes the genuine energy available to you. The better outcome requires pairing your fire with even a small measure of patience."
+      },
       "past": {
         "passage": "Reckless action led to consequences you did not foresee, or paralyzing caution kept you from taking a leap you needed. The Knight reversed either gallops off a cliff or never leaves the stable — and you know which one you were."
       },
       "present": {
         "passage": "Your fire is misdirected — burning hot but pointed at the wrong target, or smothered entirely by frustration and delays. Anger and impatience are signals, not strategies. Step back long enough to aim before you charge again."
       },
-      "future": {
-        "passage": "Impulsive moves in the coming period carry higher risk than usual. The energy to act will be there, but the wisdom to act well may lag behind. Build in a pause between the impulse and the action — even a short one changes everything."
+      "self": {
+        "passage": "You see yourself as someone whose energy is being wasted — a racehorse stuck in a paddock, or a rider who has lost the trail. This frustration is valid, but the answer is not more speed. It is a moment of stillness to find the right direction."
       }
     }
   },
   "wands-queen": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the radiant confidence of someone whose creative fire warms everything it touches without consuming it. The ideal you are reaching for is not power over others but the magnetic self-possession that naturally draws the right people and opportunities into your orbit."
+      },
+      "below": {
+        "passage": "Beneath your current situation burns a deep, steady flame of creative self-assurance that has been building for longer than you realize. This inner fire is not flashy — it is the sustained warmth of someone who has earned their confidence through lived experience."
+      },
+      "future": {
+        "passage": "A period of magnetic creative confidence is approaching. You will find yourself naturally attracting the people, resources, and opportunities that align with your vision. The key is to lead with warmth rather than force — your fire is strongest when it invites rather than demands."
+      },
+      "outcome": {
+        "passage": "The path you are on leads to a period of genuine creative authority — the kind where your vision and your warmth work together to build something that could not exist without both. Trust your instincts; they are sharper than your doubts suggest."
+      },
       "past": {
         "passage": "There was a time when your confidence and warmth drew others into your orbit naturally. You led not by commanding but by embodying a vitality that made people want to be near your fire. That period taught you what authentic presence feels like."
       },
       "present": {
         "passage": "Your creative power is at a peak — not the explosive kind but the sustained, radiant kind that warms everything it touches. Trust your instincts now. You have the rare combination of passion and self-possession that turns vision into reality without burning out."
       },
-      "future": {
-        "passage": "A period of magnetic creative confidence is approaching. You will find yourself naturally attracting the people, resources, and opportunities that align with your vision. The key is to lead with warmth rather than force — your fire is strongest when it invites rather than demands."
+      "self": {
+        "passage": "You see yourself as someone whose fire is both powerful and controlled — a source of warmth rather than destruction. This self-perception is well-founded. The confidence you feel is not arrogance; it is the natural authority of someone who knows their own creative center."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to the Queen's magnetic confidence but cannot find the frequency. The warmth and creative authority you reach for keeps slipping into either self-doubt or overcompensation, and neither feels like the real thing."
+      },
+      "below": {
+        "passage": "Beneath your current struggle lies a disconnection from your own creative power — not because the power is gone, but because something has disrupted your access to it. An old wound around being too much or not enough is interfering with your natural fire."
+      },
+      "future": {
+        "passage": "Creative confidence may waver in the coming period, tempting you toward either tyrannical control or complete withdrawal. Neither serves you. The antidote is remembering that your fire exists to create warmth, not to prove a point."
+      },
+      "outcome": {
+        "passage": "The likely result is creative energy turned inward — either as stifling self-doubt or as intensity that pushes others away. The fire is not gone; it is misdirected. Reconnecting with what genuinely excites you, rather than what you think should, changes the entire trajectory."
+      },
       "past": {
         "passage": "Your fire turned inward and became self-doubt, jealousy, or a controlling grip on things that needed room to breathe. The creative confidence that once flowed naturally curdled into something defensive. That contraction was a signal, not a sentence."
       },
       "present": {
         "passage": "You may be dimming your own light to avoid threatening others, or wielding your intensity in ways that push people away. The Queen reversed has not lost her power — she has lost her relationship to it. Reconnect with what genuinely excites you, not what you think should."
       },
-      "future": {
-        "passage": "Creative confidence may waver in the coming period, tempting you toward either tyrannical control or complete withdrawal. Neither serves you. The antidote is remembering that your fire exists to create warmth, not to prove a point."
+      "self": {
+        "passage": "You see yourself as someone whose fire has become unreliable — too hot or too cold, never the steady warmth you know you are capable of. This frustration is the beginning of recalibration, not a permanent state. The Queen is still in there."
       }
     }
   },
   "wands-king": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the kind of leadership that lights a torch and trusts others to carry it — bold vision held with steady hands. The ideal you are reaching for is authority that inspires rather than controls, ambition that serves something larger than your own name."
+      },
+      "below": {
+        "passage": "Beneath your actions runs a deep drive to shape the world according to your vision — not from ego alone, but from a genuine belief that you can see what others cannot yet. This hidden engine is powerful and largely trustworthy, as long as you keep it in service to the mission."
+      },
+      "future": {
+        "passage": "A leadership opportunity is forming that will ask you to be both bold and wise — to set ambitious direction while keeping your ego in service to the mission. Step into it fully. The fire needs a steady hand now, not a cautious one."
+      },
+      "outcome": {
+        "passage": "The trajectory leads to a position of real creative authority — the chance to direct, to inspire, and to build something that carries your vision into the world. The outcome rewards boldness tempered by wisdom. Lead from conviction, not from a need to be right."
+      },
       "past": {
         "passage": "You stepped into a leadership role with natural authority — directing creative energy not just for yourself but for others. That period of bold, visionary command shaped the expectations others still hold for you."
       },
       "present": {
         "passage": "You are being called to lead with vision and decisiveness. The King of Wands does not micromanage — he sets the direction, lights the torch, and trusts others to carry their own. Your task now is to inspire action, not to do everything yourself."
       },
-      "future": {
-        "passage": "A leadership opportunity is forming that will ask you to be both bold and wise — to set ambitious direction while keeping your ego in service to the mission. Step into it fully. The fire needs a steady hand now, not a cautious one."
+      "self": {
+        "passage": "You see yourself as the leader — someone with the vision and the fire to direct not just your own path but others'. This self-image carries weight and responsibility in equal measure. The crown fits, but only as long as the vision serves more than the one wearing it."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to authority but are struggling with the difference between leading and controlling. The vision you are reaching for keeps collapsing into either domination or abdication, and the crown feels heavier than it should."
+      },
+      "below": {
+        "passage": "Beneath your leadership struggles lies a fear that your vision is not enough — that without tight control, everything will fall apart. This subconscious grip is the very thing creating the instability it fears. Power held too tightly becomes brittle."
+      },
+      "future": {
+        "passage": "A leadership challenge ahead will test whether your ambition serves something larger than yourself. Unchecked, the King reversed becomes a tyrant or a coward. The coming period rewards those who can hold power without being consumed by it."
+      },
+      "outcome": {
+        "passage": "Without a shift, the likely result is authority that alienates or ambition that implodes. The fire is real but it is burning the hand that holds it. The better outcome requires loosening your grip and remembering that true leadership is measured by what it builds, not what it commands."
+      },
       "past": {
         "passage": "Authority was wielded poorly — either by you or over you. The fire that should have warmed became the fire that scorched. Arrogance, rigidity, or petty tyranny turned leadership into something people endured rather than followed."
       },
       "present": {
         "passage": "Your drive for control is outpacing your capacity for wisdom. The reversed King demands loyalty he has not earned or abdicates responsibility he should hold. Examine honestly whether you are leading from vision or from ego — the difference matters more than you think."
       },
-      "future": {
-        "passage": "A leadership challenge ahead will test whether your ambition serves something larger than yourself. Unchecked, the King reversed becomes a tyrant or a coward. The coming period rewards those who can hold power without being consumed by it."
+      "self": {
+        "passage": "You see yourself as a leader losing control of the fire — either gripping too hard or watching it scatter. This self-awareness, uncomfortable as it is, is the beginning of correction. The King who can see his own shadow is closer to wisdom than the one who cannot."
       }
     }
   }
