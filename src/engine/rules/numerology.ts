@@ -7,29 +7,43 @@ export function detectNumericalPattern(
 ): null | NumericalPattern {
   const numbers = spread.map((s) => s.card.number);
 
+  if (numbers.length < 2) return null;
+
   const allMatch = numbers.every((n) => n === numbers[0]);
-  if (allMatch) {
+  if (allMatch && numbers.length >= 2) {
     return {
-      detail: `All three cards carry the number ${numbers[0]}, amplifying the theme of ${meaningFor(numbers[0])}. This repetition is a signal — the lesson is being presented from every angle.`,
+      detail:
+        numbers.length === 2
+          ? `Both cards carry the number ${numbers[0]}, amplifying the theme of ${meaningFor(numbers[0])}. This mirroring is a signal — the lesson is being presented from both angles.`
+          : `Multiple cards carry the number ${numbers[0]}, amplifying the theme of ${meaningFor(numbers[0])}. This repetition is a signal — the lesson is being presented from every angle.`,
       type: "matching",
     };
   }
 
-  const pairs = numbers.filter(
-    (n, i) => numbers.indexOf(n) !== i || numbers.lastIndexOf(n) !== i,
-  );
-  if (pairs.length > 0) {
-    const repeated = pairs[0];
-    return {
-      detail: `The number ${repeated} appears twice in this spread, underscoring a theme of ${meaningFor(repeated)} that threads through your reading.`,
-      type: "matching",
-    };
+  const counts = new Map<number, number>();
+  for (const n of numbers) {
+    counts.set(n, (counts.get(n) ?? 0) + 1);
+  }
+  for (const [num, count] of counts) {
+    if (count >= 2) {
+      return {
+        detail:
+          count === 2
+            ? `The number ${num} appears twice in this spread, underscoring a theme of ${meaningFor(num)} that threads through your reading.`
+            : `The number ${num} appears ${count} times in this spread, strongly underscoring a theme of ${meaningFor(num)} that threads through your reading.`,
+        type: "matching",
+      };
+    }
   }
 
   const sorted = [...numbers].sort((a, b) => a - b);
-  if (sorted[2] - sorted[1] === 1 && sorted[1] - sorted[0] === 1) {
-    const ascending = numbers[0] < numbers[1] && numbers[1] < numbers[2];
-    const descending = numbers[0] > numbers[1] && numbers[1] > numbers[2];
+  const isConsecutive =
+    sorted.length >= 3 &&
+    sorted.every((n, i) => i === 0 || n - sorted[i - 1] === 1);
+
+  if (isConsecutive) {
+    const ascending = numbers.every((n, i) => i === 0 || n > numbers[i - 1]);
+    const descending = numbers.every((n, i) => i === 0 || n < numbers[i - 1]);
 
     if (ascending) {
       return {

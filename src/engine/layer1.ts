@@ -29,28 +29,28 @@ const positionFraming: Record<
   Position,
   (name: string, keywords: string) => string
 > = {
-  above: (name: string, keywords: string) =>
-    `Above you, ${name} reveals aspirations tied to ${keywords}.`,
-  below: (name: string, keywords: string) =>
-    `Beneath the surface, ${name} points to a root cause grounded in ${keywords}.`,
-  challenge: (name: string, keywords: string) =>
-    `Crossing your path, ${name} presents an immediate challenge of ${keywords}.`,
-  environment: (name: string, keywords: string) =>
-    `Around you, ${name} highlights external forces shaped by ${keywords}.`,
-  future: (name: string, keywords: string) =>
+  above: (name, keywords) =>
+    `Above you, ${name} reveals aspirations tied to ${keywords}. This is the best version of the situation — the conscious ideal you are reaching toward. Whether or not you achieve it depends on how honestly you engage with the cards below.`,
+  below: (name, keywords) =>
+    `Beneath the surface, ${name} points to a root cause grounded in ${keywords}. This is the foundation you may not be fully aware of — the subconscious driver shaping events from below. Understanding this influence is key to navigating what lies ahead.`,
+  challenge: (name, keywords) =>
+    `Crossing your path, ${name} presents an immediate challenge of ${keywords}. This energy directly opposes or complicates the central situation. It is not here to destroy — it is here to test whether your foundation is sound.`,
+  environment: (name, keywords) =>
+    `Around you, ${name} highlights external forces shaped by ${keywords}. These are the influences you cannot directly control — other people, circumstances, and the broader context pressing upon your situation.`,
+  future: (name, keywords) =>
     `Looking ahead, ${name} indicates ${keywords} in what is to come.`,
-  "hopes-fears": (name: string, keywords: string) =>
-    `In the realm of hopes and fears, ${name} reveals a tension around ${keywords}.`,
-  obstacle: (name: string, keywords: string) =>
-    `Standing in your way, ${name} warns of a challenge rooted in ${keywords}.`,
-  outcome: (name: string, keywords: string) =>
-    `At the arc's end, ${name} points toward a resolution defined by ${keywords}.`,
-  past: (name: string, keywords: string) =>
+  "hopes-fears": (name, keywords) =>
+    `In the realm of hopes and fears, ${name} reveals a tension around ${keywords}. What you hope for and what you fear often share a root — this card illuminates that ambivalence.`,
+  obstacle: (name, keywords) =>
+    `Standing in your way, ${name} warns of a challenge rooted in ${keywords}. This is not necessarily an enemy — sometimes the obstacle is a lesson that must be absorbed before progress can resume.`,
+  outcome: (name, keywords) =>
+    `At the arc's end, ${name} points toward a resolution defined by ${keywords}. This is the most likely result if the current trajectory holds. It is a probability, not a certainty — the cards show the road, not the destination you must accept.`,
+  past: (name, keywords) =>
     `In your past, ${name} suggests a period defined by ${keywords}.`,
-  present: (name: string, keywords: string) =>
+  present: (name, keywords) =>
     `${name} at the center of your reading speaks to a present shaped by ${keywords}.`,
-  self: (name: string, keywords: string) =>
-    `Within you, ${name} reflects an inner landscape of ${keywords}.`,
+  self: (name, keywords) =>
+    `Within you, ${name} reflects an inner landscape of ${keywords}. This is how you see yourself in this situation — not necessarily how others see you, but the internal lens through which you are interpreting events.`,
 };
 
 export function resolvePassages(
