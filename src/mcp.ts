@@ -23,7 +23,7 @@ const MCP_SPREAD_MAP: Record<string, SpreadMode> = {
 };
 
 const server = new McpServer({
-  name: "tarot",
+  name: "arcana",
   version: "0.0.0",
 });
 

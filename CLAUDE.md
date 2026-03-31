@@ -2,7 +2,7 @@
 
 ## Project overview
 
-Tarot CLI — a terminal application built with Ink (React for CLIs). TypeScript, ES Modules, Node 24+.
+Arcana CLI — a terminal tarot reading application built with Ink (React for CLIs). TypeScript, ES Modules, Node 24+.
 
 ## Architecture
 

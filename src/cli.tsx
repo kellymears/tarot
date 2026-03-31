@@ -101,7 +101,7 @@ if (noColor) {
 for (const flag of flags) {
   if (!KNOWN_FLAGS.has(flag)) {
     process.stderr.write(
-      `Unknown flag: ${flag}\nRun tarot --help for usage.\n`,
+      `Unknown flag: ${flag}\nRun arcana --help for usage.\n`,
     );
     process.exit(1);
   }
@@ -109,25 +109,25 @@ for (const flag of flags) {
 
 if (showHelp) {
   process.stdout
-    .write(`Tarot — draw a three-card spread and see what the cards have to say.
+    .write(`Arcana — draw a three-card spread and see what the cards have to say.
 
 Usage:
-  tarot                      Draw today's reading
-  tarot luna                 Draw a reading for "luna"
-  tarot card                 Draw a single card
-  tarot card luna            Draw a single card for "luna"
-  tarot celtic-cross         Draw a ten-card Celtic Cross spread
-  tarot celtic-cross luna    Draw a Celtic Cross spread for "luna"
-  tarot five-card            Draw a five-card cross spread
-  tarot five-card luna       Draw a five-card cross spread for "luna"
-  tarot horseshoe            Draw a seven-card horseshoe spread
-  tarot horseshoe luna       Draw a horseshoe spread for "luna"
-  tarot yes-no               Ask a yes-or-no question
-  tarot yes-no luna          Ask a yes-or-no question for "luna"
-  tarot history              Browse past readings
-  tarot history luna         Browse past readings for "luna"
-  tarot --new                Draw a fresh spread (ignore today's cache)
-  tarot --json               Output the reading as JSON
+  arcana                      Draw today's reading
+  arcana luna                 Draw a reading for "luna"
+  arcana card                 Draw a single card
+  arcana card luna            Draw a single card for "luna"
+  arcana celtic-cross         Draw a ten-card Celtic Cross spread
+  arcana celtic-cross luna    Draw a Celtic Cross spread for "luna"
+  arcana five-card            Draw a five-card cross spread
+  arcana five-card luna       Draw a five-card cross spread for "luna"
+  arcana horseshoe            Draw a seven-card horseshoe spread
+  arcana horseshoe luna       Draw a horseshoe spread for "luna"
+  arcana yes-no               Ask a yes-or-no question
+  arcana yes-no luna          Ask a yes-or-no question for "luna"
+  arcana history              Browse past readings
+  arcana history luna         Browse past readings for "luna"
+  arcana --new                Draw a fresh spread (ignore today's cache)
+  arcana --json               Output the reading as JSON
 
 Flags:
   -h, --help            Show this help
@@ -150,7 +150,7 @@ https://github.com/kellymears/tarot
   const pkg = JSON.parse(
     readFileSync(new URL("../package.json", import.meta.url), "utf-8"),
   );
-  process.stdout.write(`tarot ${pkg.version}\n`);
+  process.stdout.write(`arcana ${pkg.version}\n`);
 } else if (isHistory) {
   try {
     const { cards } = await import("./data/cards.js");
@@ -318,7 +318,7 @@ function printError(err: unknown): void {
   process.stderr.write(`Error: ${message}\n`);
   if (message.includes("EACCES") || message.includes("permission")) {
     process.stderr.write(
-      `Hint: check file permissions on ~/.local/share/tarot/\n`,
+      `Hint: check file permissions on ~/.local/share/arcana/\n`,
     );
   }
 }

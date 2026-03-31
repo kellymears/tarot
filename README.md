@@ -1,6 +1,6 @@
-# tarot
+# arcana
 
-A tarot CLI built with [Ink](https://github.com/vadimdemedes/ink). Draws a three-card spread (past, present, future) with authored interpretations for all 78 cards, relational analysis between cards, and animated terminal output.
+A tarot reading CLI built with [Ink](https://github.com/vadimdemedes/ink). Draws a three-card spread (past, present, future) with authored interpretations for all 78 cards, relational analysis between cards, and animated terminal output.
 
 ## Getting started
 
@@ -9,7 +9,7 @@ npm install
 npm run build
 ```
 
-To make `tarot` available globally:
+To make `arcana` available globally:
 
 ```sh
 npm link
@@ -18,9 +18,9 @@ npm link
 ## Usage
 
 ```sh
-tarot              # daily reading (defaults to your OS username)
-tarot caitlyn      # reading for "caitlyn"
-tarot caitlyn --new  # force a fresh draw for "caitlyn"
+arcana              # daily reading (defaults to your OS username)
+arcana caitlyn      # reading for "caitlyn"
+arcana caitlyn --new  # force a fresh draw for "caitlyn"
 ```
 
 Each person gets one reading per day. Running again shows the same cards. Use `--new` to draw fresh.
@@ -30,8 +30,8 @@ Each person gets one reading per day. Running again shows the same cards. Use `-
 For scripts and LLM integrations, `--json` outputs the full reading as structured JSON:
 
 ```sh
-tarot kelly --json
-tarot kelly --json --new
+arcana kelly --json
+arcana kelly --json --new
 ```
 
 Returns a JSON object with:
@@ -60,21 +60,21 @@ node dist/mcp.js
 
 ### Claude Code integration
 
-The project includes a `.mcp.json` that Claude Code auto-discovers when working in this directory. The `tarot` MCP server will appear in your available tools.
+The project includes a `.mcp.json` that Claude Code auto-discovers when working in this directory. The `arcana` MCP server will appear in your available tools.
 
 For global access, add to `~/.claude/settings.json`:
 
 ```json
 {
   "mcpServers": {
-    "tarot": {
-      "command": "tarot-mcp"
+    "arcana": {
+      "command": "arcana-mcp"
     }
   }
 }
 ```
 
-(Requires `npm link` so `tarot-mcp` is on your PATH.)
+(Requires `npm link` so `arcana-mcp` is on your PATH.)
 
 ### Tool schemas
 
@@ -101,7 +101,7 @@ Output: TarotCard[]
 
 ## Data
 
-Readings are stored in `$XDG_DATA_HOME/tarot/` (defaults to `~/.local/share/tarot/`), one JSON file per person, keyed by date.
+Readings are stored in `$XDG_DATA_HOME/arcana/` (defaults to `~/.local/share/arcana/`), one JSON file per person, keyed by date.
 
 ## Development
 

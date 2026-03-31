@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "tarot": {
+    "arcana": {
       "command": "node",
       "args": ["dist/mcp.js"]
     }

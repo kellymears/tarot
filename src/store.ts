@@ -1,4 +1,10 @@
-import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
+import {
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  renameSync,
+  writeFileSync,
+} from "node:fs";
 import { homedir } from "node:os";
 import { join } from "node:path";
 
@@ -87,7 +93,12 @@ const writeStore = (path: string, spread: StoredCard[]): void => {
 const dataDir = (): string => {
   const xdg =
     process.env["XDG_DATA_HOME"] ?? join(homedir(), ".local", "share");
-  return join(xdg, "tarot");
+  const legacyDir = join(xdg, "tarot");
+  const newDir = join(xdg, "arcana");
+  if (existsSync(legacyDir) && !existsSync(newDir)) {
+    renameSync(legacyDir, newDir);
+  }
+  return newDir;
 };
 
 const safeName = (name: string): string =>

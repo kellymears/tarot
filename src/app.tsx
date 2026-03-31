@@ -371,7 +371,7 @@ function Reading({
               </Box>
               {cached && (
                 <Text dimColor italic>
-                  {`tarot ${mode !== "spread" ? mode + " " : ""}--new for a fresh ${isSingleCard ? "draw" : "spread"} · tarot ${mode !== "spread" ? mode + " " : ""}--json for data`}
+                  {`arcana ${mode !== "spread" ? mode + " " : ""}--new for a fresh ${isSingleCard ? "draw" : "spread"} · arcana ${mode !== "spread" ? mode + " " : ""}--json for data`}
                 </Text>
               )}
             </Box>
