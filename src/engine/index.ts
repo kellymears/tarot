@@ -14,7 +14,7 @@ export function interpret(
 ): FullReading {
   const cards = resolvePassages(spread, interpretations, reversalMode);
   const relational = analyzeRelations(spread);
-  const narrative = assembleNarrative(cards, relational);
+  const narrative = assembleNarrative(cards, relational, spread);
 
   return { cards, narrative, relational };
 }

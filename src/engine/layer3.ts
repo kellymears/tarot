@@ -1,25 +1,30 @@
-import type { CardReading, Narrative, RelationalAnalysis } from "./types.js";
+import type {
+  CardReading,
+  Narrative,
+  RelationalAnalysis,
+  SpreadCard,
+} from "./types.js";
 
 export function assembleNarrative(
   cards: CardReading[],
   relational: RelationalAnalysis,
+  spread: SpreadCard[],
 ): Narrative {
   return {
-    closing: buildClosing(cards, relational),
-    opening: buildOpening(relational),
-    synthesis: buildSynthesis(cards, relational),
+    closing: buildClosing(cards, relational, spread),
+    opening: buildOpening(relational, spread),
+    synthesis: buildSynthesis(cards, relational, spread),
   };
 }
 
-const arcLabel = (cards: CardReading[]): string => {
-  const hasAllPositions =
-    cards.some((c) => c.position === "past") &&
-    cards.some((c) => c.position === "present") &&
-    cards.some((c) => c.position === "future");
+const arcLabel = (cards: CardReading[], spread: SpreadCard[]): string => {
+  const past = spread.find((s) => s.position === "past");
+  const present = spread.find((s) => s.position === "present");
+  const future = spread.find((s) => s.position === "future");
 
-  if (!hasAllPositions) return "";
+  if (!past || !present || !future) return "";
 
-  return "The thread from past through present into future traces an arc: what was, what is, and what approaches are not isolated moments but movements in a single unfolding story.";
+  return `From ${past.card.name} through ${present.card.name} to ${future.card.name}, the arc of this reading traces a movement from what shaped you into what is unfolding and onward to what approaches.`;
 };
 
 const suitClosing: Record<string, string> = {
@@ -35,6 +40,7 @@ const suitClosing: Record<string, string> = {
 const buildClosing = (
   cards: CardReading[],
   relational: RelationalAnalysis,
+  spread: SpreadCard[],
 ): string => {
   const hasFuture = cards.some((c) => c.position === "future");
   const hasOutcome = cards.some((c) => c.position === "outcome");
@@ -65,8 +71,12 @@ const buildClosing = (
     base =
       "Forces larger than the everyday are at work. What is asked of you now is not small, but neither is your capacity to meet it.";
   } else {
-    base =
-      "The cards offer a way forward. What you do with their counsel is, as always, yours to decide. Trust yourself.";
+    const futureCard = spread.find(
+      (s) => s.position === "outcome" || s.position === "future",
+    );
+    base = futureCard
+      ? `The cards offer a way forward, with ${futureCard.card.name} lighting the path ahead. What you do with their counsel is, as always, yours to decide. Trust yourself.`
+      : "The cards offer a way forward. What you do with their counsel is, as always, yours to decide. Trust yourself.";
   }
 
   const addenda: string[] = [];
@@ -114,9 +124,24 @@ const buildClosing = (
   return base;
 };
 
-const buildOpening = (relational: RelationalAnalysis): string =>
+const namedMajorDetail = (spread: SpreadCard[]): string | undefined => {
+  const majors = spread.filter((s) => s.card.arcana === "major");
+  if (majors.length === 1) {
+    return `${majors[0].card.name} anchors this spread, marking where larger forces intersect with the practical.`;
+  }
+  if (majors.length === 2) {
+    return `${majors[0].card.name} and ${majors[1].card.name} anchor this spread, marking where larger forces assert themselves.`;
+  }
+  return undefined;
+};
+
+const buildOpening = (
+  relational: RelationalAnalysis,
+  spread: SpreadCard[],
+): string =>
   [
     relational.arcanaWeight.detail,
+    namedMajorDetail(spread),
     relational.reversalPattern.count > 0
       ? relational.reversalPattern.detail
       : undefined,
@@ -128,9 +153,10 @@ const buildOpening = (relational: RelationalAnalysis): string =>
 const buildSynthesis = (
   cards: CardReading[],
   relational: RelationalAnalysis,
+  spread: SpreadCard[],
 ): string =>
   [
-    arcLabel(cards),
+    arcLabel(cards, spread),
     relational.suitDominance?.detail,
     relational.numericalPattern?.detail,
     dignityLabel(relational),
@@ -140,16 +166,25 @@ const buildSynthesis = (
     .join(" ");
 
 const dignityLabel = (relational: RelationalAnalysis): string | undefined => {
-  const hasEnemy = relational.dignities.some((d) => d.relationship === "enemy");
-  const hasAllied = relational.dignities.some(
+  const enemies = relational.dignities.filter(
+    (d) => d.relationship === "enemy",
+  );
+  const allies = relational.dignities.filter(
     (d) => d.relationship === "allied",
   );
 
-  if (hasEnemy && hasAllied)
-    return "The elemental tensions and alliances in this spread suggest a journey that is neither entirely smooth nor entirely obstructed — balance is the work.";
-  if (hasEnemy)
-    return "Elemental friction runs through this reading, asking you to reconcile competing energies rather than choose between them.";
-  if (hasAllied)
-    return "The elemental harmony across your cards suggests a natural flow — the energies support rather than hinder each other.";
+  if (enemies.length > 0 && allies.length > 0) {
+    const enemy = enemies[0];
+    const ally = allies[0];
+    return `Tension between ${enemy.cards[0]} and ${enemy.cards[1]} is counterbalanced by the harmony of ${ally.cards[0]} and ${ally.cards[1]} — the reading holds both conflict and support.`;
+  }
+  if (enemies.length > 0) {
+    const enemy = enemies[0];
+    return `The friction between ${enemy.cards[0]} and ${enemy.cards[1]} asks you to reconcile competing energies rather than choose between them.`;
+  }
+  if (allies.length > 0) {
+    const ally = allies[0];
+    return `The harmony between ${ally.cards[0]} and ${ally.cards[1]} suggests a natural flow — these energies support rather than hinder each other.`;
+  }
   return undefined;
 };
