@@ -1,529 +1,1057 @@
 {
   "major-00": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward the freedom of a true beginner — the ability to step forward without the weight of what you already know. This aspiration toward innocence is not naivety; it is the conscious desire to meet life with open hands rather than clenched fists. The Fool as your highest ideal says you want to trust the leap more than the landing."
+      },
+      "below": {
+        "passage": "Beneath the surface of your situation runs a deep, restless need to break free from constraint. The Fool at the root suggests that what is really driving you is not any specific goal but the primal desire for uncharted territory — a hunger for possibility that you may not have fully named. This subconscious pull toward freedom is the hidden engine of everything you are doing right now."
+      },
+      "future": {
+        "passage": "A fresh start is approaching, one that will ask you to abandon what you think you know. The Fool ahead suggests you will soon encounter an opportunity so unlike your current life that logic alone cannot evaluate it. Travel light when the moment arrives — what you cling to will only slow you down."
+      },
+      "outcome": {
+        "passage": "This path resolves into a new beginning — an ending that opens rather than closes. The Fool as outcome promises that whatever you are navigating will deliver you to a threshold, not a conclusion. You will arrive somewhere unfamiliar with little more than what you carry inside, and that will be enough."
+      },
       "past": {
         "passage": "Your journey began with a leap of faith. The Fool in the past position speaks to a defining moment of innocence or recklessness that set your current path in motion. You stepped off the cliff without looking down, and that fearless beginning still shapes where you stand today."
       },
       "present": {
         "passage": "Right now, the universe is handing you a blank canvas. There is an invitation before you that asks for trust over calculation — a new beginning that cannot be planned into existence. The Fool urges you to move before you feel ready, because readiness is not the point."
       },
-      "future": {
-        "passage": "A fresh start is approaching, one that will ask you to abandon what you think you know. The Fool ahead suggests you will soon encounter an opportunity so unlike your current life that logic alone cannot evaluate it. Travel light when the moment arrives — what you cling to will only slow you down."
+      "self": {
+        "passage": "You see yourself as someone standing at the edge of everything, unencumbered and ready to leap. There is a lightness in your self-image right now — a sense that you are not yet defined, that possibility matters more than history. This freedom feels intoxicating, and it is real, but remember that the cliff does not care how brave you feel."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to spontaneity but keep rehearsing the jump instead of taking it. The reversed Fool as your ideal reveals a tension between wanting to be free and wanting to be safe — a desire for recklessness that is itself carefully controlled. The aspiration is real, but the fear of foolishness is editing it into something smaller."
+      },
+      "below": {
+        "passage": "A subconscious fear of being seen as reckless or stupid is quietly shaping your decisions. The reversed Fool beneath you points to an old wound around looking foolish — a time when a leap went badly and taught you that the ground is always harder than it looks. This buried caution is not protecting you; it is preventing the very beginning you need."
+      },
+      "future": {
+        "passage": "A naivety you haven't yet confronted will soon demand your attention. You may find yourself repeating a pattern of impulsive starts and sudden retreats, unless you examine what makes commitment feel so dangerous. The stumble ahead is not the problem — refusing to learn from it is."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to a false start or a retreat from the edge. If nothing shifts, you will circle back to the same precipice without stepping off — the same opportunity half-taken, the same beginning abandoned before it has a chance to become anything. The stagnation is the outcome you are building, one hesitation at a time."
+      },
       "past": {
         "passage": "There was a moment when you held back from a leap you were meant to take. Fear dressed itself as prudence, and a door closed that you still think about. The unlived risk echoes forward, shaping your caution in ways you may not fully recognize."
       },
       "present": {
         "passage": "You are caught between the desire for a new beginning and the fear of looking foolish. Recklessness and paralysis feel like the only two options, but both are distortions. The real work is finding the middle ground — acknowledging the risk without letting it own you."
       },
-      "future": {
-        "passage": "A naivety you haven't yet confronted will soon demand your attention. You may find yourself repeating a pattern of impulsive starts and sudden retreats, unless you examine what makes commitment feel so dangerous. The stumble ahead is not the problem — refusing to learn from it is."
+      "self": {
+        "passage": "You see yourself as stuck at the starting line, unable to take the leap everyone else seems to manage effortlessly. There is a frustration in your self-perception — you know you are capable of more, but fear has dressed itself as wisdom and convinced you that staying still is the responsible choice."
       }
     }
   },
   "major-01": {
     "upright": {
+      "above": {
+        "passage": "You aspire to mastery — the focused, intentional wielding of every resource at your disposal. The Magician as your ideal speaks to a desire for agency and precision, the belief that you can shape your circumstances through sheer skill and will. This is not a wish for magic; it is a wish for the competence that looks like magic."
+      },
+      "below": {
+        "passage": "Beneath everything you are navigating lies a deep drive to prove that you have the power to create your own reality. The Magician at the root reveals a subconscious belief that if you are clever enough, resourceful enough, you can bend any situation to your will. This hidden confidence is your engine, but left unexamined, it may also be your blind spot."
+      },
+      "future": {
+        "passage": "A window of unusual personal power is opening ahead. You will soon find yourself in a position where your skills, timing, and desire converge into something potent. Prepare now by clarifying exactly what you want to create — the Magician rewards specificity, not vague wishing."
+      },
+      "outcome": {
+        "passage": "This situation resolves through an act of focused creation. The Magician as outcome tells you that the result will be proportional to the clarity and skill you bring — not luck, not timing, but your direct application of will to reality. What you build here will bear your signature unmistakably."
+      },
       "past": {
         "passage": "You once held all the tools you needed and knew exactly how to use them. The Magician in your past marks a time of sharp focus and deliberate creation — a period when your will and your world were aligned. That confidence was not luck; it was skill, and it has not left you."
       },
       "present": {
         "passage": "Everything you need is already on the table in front of you. The Magician appears now to remind you that this is not a moment for gathering more resources — it is a moment for using what you have with precision and intention. Channel your scattered energy into a single point of focus."
       },
-      "future": {
-        "passage": "A window of unusual personal power is opening ahead. You will soon find yourself in a position where your skills, timing, and desire converge into something potent. Prepare now by clarifying exactly what you want to create — the Magician rewards specificity, not vague wishing."
+      "self": {
+        "passage": "You see yourself as someone with the tools and the talent to make things happen. Right now, your self-image is one of capability and intentionality — you believe you can shape the raw material of your life into something deliberate. That confidence is not arrogance; it is the Magician recognizing his own hands."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You are reaching for a version of competence that may be more about performance than substance. The reversed Magician as your aspiration warns that the ideal you are chasing — effortless mastery, flawless execution — may be a mask rather than a goal. Ask whether you want to be capable or to appear capable; the distinction matters more than you think."
+      },
+      "below": {
+        "passage": "A subconscious fear of being exposed as a fraud is quietly driving your behavior. The reversed Magician beneath you reveals an old anxiety about not having enough — enough talent, enough tools, enough innate ability to pull off what you are attempting. This hidden impostor syndrome is not a reflection of reality; it is a distortion that is costing you real power."
+      },
+      "future": {
+        "passage": "Beware of a coming situation where appearances will not match reality. Someone — possibly you — will present a polished surface over a hollow foundation. Sharpen your discernment now, because the illusion ahead will be convincing."
+      },
+      "outcome": {
+        "passage": "The current path leads to an outcome that looks impressive on the surface but lacks substance underneath. The reversed Magician as outcome warns of results built on manipulation, misdirection, or self-deception. If you want something real at the end of this, you will need to stop cutting corners before the final act."
+      },
       "past": {
         "passage": "You once used your gifts to manipulate a situation, or someone used theirs against you. There is a memory of cleverness turned corrosive — talent without integrity. That experience taught you something important about the difference between power and cunning."
       },
       "present": {
         "passage": "Your considerable abilities are misfiring right now. You may be overthinking, underpreparing, or using the right tools for the wrong purpose entirely. The reversed Magician asks whether you are creating something real or merely performing competence for an audience."
       },
-      "future": {
-        "passage": "Beware of a coming situation where appearances will not match reality. Someone — possibly you — will present a polished surface over a hollow foundation. Sharpen your discernment now, because the illusion ahead will be convincing."
+      "self": {
+        "passage": "You see yourself as someone whose talents are not connecting, whose cleverness is misfiring or being wasted. There is a gap between what you know you can do and what you are actually producing, and it is eroding your confidence. You may also suspect that you are performing competence rather than embodying it."
       }
     }
   },
   "major-02": {
     "upright": {
+      "above": {
+        "passage": "You aspire to a knowing that does not need to explain itself. The High Priestess as your ideal speaks to a longing for deep, intuitive wisdom — the kind that arrives whole, without the laborious scaffolding of logic. You are reaching toward trust in your own inner voice, and that aspiration is already a form of listening."
+      },
+      "below": {
+        "passage": "Beneath your situation runs a current of knowledge you have not yet allowed to surface. The High Priestess at the root suggests that your subconscious already holds the answer you are seeking — it is simply waiting for your conscious mind to stop talking long enough to hear it. The hidden influence here is a truth you sense but have not yet named."
+      },
+      "future": {
+        "passage": "Hidden knowledge will soon surface in your life. The High Priestess ahead suggests that something concealed — a secret, an insight, an overlooked truth — is about to emerge. You will not find it through research or interrogation; it will find you when you are quiet enough to receive it."
+      },
+      "outcome": {
+        "passage": "This situation resolves through revelation rather than action. Something hidden will come to light, and the clarity it brings will settle the matter more completely than any decision could. The outcome is not one you will engineer — it is one you will receive, and it will arrive when you stop trying to force it."
+      },
       "past": {
         "passage": "There was a time when you knew something you could not explain. The High Priestess in your past points to a period of deep intuition — perhaps a secret kept, a truth sensed before it was proven, or a stillness that taught you more than action ever could. That inner knowing remains accessible to you."
       },
       "present": {
         "passage": "Not everything needs to be said out loud right now. The High Priestess appears when the conscious mind is too noisy to hear what the deeper self already knows. Step back from the debate, the analysis, the endless weighing of options — the answer is waiting in the silence."
       },
-      "future": {
-        "passage": "Hidden knowledge will soon surface in your life. The High Priestess ahead suggests that something concealed — a secret, an insight, an overlooked truth — is about to emerge. You will not find it through research or interrogation; it will find you when you are quiet enough to receive it."
+      "self": {
+        "passage": "You see yourself as someone who knows more than they say — someone carrying a quiet understanding that does not need external validation. Your inner world feels rich and sure right now, even if the outer world has not caught up. Trust this self-perception; the High Priestess does not appear to the unworthy."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You are striving to reconnect with an intuition you feel you have lost. The reversed High Priestess as your aspiration reveals a longing for the inner certainty you once had — but the harder you chase it, the more it recedes. The silence you are seeking cannot be achieved through effort; it requires the surrender of trying to know."
+      },
+      "below": {
+        "passage": "A subconscious disconnection from your own instincts is the hidden foundation of your current struggle. The reversed High Priestess beneath you suggests that at some point you learned to distrust your inner voice — perhaps because it was once wrong, or because someone convinced you that logic was more reliable. That buried distrust is filtering out the very signals you need most."
+      },
+      "future": {
+        "passage": "A period of confusion approaches, one where your usual instincts will feel unreliable. Information may be deliberately withheld from you, or your own denial may obscure what is plainly visible. Build your relationship with your intuition now, before you need it most."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to a resolution clouded by secrets or willful ignorance. Something that should be known will remain hidden, and the outcome will be shaped by the information you did not have — or refused to acknowledge. The truth is available, but the ending changes depending on whether you seek it."
+      },
       "past": {
         "passage": "You ignored your intuition once, and the cost was significant. There was a whisper you dismissed, a gut feeling you rationalized away. The reversed High Priestess in your past is not here to punish you for that — she is here to make sure you do not make the same mistake twice."
       },
       "present": {
         "passage": "You have become disconnected from your inner voice. The noise of other people's opinions, expectations, and timelines has drowned out the quiet signal that used to guide you. Withdrawal is not the same as wisdom — you may be hiding from a truth you are not ready to face."
       },
-      "future": {
-        "passage": "A period of confusion approaches, one where your usual instincts will feel unreliable. Information may be deliberately withheld from you, or your own denial may obscure what is plainly visible. Build your relationship with your intuition now, before you need it most."
+      "self": {
+        "passage": "You see yourself as disconnected from the intuition you once trusted. Something has muddied the signal between your conscious mind and your deeper knowing, and you are second-guessing instincts that used to be reliable. This self-doubt is not insight — it is noise masquerading as caution."
       }
     }
   },
   "major-03": {
     "upright": {
+      "above": {
+        "passage": "You are reaching toward abundance that does not require striving — the kind of flourishing that comes from creating the right conditions and then trusting the process. The Empress as your ideal speaks to a desire for creative fertility, for a life where growth feels organic rather than forced. This aspiration asks you to become the garden, not just the gardener."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep, primal need to nurture and be nurtured. The Empress at the root reveals that what is truly driving you is not ambition but a hunger for warmth, for creative expression, for the simple abundance of a life that feeds itself. This subconscious longing for nourishment is the soil from which everything else in your situation grows."
+      },
+      "future": {
+        "passage": "A period of flourishing is on its way, one that will reward patience over force. The Empress ahead promises that something you have been tending — a relationship, a project, a vision of yourself — is about to bear fruit. Let it ripen in its own time."
+      },
+      "outcome": {
+        "passage": "This path leads to something lush and fruitful. The Empress as outcome promises that what you have been tending will bloom — a creative project will land, a relationship will deepen, or a period of abundance will settle over your life like a warm season. The harvest is coming, and it will be generous."
+      },
       "past": {
         "passage": "There was a season of abundance in your history that nourished everything it touched. The Empress in your past speaks to a time when creativity flowed freely, when care was given and received without tallying the cost. That generative energy planted seeds you are still harvesting."
       },
       "present": {
         "passage": "Growth is happening all around you, whether or not you feel you have earned it. The Empress asks you to stop striving and start receiving — to trust that the ground beneath you is fertile. Nurture what is already growing rather than plowing new fields."
       },
-      "future": {
-        "passage": "A period of flourishing is on its way, one that will reward patience over force. The Empress ahead promises that something you have been tending — a relationship, a project, a vision of yourself — is about to bear fruit. Let it ripen in its own time."
+      "self": {
+        "passage": "You see yourself as someone who creates and nurtures naturally — someone whose presence makes things grow. There is a generosity in your self-image right now, a sense that you have enough to give without depleting yourself. The Empress reflects this abundance back to you and confirms it is not an illusion."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to generosity and creative flow, but something is blocking the channel. The reversed Empress as your ideal reveals a longing for nourishment that has become tangled with a fear of depletion — you want to give freely but are terrified of running dry. The aspiration itself is beautiful; the fear wrapped around it is what needs tending."
+      },
+      "below": {
+        "passage": "A subconscious pattern of self-neglect is the hidden root of your current situation. The reversed Empress beneath you suggests that somewhere along the way, you learned that your own needs come last — that nurturing others is noble but nurturing yourself is selfish. This buried depletion is not a character flaw; it is a wound that is quietly draining everything above it."
+      },
+      "future": {
+        "passage": "A creative block or period of emotional scarcity lies ahead if the current pattern continues. This is not fate — it is a consequence of neglecting the parts of yourself that need tending. Begin the work of replenishment now, or the drought ahead will be harder to break."
+      },
+      "outcome": {
+        "passage": "The current path leads to creative stagnation or emotional depletion. The reversed Empress as outcome warns that the neglect you are perpetuating — of yourself, of something that needs care — will produce a lean result. The harvest reflects what was tended, and right now the garden is being ignored."
+      },
       "past": {
         "passage": "A creative or nurturing part of you was stifled in the past. Perhaps you gave too much until nothing was left, or perhaps the conditions were hostile to growth. The reversed Empress marks a period of depletion whose effects you may still be compensating for."
       },
       "present": {
         "passage": "You are running on empty and calling it strength. The reversed Empress appears when self-care has been abandoned in favor of productivity, or when creative energy has curdled into resentment. Something in your life is starving, and no amount of willpower can substitute for genuine nourishment."
       },
-      "future": {
-        "passage": "A creative block or period of emotional scarcity lies ahead if the current pattern continues. This is not fate — it is a consequence of neglecting the parts of yourself that need tending. Begin the work of replenishment now, or the drought ahead will be harder to break."
+      "self": {
+        "passage": "You see yourself as someone who has given too much and received too little in return. Your inner landscape feels barren right now — creativity blocked, energy depleted, the well you used to draw from running dry. This is not who you are; it is what happens when you forget to water your own roots."
       }
     }
   },
   "major-04": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the kind of authority that brings order to chaos — a clear-eyed leadership built on competence, not ego. The Emperor as your ideal speaks to a desire for structure that serves rather than suffocates, boundaries that protect what matters most. You are reaching toward sovereignty over your own life, and that ambition is worth taking seriously."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a fundamental need for control and stability. The Emperor at the root reveals that what is really driving you is not the specific outcome you are chasing but a deeper craving for solid ground — for the assurance that things will hold together because you built them to last. This subconscious need for order is the scaffolding beneath every decision you are making."
+      },
+      "future": {
+        "passage": "A situation requiring firm leadership and clear boundaries is approaching. You will be asked to take charge, to organize what is scattered, and to hold a line that others may push against. The Emperor ahead asks you to prepare for authority — not as a title, but as a weight you must be willing to carry."
+      },
+      "outcome": {
+        "passage": "This situation resolves through the imposition of clear structure and firm decision-making. The Emperor as outcome tells you that the result will be orderly, stable, and built to last — provided you are willing to make the hard calls that stability requires. The foundation you lay now will bear significant weight."
+      },
       "past": {
         "passage": "Structure and authority shaped your early path in ways both protective and confining. The Emperor in your past represents a period — or a person — that taught you the value of discipline, boundaries, and order. Whether that influence was benevolent or rigid, it built the scaffolding you still rely on."
       },
       "present": {
         "passage": "This is a time for building, not dreaming. The Emperor demands that you impose order on chaos, make the hard decisions, and take full responsibility for the territory you claim. Sentiment cannot substitute for structure right now — lead with your spine, not your heart."
       },
-      "future": {
-        "passage": "A situation requiring firm leadership and clear boundaries is approaching. You will be asked to take charge, to organize what is scattered, and to hold a line that others may push against. The Emperor ahead asks you to prepare for authority — not as a title, but as a weight you must be willing to carry."
+      "self": {
+        "passage": "You see yourself as someone who can hold the line — a builder, a protector, a source of order in chaos. Your self-image is one of authority earned through discipline, not bestowed by title. The Emperor in this position affirms that your instinct to structure and lead is well-founded, even when it feels rigid."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You are reaching for stability, but the version of control you aspire to may be doing more harm than good. The reversed Emperor as your ideal reveals that your vision of strength has become entangled with rigidity — that the order you seek is less about building something sound and more about preventing anything from moving. Reexamine whether your aspiration is leadership or simply the absence of vulnerability."
+      },
+      "below": {
+        "passage": "A subconscious wound around authority is the hidden root of your current struggle. The reversed Emperor beneath you suggests that an early encounter with power — someone who wielded it badly, or a time when your own authority was stripped away — is still shaping how you relate to control. This buried dynamic is either making you too rigid or too reluctant to take charge."
+      },
+      "future": {
+        "passage": "A power struggle is forming on the horizon. Whether it manifests as an external conflict with authority or an internal battle with your own rigidity, the reversed Emperor warns that force alone will not resolve what is coming. Flexibility is not weakness — it is what keeps structures from breaking."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to a power vacuum or a collapse of structure. The reversed Emperor as outcome warns of an ending defined by either tyrannical overcontrol or total disorganization — two expressions of the same failure to wield authority with wisdom. The outcome depends entirely on whether you can find the middle ground."
+      },
       "past": {
         "passage": "Someone wielded power over you without wisdom, or you submitted to a rigid structure that served control more than care. The reversed Emperor in your past marks an encounter with authority at its worst — domineering, inflexible, or hollow. Untangling that influence is ongoing work."
       },
       "present": {
         "passage": "Your relationship with control is out of balance. You may be gripping too tightly to plans and hierarchies, or you may be abdicating responsibility entirely. The reversed Emperor asks an uncomfortable question: are you building walls to protect something worth protecting, or to avoid the vulnerability of open ground?"
       },
-      "future": {
-        "passage": "A power struggle is forming on the horizon. Whether it manifests as an external conflict with authority or an internal battle with your own rigidity, the reversed Emperor warns that force alone will not resolve what is coming. Flexibility is not weakness — it is what keeps structures from breaking."
+      "self": {
+        "passage": "You see yourself as someone who has lost their grip on the controls — either grasping too tightly at authority that is slipping, or surrendering responsibility you should be shouldering. Your relationship with your own power is distorted right now, and it is coloring every decision you make."
       }
     }
   },
   "major-05": {
     "upright": {
+      "above": {
+        "passage": "You aspire to a wisdom larger than your own — the kind that comes from tradition, mentorship, and the accumulated knowledge of those who came before. The Hierophant as your ideal is not about blind obedience; it is about the humility to recognize that some truths are inherited, not invented. You are reaching toward belonging within a lineage of meaning."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep need for shared meaning and moral framework. The Hierophant at the root reveals that what is really driving you is a hunger for something to believe in — a structure of values that connects you to something larger than your individual experience. This subconscious search for sacred ground is the hidden foundation of everything you are navigating."
+      },
+      "future": {
+        "passage": "A guide or teaching is approaching that will reshape how you think about your situation. The Hierophant ahead does not promise easy answers, but he promises meaningful ones — the kind that come from lineage, from accumulated human wisdom rather than solitary invention."
+      },
+      "outcome": {
+        "passage": "This path leads to a resolution rooted in conventional wisdom or established practice. The Hierophant as outcome suggests that the answer to your situation is not revolutionary — it is time-tested. Following the prescribed path, joining the institution, or heeding the mentor's advice will produce a stable and meaningful result."
+      },
       "past": {
         "passage": "A tradition, institution, or mentor once provided the framework through which you understood the world. The Hierophant in your past points to a formative encounter with received wisdom — a teaching that gave you roots before you were ready to question them. That foundation, however imperfect, still informs your choices."
       },
       "present": {
         "passage": "There is value right now in doing things the established way. The Hierophant is not asking you to be original — he is asking you to be humble enough to learn from those who walked this path before you. Seek a teacher, a practice, or a tradition that can hold what your individual perspective cannot."
       },
-      "future": {
-        "passage": "A guide or teaching is approaching that will reshape how you think about your situation. The Hierophant ahead does not promise easy answers, but he promises meaningful ones — the kind that come from lineage, from accumulated human wisdom rather than solitary invention."
+      "self": {
+        "passage": "You see yourself as a student right now — someone seeking guidance from something larger and older than your individual experience. There is humility in this self-perception, and it is genuine. The Hierophant in the self position suggests you are ready to learn from tradition rather than reinvent the wheel."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to break free from received wisdom, but the rebellion itself has become a kind of orthodoxy. The reversed Hierophant as your ideal reveals a desire for authenticity that is defined entirely by what it rejects — you know what you do not believe, but the alternative remains unclear. True independence requires building something, not just tearing down what others built."
+      },
+      "below": {
+        "passage": "A subconscious distrust of institutions and authority figures is shaping your choices more than you realize. The reversed Hierophant beneath you points to an experience of betrayal by a system or teacher that was supposed to be trustworthy — a wound that now makes all collective wisdom feel suspicious. This hidden skepticism protects you, but it also isolates you from guidance you might genuinely need."
+      },
+      "future": {
+        "passage": "An encounter with institutional hypocrisy or outdated belief is ahead. You will be asked to choose between belonging and authenticity, between the safety of the group and the loneliness of your own truth. The reversed Hierophant does not make the choice for you — he only insists that you make it consciously."
+      },
+      "outcome": {
+        "passage": "The current path leads to a break with convention — a resolution that comes from outside the established framework. The reversed Hierophant as outcome may mean freedom from a restrictive system, but it may also mean losing the community and structure that system provided. The exit is clear; what lies beyond it is yours to build."
+      },
       "past": {
         "passage": "You once broke from a tradition or belief system that no longer served you, and the rupture left marks. The reversed Hierophant in your past speaks to a necessary rebellion — against dogma, conformity, or a teacher who failed you. That act of refusal was a form of integrity, even if it felt like destruction."
       },
       "present": {
         "passage": "You are chafing against rules that feel arbitrary or beliefs that no longer fit. The reversed Hierophant acknowledges that not all traditions deserve your loyalty, but warns against reflexive rebellion for its own sake. The question is not whether to follow or resist — it is whether you have something better to put in tradition's place."
       },
-      "future": {
-        "passage": "An encounter with institutional hypocrisy or outdated belief is ahead. You will be asked to choose between belonging and authenticity, between the safety of the group and the loneliness of your own truth. The reversed Hierophant does not make the choice for you — he only insists that you make it consciously."
+      "self": {
+        "passage": "You see yourself as someone who does not belong inside the lines that others find comforting. There is a rebel in your self-image right now, someone who questions every received truth and bristles at conformity. Whether this is liberation or isolation depends on whether your rejection of tradition is principled or reflexive."
       }
     }
   },
   "major-06": {
     "upright": {
+      "above": {
+        "passage": "You aspire to wholehearted alignment — a life where your actions, values, and deepest desires all point in the same direction. The Lovers as your ideal is not merely about romantic union; it is about the integration of your divided self into a single, clear choice. You are reaching toward the courage to commit completely, without reservation or escape hatch."
+      },
+      "below": {
+        "passage": "Beneath everything you are navigating lies a fundamental desire for union — with another person, with a path, or with the parts of yourself you have kept separate. The Lovers at the root reveal that the hidden driver of your situation is a longing for wholeness that can only come through choosing, fully and without splitting the difference. This subconscious pull toward integration is what gives your current dilemma its weight."
+      },
+      "future": {
+        "passage": "A significant union or decision is approaching — one that will ask you to align your actions with your deepest values. The Lovers ahead are not just about attraction; they are about integration. When the choice arrives, you will know it by the way it clarifies everything around it."
+      },
+      "outcome": {
+        "passage": "This situation resolves through a wholehearted choice that aligns your actions with your deepest values. The Lovers as outcome promise that when you commit fully — to a person, a direction, a principle — the alignment itself will generate momentum. The resolution is not a compromise; it is an integration."
+      },
       "past": {
         "passage": "A defining choice shaped the life you are living now. The Lovers in your past does not only speak to romance — it marks a moment when you chose one path over another, one value over its opposite, and in doing so declared who you were. That declaration still reverberates."
       },
       "present": {
         "passage": "A choice stands before you that cannot be deferred or split down the middle. The Lovers demand wholehearted commitment — to a person, a path, or a set of values that defines your direction from this point forward. Half-measures will not work here. Choose with your whole self or do not choose at all."
       },
-      "future": {
-        "passage": "A significant union or decision is approaching — one that will ask you to align your actions with your deepest values. The Lovers ahead are not just about attraction; they are about integration. When the choice arrives, you will know it by the way it clarifies everything around it."
+      "self": {
+        "passage": "You see yourself as someone at a crossroads, aware that a choice of real consequence is before you. Your self-image is shaped by the tension between two paths, two values, or two desires — and the awareness that choosing one means releasing the other. The Lovers confirm that this is not indecision; it is discernment."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to harmony, but the version of unity you are reaching for requires you to abandon a part of yourself to achieve it. The reversed Lovers as your ideal reveals a fantasy of effortless compatibility — a wish for a choice that costs nothing. Real union demands real sacrifice, and the aspiration must include that cost to be honest."
+      },
+      "below": {
+        "passage": "A subconscious misalignment between your desires and your values is the hidden engine of your current conflict. The reversed Lovers beneath you point to a fracture that happened long before this moment — a time when you learned to say yes while your body said no, or to want one thing while pursuing another. This buried dissonance is the real source of the tension you feel on the surface."
+      },
+      "future": {
+        "passage": "A temptation or misalignment is forming ahead. You may be drawn toward a choice that looks like love or partnership but is actually a retreat from the harder work of self-integration. The reversed Lovers caution you to examine your motives before you commit — desire is not the same as alignment."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to a decision made from misalignment — a choice that satisfies one part of you while betraying another. The reversed Lovers as outcome warns of a resolution marked by regret or half-commitment, where the thing you chose cannot fully satisfy because the thing you abandoned still holds a piece of you."
+      },
       "past": {
         "passage": "A relationship or decision in your past was marked by disharmony — a choice made under pressure, a union that divided rather than unified you. The reversed Lovers point to a time when your head and heart were at war, and the compromise you reached satisfied neither."
       },
       "present": {
         "passage": "You are out of alignment with yourself, and it is showing up in your relationships and decisions. The reversed Lovers appear when you are saying yes to something your body is rejecting, or holding on to a connection that requires you to abandon a part of who you are. Internal harmony must come before external union."
       },
-      "future": {
-        "passage": "A temptation or misalignment is forming ahead. You may be drawn toward a choice that looks like love or partnership but is actually a retreat from the harder work of self-integration. The reversed Lovers caution you to examine your motives before you commit — desire is not the same as alignment."
+      "self": {
+        "passage": "You see yourself as divided — your head pulling one way, your heart another, and neither willing to yield. This inner disharmony is making every external relationship feel slightly off, because you cannot offer alignment to others when you do not have it within yourself."
       }
     }
   },
   "major-07": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the kind of victory that comes from pure, directed will — the ability to harness every contradictory impulse and drive them toward a single destination. The Chariot as your ideal speaks to a desire for unstoppable momentum, for the mastery of internal conflict that makes external obstacles irrelevant. You want to move through the world with purpose, and that ambition has teeth."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep, urgent need to prove that you can overcome anything through sheer force of will. The Chariot at the root reveals that what is really driving you is not the destination but the need to demonstrate that you are capable of reaching it — that conflicting forces cannot hold you back. This subconscious drive for triumph is powerful, but examine whether the race you are running is one you actually want to win."
+      },
+      "future": {
+        "passage": "A challenge requiring discipline and focused drive is on its way. The Chariot ahead promises that victory is possible, but only through mastery of your own conflicting impulses. Prepare yourself for a test of will — the battlefield is within you as much as outside."
+      },
+      "outcome": {
+        "passage": "This situation resolves through determined forward motion. The Chariot as outcome promises victory for the one who does not flinch — a result won by willpower, discipline, and the refusal to be derailed by internal conflict or external resistance. The triumph ahead is real, but it will demand everything you have."
+      },
       "past": {
         "passage": "There was a time when your sheer force of will carried you through impossible terrain. The Chariot in your past marks a victory won not by luck but by relentless forward motion — you harnessed conflicting forces and drove them in a single direction. That triumph proved what you are capable of under pressure."
       },
       "present": {
         "passage": "Forward momentum is everything right now. The Chariot does not ask you to be subtle — it asks you to be unstoppable. Gather the reins of every scattered intention and pull them into alignment. Obstacles are not signals to stop; they are terrain to cross."
       },
-      "future": {
-        "passage": "A challenge requiring discipline and focused drive is on its way. The Chariot ahead promises that victory is possible, but only through mastery of your own conflicting impulses. Prepare yourself for a test of will — the battlefield is within you as much as outside."
+      "self": {
+        "passage": "You see yourself as someone in motion — driven, focused, refusing to be stopped by obstacles that would stall anyone else. Your self-image is one of disciplined ambition, of conflicting forces held together through sheer willpower. The Chariot affirms this: you are not reckless, you are directed."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to control, but the ambition has outpaced your ability to steer. The reversed Chariot as your ideal reveals a vision of power that confuses speed with direction — you want to be moving, but you have not fully decided where. The drive itself is not the problem; the absence of a clear destination is."
+      },
+      "below": {
+        "passage": "A subconscious fear of losing control is the hidden force beneath your current situation. The reversed Chariot at the root suggests that an experience of powerlessness — a time when everything spiraled despite your best efforts — left you with a compulsive need to grip the reins at all times. This buried fear of helplessness is driving you harder than any conscious goal."
+      },
+      "future": {
+        "passage": "A loss of control or direction looms unless you address the internal conflict driving your actions. The reversed Chariot warns that raw ambition without a clear destination leads to exhaustion or destruction. Define where you are going before you accelerate — speed without aim is just recklessness with better marketing."
+      },
+      "outcome": {
+        "passage": "The current path leads to stalled momentum or a crash born of unchecked aggression. The reversed Chariot as outcome warns that raw willpower without clear direction will not produce a victory — it will produce exhaustion, conflict, or a spectacular loss of control. The destination matters as much as the speed."
+      },
       "past": {
         "passage": "A time of aggression or directionlessness left its mark on your history. The reversed Chariot points to a period when your drive either consumed everything in its path or stalled entirely — when ambition became domination, or when the wheels simply came off. The wreckage taught you something about the cost of unchecked momentum."
       },
       "present": {
         "passage": "You are spinning your wheels or careening without direction. The reversed Chariot appears when willpower alone is not enough — when the forces you are trying to control are pulling you apart rather than propelling you forward. Stop driving and examine why your vehicle is not responding to the reins."
       },
-      "future": {
-        "passage": "A loss of control or direction looms unless you address the internal conflict driving your actions. The reversed Chariot warns that raw ambition without a clear destination leads to exhaustion or destruction. Define where you are going before you accelerate — speed without aim is just recklessness with better marketing."
+      "self": {
+        "passage": "You see yourself as someone who has lost direction — a driver without a destination, or worse, someone whose vehicle has stopped responding to the reins. The internal forces that once propelled you forward are now pulling you apart, and your self-image reflects that scattering."
       }
     }
   },
   "major-08": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the quiet power of someone who does not need to prove their strength. Strength as your ideal speaks to a longing for the kind of courage that is gentle rather than forceful — the ability to face what terrifies you with steady hands and an open heart. This aspiration is rarer and harder than ambition, and it is worth every ounce of effort."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep reservoir of resilience you may not fully recognize. Strength at the root reveals that what is truly sustaining you through this moment is not strategy or willpower but a patient, enduring force that has been with you longer than you remember. This subconscious fortitude is your real foundation — the part of you that knows how to hold steady when everything else shakes."
+      },
+      "future": {
+        "passage": "A test of endurance rather than speed is approaching. Strength ahead tells you that what is coming will not be resolved in a single dramatic moment — it will require sustained courage, day after day, without applause. Build your reserves now. The strength you will need is quiet, and it is already in you."
+      },
+      "outcome": {
+        "passage": "This situation resolves through patience and inner fortitude rather than dramatic action. Strength as outcome tells you that the resolution will not come in a single decisive moment — it will come through sustained courage, through showing up day after day with your hands open. The ending is quiet, but it is deeply won."
+      },
       "past": {
         "passage": "You tamed something wild in yourself, and that quiet act of courage changed your trajectory. Strength in your past speaks to a moment when brute force was available but you chose patience instead — when you met aggression with gentleness, or fear with steady hands. That inner resolve is still your most reliable resource."
       },
       "present": {
         "passage": "The situation before you will not yield to force. Strength asks you to hold steady in the face of what frightens or enrages you — to keep your hands open when every instinct says to make fists. This is not passivity; it is the hardest kind of power, the kind that bends without breaking."
       },
-      "future": {
-        "passage": "A test of endurance rather than speed is approaching. Strength ahead tells you that what is coming will not be resolved in a single dramatic moment — it will require sustained courage, day after day, without applause. Build your reserves now. The strength you will need is quiet, and it is already in you."
+      "self": {
+        "passage": "You see yourself as someone who is quietly, persistently strong — not through force, but through patience and compassion. Your self-image right now is one of gentle authority, of a person who can face what is frightening without becoming frightened. This is not a performance; it is who you actually are in this moment."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to inner calm, but the ideal of unshakable composure has become its own form of pressure. The reversed Strength as your aspiration reveals that you are holding yourself to a standard of emotional endurance that leaves no room for vulnerability. Genuine strength includes the ability to admit when you are overwhelmed — the mask of calm is not the same as calm itself."
+      },
+      "below": {
+        "passage": "A subconscious belief that you are not strong enough is the hidden crack in your foundation. The reversed Strength beneath you points to a moment when your resilience was tested beyond its limits and the experience left a residue of doubt you have never fully cleared. This buried conviction of inadequacy is not truth — it is scar tissue, and it does not define your actual capacity."
+      },
+      "future": {
+        "passage": "A crisis of confidence is forming that will challenge your sense of inner authority. The reversed Strength warns that the enemy ahead is not external — it is the voice inside that says you cannot handle what is coming. Begin now to separate genuine limitation from internalized fear."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to a resolution weakened by self-doubt or by the collapse of willpower at a critical moment. The reversed Strength as outcome warns that if you do not address the erosion of your inner confidence, the ending will be shaped by that fragility rather than by your actual capability."
+      },
       "past": {
         "passage": "There was a time when self-doubt eroded your foundation. The reversed Strength in your past marks a period when you lost faith in your own resilience — when exhaustion or fear convinced you that you were weaker than you actually are. That false narrative still whispers, and it is still wrong."
       },
       "present": {
         "passage": "You are either suppressing your raw nature to the point of numbness or letting it run unchecked. The reversed Strength appears when the relationship between your civilized self and your instinctual self has broken down. One is dominating the other, and neither arrangement is sustainable."
       },
-      "future": {
-        "passage": "A crisis of confidence is forming that will challenge your sense of inner authority. The reversed Strength warns that the enemy ahead is not external — it is the voice inside that says you cannot handle what is coming. Begin now to separate genuine limitation from internalized fear."
+      "self": {
+        "passage": "You see yourself as someone running low on the reserves that used to feel inexhaustible. Self-doubt has crept in where steadiness used to live, and you are wondering whether you have the endurance this situation demands. The reversed Strength in the self position says the doubt is louder than the truth — but you are listening to the doubt."
       }
     }
   },
   "major-09": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the kind of clarity that can only be found alone — a truth stripped of other people's noise and expectations. The Hermit as your ideal speaks to a longing for wisdom that belongs entirely to you, earned through solitary reflection rather than borrowed from the crowd. This aspiration toward inner light is both the hardest and most rewarding path you can choose."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep, often unacknowledged need to withdraw and make sense of things on your own terms. The Hermit at the root reveals that what is really driving you is not the external question but an internal one — a search for meaning that cannot be conducted in public. This subconscious pull toward solitude is not antisocial; it is the soul's demand for honest self-examination."
+      },
+      "future": {
+        "passage": "A necessary withdrawal is approaching. The Hermit ahead suggests that you will soon need to disengage from the crowd to find what you are looking for. Do not resist this period of solitude when it arrives — it is not a detour from your path; it is the path."
+      },
+      "outcome": {
+        "passage": "This path resolves into clarity earned through solitary reflection. The Hermit as outcome tells you that the answer you are seeking will not come from consensus or collaboration — it will come from the lantern you carry into your own darkness. The resolution is a quiet one, an understanding that changes everything without making a sound."
+      },
       "past": {
         "passage": "A period of deliberate solitude gave you something the world could not. The Hermit in your past marks a withdrawal that was not running away but turning inward — a season of reflection that crystallized your understanding of yourself. The lantern you lit in that darkness still guides you."
       },
       "present": {
         "passage": "Step away from the noise. The Hermit appears when the answers you seek cannot be found in conversation, collaboration, or consensus — only in the quiet of your own company. This is not loneliness; it is the productive solitude that precedes clarity. Go where no one else's voice can reach you."
       },
-      "future": {
-        "passage": "A necessary withdrawal is approaching. The Hermit ahead suggests that you will soon need to disengage from the crowd to find what you are looking for. Do not resist this period of solitude when it arrives — it is not a detour from your path; it is the path."
+      "self": {
+        "passage": "You see yourself as someone who needs solitude to function — a person whose clarity comes from withdrawal rather than engagement. There is wisdom in this self-perception right now. The Hermit in the self position confirms that your desire for quiet is not avoidance; it is the instinct of someone who thinks best alone."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to self-sufficiency, but the ideal has curdled into isolation. The reversed Hermit as your aspiration reveals a desire for independence that is actually a fear of depending on anyone — a retreat disguised as wisdom. The solitude you are reaching toward is not the lantern-lit clarity of the sage; it is the locked door of someone afraid to be seen."
+      },
+      "below": {
+        "passage": "A subconscious pattern of withdrawal is the hidden root of your current situation. The reversed Hermit beneath you suggests that at some point, pulling away became your default response to difficulty — not as a conscious strategy but as a reflex born of old hurt. This buried tendency to disappear is not introspection; it is protection, and it is keeping necessary connections at arm's length."
+      },
+      "future": {
+        "passage": "A period of unwanted isolation or spiritual disconnection is ahead unless you address the withdrawal pattern forming now. The reversed Hermit cautions that the hermitage can become a fortress. Seek connection before the walls grow too high to see over."
+      },
+      "outcome": {
+        "passage": "The current path leads to isolation without illumination — withdrawal that produces loneliness rather than insight. The reversed Hermit as outcome warns that if you continue retreating, the resolution will be a quiet one, but not the kind you want. Come back to the world before the world forgets to look for you."
+      },
       "past": {
         "passage": "Isolation went too far once, and the distance you put between yourself and others became its own kind of prison. The reversed Hermit in your past speaks to a withdrawal that curdled into alienation — solitude that stopped being a choice and became a habit born of fear."
       },
       "present": {
         "passage": "You have been alone with your thoughts too long, and they are no longer reliable company. The reversed Hermit warns that the line between introspection and rumination has blurred. Your wisdom needs to be tested against other perspectives now — not because you are wrong, but because insight that never leaves the cave becomes dogma."
       },
-      "future": {
-        "passage": "A period of unwanted isolation or spiritual disconnection is ahead unless you address the withdrawal pattern forming now. The reversed Hermit cautions that the hermitage can become a fortress. Seek connection before the walls grow too high to see over."
+      "self": {
+        "passage": "You see yourself as someone who has been alone too long — isolated past the point of productivity, withdrawn past the point of wisdom. The reversed Hermit in the self position reflects a self-image darkened by loneliness disguised as independence. You are not finding yourself in this solitude; you are losing yourself."
       }
     }
   },
   "major-10": {
     "upright": {
+      "above": {
+        "passage": "You aspire to ride the wheel rather than be crushed by it — to meet change with grace and trust that the turning serves a larger pattern. The Wheel of Fortune as your ideal speaks to a desire for the kind of faith that holds steady through both ascent and decline. You are reaching toward acceptance of life's cyclical nature, and that acceptance is itself a form of wisdom."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep awareness that forces larger than your will are in motion. The Wheel of Fortune at the root reveals that what is really driving your experience is not any single decision but the convergence of timing, circumstance, and fate. This subconscious recognition that you are part of a cycle — not the author of it — is both humbling and liberating."
+      },
+      "future": {
+        "passage": "A significant shift in fortune is coming, the kind that rearranges the landscape of your life. Whether this turn is welcome or unwelcome depends less on the event itself than on how loosely you hold your current circumstances. The Wheel of Fortune ahead asks you to practice the art of letting go before life does it for you."
+      },
+      "outcome": {
+        "passage": "This situation resolves through a turn of fortune that is already in motion. The Wheel as outcome tells you that the result is not entirely in your hands — cycles, timing, and forces larger than any single will are shaping the conclusion. The outcome will be a change, and the best preparation is flexibility."
+      },
       "past": {
         "passage": "A turning point arrived in your life that was larger than any single decision — the wheel simply turned, and everything shifted. The Wheel of Fortune in your past marks a moment when fate, luck, or circumstance intervened in ways you could not have predicted. You learned then that not everything is within your control, and that this is not always a threat."
       },
       "present": {
         "passage": "The wheel is turning right now, and the only real question is whether you will move with it or be dragged. Change is not approaching — it is here, mid-rotation. The Wheel of Fortune reminds you that cycles are natural, that what rises must descend and what descends will rise again. Position yourself accordingly."
       },
-      "future": {
-        "passage": "A significant shift in fortune is coming, the kind that rearranges the landscape of your life. Whether this turn is welcome or unwelcome depends less on the event itself than on how loosely you hold your current circumstances. The Wheel of Fortune ahead asks you to practice the art of letting go before life does it for you."
+      "self": {
+        "passage": "You see yourself as someone at the mercy of larger forces — riding a wheel you did not set in motion, trusting that the turn will carry you somewhere worth going. There is surrender in your self-image right now, and it is the right posture. The Wheel asks you to release the need to control the rotation."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to stability in a universe that will not sit still, and the aspiration itself is the source of your friction. The reversed Wheel of Fortune as your ideal reveals a deep longing to stop the cycle — to find a position on the wheel and hold it permanently. But the wheel does not have a pause button, and reaching for one only guarantees that the next turn catches you off guard."
+      },
+      "below": {
+        "passage": "A subconscious resistance to change is the hidden foundation of your current difficulty. The reversed Wheel of Fortune beneath you points to a deep-seated belief that if you hold tightly enough, you can prevent the inevitable turning. This buried rigidity is not caution — it is the refusal to accept that loss and gain are part of the same rotation."
+      },
+      "future": {
+        "passage": "A period of resistance to inevitable change lies ahead. The reversed Wheel of Fortune warns that clinging to the current arrangement will not prevent the shift — it will only ensure that when it comes, you are unprepared. Begin loosening your grip on what you are afraid to lose."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to stagnation dressed as bad luck. The reversed Wheel as outcome warns that the resolution will feel like more of the same — repetition without progress, the same lesson arriving in slightly different packaging. Something must be released before the wheel can turn again."
+      },
       "past": {
         "passage": "A setback or stroke of bad luck once knocked you off course, and you may still be recovering your footing. The reversed Wheel of Fortune in your past speaks to a time when the ground shifted beneath you without warning — a reminder that fortune is impartial. What matters now is not the fall but what you built from the rubble."
       },
       "present": {
         "passage": "You are fighting against a natural cycle, trying to hold the wheel in place through sheer stubbornness. The reversed Wheel of Fortune appears when resistance to change is creating more suffering than the change itself would. The stagnation you feel is not stability — it is a wheel that you are preventing from turning."
       },
-      "future": {
-        "passage": "A period of resistance to inevitable change lies ahead. The reversed Wheel of Fortune warns that clinging to the current arrangement will not prevent the shift — it will only ensure that when it comes, you are unprepared. Begin loosening your grip on what you are afraid to lose."
+      "self": {
+        "passage": "You see yourself as someone being punished by luck or trapped in a cycle that never seems to turn in your favor. Your self-image is colored by a sense of powerlessness — the feeling that no matter what you do, the wheel will not budge. But the wheel is not stuck; your grip on it is what prevents the rotation."
       }
     }
   },
   "major-11": {
     "upright": {
+      "above": {
+        "passage": "You aspire to a life governed by truth and fairness — a world where actions have proportional consequences and honesty is the foundation of every exchange. Justice as your ideal speaks to a deep commitment to integrity, to the belief that the right thing and the hard thing are usually the same thing. This aspiration will cost you the comfort of convenient lies, and it is worth the price."
+      },
+      "below": {
+        "passage": "Beneath your situation lies an unresolved question of fairness that is quietly shaping everything above it. Justice at the root reveals that what is really driving your experience is a deep, perhaps unspoken need for balance — a sense that something is owed, that an account has not been settled. This subconscious ledger is more influential than any conscious strategy you are employing."
+      },
+      "future": {
+        "passage": "A judgment or legal matter is approaching that will require you to stand in your integrity. Justice ahead means that outcomes will be proportional to actions — no more, no less. If you have been honest and fair, there is nothing to fear. If not, there is still time to correct the balance before the scales settle."
+      },
+      "outcome": {
+        "passage": "This situation resolves with a fair and proportional result. Justice as outcome promises that the ending will reflect what was actually earned — not more, not less. If you have acted with integrity, the scales will show it. If corners were cut, they will show that too. The outcome is honest, and that is its own mercy."
+      },
       "past": {
         "passage": "A reckoning in your past brought the truth to light, whether you welcomed it or not. Justice in your history marks a moment when consequences arrived — not as punishment, but as the natural result of actions taken. That experience taught you that the universe keeps a precise accounting, even when you wish it did not."
       },
       "present": {
         "passage": "Truth and fairness demand your attention now. Justice asks you to weigh the situation before you with honest eyes, to set aside what you want to be true and deal with what is. A decision must be made or a consequence accepted, and the only path through is radical honesty — with others and with yourself."
       },
-      "future": {
-        "passage": "A judgment or legal matter is approaching that will require you to stand in your integrity. Justice ahead means that outcomes will be proportional to actions — no more, no less. If you have been honest and fair, there is nothing to fear. If not, there is still time to correct the balance before the scales settle."
+      "self": {
+        "passage": "You see yourself as someone committed to fairness, even when it is inconvenient. Your self-image is one of integrity — a person who weighs evidence, considers consequences, and tries to do what is right rather than what is easy. Justice in the self position affirms that this moral seriousness is genuine, not performative."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to fairness, but the version of justice you are reaching for may be contaminated by a desire for vindication. The reversed Justice as your ideal warns that the line between seeking balance and seeking revenge is thinner than it appears. Examine whether you want the scales to be level or whether you want them tipped in your favor."
+      },
+      "below": {
+        "passage": "A subconscious experience of injustice is the hidden engine of your current behavior. The reversed Justice beneath you points to a wound where fairness failed — where the wrong person paid the price or the truth was buried under convenience. This unresolved grievance is coloring your perception of the present situation, making you see imbalances that may or may not be there."
+      },
+      "future": {
+        "passage": "An unfair outcome or unresolved legal matter looms unless hidden truths are brought to light. The reversed Justice warns that cutting corners now will compound into larger consequences later. Whatever you are tempted to leave unaddressed — address it. The bill comes due whether or not you are ready."
+      },
+      "outcome": {
+        "passage": "The current path leads to an outcome that feels unjust — a result disproportionate to the effort, or a consequence that lands on the wrong shoulders. The reversed Justice as outcome warns that unless hidden dishonesty is addressed, the resolution will carry a bitter aftertaste that lingers long after the matter is settled."
+      },
       "past": {
         "passage": "An injustice in your past left a wound that has not fully healed. The reversed Justice speaks to a time when the truth was suppressed, when consequences fell on the wrong shoulders, or when a system that should have protected you failed. That experience may have damaged your faith in fairness itself."
       },
       "present": {
         "passage": "Something is not right, and you can feel it. The reversed Justice appears when dishonesty — yours or someone else's — is distorting the situation. You may be avoiding accountability, or you may be the one absorbing a punishment you do not deserve. Either way, the imbalance cannot sustain itself much longer."
       },
-      "future": {
-        "passage": "An unfair outcome or unresolved legal matter looms unless hidden truths are brought to light. The reversed Justice warns that cutting corners now will compound into larger consequences later. Whatever you are tempted to leave unaddressed — address it. The bill comes due whether or not you are ready."
+      "self": {
+        "passage": "You see yourself as someone who has been treated unfairly — or, if you are honest, as someone whose own fairness has recently lapsed. The reversed Justice in the self position points to an imbalance in your inner tribunal, where you are either being too hard on yourself or not hard enough."
       }
     }
   },
   "major-12": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the perspective that only comes from surrendering control — a willingness to be suspended, to see the world from an angle that effort alone cannot reach. The Hanged Man as your ideal speaks to a longing for the wisdom born of letting go, the understanding that arrives when you stop trying to arrive. This aspiration toward sacred stillness is a rebellion against the tyranny of constant progress."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a subconscious recognition that the way forward is actually through surrender. The Hanged Man at the root reveals that what is really driving your experience is not resistance but a deep, quiet willingness to let things be — a part of you that knows the struggle is creating the problem, not solving it. This hidden surrender is your greatest untapped resource."
+      },
+      "future": {
+        "passage": "A period of necessary waiting approaches, one that will test your relationship with control. The Hanged Man ahead does not promise suffering — he promises a new way of seeing that can only emerge from stillness. When everything pauses, resist the urge to fill the silence with frantic action."
+      },
+      "outcome": {
+        "passage": "This situation resolves not through action but through a fundamental shift in perspective. The Hanged Man as outcome tells you that the ending arrives when you stop trying to force one — when surrender itself becomes the resolution. What you gain from this stillness will be worth far more than any victory won by struggle."
+      },
       "past": {
         "passage": "A period of suspension — willing or not — gave you a perspective you could not have gained any other way. The Hanged Man in your past marks a time when progress halted and you were forced to see your world from an unfamiliar angle. What felt like stagnation was actually a profound reorientation."
       },
       "present": {
         "passage": "Nothing you do right now will accelerate this situation. The Hanged Man asks you to stop struggling against the rope and let the blood rush to your head. Surrender is not defeat — it is the recognition that some insights only arrive when you stop trying to force them. Hang here. See what you see."
       },
-      "future": {
-        "passage": "A period of necessary waiting approaches, one that will test your relationship with control. The Hanged Man ahead does not promise suffering — he promises a new way of seeing that can only emerge from stillness. When everything pauses, resist the urge to fill the silence with frantic action."
+      "self": {
+        "passage": "You see yourself as someone in suspension — not falling, not rising, just hanging in the space between action and understanding. Your self-image right now is contemplative, perhaps even sacrificial. The Hanged Man in the self position says this is not passivity; it is the rare willingness to let go of your usual orientation and see differently."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to patience, but the waiting has become its own trap. The reversed Hanged Man as your ideal reveals that what you are calling surrender may actually be avoidance — a spiritual justification for refusing to act. The noble stillness you are reaching for has lost its purpose and become a comfortable form of paralysis."
+      },
+      "below": {
+        "passage": "A subconscious pattern of martyrdom is the hidden root of your current situation. The reversed Hanged Man beneath you suggests that somewhere you learned that suffering is meaningful by default — that the more you sacrifice, the more valuable the outcome. This buried belief is keeping you suspended long past the point where the suspension served its purpose."
+      },
+      "future": {
+        "passage": "A pattern of unnecessary self-sacrifice or chronic indecision is solidifying ahead. The reversed Hanged Man warns that what you are calling patience may be avoidance wearing a spiritual costume. The suspension only works if you use it to see differently — not as an excuse to see nothing at all."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to a resolution of unnecessary stagnation — a conclusion delayed not by genuine need for reflection but by the fear of acting. The reversed Hanged Man as outcome warns that if you continue to wait, the situation will resolve itself without your input, and you may not like what passivity produces."
+      },
       "past": {
         "passage": "You once refused a necessary pause, pushing forward when the situation demanded stillness. The reversed Hanged Man in your past speaks to a sacrifice you were unwilling to make or a perspective you refused to consider. That resistance may have preserved your momentum but cost you a deeper understanding."
       },
       "present": {
         "passage": "You are stalling where you should be surrendering, or surrendering where you should be acting. The reversed Hanged Man appears when martyrdom and stubbornness become indistinguishable — when you cannot tell whether you are being patient or just afraid to move. Ask yourself honestly: is this waiting purposeful, or is it hiding?"
       },
-      "future": {
-        "passage": "A pattern of unnecessary self-sacrifice or chronic indecision is solidifying ahead. The reversed Hanged Man warns that what you are calling patience may be avoidance wearing a spiritual costume. The suspension only works if you use it to see differently — not as an excuse to see nothing at all."
+      "self": {
+        "passage": "You see yourself as someone who is stuck but calling it patience, or sacrificing but calling it wisdom. The reversed Hanged Man in the self position reflects a self-image caught in a loop of martyrdom — you have been hanging so long that you have forgotten you have the option to come down."
       }
     }
   },
   "major-13": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the kind of transformation that leaves nothing unnecessary standing. Death as your ideal speaks to a desire for radical renewal — the willingness to let entire chapters close so that what comes next can be genuinely new. This is not a death wish; it is a life wish, aimed at the version of yourself that can only exist after the old one is gone."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a profound, often unacknowledged understanding that something must end before anything new can begin. Death at the root reveals that the deepest current shaping your experience is not fear of change but readiness for it — a part of you that has already said goodbye to what the rest of you is still holding. This subconscious acceptance is further along than you think."
+      },
+      "future": {
+        "passage": "A profound transformation is approaching that will close one chapter of your life entirely. Death ahead is not a threat — it is a promise that what no longer serves you will fall away, making room for something you cannot yet imagine. Do not plan for what comes after the ending; plan only to let go when the time comes."
+      },
+      "outcome": {
+        "passage": "This situation resolves through a complete ending that makes way for something entirely new. Death as outcome does not mean loss alone — it means that the chapter closes so thoroughly that clinging to it becomes impossible. What follows the ending will surprise you, but it cannot arrive until you let the current form die."
+      },
       "past": {
         "passage": "Something ended completely, and in the clearing it left behind, your real life began. Death in your past speaks to a transformation so thorough that who you were before and who you became after are barely recognizable as the same person. You know better than most that endings are not the enemy — stagnation is."
       },
       "present": {
         "passage": "Something in your life is dying, and it needs to. Death does not come to destroy what is healthy — he comes for what has already stopped living. The ending before you is not optional; it is already in motion. Your only choice is whether to grieve what is passing and walk forward, or to embalm it and carry the weight."
       },
-      "future": {
-        "passage": "A profound transformation is approaching that will close one chapter of your life entirely. Death ahead is not a threat — it is a promise that what no longer serves you will fall away, making room for something you cannot yet imagine. Do not plan for what comes after the ending; plan only to let go when the time comes."
+      "self": {
+        "passage": "You see yourself as someone in the middle of a transformation so total that you barely recognize who you were before it started. Your identity is molting, and the rawness of that process colors everything. Death in the self position says this dissolution of the old self is not destruction — it is the necessary clearing before regrowth."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to change, but on your own terms — a transformation you can control, an ending you can schedule. The reversed Death as your ideal reveals a desire for renewal that stops short of the actual death required to achieve it. You want the new life without the funeral, and that aspiration, however understandable, is the very thing blocking the transformation."
+      },
+      "below": {
+        "passage": "A subconscious terror of irreversible loss is the hidden root of your resistance. The reversed Death beneath you points to a deep, primal fear that if you let this thing die — this relationship, this identity, this way of living — nothing will grow in its place. This buried dread of the void is not irrational, but it is keeping you tethered to something that has already stopped breathing."
+      },
+      "future": {
+        "passage": "Stagnation will deepen if you continue to resist the transformation that is trying to move through your life. The reversed Death warns that the alternative to a clean ending is a long, exhausting decline. The change you fear is not the worst outcome — the worst outcome is nothing changing at all."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to stagnation — what refuses to die lingers, and the longer it lingers the heavier it becomes. The reversed Death as outcome warns that the resolution will be a prolonged decay rather than a clean ending, a slow suffocation of possibility under the weight of what should have been released long ago."
+      },
       "past": {
         "passage": "You resisted a necessary ending once, and the cost of that resistance shaped you more than the ending itself would have. The reversed Death in your past speaks to something you kept alive past its natural expiration — a relationship, a belief, an identity — because the alternative felt like annihilation."
       },
       "present": {
         "passage": "You are clinging to something that has already died. The reversed Death appears when the refusal to let go has become its own form of suffering — when preservation has turned into a slow, airless decay. What you are protecting is no longer what you remember it being. Release it, and mourn it properly."
       },
-      "future": {
-        "passage": "Stagnation will deepen if you continue to resist the transformation that is trying to move through your life. The reversed Death warns that the alternative to a clean ending is a long, exhausting decline. The change you fear is not the worst outcome — the worst outcome is nothing changing at all."
+      "self": {
+        "passage": "You see yourself as someone resisting a transformation that everyone around you can see is necessary. There is a stubbornness in your self-image — a refusal to let the old identity die because the unknown on the other side feels like annihilation. But what you are protecting is already gone; you are guarding an empty room."
       }
     }
   },
   "major-14": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the art of perfect blending — the ability to hold opposites together without forcing either to surrender. Temperance as your ideal speaks to a longing for balance that is not compromise but alchemy, the precise combination of disparate elements into something neither could be alone. This aspiration toward integration is the most sophisticated form of mastery."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep, instinctive understanding that extremes are not serving you. Temperance at the root reveals that what is really driving your choices is a subconscious pull toward equilibrium — a part of you that knows the answer lives in the space between the opposites you have been swinging between. This hidden wisdom of moderation is quietly steering you toward the middle, even when your conscious mind resists."
+      },
+      "future": {
+        "passage": "A period of integration and healing is approaching. Temperance ahead promises that the chaos you have been navigating will settle into a workable synthesis — but only if you resist the temptation to rush. The blend you are creating needs time and a steady hand. The angel pours slowly for a reason."
+      },
+      "outcome": {
+        "passage": "This situation resolves through integration and gradual harmonizing rather than sudden resolution. Temperance as outcome promises a result that emerges from patience and precise adjustment — the slow alchemy of combining what seemed incompatible into something whole. The ending is not dramatic, but it is deeply satisfying."
+      },
       "past": {
         "passage": "A period of careful blending and patient adjustment created the balance you now depend on. Temperance in your past speaks to a time when you learned the art of moderation — not as blandness, but as the precise mixing of disparate elements into something that works. That alchemy was harder than it looked."
       },
       "present": {
         "passage": "The answer lies in the middle, and getting there requires precision, not compromise. Temperance asks you to hold two opposing truths and find the point where they strengthen rather than cancel each other. This is not about being moderate in all things — it is about being exact in how you combine them."
       },
-      "future": {
-        "passage": "A period of integration and healing is approaching. Temperance ahead promises that the chaos you have been navigating will settle into a workable synthesis — but only if you resist the temptation to rush. The blend you are creating needs time and a steady hand. The angel pours slowly for a reason."
+      "self": {
+        "passage": "You see yourself as someone patiently blending the disparate parts of your life into something that works. Your self-image is one of careful balance — a person mediating between extremes, pouring from one vessel to another without spilling a drop. Temperance in the self position confirms that this equilibrium is hard-won and real."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to balance, but the moderation you are reaching for has become an excuse to avoid commitment to anything fully. The reversed Temperance as your ideal reveals that your vision of harmony may actually be a fear of intensity — a desire to keep everything lukewarm so nothing can burn you. Real alchemy requires heat."
+      },
+      "below": {
+        "passage": "A subconscious pattern of excess is the hidden root beneath your surface composure. The reversed Temperance beneath you points to an imbalance you have been compensating for rather than correcting — a tendency to swing between too much and too little that you manage through willpower rather than genuine equilibrium. This buried instability is exhausting you in ways you may not recognize."
+      },
+      "future": {
+        "passage": "A collision between competing forces in your life is ahead if you do not actively seek balance now. The reversed Temperance warns that the elements you are trying to combine are not mixing — they are reacting. Step back and examine whether you are blending or just forcing incompatible things into the same container."
+      },
+      "outcome": {
+        "passage": "The current path leads to a resolution of imbalance — too much of one thing, not enough of another, and a result that reflects the excess rather than the intention. The reversed Temperance as outcome warns that forcing incompatible elements together will produce a volatile mixture. Step back and recalibrate before the final pour."
+      },
       "past": {
         "passage": "Excess or imbalance in your past threw a situation out of alignment. The reversed Temperance speaks to a period when you pushed too hard in one direction — too much work, too much indulgence, too much of anything that should have been measured. The correction that followed was the lesson."
       },
       "present": {
         "passage": "Something in your life has gone to extremes, and the center is not holding. The reversed Temperance appears when moderation has been abandoned — when you are oscillating between excess and deprivation rather than finding a sustainable rhythm. The cure for too much of one thing is never too much of its opposite."
       },
-      "future": {
-        "passage": "A collision between competing forces in your life is ahead if you do not actively seek balance now. The reversed Temperance warns that the elements you are trying to combine are not mixing — they are reacting. Step back and examine whether you are blending or just forcing incompatible things into the same container."
+      "self": {
+        "passage": "You see yourself as someone who has lost the recipe — the proportions that used to work are not working anymore, and every adjustment seems to make things worse. Your self-image swings between excess and asceticism, unable to find the center. The reversed Temperance says the imbalance is real, but so is your ability to correct it."
       }
     }
   },
   "major-15": {
     "upright": {
+      "above": {
+        "passage": "You aspire to honest reckoning with your own desires — the courage to look at what binds you without flinching or moralizing. The Devil as your ideal does not mean you aspire to bondage; it means you aspire to the radical honesty required to name your chains. This aspiration toward unflinching self-awareness is the first step out of any cage."
+      },
+      "below": {
+        "passage": "Beneath your situation lies an attachment so deep it has become invisible to you. The Devil at the root reveals that a desire, a habit, or a dynamic you consider normal is actually the hidden engine of everything you are experiencing. This subconscious bondage does not feel like a chain — it feels like a need, and that is precisely what makes it powerful."
+      },
+      "future": {
+        "passage": "A temptation or binding attachment is forming ahead that will test your relationship with desire and control. The Devil does not force chains on anyone — he simply offers them, beautifully wrapped. When the offer comes, remember that the lock is on your side of the door."
+      },
+      "outcome": {
+        "passage": "This situation resolves through a confrontation with what binds you. The Devil as outcome does not promise liberation — he promises awareness. The result of this path is a clear-eyed encounter with the attachment, the compulsion, or the shadow you have been negotiating with. What you do with that encounter is up to you."
+      },
       "past": {
         "passage": "A period of bondage — to a habit, a person, a way of living — defined a chapter of your history. The Devil in your past speaks to chains that felt like comfort, to a cage you decorated so well you forgot it was a cage. Breaking free from that attachment, or recognizing that you have not yet, is the work that brought you here."
       },
       "present": {
         "passage": "Something has a hold on you, and part of you does not want to be released. The Devil appears when the thing that is hurting you is also the thing you reach for — when pleasure and damage wear the same face. Name the chain. Not to shame yourself, but because you cannot release what you refuse to see."
       },
-      "future": {
-        "passage": "A temptation or binding attachment is forming ahead that will test your relationship with desire and control. The Devil does not force chains on anyone — he simply offers them, beautifully wrapped. When the offer comes, remember that the lock is on your side of the door."
+      "self": {
+        "passage": "You see yourself as someone in the grip of something you cannot — or will not — release. There is an honesty in this self-perception that is its own kind of power. The Devil in the self position does not judge; he illuminates. You know the chain is there. The question is whether knowing is enough to move you toward freedom."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to freedom from the patterns that have controlled you, and the aspiration is close to becoming real. The reversed Devil as your ideal speaks to a vision of liberation that is not abstract — you can see the exit, you know which chains need breaking. This is not a vague hope for change; it is a specific, urgent reaching toward a life no longer defined by what you cannot stop doing."
+      },
+      "below": {
+        "passage": "A subconscious process of liberation is already underway beneath the surface. The reversed Devil at the root reveals that the grip of an old pattern or attachment is weakening, even if you cannot feel it consciously. Something in your depths has already decided it is done — the rest of you simply has not caught up yet. This hidden loosening of the chains is the most important thing happening in your life right now."
+      },
+      "future": {
+        "passage": "A release from a long-standing pattern or attachment is approaching. The reversed Devil ahead signals that the grip of whatever has been controlling you is about to weaken enough for you to slip free. But freedom is not handed to you — it is seized in the moment the chains go slack."
+      },
+      "outcome": {
+        "passage": "This path leads to liberation from a bond that once seemed permanent. The reversed Devil as outcome promises that the attachment, the addiction, or the toxic dynamic will loosen its grip — but freedom is not given, it is claimed. The outcome is release, but only if you walk through the door when it opens."
+      },
       "past": {
         "passage": "You broke free from something that once had total power over you. The reversed Devil in your past marks a liberation — from addiction, from a toxic dynamic, from a pattern of self-destruction that you finally refused to continue. That break was one of the bravest things you have ever done, even if no one witnessed it."
       },
       "present": {
         "passage": "The chains are loosening, but you are not yet free. The reversed Devil appears at the threshold of liberation — when you can see the exit but have not walked through it. The attachment is weakening, but old patterns have muscle memory. Stay conscious. The last steps out of bondage are the ones where people turn back."
       },
-      "future": {
-        "passage": "A release from a long-standing pattern or attachment is approaching. The reversed Devil ahead signals that the grip of whatever has been controlling you is about to weaken enough for you to slip free. But freedom is not handed to you — it is seized in the moment the chains go slack."
+      "self": {
+        "passage": "You see yourself as someone on the verge of breaking free from a pattern that has held you for too long. The chains feel looser than they did, and your self-image is shifting from captive to escapee. The reversed Devil in the self position says you are right — the hold is weakening. Do not look back now."
       }
     }
   },
   "major-16": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the kind of truth that demolishes comfortable lies — even your own. The Tower as your ideal speaks to a rare and difficult ambition: the willingness to let false structures fall rather than live inside them. You are reaching toward liberation through honesty so radical it looks like destruction, and that aspiration takes more courage than building ever did."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a foundation that is already cracking, whether or not you have acknowledged it. The Tower at the root reveals that the hidden force shaping your experience is structural instability — something was built on false premises, and the pressure of that lie is creating the tension you feel on the surface. This subconscious awareness that the ground is not solid is the most important information you have."
+      },
+      "future": {
+        "passage": "A sudden disruption is approaching that will feel like destruction but function as liberation. The Tower ahead is the card most people fear, but its gift is brutal honesty — the instant removal of everything that was never going to hold. You cannot prepare for lightning, but you can stop building on sand."
+      },
+      "outcome": {
+        "passage": "This situation resolves through sudden, irreversible upheaval. The Tower as outcome tells you that the ending will not be gradual or negotiable — it will be swift, and it will strip away what cannot stand on its own. The destruction clears ground for something honest. What you build next will be built on bedrock, not sand."
+      },
       "past": {
         "passage": "Something in your life was struck down without warning, and the rubble reshaped everything. The Tower in your past marks a sudden upheaval — a revelation, a collapse, a bolt from the clear blue that shattered what you thought was permanent. What you built from the wreckage is more honest than what stood before."
       },
       "present": {
         "passage": "The structure is coming down, and it should. The Tower does not destroy what is sound — it destroys what was built on false foundations. The upheaval you are experiencing right now, however violent it feels, is clearing ground for something that can actually bear weight. Let it fall. You cannot save a burning building by standing inside it."
       },
-      "future": {
-        "passage": "A sudden disruption is approaching that will feel like destruction but function as liberation. The Tower ahead is the card most people fear, but its gift is brutal honesty — the instant removal of everything that was never going to hold. You cannot prepare for lightning, but you can stop building on sand."
+      "self": {
+        "passage": "You see yourself as someone whose certainties are crumbling — standing in the rubble of something you built, watching the lightning illuminate everything you ignored. The Tower in the self position reflects a self-image in crisis, but crisis is not the same as destruction. What you are losing was never as solid as you believed."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to hold everything together, but the aspiration itself may be the problem. The reversed Tower as your ideal reveals a deep desire to prevent upheaval at any cost — to maintain the structure even as it groans under its own dishonesty. Consider that what you are calling preservation is actually prolonging a collapse that would be kinder if it were swift."
+      },
+      "below": {
+        "passage": "A subconscious fear of total destruction is the hidden force keeping your current situation intact. The reversed Tower beneath you points to a terror of catastrophe so profound that you would rather live in a crumbling structure than face the open air. This buried fear of devastation is not irrational — you may have survived a collapse before — but it is preventing the necessary demolition that would finally free you."
+      },
+      "future": {
+        "passage": "The collapse you have been avoiding is not going away — it is gathering force. The reversed Tower warns that delayed destruction is not prevention; it is accumulation. The longer the reckoning is postponed, the more comprehensive it will be when it arrives. Consider dismantling gracefully what will otherwise fall on your head."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to a slow, grinding deterioration rather than a clean break. The reversed Tower as outcome warns that the destruction you are trying to prevent will happen anyway, but in the most exhausting way possible — through erosion rather than lightning. Controlled demolition is still an option, and it is kinder than slow decay."
+      },
       "past": {
         "passage": "You narrowly avoided a collapse once, or you experienced one internally that no one else could see. The reversed Tower in your past speaks to a catastrophe that was either delayed or internalized — a structure that should have fallen but was propped up at enormous personal cost."
       },
       "present": {
         "passage": "You can feel the cracks in the foundation, and you are choosing not to look at them. The reversed Tower appears when the fear of upheaval is more paralyzing than the upheaval itself would be. You are spending so much energy maintaining an unstable structure that you have none left for building something new."
       },
-      "future": {
-        "passage": "The collapse you have been avoiding is not going away — it is gathering force. The reversed Tower warns that delayed destruction is not prevention; it is accumulation. The longer the reckoning is postponed, the more comprehensive it will be when it arrives. Consider dismantling gracefully what will otherwise fall on your head."
+      "self": {
+        "passage": "You see yourself as someone barely holding things together — aware of the cracks in the structure but terrified of what happens if you stop maintaining them. Your self-image is one of exhausted vigilance, of someone spending all their energy preventing a collapse that might actually be the best thing that could happen."
       }
     }
   },
   "major-17": {
     "upright": {
+      "above": {
+        "passage": "You aspire to hope that has been earned through suffering — not the breezy optimism of someone untested, but the luminous faith of someone who has survived the Tower and still believes in light. The Star as your ideal speaks to a desire for renewal that is grounded in reality, a healing that does not pretend the wound never happened. This aspiration toward honest hope is the most beautiful thing you can reach for."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a wellspring of hope you may not consciously recognize. The Star at the root reveals that what is sustaining you through this moment — even when you feel depleted — is a deep, subconscious faith that things can be healed. This hidden reservoir of optimism is not naivety; it is the part of you that remembers what the light felt like and refuses to forget."
+      },
+      "future": {
+        "passage": "A period of hope and renewed purpose is approaching. The Star ahead promises that whatever darkness you are currently navigating has an end, and what waits beyond it is luminous. You will not arrive there through force — you will arrive by following the faint light that is already visible, even now."
+      },
+      "outcome": {
+        "passage": "This situation resolves into healing and renewed purpose. The Star as outcome promises that what you have endured will not have been for nothing — the clarity, the peace, and the sense of direction you have been longing for are the actual destination of this path. The resolution is gentle, like water returning to a dry riverbed."
+      },
       "past": {
         "passage": "After a period of darkness, hope returned to your life like water to cracked earth. The Star in your past marks the moment when healing began in earnest — when the worst was over and you could finally look up. That renewal was not naivety; it was earned by surviving what came before."
       },
       "present": {
         "passage": "You are being restored. The Star appears in the present as a quiet reassurance that the pain you have endured has not been wasted — that inspiration and clarity are flowing back into spaces that were emptied by loss. This is not a time for grand action; it is a time for gentle, steady replenishment."
       },
-      "future": {
-        "passage": "A period of hope and renewed purpose is approaching. The Star ahead promises that whatever darkness you are currently navigating has an end, and what waits beyond it is luminous. You will not arrive there through force — you will arrive by following the faint light that is already visible, even now."
+      "self": {
+        "passage": "You see yourself as someone emerging from darkness into something gentle and luminous. Your self-image right now is one of quiet hope — not the manic kind, but the deep, steady kind that survives because it was tested. The Star in the self position says this renewed faith in yourself is not naive; it is earned."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to hope but cannot quite reach it — the star is visible, but it feels impossibly far. The reversed Star as your ideal reveals a longing for renewal that is shadowed by the fear that you have been damaged beyond repair. This is not true, but the aspiration itself has been dimmed by exhaustion. You are reaching for the light with tired arms, and that still counts."
+      },
+      "below": {
+        "passage": "A subconscious loss of faith is the hidden foundation of your current difficulty. The reversed Star beneath you points to a moment when hope was extinguished — not dramatically, but slowly, like a lantern running out of oil. This buried despair is not depression in the clinical sense; it is a quiet resignation that has been operating beneath your awareness, draining color from everything above it."
+      },
+      "future": {
+        "passage": "A crisis of faith or purpose is ahead unless you tend to your inner spark now. The reversed Star warns that inspiration, once extinguished, is harder to rekindle than to maintain. Do not wait until the well is completely dry — begin drawing from whatever source of meaning still flows, however thin."
+      },
+      "outcome": {
+        "passage": "The current path leads to a resolution tinged with disappointment or disillusionment. The reversed Star as outcome warns that without actively reconnecting to what gives your life meaning, the ending of this chapter will feel hollow rather than hopeful. The light is not gone, but you will need to seek it rather than wait for it to find you."
+      },
       "past": {
         "passage": "There was a time when hope deserted you, and the absence was devastating. The reversed Star in your past speaks to a period of despair — not the dramatic kind, but the quiet kind, the gray days when you could not remember what you were working toward. That season passed, but it left a residue of doubt."
       },
       "present": {
         "passage": "You have lost connection to the thing that gives your life meaning. The reversed Star appears when cynicism has replaced wonder, when the future looks like a repetition of the past rather than an opening. This disconnection from hope is not a permanent condition, but it will not resolve itself — you must actively reach for the light again."
       },
-      "future": {
-        "passage": "A crisis of faith or purpose is ahead unless you tend to your inner spark now. The reversed Star warns that inspiration, once extinguished, is harder to rekindle than to maintain. Do not wait until the well is completely dry — begin drawing from whatever source of meaning still flows, however thin."
+      "self": {
+        "passage": "You see yourself as someone who has lost faith — in the process, in the future, perhaps in yourself. The light that used to guide you has dimmed, and your self-image reflects that dimming. The reversed Star in the self position acknowledges the despair but insists it is a weather pattern, not a permanent climate."
       }
     }
   },
   "major-18": {
     "upright": {
+      "above": {
+        "passage": "You aspire to navigate uncertainty without demanding certainty — to walk the moonlit path trusting your instincts even when the landmarks dissolve. The Moon as your ideal speaks to a desire for comfort with ambiguity, for the ability to move through confusion without panicking. This aspiration toward trust in the dark is the mark of someone who has learned that not all truths arrive in daylight."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a rich, churning layer of subconscious material that your waking mind has been avoiding. The Moon at the root reveals that dreams, fears, and half-formed intuitions are the real drivers of your experience — not the rational story you have been telling yourself. This hidden psychic undertow is not your enemy; it is the part of you that sees what the conscious mind refuses to."
+      },
+      "future": {
+        "passage": "A period of uncertainty and illusion is approaching that will test your ability to navigate without a clear map. The Moon ahead asks you to trust your instincts over your analysis, to walk carefully through territory where the landmarks keep shifting. Not everything that frightens you in the dark is real."
+      },
+      "outcome": {
+        "passage": "This situation resolves through a passage that feels more like a dream than a decision. The Moon as outcome tells you that the ending will not arrive with the clarity of daylight — it will emerge gradually from shadow, and you may not recognize the resolution until you have already walked through it. Trust the path beneath your feet when you cannot see ahead."
+      },
       "past": {
         "passage": "You once walked a path where nothing was as it seemed, and the experience taught you to trust a deeper sense. The Moon in your past speaks to a period of confusion, illusion, or subconscious upheaval — a time when the rational mind could not navigate what the dream-self understood perfectly."
       },
       "present": {
         "passage": "Things are not what they appear to be. The Moon rises in your present to tell you that the information you are relying on is incomplete, distorted, or deliberately misleading. Do not make irreversible decisions in this light — wait for the shadows to resolve. Your intuition knows more than your eyes right now."
       },
-      "future": {
-        "passage": "A period of uncertainty and illusion is approaching that will test your ability to navigate without a clear map. The Moon ahead asks you to trust your instincts over your analysis, to walk carefully through territory where the landmarks keep shifting. Not everything that frightens you in the dark is real."
+      "self": {
+        "passage": "You see yourself as someone navigating through fog — uncertain which perceptions to trust, which fears are real, and which are projections of your own making. The Moon in the self position reflects a self-image built on shifting ground, where intuition and anxiety wear the same face. You are not lost; you are in the part of the journey that has no map."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to clarity — to the moment when the fog lifts and you can finally see what is real. The reversed Moon as your ideal speaks to a desire to escape confusion and face truth head-on, however uncomfortable it may be. This aspiration toward seeing clearly is healthy, but be prepared: the truth you uncover may not match the truth you were hoping for."
+      },
+      "below": {
+        "passage": "A subconscious refusal to look at your own fears is the hidden root of the confusion you are experiencing. The reversed Moon beneath you reveals that the illusions clouding your situation are not coming from outside — they are projections from within, old anxieties casting shadows that you are mistaking for real threats. This buried fear is not protecting you; it is distorting everything you see."
+      },
+      "future": {
+        "passage": "Suppressed fears or unprocessed anxieties will surface ahead, demanding attention you have been withholding. The reversed Moon warns that what you push into the subconscious does not disappear — it waits. Better to meet these shadows voluntarily than to be ambushed by them later."
+      },
+      "outcome": {
+        "passage": "The current path leads to a resolution where hidden fears or repressed truths surface uninvited. The reversed Moon as outcome warns that what has been pushed into the subconscious will demand acknowledgment — the ending of this situation will require you to face something you have been avoiding. The confrontation is uncomfortable, but the clarity it brings is worth the discomfort."
+      },
       "past": {
         "passage": "Fears and anxieties once controlled your decisions in ways you may not have recognized at the time. The reversed Moon in your past speaks to a period when you were haunted by projections — when what you imagined was worse than what was real. Distinguishing between the two is a skill you had to learn the hard way."
       },
       "present": {
         "passage": "The fog is beginning to lift, but you are not sure you trust what you see in the clearing light. The reversed Moon appears when illusions are dissolving but the truth beneath them is uncomfortable. Clarity is available to you right now, but accepting it requires letting go of the stories you have been telling yourself."
       },
-      "future": {
-        "passage": "Suppressed fears or unprocessed anxieties will surface ahead, demanding attention you have been withholding. The reversed Moon warns that what you push into the subconscious does not disappear — it waits. Better to meet these shadows voluntarily than to be ambushed by them later."
+      "self": {
+        "passage": "You see yourself as someone whose fears have been running the show — making decisions based on anxieties that, upon inspection, may not be grounded in reality. The reversed Moon in the self position says the fog is lifting and what you find underneath it may be less frightening than what you imagined. Let the illusions dissolve."
       }
     }
   },
   "major-19": {
     "upright": {
+      "above": {
+        "passage": "You aspire to joy without conditions — the kind of radiant, uncomplicated happiness that does not need to justify itself or brace for the fall. The Sun as your ideal speaks to a desire for a life lived in full light, where clarity is not something you fight for but something you stand in naturally. This aspiration toward genuine vitality is not childish; it is the most mature thing you can want."
+      },
+      "below": {
+        "passage": "Beneath your situation lies an irrepressible core of vitality that no amount of difficulty has managed to extinguish. The Sun at the root reveals that the deepest force driving your experience is not fear or ambition but a fundamental, almost stubborn belief in your own right to flourish. This subconscious warmth is your truest foundation — the part of you that insists on growing toward the light regardless of conditions."
+      },
+      "future": {
+        "passage": "Joy is coming, and it is not the fragile, conditional kind. The Sun ahead promises a period of clarity and vitality that will burn away the lingering doubts and shadows of your current situation. Whatever you are struggling with now, know that a season of warmth and honest light is on its way."
+      },
+      "outcome": {
+        "passage": "This situation resolves in joy and clarity. The Sun as outcome is the brightest promise in the deck — success that is genuine, happiness that is not borrowed from the future or stolen from someone else. The resolution of this path is luminous and uncomplicated. Whatever you have been worrying about, the light ahead is real."
+      },
       "past": {
         "passage": "There was a golden period in your life when everything aligned — when joy was simple and success felt natural. The Sun in your past marks a time of genuine vitality and clarity, a season so warm that it still heats your memory. That brightness was not an illusion; it was you at your most authentic."
       },
       "present": {
         "passage": "The light is on you right now, and the warmth is real. The Sun in the present is the most favorable card in the deck — a signal that clarity, success, and genuine happiness are available to you at this moment. Do not question it, complicate it, or wait for the other shoe to drop. Step into the light and let it reach you."
       },
-      "future": {
-        "passage": "Joy is coming, and it is not the fragile, conditional kind. The Sun ahead promises a period of clarity and vitality that will burn away the lingering doubts and shadows of your current situation. Whatever you are struggling with now, know that a season of warmth and honest light is on its way."
+      "self": {
+        "passage": "You see yourself as someone standing fully in the light — authentic, vital, uncomplicated by the shadows that usually qualify your self-perception. The Sun in the self position reflects a rare alignment between who you are and how you feel about who you are. This is not arrogance; it is the simple warmth of being at home in yourself."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to happiness but have built a ceiling between yourself and the light. The reversed Sun as your ideal reveals that something in you distrusts joy — a learned expectation that good things come with hidden costs. The sun you are reaching for is real, but the hand you extend keeps flinching back. Allowing yourself to receive what you want may be harder than earning it."
+      },
+      "below": {
+        "passage": "A subconscious pattern of dimming your own light is the hidden root of the shadow over your situation. The reversed Sun beneath you suggests that at some point you learned that shining too brightly was dangerous — that visibility invited criticism, or that joy was something you had to earn rather than simply claim. This buried habit of self-diminishment is filtering out the very warmth you need."
+      },
+      "future": {
+        "passage": "A delay in the joy or clarity you are hoping for is ahead, but it is a delay, not a denial. The reversed Sun warns that the brightness approaching may be temporarily obscured by your own inner weather. Work now on the pessimism or fear that threatens to filter the light before it reaches you."
+      },
+      "outcome": {
+        "passage": "The current path leads to a resolution that should feel joyful but arrives muted. The reversed Sun as outcome warns of a happy ending you cannot quite feel — success that is real but does not register because your capacity to receive it has been diminished. The outcome itself is fine; the question is whether you will be present enough to enjoy it."
+      },
       "past": {
         "passage": "A period that should have been joyful was clouded by something you could not name. The reversed Sun in your past speaks to happiness that was partially blocked — by self-doubt, by external circumstances, or by the inability to trust good things when they arrived. The warmth was real, but you could not fully let it in."
       },
       "present": {
         "passage": "The light is there, but you are having trouble seeing it. The reversed Sun appears when pessimism or exhaustion has dimmed your capacity for joy — when good things are happening but you cannot feel them properly. This is not ingratitude; it is depletion. Before you can celebrate the sun, you need to come out from under the cloud you have been carrying."
       },
-      "future": {
-        "passage": "A delay in the joy or clarity you are hoping for is ahead, but it is a delay, not a denial. The reversed Sun warns that the brightness approaching may be temporarily obscured by your own inner weather. Work now on the pessimism or fear that threatens to filter the light before it reaches you."
+      "self": {
+        "passage": "You see yourself through a filter that dims every good thing — accomplishments feel hollow, praise feels undeserved, and the happiness available to you is kept at arm's length. The reversed Sun in the self position says the light is there; your inner cloud cover is the only thing blocking it. The problem is not your life — it is the lens."
       }
     }
   },
   "major-20": {
     "upright": {
+      "above": {
+        "passage": "You aspire to the moment when everything becomes clear — a reckoning with your own life so honest that it sets you free. Judgement as your ideal speaks to a desire for resurrection, not from death but from the half-life of avoidance and self-deception. You are reaching toward the version of yourself that has nothing left to hide, and that aspiration is the trumpet already sounding."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep, unfinished reckoning that has been waiting for your attention. Judgement at the root reveals that the hidden force shaping your experience is a call you have been hearing for longer than you admit — a summons to account for who you have been and to choose who you will become. This subconscious readiness for transformation is closer to the surface than you think."
+      },
+      "future": {
+        "passage": "A moment of profound clarity and self-reckoning is approaching. Judgement ahead does not predict punishment — it predicts awakening. You will soon be asked to look at your life with absolute honesty and to answer a call that has been building for longer than you realize. When it comes, do not hesitate."
+      },
+      "outcome": {
+        "passage": "This situation resolves through a moment of profound clarity and transformation. Judgement as outcome tells you that the ending of this chapter will feel like an awakening — a reckoning that does not punish but liberates. You will see your life with absolute honesty, and that honesty will be the foundation for everything that comes next."
+      },
       "past": {
         "passage": "A moment of reckoning in your past forced you to answer for who you had been and who you wanted to become. Judgement in your history marks a profound evaluation — not by others, but by the deepest part of yourself. That accounting, however painful, freed you to begin again with clear eyes."
       },
       "present": {
         "passage": "You are being called to rise. Judgement in the present demands an honest review of your life — not to condemn, but to clarify. What have you been avoiding? What needs to be forgiven? What part of yourself, long buried, is ready to be resurrected? The trumpet is sounding now, and it is sounding for you."
       },
-      "future": {
-        "passage": "A moment of profound clarity and self-reckoning is approaching. Judgement ahead does not predict punishment — it predicts awakening. You will soon be asked to look at your life with absolute honesty and to answer a call that has been building for longer than you realize. When it comes, do not hesitate."
+      "self": {
+        "passage": "You see yourself as someone answering a call that has been building for a long time — a reckoning not with the world but with your own potential. Your self-image is one of someone ready to be honest about who they have been and who they are capable of becoming. Judgement in the self position says this readiness is not premature; the trumpet is for you."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to self-forgiveness, but the inner judge keeps moving the goalposts. The reversed Judgement as your ideal reveals a desire for absolution that is trapped in a cycle of self-condemnation — you want to rise, but you keep pulling yourself back down for one more review, one more accounting. The reckoning you are reaching for has already happened; what remains is the courage to accept the verdict and move on."
+      },
+      "below": {
+        "passage": "A subconscious refusal to forgive yourself is the hidden root of your stagnation. The reversed Judgement beneath you points to an old guilt or regret that has calcified into a permanent tribunal — a part of you that believes you do not deserve the transformation you are seeking. This buried self-judgment is not accountability; it is punishment without parole, and it is keeping you from answering the call."
+      },
+      "future": {
+        "passage": "A reckoning you have been avoiding will not wait much longer. The reversed Judgement warns that postponing your own honest self-evaluation will not make it easier — it will make it more disorienting when it finally arrives. Begin the inner audit on your own terms, while the choice is still yours."
+      },
+      "outcome": {
+        "passage": "The current trajectory leads to a missed awakening — a reckoning that arrives but finds you unprepared or unwilling to engage with it. The reversed Judgement as outcome warns that the clarity available at the end of this path will be wasted if you cannot stop punishing yourself long enough to receive it. Forgiveness is the prerequisite for transformation."
+      },
       "past": {
         "passage": "You once refused a call to transformation, and the unfinished reckoning has been following you since. The reversed Judgement in your past speaks to a moment of potential awakening that was suppressed — by fear, by doubt, or by someone else's judgment overriding your own. That unanswered call still echoes."
       },
       "present": {
         "passage": "Self-doubt is drowning out the trumpet. The reversed Judgement appears when you are judging yourself so harshly that you cannot hear the genuine call to rise. You may be caught in cycles of guilt and self-punishment that masquerade as accountability but actually prevent growth. Forgiveness — of yourself — is not optional here."
       },
-      "future": {
-        "passage": "A reckoning you have been avoiding will not wait much longer. The reversed Judgement warns that postponing your own honest self-evaluation will not make it easier — it will make it more disorienting when it finally arrives. Begin the inner audit on your own terms, while the choice is still yours."
+      "self": {
+        "passage": "You see yourself as someone who is not ready — not good enough, not healed enough, not worthy enough to answer the call that keeps sounding. The reversed Judgement in the self position reflects a self-image crippled by an inner critic that has confused self-flagellation with accountability. You are judging yourself into paralysis."
       }
     }
   },
   "major-21": {
     "upright": {
+      "above": {
+        "passage": "You aspire to wholeness — the moment when every scattered piece of your experience falls into a pattern that finally makes sense. The World as your ideal speaks to a longing for completion that is not an ending but a fulfillment, the point at which the journey reveals its meaning. This aspiration toward integration is the most expansive thing you can reach for, because it includes everything you have been."
+      },
+      "below": {
+        "passage": "Beneath your situation lies a deep, often unspoken awareness that you are closer to completion than you believe. The World at the root reveals that the hidden current carrying you forward is not ambition but a sense of approaching wholeness — a subconscious recognition that the threads of your life are weaving together whether you direct them or not. This buried knowledge of your own completion is the most powerful foundation you could have."
+      },
+      "future": {
+        "passage": "Fulfillment and wholeness are approaching in a form you may not expect. The World ahead promises that the scattered pieces of your current situation will eventually come together into something complete and meaningful. Trust the process — the final integration is already in motion, even if you cannot see the whole picture yet."
+      },
+      "outcome": {
+        "passage": "This situation resolves in fulfillment and genuine completion. The World as outcome is the rarest and most beautiful promise the deck can make — that the cycle will close, the work will be done, and the result will be whole. What you have been building, enduring, and becoming will come together into something that makes sense of the entire journey."
+      },
       "past": {
         "passage": "You completed something extraordinary once — a cycle, a journey, a transformation that brought you full circle. The World in your past marks a moment of genuine achievement and integration, a time when disparate threads of your life wove together into a coherent whole. That completion gave you the foundation for everything that followed."
       },
       "present": {
         "passage": "A great cycle is reaching its conclusion. The World in the present tells you that what you have been working toward is not just close — it is here. Allow yourself to feel the weight of this accomplishment before rushing to the next thing. Completion is not a stop along the way; it is its own destination, and you have earned this arrival."
       },
-      "future": {
-        "passage": "Fulfillment and wholeness are approaching in a form you may not expect. The World ahead promises that the scattered pieces of your current situation will eventually come together into something complete and meaningful. Trust the process — the final integration is already in motion, even if you cannot see the whole picture yet."
+      "self": {
+        "passage": "You see yourself as someone nearing wholeness — a person whose scattered experiences are finally weaving themselves into a coherent story. The World in the self position reflects a self-image of integration, of someone who has traveled far enough to see the pattern in the path. This sense of completion is not premature; it is the real thing."
       }
     },
     "reversed": {
+      "above": {
+        "passage": "You aspire to completion, but the finish line keeps receding. The reversed World as your ideal reveals a longing for wholeness that has become a source of frustration rather than motivation — you can see the shape of what the integrated life would look like, but something always seems to be missing. The piece you are searching for may not be something to add; it may be something to release."
+      },
+      "below": {
+        "passage": "A subconscious fear of completion is the hidden root of the loose ends that define your situation. The reversed World beneath you suggests that some part of you resists finishing — not out of laziness but out of a buried fear that completion means there is nothing left to strive for. This hidden dread of the final step is keeping you perpetually almost-there, and it is a more powerful force than any external obstacle."
+      },
+      "future": {
+        "passage": "A completion you are counting on may be delayed or diminished by loose ends you have not yet tied. The reversed World warns against the assumption that things will simply come together on their own. The wholeness you are seeking requires your active participation — every thread you leave hanging is a gap in the final tapestry."
+      },
+      "outcome": {
+        "passage": "The current path leads to an incomplete resolution — almost there, but not quite. The reversed World as outcome warns of a conclusion that falls just short of the wholeness it promised, a final chapter with a loose end that unravels the satisfaction. The remedy is not more effort but more honesty about what remains unfinished."
+      },
       "past": {
         "passage": "Something was left unfinished, and the incompleteness still has a hold on you. The reversed World in your past speaks to a cycle that was interrupted before it could close — a journey abandoned near its end, or a lesson that was almost but not quite learned. That dangling thread affects more of your present than you might admit."
       },
       "present": {
         "passage": "You are so close to completion that the remaining distance feels unbearable. The reversed World appears when the final steps of a long journey are the hardest — when you are tempted to declare yourself done before the work is truly finished, or to take shortcuts that will hollow out the achievement. Stay the course. The last mile is the one that matters most."
       },
-      "future": {
-        "passage": "A completion you are counting on may be delayed or diminished by loose ends you have not yet tied. The reversed World warns against the assumption that things will simply come together on their own. The wholeness you are seeking requires your active participation — every thread you leave hanging is a gap in the final tapestry."
+      "self": {
+        "passage": "You see yourself as someone tantalizingly close to completion but unable to cross the final threshold. Your self-image is one of near-wholeness, of a puzzle with one stubborn piece missing. The reversed World in the self position says the missing piece is not lost — it is the thing you keep postponing, the thread you refuse to tie off."
       }
     }
   }
