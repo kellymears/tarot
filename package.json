@@ -1,8 +1,16 @@
 {
   "name": "arcana-cli",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Arcana — a tarot reading CLI",
   "type": "module",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
   "bin": {
     "arcana": "./dist/cli.js",
     "arcana-mcp": "./dist/mcp.js"
