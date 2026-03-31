@@ -7,23 +7,83 @@ import type { CardReading, SpreadCard } from "./types.js";
 
 import { lookupPassage } from "../data/interpretations/index.js";
 
-const reversalFraming: Record<
+const reversalPositionPrefix: Record<
   "blocked" | "shadow" | "weakened",
-  { prefix: string; suffix: string }
+  Record<Position, string>
 > = {
   blocked: {
-    prefix: "This energy is present but finds itself obstructed. ",
-    suffix: " Yet something prevents its full expression right now.",
+    above:
+      "Your aspiration carries this energy, but something blocks its expression. ",
+    below: "At the root, this energy stirs but cannot surface freely. ",
+    challenge:
+      "The crossing force is present but muted — its pressure is real but indirect. ",
+    environment:
+      "In your surroundings, this energy circulates but cannot land. ",
+    future: "Ahead of you, this energy approaches but may arrive delayed. ",
+    "hopes-fears":
+      "This hope or fear is real but cannot fully take shape yet. ",
+    obstacle:
+      "The challenge itself is partially blocked — even the obstacle is struggling. ",
+    outcome:
+      "The resolution carries this energy, but it may manifest incompletely. ",
+    past: "In your past, this energy was present but never fully released. ",
+    present: "Right now, this energy is present but finds itself obstructed. ",
+    self: "Within you, this energy exists but you are holding it back. ",
   },
   shadow: {
-    prefix: "This influence operates beneath conscious awareness. ",
-    suffix: " It works from the inner landscape, not the visible one.",
+    above: "Your conscious aspiration masks a deeper version of this energy. ",
+    below: "At the root, this is the unconscious truth driving events. ",
+    challenge:
+      "The crossing force works subtly — its influence is felt more than seen. ",
+    environment:
+      "Around you, this influence moves unseen through others' actions. ",
+    future:
+      "What approaches carries this influence in its undertow, invisible but shaping. ",
+    "hopes-fears":
+      "This hope or fear operates below the surface of your awareness. ",
+    obstacle:
+      "The challenge operates in shadow — you may not recognize it as an obstacle. ",
+    outcome:
+      "The resolution will arrive carrying undertones you may not immediately see. ",
+    past: "In your past, this influence worked beneath your awareness. ",
+    present: "Right now, this influence operates beneath conscious awareness. ",
+    self: "Within you, this energy works from the inner landscape. ",
   },
   weakened: {
-    prefix: "A quieter version of this energy is at play. ",
-    suffix: " The essence remains, but its force is diminished.",
+    above: "Your aspiration holds this energy in diluted form. ",
+    below: "At the root, this energy stirs faintly. ",
+    challenge:
+      "The crossing force is weakened — present but not overwhelming. ",
+    environment: "Around you, this influence is present but muted. ",
+    future:
+      "What approaches carries this energy, but with less force than expected. ",
+    "hopes-fears":
+      "This hope or fear is real but carries less weight than you might assume. ",
+    obstacle:
+      "The challenge is real but not at full strength — there is room to move. ",
+    outcome:
+      "The resolution carries this energy, but its force is diminished. ",
+    past: "In your past, a quieter version of this energy was at play. ",
+    present: "Right now, a diminished echo of this energy is present. ",
+    self: "Within you, this energy exists but at reduced intensity. ",
   },
 };
+
+const reversalSuffix: Record<"blocked" | "shadow" | "weakened", string> = {
+  blocked: " Yet something prevents its full expression right now.",
+  shadow: " It works from the inner landscape, not the visible one.",
+  weakened: " The essence remains, but its force is diminished.",
+};
+
+const reversalFraming = (
+  mode: "blocked" | "shadow" | "weakened",
+  position: Position,
+): { prefix: string; suffix: string } => ({
+  prefix:
+    reversalPositionPrefix[mode][position] ??
+    reversalPositionPrefix[mode].present,
+  suffix: reversalSuffix[mode],
+});
 
 const positionFraming: Record<
   Position,
@@ -79,8 +139,10 @@ export function resolvePassages(
     let passage = authored ?? fallbackPassage(sc, effectiveOrientation);
 
     if (isReversed && useUpright) {
-      const framing =
-        reversalFraming[reversalMode as "blocked" | "shadow" | "weakened"];
+      const framing = reversalFraming(
+        reversalMode as "blocked" | "shadow" | "weakened",
+        sc.position,
+      );
       passage = framing.prefix + passage + framing.suffix;
     }
 

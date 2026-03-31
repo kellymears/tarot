@@ -1,9 +1,17 @@
 import type {
   CardReading,
+  Element,
   Narrative,
   RelationalAnalysis,
   SpreadCard,
 } from "./types.js";
+
+import {
+  DIGNITIES,
+  MAJOR_ELEMENT,
+  SUIT_ELEMENT,
+  SUIT_THEME,
+} from "../constants.js";
 
 export function assembleNarrative(
   cards: CardReading[],
@@ -161,9 +169,111 @@ const buildSynthesis = (
     relational.numericalPattern?.detail,
     dignityLabel(relational),
     relational.courtCards?.detail,
+    crossPositionInsight(spread),
   ]
     .filter(Boolean)
     .join(" ");
+
+const byPosition = (
+  spread: SpreadCard[],
+  position: string,
+): SpreadCard | undefined => spread.find((s) => s.position === position);
+
+const crossPositionInsight = (spread: SpreadCard[]): string | undefined => {
+  if (spread.length < 2) return undefined;
+
+  const insights: string[] = [];
+
+  // 1. Past-future echo: same suit bookends the reading
+  const past = byPosition(spread, "past");
+  const future = byPosition(spread, "future");
+  if (
+    past?.card.suit &&
+    future?.card.suit &&
+    past.card.suit === future.card.suit
+  ) {
+    const theme = SUIT_THEME[past.card.suit];
+    insights.push(
+      `The suit of ${past.card.suit[0].toUpperCase() + past.card.suit.slice(1)} bookends this reading from past to future, suggesting the same thematic energy — ${theme} — both shaped you and awaits you.`,
+    );
+  }
+
+  // 2. Above-below tension or harmony
+  const above = byPosition(spread, "above");
+  const below = byPosition(spread, "below");
+  if (above && below) {
+    const elAbove = elementOfCard(above);
+    const elBelow = elementOfCard(below);
+    if (elAbove && elBelow) {
+      if (areEnemies(elAbove, elBelow)) {
+        insights.push(
+          `Your conscious aspiration (${above.card.name}) and subconscious root (${below.card.name}) pull in opposite directions — what you want and what drives you are not yet aligned.`,
+        );
+      } else if (areAllied(elAbove, elBelow)) {
+        insights.push(
+          "Your aspiration and root cause are aligned — what you reach for and what drives you share a common source.",
+        );
+      }
+    }
+  }
+
+  // 3. Self-environment contrast: different suits
+  const self = byPosition(spread, "self");
+  const environment = byPosition(spread, "environment");
+  if (
+    self?.card.suit &&
+    environment?.card.suit &&
+    self.card.suit !== environment.card.suit
+  ) {
+    insights.push(
+      `How you see yourself (${self.card.name}) and how your environment shapes you (${environment.card.name}) operate in different registers — the inner and outer worlds are not speaking the same language.`,
+    );
+  }
+
+  // 4. Challenge echoes obstacle: shared suit or element
+  const challenge = byPosition(spread, "challenge");
+  const obstacle = byPosition(spread, "obstacle");
+  if (challenge && obstacle) {
+    const sharedSuit =
+      challenge.card.suit &&
+      obstacle.card.suit &&
+      challenge.card.suit === obstacle.card.suit;
+    const elChallenge = elementOfCard(challenge);
+    const elObstacle = elementOfCard(obstacle);
+    const sharedElement =
+      elChallenge && elObstacle && elChallenge === elObstacle;
+
+    if (sharedSuit || sharedElement) {
+      const element = elChallenge ?? elObstacle;
+      const elementName = element
+        ? element[0].toUpperCase() + element.slice(1)
+        : "shared";
+      insights.push(
+        `The crossing force and the obstacle share the energy of ${elementName} — the same theme that complicates your present also stands in your path.`,
+      );
+    }
+  }
+
+  // Return at most the first match (most striking)
+  return insights[0];
+};
+
+const elementOfCard = (sc: SpreadCard): Element | null => {
+  if (sc.card.suit) return SUIT_ELEMENT[sc.card.suit];
+  return MAJOR_ELEMENT[sc.card.id] ?? null;
+};
+
+const areAllied = (a: Element, b: Element): boolean => {
+  if (a === b) return true;
+  return DIGNITIES.allied.some(
+    ([x, y]) => (a === x && b === y) || (a === y && b === x),
+  );
+};
+
+const areEnemies = (a: Element, b: Element): boolean =>
+  DIGNITIES.enemy.some(
+    ([x, y]) => (a === x && b === y) || (a === y && b === x),
+  );
 
 const dignityLabel = (relational: RelationalAnalysis): string | undefined => {
   const enemies = relational.dignities.filter(
