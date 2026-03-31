@@ -45,6 +45,32 @@ const suitClosing: Record<string, string> = {
     "The fire is lit. Channel it with intention, or it will choose its own direction.",
 };
 
+/**
+ * Deterministic variant selector — uses the sum of card numbers so the
+ * same reading always produces the same closing, but different readings
+ * get different variants.
+ */
+const variantIndex = (spread: SpreadCard[], count: number): number => {
+  const sum = spread.reduce((acc, s) => acc + s.card.number, 0);
+  return sum % count;
+};
+
+const SINGLE_CARD_CLOSINGS = [
+  "The cards have spoken. Sit with what they reveal — understanding often arrives in its own time.",
+  "One card, one moment of attention. Let it resonate before you move on.",
+];
+
+const MIXED_ENERGY_CLOSINGS = [
+  "The cards offer a way forward. What you do with their counsel is, as always, yours to decide. Trust yourself.",
+  "What the cards reveal is not a command but an invitation. The choice — as always — remains yours.",
+  "This reading holds both shadow and light. Neither dominates, and that balance is itself a message.",
+];
+
+const LARGE_SPREAD_ADDENDA = [
+  "This is a complex reading with many threads. Give yourself time to sit with it — not everything will be clear immediately.",
+  "A reading this size is a conversation, not a verdict. Return to it over the coming days — different cards will speak at different times.",
+];
+
 const buildClosing = (
   cards: CardReading[],
   relational: RelationalAnalysis,
@@ -54,7 +80,8 @@ const buildClosing = (
   const hasOutcome = cards.some((c) => c.position === "outcome");
 
   if (!hasFuture && !hasOutcome) {
-    return "The cards have spoken. Sit with what they reveal — understanding often arrives in its own time.";
+    const idx = variantIndex(spread, SINGLE_CARD_CLOSINGS.length);
+    return SINGLE_CARD_CLOSINGS[idx];
   }
 
   const total = cards.length;
@@ -82,17 +109,19 @@ const buildClosing = (
     const futureCard = spread.find(
       (s) => s.position === "outcome" || s.position === "future",
     );
-    base = futureCard
-      ? `The cards offer a way forward, with ${futureCard.card.name} lighting the path ahead. What you do with their counsel is, as always, yours to decide. Trust yourself.`
-      : "The cards offer a way forward. What you do with their counsel is, as always, yours to decide. Trust yourself.";
+    const idx = variantIndex(spread, MIXED_ENERGY_CLOSINGS.length);
+    if (futureCard && idx === 0) {
+      base = `The cards offer a way forward, with ${futureCard.card.name} lighting the path ahead. What you do with their counsel is, as always, yours to decide. Trust yourself.`;
+    } else {
+      base = MIXED_ENERGY_CLOSINGS[idx];
+    }
   }
 
   const addenda: string[] = [];
 
   if (isLargeSpread) {
-    addenda.push(
-      "This is a complex reading with many threads. Give yourself time to sit with it — not everything will be clear immediately.",
-    );
+    const idx = variantIndex(spread, LARGE_SPREAD_ADDENDA.length);
+    addenda.push(LARGE_SPREAD_ADDENDA[idx]);
   }
 
   if (relational.suitDominance) {
@@ -132,47 +161,114 @@ const buildClosing = (
   return base;
 };
 
-const namedMajorDetail = (spread: SpreadCard[]): string | undefined => {
+const namedMajorOpening = (
+  spread: SpreadCard[],
+  arcanaWeight: RelationalAnalysis["arcanaWeight"],
+): string | undefined => {
   const majors = spread.filter((s) => s.card.arcana === "major");
+  const total = spread.length;
+
+  // When every card is major or a majority is major, the generic detail
+  // already references the weight — no need to name individuals.
+  if (arcanaWeight.count === total || arcanaWeight.count > total / 2) {
+    return undefined;
+  }
+
   if (majors.length === 1) {
-    return `${majors[0].card.name} anchors this spread, marking where larger forces intersect with the practical.`;
+    return `${majors[0].card.name} anchors this reading among everyday concerns, marking where larger forces intersect with the practical.`;
   }
   if (majors.length === 2) {
-    return `${majors[0].card.name} and ${majors[1].card.name} anchor this spread, marking where larger forces assert themselves.`;
+    return `${majors[0].card.name} and ${majors[1].card.name} anchor this reading, marking where larger forces assert themselves among the practical.`;
   }
   return undefined;
 };
 
+const elementIsStriking = (
+  balance: RelationalAnalysis["elementalBalance"],
+): boolean => {
+  if (!balance) return false;
+  return balance.missing.length > 0 || balance.dominant.length > 0;
+};
+
+const OPENING_TRANSITIONS = ["Additionally, ", "Meanwhile, ", ""];
+
 const buildOpening = (
   relational: RelationalAnalysis,
   spread: SpreadCard[],
-): string =>
-  [
-    relational.arcanaWeight.detail,
-    namedMajorDetail(spread),
-    relational.reversalPattern.count > 0
-      ? relational.reversalPattern.detail
-      : undefined,
-    relational.elementalBalance?.detail,
-  ]
-    .filter(Boolean)
+): string => {
+  // Priority: named majors > generic arcana weight, then reversals,
+  // then elemental balance (only if striking).
+  const named = namedMajorOpening(spread, relational.arcanaWeight);
+  const arcana = named ?? relational.arcanaWeight.detail;
+
+  const candidates: string[] = [arcana];
+
+  if (relational.reversalPattern.count > 0) {
+    candidates.push(relational.reversalPattern.detail);
+  }
+
+  if (elementIsStriking(relational.elementalBalance)) {
+    candidates.push(relational.elementalBalance!.detail);
+  }
+
+  // Take 2-3 most significant, join with transitions.
+  const selected = candidates.slice(0, 3);
+  return selected
+    .map((sentence, i) => {
+      if (i === 0) return sentence;
+      const transition = OPENING_TRANSITIONS[(i - 1) % 3];
+      // Lowercase the first letter when prepending a transition word.
+      if (transition) {
+        return transition + sentence[0].toLowerCase() + sentence.slice(1);
+      }
+      return sentence;
+    })
     .join(" ");
+};
+
+const SYNTHESIS_TRANSITIONS = [
+  "Within this arc, ",
+  "The elemental currents suggest ",
+  "",
+];
 
 const buildSynthesis = (
   cards: CardReading[],
   relational: RelationalAnalysis,
   spread: SpreadCard[],
-): string =>
-  [
-    arcLabel(cards, spread),
-    relational.suitDominance?.detail,
-    relational.numericalPattern?.detail,
-    dignityLabel(relational),
-    relational.courtCards?.detail,
-    crossPositionInsight(spread),
-  ]
-    .filter(Boolean)
+): string => {
+  // Priority: arc label, cross-position insight, dignity OR suit dominance.
+  // Court cards and numerical patterns are dropped here (they appear in
+  // the Connections box).
+  const candidates: string[] = [];
+
+  const arc = arcLabel(cards, spread);
+  if (arc) candidates.push(arc);
+
+  const insight = crossPositionInsight(spread);
+  if (insight) candidates.push(insight);
+
+  // Pick dignity over suit dominance when both exist (dignity names cards).
+  const dignity = dignityLabel(relational);
+  if (dignity) {
+    candidates.push(dignity);
+  } else if (relational.suitDominance?.detail) {
+    candidates.push(relational.suitDominance.detail);
+  }
+
+  // Take at most 3, join with transitions.
+  const selected = candidates.slice(0, 3);
+  return selected
+    .map((sentence, i) => {
+      if (i === 0) return sentence;
+      const transition = SYNTHESIS_TRANSITIONS[(i - 1) % 3];
+      if (transition) {
+        return transition + sentence[0].toLowerCase() + sentence.slice(1);
+      }
+      return sentence;
+    })
     .join(" ");
+};
 
 const byPosition = (
   spread: SpreadCard[],
